@@ -11,7 +11,7 @@ export default class page extends React.Component {
   render() {
     return (
       <>
-        <Link to="/">Go index</Link>
+        <Link to="/">Go indexaass</Link>
       </>
     )
   }
