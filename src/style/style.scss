@@ -10,35 +10,6 @@ code {
     monospace;
 }
 
-@font-face {
-  font-family: Play;
-  src: local(Play-Bold),
-    url(/path/to/Play-Bold.woff2) format("woff2"),
-    url(/path/to/Play-Bold.woff) format("woff"),
-    url(/path/to/Play-Bold.ttf) format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-}
-
-@font-face {
-  font-family: NotoSansKR;
-  src: local(NotoSansKR-Regular),
-    url(/path/to/NotoSansKR-Regular.woff2) format("woff2"),
-    url(/path/to/NotoSansKR-Regular.woff) format("woff"),
-    url(/path/to/NotoSansKR-Regular.ttf) format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-}
-
-.centerT {
-  text-align: center;
-}
-.leftT{
-  text-align: left;
-}
-
 
 .main_banner {
   width: 100%;

@@ -21,7 +21,9 @@ export default class Header extends React.Component {
                     </div>
 
                     <div className="right">
-
+                        <Link to="/"><span className="menu">로그인</span></Link>
+                        <Link to="/"><span className="menu">회원가입</span></Link>
+                        <Link to="/"><span className="menu">안내/문의</span></Link>
                     </div>
             </div>
             </header>
