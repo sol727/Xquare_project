@@ -1,0 +1,25 @@
+// 정사각형 만들기
+@mixin square ( $width )  {
+  width: $width;
+  height: $width;
+}
+
+header { display: flex; align-items: center; justify-content: space-between;
+
+  .left {
+
+  }
+
+  .center {
+    .menu { color:#222324; }
+  }
+
+  .right {
+
+  }
+}
+
+.test {
+  background-color: #000;
+  @include square(200px);
+}
