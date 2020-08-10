@@ -16,6 +16,7 @@ function App() {
     <BrowserRouter>
         <Route exact path="/" component={index}/>
         <Route path="/page" component={page}/>
+
     </BrowserRouter>
   );
 }
