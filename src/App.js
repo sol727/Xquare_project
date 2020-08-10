@@ -1,6 +1,7 @@
 import React from 'react';
-import './style/common.css';
-import './style/style.css';
+import './style/common.scss';
+import './style/style.scss';
+import './style/style2.scss';
 import { BrowserRouter , Route } from 'react-router-dom';
 
 /* 페이지 */

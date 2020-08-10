@@ -1,8 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import $ from 'jquery'
-import Header from '../components/header'
 import * as js from '../js/style'
+import Header from '../components/header'
 
 export default class index extends React.Component {
 
@@ -12,13 +10,19 @@ export default class index extends React.Component {
 
   // $(document).ready({ ... })
   componentDidMount(){
-    js.a()
+    
   }
   
   render() {
     return (
       <>
-      AAAA
+
+        <Header />
+
+        <div className="test">
+          
+        </div>
+
       </>
     )
   }
