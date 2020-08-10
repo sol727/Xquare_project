@@ -1,5 +1,43 @@
-.from_page{max-width: 1200px;margin:0 auto;
+
+//공통
+.error_msg{
+    font-size: 13px;color:#ff513e;margin-top:4px;}
+.input_box{position: relative;
+    .input_delt_btn{
+        position: absolute;top:50%;right:20px;transform: translateY(-50%);display: none;}
+}
+input.error + .input_delt_btn{
+    display: block;}
+
+//form_page
+.from_page{
+    max-width: 1200px;margin:0 auto;
     .bg_gradient{
-        float: left;width: 588px;min-height:788px;background-image: linear-gradient(to top, #ffb27c, #ffa740);
+        float: left;width: 588px;min-height:788px;background-image: linear-gradient(to top, #ffb27c, #ffa740);position: relative;padding:204px 102px 0px 102px;
+        img{
+            position: absolute;bottom: 0;width: 100%;left: 0;}
+        .title{
+            font-size: 60px;color: #fff;margin-bottom:24px;}
+        .sub_title{
+            font-size:18px;color:#fff;line-height: 28px;word-break:normal;padding-bottom:15px;border-bottom:1px solid #fff;}
+    }
+    .orange_title{font-size: 18px;color: #fe8d40;text-align: center;}
+    .right{
+        margin-top: 80px;float:right;width: 588px;padding: 56px 122px 0px;
+        .sns_wrap{padding:8px;width:max-content;margin: 10px auto 40px;}
+        .sns_wrap button{margin-right: 24px;}
+        .sns_wrap button:last-child{margin-right: 0px;}
+        ul{margin-top:24px;}
+        ul li{margin-bottom:24px;}
     }
 }
+
+// 로그인
+.login {
+    .form_btn{color:#fff;font-weight: 600;}
+    .signup_txt{font-size: 15px;color:#9a9a99;text-align: center;margin-top:24px;
+        span{font-size: 15px;color:#ff8e40;font-weight: 600;border-bottom:1px solid #ff8e40;margin-left:5px;}
+    }
+}
+
+
