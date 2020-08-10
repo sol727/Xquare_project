@@ -8,6 +8,7 @@ import { BrowserRouter , Route } from 'react-router-dom';
 
 import index from './pages/index'
 import page from './pages/page'
+import Login from './pages/login';
 
 /* 페이지 */
 
@@ -16,6 +17,7 @@ function App() {
     <BrowserRouter>
         <Route exact path="/" component={index}/>
         <Route path="/page" component={page}/>
+        <Route path="/login" component={Login}/>
 
     </BrowserRouter>
   );
