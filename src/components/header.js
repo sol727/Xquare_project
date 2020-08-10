@@ -10,7 +10,12 @@ export default class Header extends React.Component {
     render() {
         return (
             <header>
-                <div className="left"></div>
+                
+                <div className="left">
+
+                    <img src={ require('../images/apple-icon-114x114.png') } alt=""/>
+
+                </div>
 
                 <div className="center">
                     <Link><span className="menu">투자하기</span></Link>
@@ -21,6 +26,7 @@ export default class Header extends React.Component {
                 <div className="right">
 
                 </div>
+
             </header>
         )
     }
