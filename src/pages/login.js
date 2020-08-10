@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import Header from '../components/header'
+import Footer from '../components/footer';
 
 
 export default class Login extends React.Component {
@@ -13,13 +14,18 @@ export default class Login extends React.Component {
         return (
             <>
                 <Header />
-                <section className="from_page login">
+
+                <section className="form_page login clearfix2">
                     <div className="bg_gradient mo_none">
                         <img src={ require('../images/form_left_bg.png') } alt="물방울bg"/>
                         <h1 className="title">로그인</h1>   
                         <p className="sub_title">에너지엑스 스퀘어의 다양한 서비스를 이용하시려면 로그인을 해주세요.</p>   
                     </div>
                     <div className="right">
+                        <div className="mo_title pc_none">
+                            <h1>로그인</h1>
+                            <p>에너지엑스 스퀘어의 다양한 서비스를 이용하시려면 로그인을 해주세요.</p>
+                        </div>
                         <form action="">
                             <h2 className="orange_title">SNS 계정으로 간편 로그인</h2>
                             <div className="sns_wrap">
@@ -58,6 +64,8 @@ export default class Login extends React.Component {
                         </form>
                     </div>
                 </section>
+                
+                <Footer/>
             </>
         )
     }
