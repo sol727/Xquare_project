@@ -10,23 +10,20 @@ export default class Header extends React.Component {
     render() {
         return (
             <header>
-                
-                <div className="left">
+                <div className="container">           
+                   
+                    <Link to="/"><img src={ require('../images/img_logo_xquare.png') } alt="로고"/></Link>               
 
-                    <img src={ require('../images/apple-icon-114x114.png') } alt=""/>
+                    <div className="center">
+                        <Link to="/"><span className="menu">투자하기</span></Link>
+                        <Link to="/"><span className="menu">소식</span></Link>
+                        <Link to="/"><span className="menu">소개</span></Link>
+                    </div>
 
-                </div>
+                    <div className="right">
 
-                <div className="center">
-                    <Link><span className="menu">투자하기</span></Link>
-                    <Link><span className="menu">소식</span></Link>
-                    <Link><span className="menu">소개</span></Link>
-                </div>
-
-                <div className="right">
-
-                </div>
-
+                    </div>
+            </div>
             </header>
         )
     }
