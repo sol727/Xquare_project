@@ -35,7 +35,7 @@ export default class index extends React.Component {
           </div>
           <div className="section1">
             <div className="container">
-              <h1 className="title centerT">Xquare List</h1>
+              <h1 className="title centerT playF">Xquare List</h1>
               <p className="sub_title centerT">엑스퀘어의 친환경 투자상품을 소개합니다.</p>
               <ul className="list_wrap clearfix">
                 <li>
@@ -107,22 +107,22 @@ export default class index extends React.Component {
           <div className="section2">
             <div className="gray_bg">
                 <div className="container">
-                   <h1 className="title centerT">Xquare Contribution</h1>
+                   <h1 className="title centerT playF">Xquare Contribution</h1>
                    <p className="sub_title centerT">엑스퀘어에서는 누구나 쉽게 에너지 사업을 시작할 수 있습니다.</p>
                    <ul className="clearfix">
                      <li className="clearfix">
                        <div className="icon_box">
                          <img src={ require('../images/icons/contribution_icon1.png') } alt="Contribution이미지"/>
-                         <p className="point_color">수익률</p>
+                         <p className="point_color playF">수익률</p>
                        </div>
-                       <p>80.00<span> %</span></p>
+                       <p className="playF">80.00<span> %</span></p>
                      </li>
                      <li className="clearfix">
                        <div className="icon_box">
                          <img src={ require('../images/icons/contribution_icon2.png') } alt="Contribution이미지"/>
-                         <p className="point_color">환경기여도</p>
+                         <p className="point_color playF">환경기여도</p>
                        </div>
-                       <p>100,000<span> 그루</span></p>
+                       <p className="playF">100,000<span> 그루</span></p>
                      </li>
                    </ul>
                 </div>
@@ -130,7 +130,7 @@ export default class index extends React.Component {
           </div>
           <div className="section3">
             <div className="container">
-             <h1 className="title centerT">About Xquare</h1>
+             <h1 className="title centerT playF">About Xquare</h1>
              <p className="sub_title centerT">엑스퀘어에서는 누구나 쉽게 에너지 사업을 시작할 수 있습니다.
              <br/>엑스퀘어만의 안정성있는 주식채권형 에너지 발전소에 투자하세요.</p>
              <ul className="hashtag clearfix">
@@ -160,7 +160,7 @@ export default class index extends React.Component {
           </div>
           <div className="section4">
             <div className="container">
-              <h1 className="title centerT">Xquare News</h1>
+              <h1 className="title centerT playF">Xquare News</h1>
               <p className="sub_title centerT">엑스퀘어의 언론보도 내용을 알려드립니다.</p>
               <ul className="list clearfix">
                 <li>
@@ -232,7 +232,7 @@ export default class index extends React.Component {
           <div className="section5 "> 
             <div className="centerT">
               <h2>플랫폼 이용 가이드</h2>
-              <p>엑스퀘어에서는 누구나 쉽게 에너지 사업을 시작할 수 있습니다.</p>
+              <p>엑스퀘어에서는 누구나 쉽게<br/>에너지 사업을 시작할 수 있습니다.</p>
              </div>            
           </div>
         </section>
