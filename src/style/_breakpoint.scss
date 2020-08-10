@@ -1,9 +1,9 @@
 // Break Point (Desktop First 기준 내림차순 설정)
 $desktop-l-width	: 1440px;
-$tablet-l-width		: 1024px;
+$tablet-l-width		: 1200px;
 $tablet-s-width		: 768px;
 $mob-l-width		: 640px;
-$mob-m-width		: 425px;
+$mob-m-width		: 480px;
 $mob-s-width		: 375px;
 
 // only PC
@@ -54,7 +54,6 @@ $mob-s-width		: 375px;
 
 
 @include pc-only{
-  .pc_none {display: none;}
   .mo_none {display: block;}
 }
 
