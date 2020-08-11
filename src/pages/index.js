@@ -18,6 +18,7 @@ export default class index extends React.Component {
     }
 
     this.sliderEvent = this.sliderEvent.bind(this)
+    this.onClickLink = this.onClickLink.bind(this)
   }
 
   // $(document).ready({ ... })sta
@@ -39,6 +40,10 @@ export default class index extends React.Component {
     } )
   }
 
+  onClickLink (link) {
+    window.location.pathname = link
+  }
+
   
   render() {
     return (
@@ -49,34 +54,28 @@ export default class index extends React.Component {
             <ul className="main_banner" >
               <Slider slidesToShow={1} slidesToScroll={1} speed={500} dots={false} infinite={false} beforeChange={this.sliderEvent}>
                 <li>
-                  <Link to="">            
-                    <div className="text">
+                    <div className="text" onClick={() => this.onClickLink("/signUp")}>
                         <h1 className="white_color">누구나 쉽게 투자하는</h1>
                         <h1>에너지 금융</h1>
                         <p className="white_color">지구를 깨끗하게 하는 신재생 에너지 발전<br/>안정적인 금융상품에 직접 투자하세요.</p>
                         <button type="button" className="white_color">투자하러가기 <img src={ require('../images/icons/w_arrow.png') } alt="화살표아이콘"/></button>
                     </div>
-                  </Link>  
                 </li>
                 <li>
-                  <Link to="">            
-                    <div className="text">
+                    <div className="text" onClick={() => this.onClickLink("/")}>
                         <h1 className="white_color">누구나 쉽게 투자하는</h1>
                         <h1>에너지 금융2</h1>
                         <p className="white_color">지구를 깨끗하게 하는 신재생 에너지 발전<br/>안정적인 금융상품에 직접 투자하세요.</p>
                         <button type="button" className="white_color">투자하러가기 <img src={ require('../images/icons/w_arrow.png') } alt="화살표아이콘"/></button>
                     </div>
-                  </Link>  
                 </li>
                 <li>
-                <Link to="">            
-                  <div className="text">
+                  <div className="text" onClick={() => this.onClickLink("/")}>
                       <h1 className="white_color">누구나 쉽게 투자하는</h1>
                       <h1>에너지 금융3</h1>
                       <p className="white_color">지구를 깨끗하게 하는 신재생 에너지 발전<br/>안정적인 금융상품에 직접 투자하세요.</p>
                       <button type="button" className="white_color">투자하러가기 <img src={ require('../images/icons/w_arrow.png') } alt="화살표아이콘"/></button>
                   </div>
-                </Link>  
                 </li>     
               </Slider>               
             </ul>

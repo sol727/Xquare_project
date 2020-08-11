@@ -13,8 +13,8 @@ export default class Header extends React.Component {
                     <div className="clearfix2">                        
                         <Link to="/"><img src={ require('../images/img_logo_xquare.png') } alt="로고"/></Link>                                              
                         <div className="right">
-                            <Link to="/"><span className="menu">로그인</span></Link>
-                            <Link to="/"><span className="menu">회원가입</span></Link>
+                            <Link to="/login"><span className="menu">로그인</span></Link>
+                            <Link to="/signUp"><span className="menu">회원가입</span></Link>
                             <Link to="/"><span className="menu">안내/문의</span></Link>
                         </div>                     
                     </div> 
@@ -42,7 +42,7 @@ export default class Header extends React.Component {
                             <div className="menu">
                                 <div className="before_login">
                                     <ul className="clearfix">
-                                        <li><Link to="/signup">회원가입</Link></li>
+                                        <li><Link to="/signUp">회원가입</Link></li>
                                         <li><Link to="/login">로그인</Link></li>
                                     </ul>
                                 </div>
