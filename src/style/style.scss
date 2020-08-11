@@ -428,18 +428,131 @@ code {
       border-radius: 8px;
       overflow: hidden;
     }
-    .label_wrap {margin-bottom: 8px;}
+    .label_wrap {margin-bottom: 8px;} 
+    .slick-list {
+      margin: 0 2em;
+    }
   }
   .title_area .text_box {
     width: calc(100% - 628px);  
+    .bar_box {
+      margin-bottom: 24px;
+    }
+    .bar_box>div {
+      margin-bottom: 8px;
+      p span{
+        font-size: 13px;
+        color: #b8c4d2;          
+        font-weight: normal;
+      }
+    }
+    .bar {
+      height: 8px;
+    }
   }
   .title_box {
     border-bottom: 1px solid #eaedf1;
     margin: 0 16px 28px;
-    padding: 20px 0;
+    padding: 20px 0 28px;
     .title {font-size: 28px;}
   }
+  .btn_wrap {   
+    text-align: center;
+    margin: auto;
+    button.submit {width: 384px; height: 44px; background: #ff8e40; color: #ffffff; border-radius: 4px; margin-bottom: 24px;}
+    ul{
+      width: 384px; 
+      margin: auto;
+    }
+    >ul>li {
+      width: calc(50% - 12px);
+      padding: 4px 0;      
+    }
+  }
 }
+.invest_index .like_btn {
+  width: 100%;
+  padding: 5px 0 5px 22px;  
+  font-weight: bold;
+  background-image: url(../images/icons/like_btn.png);
+  background-position: 55px center;
+  background-repeat: no-repeat;      
+    &.on{
+      background-image: url(../images/icons/like_btn_on.png);
+      background-position: 55px center;
+      background-repeat: no-repeat;     
+    }
+}
+.invest_index .share_btn {
+  width: 100%;
+  padding: 5px 0 5px 22px;  
+  font-weight: bold;
+  background-image: url(../images/icons/share_btn.png);
+  background-position: 55px center;
+  background-repeat: no-repeat;          
+}
+
+.open_expected {
+  width: max-content;
+  margin: 0 auto 16px;
+  p {
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 8px; 
+    vertical-align: middle;
+  }
+}
+.open_expected_btn {
+    .alarm_btn {
+      width: calc(70% - 24px);
+      height: 44px;
+      background: #282d40;
+      color: #ffffff;      
+      border-radius: 4px; 
+      font-size: 18px;
+      line-height: 24px;
+      background-image: url(../images/icons/alarm_btn.png);
+      background-position: 146px center;
+      background-repeat: no-repeat;      
+      &.on {
+        background: #5dcf17;
+        background-image: url(../images/icons/alarm_btn_on.png);
+        background-position: 146px center;
+        background-repeat: no-repeat;      
+      }
+    }
+    .share_btn {
+      width:30%; 
+      padding: 10px 0;
+      background-position: 43px center;
+    
+    }
+}
+.goal_box {
+  margin-bottom: 24px;
+  height: 112px;
+  li{
+    background: #f8f9fb;        
+    width: 50%;
+    height: 100%;
+    padding: 16px 0;
+    text-align: center;
+    display: -moz-inline-grid;
+    display: -ms-inline-grid;
+    display: inline-grid;   
+    p{
+      font-size: 13px; 
+      line-height: 20px;      
+    }
+    h3 {
+      font-size: 30px;
+      color: #000000;
+    }
+  }
+}
+
+
+
 
 
 
