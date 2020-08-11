@@ -15,6 +15,7 @@ import Signup from './pages/signup';
 import Signup2 from './pages/signup2';
 import Invest_index from './pages/invest_index';
 import Corporation_signup from './pages/corporation_signup';
+import Find_id from './pages/find_id';
 
 
 /* 페이지 */
@@ -29,6 +30,7 @@ function App() {
         <Route path="/signup" component={Signup}/>
         <Route path="/signup2" component={Signup2}/>
         <Route path="/corporation_signup" component={Corporation_signup}/>
+        <Route path="/find_id" component={Find_id}/>
     </BrowserRouter>
   );
 }

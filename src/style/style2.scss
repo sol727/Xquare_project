@@ -1,15 +1,18 @@
 
 //공통
+
 input[type="file"]{display: none;}
 .file_wrap{
     .file_name{width:calc(100% - 104px);float: left;}
     .file_name:disabled,.file_name:read-only{background:#fff;border-color:#E8E8E8;}
     .file_up_btn{display: block;width:78px;height:38px;border-radius: 4px;font-size:15px;color:#bfbfbf;background:#eaedf1;text-align: center;line-height:38px;float: right;cursor: pointer;}
+    .file_up_btn.on{background:#282d40;color:#fff;}
 }
 .red_color{color:#ff513e !important;}
 .green_color{color:#5dcf17 !important;}
 .mb16{margin-bottom:16px;}
 .mt16{margin-top:16px;}
+.font_13{font-size: 13px;}
 .pc_none {display: none;}
 select{width:100%;height: 40px;border: 1px solid #d6d6d6;border-radius:2px;padding:0 16px;background-image:url(../images/icons/select_icon.png);background-repeat: no-repeat;background-position-x: calc(100% - 16px);background-position-y:center;font-size:15px;}
 input:read-only{background: #f8f9fb;border-color:#f8f9fb;}
@@ -21,6 +24,12 @@ input:read-only{background: #f8f9fb;border-color:#f8f9fb;}
 }
 input.error + .input_delt_btn{
     display: block;}
+
+//btn
+.navy_btn{width: 100%;height: 44px;background:#282d40;border-radius:4px;color:#fff;font-size: 18px;font-weight: 600;}
+.green_btn{color:#fff;background:#5dcf17;font-weight: 600;}
+.unable_btn{width:100%;height:44px;border-radius:4px;font-size:18px;color:#bfbfbf;background: #eaedf1;}
+.orange_btn{background:#ff8e40;color:#fff;}
 
 
 //footer
@@ -52,7 +61,6 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     }
 
 }
-
 
 
 //form_page
@@ -103,13 +111,6 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     }
     .signup_txt p{font-size:15px;color:#9a9a99;margin-bottom:4px;}
 }
-
-//btn
-.navy_btn{width: 100%;height: 44px;background:#282d40;border-radius:4px;color:#fff;font-size: 18px;font-weight: 600;}
-.green_btn{color:#fff;background:#5dcf17;font-weight: 600;}
-.unable_btn{width:100%;height:44px;border-radius:4px;font-size:18px;color:#bfbfbf;background: #eaedf1;}
-.orange_btn{background:#ff8e40;color:#fff;}
-
 .signup.signup2{
     .right{padding:0px 102px 0px;
         .title{font-size:18px;font-weight:600;height: 52px;line-height: 52px;}
@@ -133,6 +134,11 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
             ul li:last-child span{line-height: 40px;}
         }
 
+    }
+    .add_wrap{
+        li input{width:calc(100% - 104px);}
+        li .delt_btn{width:78px;height:38px;border-radius: 4px;font-size:15px;color:#bfbfbf;background:#eaedf1;}
+        li .delt_btn.on{background:#282d40;color:#fff;}
     }
     .terms_wrap{
         .agree_box{border-top:2px solid #ff8e40; 
@@ -159,6 +165,32 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     .btn_wrap{padding-bottom:173px;
         .back_btn{width:78px;height:38px;color:#fe8d40;font-size:15px;}
         .unable_btn{width:calc(100% - 102px);}
+    }
+}
+
+
+.search_page{min-height: calc(100vh - 446px);
+    .container{width:588px;}
+    .title_wrap{padding:32px 0px 16px;border-bottom:1px solid #eaedf1;text-align:center;
+        h1{font-size:50px;}
+        p{font-size:20px;margin-top:20px;}
+    }
+    .form_box{max-width: 384px;margin:30px auto 0;
+        .certify_btn_wrap{padding:24px 0;}
+        .corporation_find_wrap{text-align: center;
+            a{font-size:14px;text-decoration: underline;font-weight: 600;}
+        }
+        .certify_after{
+            .date_txt{font-size:14px;margin-bottom:24px;
+                span{font-size: 13px;color:#fff;background:#ff8e40;padding:2px 13px;border-radius:2px;margin-right:12px;}
+            }
+            .email_box{background:#f8f9fb;padding:24px 0px;text-align: center;
+                h4{margin-top:10px;}
+            }
+            .btn_wrap{margin-top:32px;
+                button{width:calc(50% - 12px);}
+            }
+        }
     }
 }
 
