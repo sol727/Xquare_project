@@ -64,6 +64,10 @@ $mob-s-width		: 375px;
         .right{width:50%;padding:56px 70px 0;}
     }
 
+    //회원가입
+    .signup.signup2 .right{padding:0px 30px 0px;}
+    
+
     //footer
     footer .container{width:calc(100% - 38px);}
 }
@@ -74,6 +78,9 @@ $mob-s-width		: 375px;
     .form_page{width:calc(100% - 38px);
         .right{width:100%;padding:0px 0px 40px;margin-top:10px;}
     }
+
+    //회원가입
+    .signup.signup2 .right{padding:0px;}
 
     //footer
     footer {padding-top:42px;

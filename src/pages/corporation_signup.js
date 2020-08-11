@@ -5,7 +5,7 @@ import Footer from '../components/footer';
 import $ from 'jquery'
 import PerfectScrollbar from '@opuscapita/react-perfect-scrollbar';
 
-export default class Signup2 extends React.Component {
+export default class Corporation_signup extends React.Component {
     
     constructor(props) {
     super(props);

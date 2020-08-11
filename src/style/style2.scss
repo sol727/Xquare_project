@@ -100,7 +100,8 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
 //btn
 .navy_btn{width: 100%;height: 44px;background:#282d40;border-radius:4px;color:#fff;font-size: 18px;font-weight: 600;}
 .green_btn{color:#fff;background:#5dcf17;font-weight: 600;}
-.unable_btn{color:#bfbfbf;background: #eaedf1;}
+.unable_btn{width:100%;height:44px;border-radius:4px;font-size:18px;color:#bfbfbf;background: #eaedf1;}
+.orange_btn{background:#ff8e40;color:#fff;}
 
 .signup.signup2{
     .right{padding:0px 102px 0px;
@@ -128,14 +129,23 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
         .agree_box{border-top:2px solid #ff8e40; 
             .check_wrap{padding:10px 16px;}
             .txt_box{padding:15px 8px;background:#f8f9fb;font-size: 13px;line-height: 20px;}
-            .agree_wrap{display:none;}
+            input[type="checkbox"].all_agree.on + label:after{display:block;}
+            input[type="checkbox"].all_agree + label{position: relative;}
+            input[type="checkbox"].all_agree + label:after{position: absolute;content:'';width:24px;height: 24px;background-image:url(../images/icons/all_check_img.png);left:-2px;top:-2px;display: none;}
+            .agree_wrap{display:none;
+                .oc-scrollbar-container { height: 200px;display: none;margin-top:20px;}
+                .ps__rail-y{opacity: 1;width:4px;right:6px;}
+                .ps__rail-y:hover{background-color:transparent;}
+                .ps__thumb-y { background-color:#000;width:4px;}
+            }
             .check_wrap2{background:#f8f9fb;}
             .down_btn.on img{transform: rotate(180deg);}
-            .txt_box2{padding:10px 34px;font-size: 13px;color:#343332;line-height: 20px;display: none;}
+            .txt_box2{padding:0px 34px;font-size: 13px;color:#343332;line-height: 20px;display: block;}
         }
     }
-    .btn_wrap{
+    .btn_wrap{padding-bottom:173px;
         .back_btn{width:78px;height:38px;color:#fe8d40;font-size:15px;}
+        .unable_btn{width:calc(100% - 102px);}
     }
 }
 
