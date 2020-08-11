@@ -52,7 +52,7 @@ input:read-only{background:#eee;}
 /*reset end*/
 .check_wrap {
   input[type="checkbox"] + label{
-      width: 24px;height: 24px;border:2px solid #eaedf1;display: block;border-radius: 2px;cursor:pointer;}
+      width: 24px;height: 24px;border:2px solid #eaedf1;display: block;border-radius: 2px;cursor:pointer; background: #fff;}
   input[type="checkbox"]:checked + label{
       background:url(../images/checked_img.png)no-repeat center;border-color:#ff8e40;}
   .label_txt{
@@ -133,6 +133,7 @@ header { display: flex; align-items: center; justify-content: space-between;
     width: 100%;
       height: 56px;
       padding: 16px;
+      display: none;
       .logo {
         width: 80%;
       }
