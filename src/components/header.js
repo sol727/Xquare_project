@@ -33,8 +33,8 @@ export default class Header extends React.Component {
                         </div>                        
                     </div> 
                     <div className="hamburger_wrap">
-                        <div class="dim"></div>
-                        <div class="menu_wrap">                            
+                        <div className="dim"></div>
+                        <div className="menu_wrap">                            
                             <div className="clearfix2 top">
                                 <Link to="/"><img src={ require('../images/img_logo_xquare.png') } alt="로고" className="logo"/></Link>
                                 <button className="burger_btn"><img src={ require('../images/icons/close_btn.png') } alt="닫기버튼"/></button>

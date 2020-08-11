@@ -17,20 +17,70 @@ code {
   transform: translate(-50%,-50%);
 }
 
+//slide-------------------------
+.slick-slider { width: 100%;
+  .slick-list , .slick-track , .slick-slide { width: 100%; 
+    &>div { width: 100%; }
+  }
+  .slick-arrow { display: none !important;  }
+}
+.main_banner .slick-slider {height: 100%;}
+.main_banner .slick-list {height: 100%;}
+.main_banner .slick-slider .slick-list > div, .main_banner .slick-slider .slick-track > div, .main_banner .slick-slider .slick-slide > div {
+  height: 100%;
+}
+.dot_wrap {
+  margin: 16px auto 24px;
+  width: max-content;
+  li { 
+    width: 8px;
+     height: 8px; 
+     background: #343332;    
+     opacity: 0.2;
+     border-radius: 50%;
+     margin-right: 16px;
+     &.active {background: #ff8e40; opacity: 1;}
+  &:last-child {margin-right: 0 !important;}
+  }
+}
+.main_banner_wrap {position: relative;}
+.main_banner_wrap .dot_wrap {
+  position: absolute; 
+  bottom: 10px;
+  left: 50%; 
+  transform: translateX(-50%);
+}
+.main_banner_wrap .dot_wrap li {
+  width: 120px;
+  height: 8px;
+  border-radius: 0;
+  margin-right: 12px;
+}
+//common-------------------------------
+.mo_only {display: none;}
 
+//css------------------------------------
+//index
 .index{ 
   .main_banner {
     width: 100%;
     height: 700px;    
     overflow: hidden;
+    background-image: url(../images/main_banner_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   &.mo {
+    background-image: url(../images/main_banner_bg_mo.png);   
+   }
+   li {
+    height: 100%;
+  }
     a{
       width: 100%; 
       height: 100%; 
       position: relative;
-    }
-    img{
-      width: 100%;
-    }
+    }   
     .text{
       position: absolute;
       left: 15%; 
@@ -56,6 +106,7 @@ code {
         >img{
           width: auto;
           margin-left: 16px;
+          display: inline-block !important;
         }
       }
     }
@@ -77,7 +128,6 @@ code {
     .btn_wrap{
       margin-top: 48px;
     }
-
 }
 
 .list_wrap{   
@@ -85,7 +135,7 @@ code {
   a {
     height: 100%;
   }    
-  >li{
+  li.slick-item{
     width: calc(33.333% - 16px);
     height: 376px;
     border-radius: 4px;
@@ -113,42 +163,11 @@ code {
         }
       }
       .text{
-        padding: 16px 12px;
-        .label_wrap{
-          margin-bottom: 10px;
-          li {
-            padding: 2px 10px;
-            margin-right: 8px;
-            border-radius: 4px;
-            font-size: 13px; 
-            color: #8d9daf ;
-            border: 1px solid #8d9daf;          
-            &:last-child {
-              margin-right: 0;
-            }
-          }       
-        }
+        padding: 16px 12px;       
         h2 {
           font-size: 18px; 
           margin-bottom: 8px;
-        }
-        .bar {
-          height: 4px;
-          background: #eeeff5;
-          width: 100%;
-          position: relative;
-          margin-bottom: 8px;
-          &:after {
-            position: absolute;
-            content:'';
-            width: 60%;
-            height: 100%;
-            background: #ff8e40;
-            left: 0;
-            top: 0;
-
-          }
-        }
+        }       
         .total {
           p:first-child{
             font-size: 16px;
@@ -160,6 +179,36 @@ code {
         }
       }
   }
+}
+.bar {
+  height: 4px;
+  background: #eeeff5;
+  width: 100%;
+  position: relative;
+  margin-bottom: 8px;
+  &:after {
+    position: absolute;
+    content:'';
+    width: 60%;
+    height: 100%;
+    background: #ff8e40;
+    left: 0;
+    top: 0;
+  }
+}
+.label_wrap{
+  margin-bottom: 10px;
+  li {
+    padding: 2px 10px;
+    margin-right: 8px;
+    border-radius: 4px;
+    font-size: 13px; 
+    color: #8d9daf ;
+    border: 1px solid #8d9daf;          
+    &:last-child {
+      margin-right: 0;
+    }
+  }       
 }
 //label
 .label.funding {background: #ff8e40; color: #ffffff; }
@@ -236,7 +285,7 @@ code {
       border-radius: 2px;
       &:last-child {
         margin-right: 0;
-      }
+      }     
     }
   }
   .box_list {
@@ -270,6 +319,7 @@ code {
        font-size: 18px; 
        line-height: 1.5;
       }
+      img {display: inline-block !important; }
     }
   }
 }
@@ -338,7 +388,9 @@ code {
 
 .section5 {
   height: 240px;
-  background-image: url(/images/img_img_thumnail_default.png);
+  background-image: url(../images/img_img_thumnail_default.png) ;   
+  background-position: center;
+  background-repeat: no-repeat;
   margin-top: 48px;
   >div{
     background: rgba(0,0,0,0.5);
@@ -360,5 +412,34 @@ code {
     }
   }
 }
+
+//투자하기 상세---------------------------------------------------------------------------------
+.invest_index {
+  padding-top: 24px;
+  .title_area {
+    padding-top: 24px;
+    display: table;
+  }
+  .title_area .img_box {
+    width: 588px;
+    display: table-cell;
+    vertical-align: middle;
+    li {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .label_wrap {margin-bottom: 8px;}
+  }
+  .title_area .text_box {
+    width: calc(100% - 628px);  
+  }
+  .title_box {
+    border-bottom: 1px solid #eaedf1;
+    margin: 0 16px 28px;
+    padding: 20px 0;
+    .title {font-size: 28px;}
+  }
+}
+
 
 
