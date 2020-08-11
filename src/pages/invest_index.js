@@ -77,7 +77,7 @@ export default class Invest_index extends React.Component {
                                              </li>
                                         </Slider>
                                    </ul>
-                                   <ul className="slider_arrow">
+                                   <ul className="slider_arrow mo_none">
                                         <li className="prev_arrow" onClick={this.onClickPrev}></li>
                                         <li className="next_arrow" onClick={this.onClickNext}></li>
                                    </ul>
@@ -177,30 +177,109 @@ export default class Invest_index extends React.Component {
                               </div>
                          </div>
                          {/* 탭영역 */}
-                         <ul className="tab_wrap">
-                              <li className="active"><Link to="/"><span>핵심정보</span></Link></li>
-                              <li><Link to="/"><span>새소식</span></Link></li>
-                              <li><Link to="/"><span>커뮤니티</span></Link></li>
-                              <li><Link to="/"><span>부가정보</span></Link></li>
-                              <li><Link to="/"><span>투자 현황</span></Link></li>
-                         </ul>
+                         <div className="overflow-div">
+                              <ul className="tab_wrap">
+                                   <li className="active"><Link to="/"><span>핵심정보</span></Link></li>
+                                   <li><Link to="/"><span>새소식</span></Link></li>
+                                   <li><Link to="/"><span>커뮤니티</span></Link></li>
+                                   <li><Link to="/"><span>부가정보</span></Link></li>
+                                   <li><Link to="/"><span>투자 현황</span></Link></li>
+                              </ul>
+                         </div>                        
                     </div>
                     {/* 탭컨텐츠영역 - 핵심정보*/}
                     <div className="detail_cont">
-                         <ul className="total_box">
-                              <li>
-                                   <p>펀딩시작일</p>
-                                   <h3 className="playF">yyyy.mm.dd</h3>
-                              </li>
-                              <li>
-                                   <p>펀딩종료일</p>
-                                   <h3 className="playF">yyyy.mm.dd</h3>
-                              </li>
-                              <li>
-                                   <p>증권입고일</p>
-                                   <h3 className="playF">yyyy.mm.dd</h3>
-                              </li>
-                         </ul>                         
+                         <div className="detail_container tab1">
+                              <ul className="total_box clearfix">                                   
+                                   <li>
+                                        <p>펀딩시작일</p>
+                                        <h3 className="playF">yyyy.mm.dd</h3>
+                                   </li>
+                                   <li>
+                                        <p>펀딩종료일</p>
+                                        <h3 className="playF">yyyy.mm.dd</h3>
+                                   </li>
+                                   <li>
+                                        <p>증권입고일</p>
+                                        <h3 className="playF">yyyy.mm.dd</h3>
+                                   </li>
+                              </ul>    
+                              {/* 펀딩정보 */}                           
+                              <h2 className="sub_title">펀딩 정보</h2>
+                              <ul className="detail_table">
+                                   <li >
+                                        <p className="th">주식종류</p>
+                                        <p className="td">일반회사채</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">1주당 가격</p>
+                                        <p className="td">10,000원</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">최소 투자가능금액</p>
+                                        <p className="td">100,000원(주)</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">성공시 지분율</p>
+                                        <p className="td">3%</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">발행예정 주식수</p>
+                                        <p className="td">100주</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">기업가치</p>
+                                        <p className="td">300,000,000원</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">최저배당이율</p>
+                                        <p className="td">액면금액 연 1%</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">상환청구기간</p>
+                                        <p className="td">2020.03.12~2020.04.01</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">상환 이자율</p>
+                                        <p className="td">연 복리 5%</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">전환 청구 기간</p>
+                                        <p className="td">2020.03017~2020.04.01</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">전환조건</p>
+                                        <p className="td">보통주 1:1 전환</p>
+                                   </li>
+                              </ul>
+
+                              {/* 펀딩상세 세부정보 */}
+                              <div className="info">
+                                   <h2 className="info_title centerT mb12">펀딩 상세 세부정보 소제목이 나타납니다.</h2>
+                                   <p className="point_color sutbitle mb12">sutbitle here Amet faucibus netus purus tristique dolor.</p>
+                                   <img src={ require('../images/info_sample.jpg') } alt="펀딩상세이미지" className="mb12"/>
+                                   <p className="body mb12">body here
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper molestie pellentesque integer bibendum. Ut fusce ut adipiscing venenatis consectetur nulla consequat semper. Est massa mattis ac purus aliquam vitae. Integer facilisi consequat senectus facilisis. Est non et egestas nisl a amet. Bibendum egestas nibh pretium vel diam mauris vitae eget aenean.</p>
+                                   <p className="caption"></p>
+                               </div>   
+
+                               {/* 투자위험 */}
+                               <h2 className="sub_title">투자위험</h2>
+                              <ul className="detail_table detail_table2">
+                                   <li >
+                                        <p className="th">사업위험</p>
+                                        <p className="td">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam rutrum elementum, congue vulputate magna dictum nisi, feugiat purus.</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">회사위험</p>
+                                        <p className="td">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam rutrum elementum, congue vulputate magna dictum nisi, feugiat purus.</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">기타위험</p>
+                                        <p className="td">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor, lobortis turpis imperdiet lobortis. Varius sagittis risus lorem neque tempor arcu fames proin. Quam placerat enim dui, nisi faucibus pulvinar. Egestas metus in varius auctor. Pretium urna mi tincidunt elit, laoreet.</p>
+                                   </li>                                   
+                              </ul>                              
+                         </div>                                           
                     </div>
                </section>
                <Footer />
