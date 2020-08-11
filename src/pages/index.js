@@ -271,17 +271,17 @@ export default class index extends React.Component {
                   this.state.width > 480 ?
                   <>                
                     <li>
-                        <img src={ require('../images/icons/about_icon.png') } alt="About이미지1"/>
+                        <img src={ require('../images/icons/about_icon1_on.png') } alt="About이미지" className="pc_none"/>
                         <h3>환경</h3>
                         <p>석탄 화력 발전소에서 나오는<br/>매연,미세먼지 억제<br/>친환경 에너지를 환경 개선하고<br/> 기후변화문제해결</p>
                     </li>
                     <li>
-                        <img src={ require('../images/icons/about_icon2.png') } alt="About이미지2"/>
+                        <img src={ require('../images/icons/about_icon2_on.png') } alt="About이미지2" className="pc_none"/>
                         <h3>안정성</h3>
                         <p>담보,보험으로 안정성 확보<br/>안정적인 신재생에너지<br/>발전사업 엄선</p>
                     </li>
                     <li>
-                        <img src={ require('../images/icons/about_icon3.png') } alt="About이미지3"/>
+                        <img src={ require('../images/icons/about_icon3_on.png') } alt="About이미지3" className="pc_none"/>
                         <h3>수익성</h3>
                         <p>기술발전으로 인한<br/>모듈가격의 하락 →<br/>수익성의 증대<br/>중간마진없이 직접투자</p>
                     </li>                 

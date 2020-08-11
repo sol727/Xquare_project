@@ -68,6 +68,8 @@ $mob-s-width		: 375px;
 @include mob{
   .pc_none {display: block;}
   .mo_none {display: none;}
+  .overflow-div {width: calc(100% - 38px); overflow-y: auto; margin: auto;}
+  
   //slide
   .main_banner_wrap .dot_wrap {width: calc(100% - 38px);}
   .main_banner_wrap .dot_wrap li{width: calc(33.333% - 8px);}
@@ -154,15 +156,18 @@ $mob-s-width		: 375px;
 		  height: 308px;
 		  padding-top: 32px;
 		  border-top: 4px solid #ff8e40;
+		  background: #fff;
 		  h3 {
 			  font-size: 25px; 
 			  color: #ff8e40;
+			  margin-top: 25px;
 		  }
 		  p {
 			  font-size: 14px;
 			  font-weight: bold;
 			  margin-top: 12px;
 		  }
+		  img {display: inline-block;}
 	  }
   }
   .section4{
@@ -187,6 +192,33 @@ $mob-s-width		: 375px;
 	  font-size: 14px;
 		&br {display: block;}
 	}
+
+	//투자 상세정보-------------------------------------------
+	.tab_wrap {
+		white-space: nowrap;
+		li {width: 100px;}
+	}
+	.img_slider_wrap {height: 218px; float: none !important ; margin-bottom: 16px;}
+	.invest_index .title_area .img_box {width: 100%; height: 100%;}
+	.invest_index .title_area {display: block;}
+	.invest_index .title_area .text_box {width: 100%; float: none; }
+	.invest_index .title_box {padding: 16px 0; margin: 8px 0;}
+	.detail_container {width: calc(100% - 38px); margin: 0 auto;}
+	.invest_index .btn_wrap button.submit {width: 100%;}
+	.invest_index .btn_wrap ul {width: 100%;}
+	.detail_cont .sub_title {margin: 8px 0;}
+	.detail_cont .total_box {margin: 24px 0;}
+	.detail_cont .total_box li p {font-size: 13px;}
+	.detail_cont .total_box li h3 {font-size: 12px;}
+	.invest_index .label_wrap li {border: 1px solid #e9edf1;}
+	.goal_box li h3 {font-size: 22px;}
+	.bar_box p {font-size: 16px;}
+	.bar_box p span {font-size: 13px;}
+	.invest_index .like_btn {padding: 5px 0 5px 34px; background-position: 50px center;}
+	.invest_index .share_btn{padding: 5px 0 5px 34px; background-position: 50px center;}
+	.detail_table.detail_table2 > li .th {width: 100%; display: block;}
+	.detail_table > li .td {padding: 8px 16px;}
+
 
 }
 
