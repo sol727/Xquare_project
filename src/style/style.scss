@@ -416,22 +416,21 @@ code {
 //투자하기 상세---------------------------------------------------------------------------------
 .invest_index {
   padding-top: 24px;
+  >.top {
+    border-bottom: 1px solid #eaedf1;
+  }
   .title_area {
     padding-top: 24px;
     display: table;
   }
   .title_area .img_box {
-    width: 588px;
-    display: table-cell;
+    width: 588px;    
     vertical-align: middle;
     li {
       border-radius: 8px;
       overflow: hidden;
     }
-    .label_wrap {margin-bottom: 8px;} 
-    .slick-list {
-      margin: 0 2em;
-    }
+    .label_wrap {margin-bottom: 8px;}    
   }
   .title_area .text_box {
     width: calc(100% - 628px);  
@@ -470,6 +469,46 @@ code {
     }
   }
 }
+.img_slider_wrap {
+  position: relative;
+  .dot_wrap{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;    
+    margin: 0;
+    li {
+      background: #343332; opacity: 1;
+      &.active {
+        background: #ff8e40;
+      }
+    }
+  }
+}
+.slider_arrow {
+   position: absolute;
+   width: 100%;
+   top:44%;
+   transform: translateY(-50%);
+   li {
+     width: 32px; height: 48px; background: #c0c5ca; border-radius: 2px;         
+    }
+    li.prev_arrow {
+      position: absolute;
+      left: 0;
+      background-image: url(../images/icons/btn_prev.png);
+      background-position: center;
+      background-repeat: no-repeat;      
+     }
+     li.next_arrow {
+      position: absolute;
+       right: 0;
+      background-image: url(../images/icons/btn_next.png);
+      background-position: center;
+      background-repeat: no-repeat;      
+     }
+}
+
 .invest_index .like_btn {
   width: 100%;
   padding: 5px 0 5px 22px;  
@@ -491,8 +530,9 @@ code {
   background-position: 55px center;
   background-repeat: no-repeat;          
 }
-
-.open_expected {
+//title_box > .bottom_box
+.text_box .bottom_box {padding: 0;}
+.bottom_box .top {
   width: max-content;
   margin: 0 auto 16px;
   p {
@@ -502,32 +542,42 @@ code {
     vertical-align: middle;
   }
 }
-.open_expected_btn {
-    .alarm_btn {
-      width: calc(70% - 24px);
-      height: 44px;
+  .btn_wrap2  button:first-of-type{
+    width: calc(70% - 24px);
+    height: 44px;
+    font-size: 18px;
+    line-height: 24px;
+    border-radius: 4px;    
+    font-weight: 600;
+  }
+  .btn_wrap2  button:last-of-type {
+    width:30%; 
+    padding: 10px 0;
+  } 
+.btn_wrap2 {   
+    .submit.end {
+     background: #eaedf1;
+     color: #bfbfbf;
+    }
+    .alarm_btn {      
       background: #282d40;
-      color: #ffffff;      
-      border-radius: 4px; 
-      font-size: 18px;
-      line-height: 24px;
+      color: #ffffff;
       background-image: url(../images/icons/alarm_btn.png);
-      background-position: 146px center;
+      background-position: 140px center;
       background-repeat: no-repeat;      
       &.on {
         background: #5dcf17;
         background-image: url(../images/icons/alarm_btn_on.png);
-        background-position: 146px center;
+        background-position: 140px center;
         background-repeat: no-repeat;      
       }
     }
-    .share_btn {
-      width:30%; 
-      padding: 10px 0;
-      background-position: 43px center;
-    
+    .share_btn {      
+      background-position: 43px center;    
     }
 }
+
+
 .goal_box {
   margin-bottom: 24px;
   height: 112px;
@@ -547,8 +597,29 @@ code {
     h3 {
       font-size: 30px;
       color: #000000;
+      margin-bottom: 0;
     }
   }
+}
+
+
+.tab_wrap {
+  text-align: center;
+  margin-top: 24px;  
+  li {
+    display: inline-block;
+    width: 180px;
+    margin-right: 24px;
+    font-weight: 600;
+    a{
+      padding: 10px 0;
+    }
+    &:last-child {
+      margin-right: 0;    
+    } 
+  }
+  li.active a span{color: #ff8e40;}
+  li.active {border-bottom: 4px solid #ff8e40;}
 }
 
 

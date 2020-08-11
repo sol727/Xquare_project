@@ -34,7 +34,7 @@ export default class Invest_index extends React.Component {
                   }                  
           });
 
-          $('.open_expected_btn .alarm_btn').click(function(){
+          $('.btn_wrap2 .alarm_btn').click(function(){
                $(this).toggleClass('on');              
           });          
       
@@ -53,20 +53,31 @@ export default class Invest_index extends React.Component {
 
                <section className="invest_index">
                     <div className="top">
-                         <div className="title_area clearfix2 container">                              
-                              <ul className="img_box ">
-                                   <Slider slidesToShow={1} slidesToScroll={1} speed={500} dots={false}  beforeChange={this.sliderEvent} >
-                                        <li>
-                                             <img src={ require('../images/detail_sample.png') } alt="투자상세이미지"/>
-                                        </li>
-                                        <li>
-                                             <img src={ require('../images/detail_sample.png') } alt="투자상세이미지"/>
-                                        </li>
-                                        <li>
-                                             <img src={ require('../images/detail_sample.png') } alt="투자상세이미지"/>
-                                        </li>
-                                   </Slider>
-                              </ul>
+                         <div className="title_area clearfix2 container">                           
+                              <div className="img_slider_wrap">
+                                   <ul className="img_box slider">
+                                        <Slider slidesToShow={1} slidesToScroll={1} speed={500} dots={false}  beforeChange={this.sliderEvent} >
+                                             <li>
+                                                  <img src={ require('../images/detail_sample.png') } alt="투자상세이미지"/>
+                                             </li>
+                                             <li>
+                                                  <img src={ require('../images/detail_sample.png') } alt="투자상세이미지"/>
+                                             </li>
+                                             <li>
+                                                  <img src={ require('../images/detail_sample.png') } alt="투자상세이미지"/>
+                                             </li>
+                                        </Slider>
+                                   </ul>
+                                   <ul className="slider_arrow">
+                                        <li className="prev_arrow"></li>
+                                        <li className="next_arrow"></li>
+                                   </ul>
+                                   <ul className="dot_wrap clearfix">
+                                        <li className={ this.state.focus === 0 ? "active" : ""  } ></li>
+                                        <li className={ this.state.focus === 1 ? "active" : ""  } ></li>
+                                        <li className={ this.state.focus === 2 ? "active" : ""  } ></li>
+                                   </ul>   
+                              </div>                              
                               <div className="text_box">                                   
                                    <ul className="label_wrap clearfix">
                                         <li>태양광/소형</li>
@@ -75,47 +86,87 @@ export default class Invest_index extends React.Component {
                                    <div className="title_box">
                                         <h1 className="ellipsis2 title">타이틀입니다타이틀입니다타이틀입니다타이틀입니다타이틀입니다타이틀입니다타이틀입니다타이틀입니다타이틀입니다</h1>
                                    </div>
-                                     {/*오픈예정일 때 활성화 되는 영역 ↓*/}
-                                   <div className="open_expected">
-                                        <img src={ require('../images/icons/calendar_icon.png') } alt="달력아이콘"/>
-                                        <p>3월 말 오픈예정</p>
-                                   </div>
-                                     {/*오픈예정일 때 활성화 되는 영역 ↑*/}
-                                   <ul className="goal_box clearfix">
-                                        {/*오픈예정일 때는 목표금액만 활성화 됩니다.*/}
-                                        <li>
-                                             <p>목표금액</p>
-                                             <h3 className="playF">10,000,000<span>원</span></h3>
-                                        </li>
-                                         <li>
-                                             <p>남은기간</p>
-                                             <h3 className="playF">D-6</h3>
-                                             <p>yyyy.mm.dd hh:mm 마감</p>
-                                        </li>
-                                   </ul>
-                                   {/*오픈예정일 때 활성화 되는 영역 ↓*/}
-                                   <div className="open_expected_btn">
-                                        <div className="btn_wrap clearfix2">
-                                             <button type="button" className="alarm_btn"> 998</button>
+
+                                    {/*종료된 프로젝트일 때 활성화 되는 영역 ↓
+                                    <div className="project_end bottom_box">
+                                        <div className="top">
+                                             <img src={ require('../images/icons/coin_icon.png') } alt="코인아이콘"/>
+                                             <p>9,000,000원 투자완료</p>
+                                        </div>
+                                        <ul className="goal_box clearfix">                                            
+                                             <li>
+                                                  <p>목표금액</p>
+                                                  <h3 className="playF">10,000,000<span>원</span></h3>
+                                             </li>
+                                             <li>
+                                                  <p>펀딩실패</p>
+                                                  <h3 className="playF">90<span>%</span></h3>                                                  
+                                             </li>
+                                        </ul>                                       
+                                        <div className="btn_wrap2 clearfix2">
+                                             <button type="button" className="submit end"> 마감되었습니다</button>
                                              <button type="button" className="share_btn">nnn</button>
+                                        </div>                                       
+                                    </div>                                   
+                                   */}
+
+
+                                     {/*오픈예정일 때 활성화 되는 영역 ↓
+                                     <div className="open_expected bottom_box">
+                                        <div className="top">
+                                             <img src={ require('../images/icons/calendar_icon.png') } alt="달력아이콘"/>
+                                             <p>3월 말 오픈예정</p>
+                                        </div>                                    
+                                        <ul className="goal_box clearfix">                                        
+                                             <li>
+                                                  <p>목표금액</p>
+                                                  <h3 className="playF">10,000,000<span>원</span></h3>
+                                             </li>
+                                             <li>
+                                                  <p>남은기간</p>
+                                                  <h3 className="playF">D-6</h3>
+                                                  <p>yyyy.mm.dd hh:mm 마감</p>
+                                             </li>
+                                        </ul>                                  
+                                        <div className="btn_wrap2">
+                                             <div className="btn_wrap clearfix2">
+                                                  <button type="button" className="alarm_btn"> 998</button>
+                                                  <button type="button" className="share_btn">nnn</button>
+                                             </div>
+                                        </div>
+                                     </div>
+                                   */}
+
+
+                                    {/* 진행중일 때 활성화 되는 영역↓*/}
+                                    <div className="project_ing bottom_box">
+                                        <ul className="goal_box clearfix">                                            
+                                             <li>
+                                                  <p>목표금액</p>
+                                                  <h3 className="playF">10,000,000<span>원</span></h3>
+                                             </li>
+                                             <li>
+                                                  <p>남은기간</p>
+                                                  <h3 className="playF">D-6</h3>     
+                                                  <p>yyyy.mm.dd hh:mm 마감</p>                                             
+                                             </li>
+                                        </ul>                                                     
+                                        <div className="bar_box">
+                                             <div className="clearfix2">
+                                                  <p className="bold">4,000,000원<span>/10,000,000원</span></p>
+                                                  <p className="point_color bold">nn%</p>
+                                             </div>
+                                             <div className="bar"></div>
+                                        </div>                                  
+                                        <div className="btn_wrap">
+                                             <button type="button" className="submit">지금 투자하기</button>
+                                             <ul className="clearfix2">
+                                                  <li><button type="button" className="like_btn">nnn</button></li>
+                                                  <li><button type="button" className="share_btn"> nnn</button></li>
+                                             </ul>
                                         </div>
                                    </div>
-                                    {/* 진행중일 때 활성화 되는 영역↓
-                                   <div className="bar_box">
-                                        <div className="clearfix2">
-                                             <p className="bold">4,000,000원<span>/10,000,000원</span></p>
-                                             <p className="point_color bold">nn%</p>
-                                        </div>
-                                         <div className="bar"></div>
-                                   </div>
-                                  
-                                   <div className="btn_wrap">
-                                        <button type="button" className="submit">지금 투자하기</button>
-                                        <ul className="clearfix2">
-                                             <li><button type="button" className="like_btn">nnn</button></li>
-                                             <li><button type="button" className="share_btn"> nnn</button></li>
-                                        </ul>
-                                   </div>*/}
+
                               </div>
                          </div>
                          <ul className="tab_wrap">
