@@ -61,14 +61,15 @@ export default class Corporation_signup extends React.Component {
                 <section className="form_page signup signup2 clearfix2">
                     <div className="bg_gradient mo_none">
                         <img src={ require('../images/form_left_bg.png') } alt="물방울bg"/>
-                        <h1 className="title">엑스퀘어<br/>회원가입</h1>   
+                        <h1 className="title">법인<br/>회원가입</h1>   
                         <p className="sub_title">엑스퀘어는 [자본시장과 금융투자업에 관한 법률]에 따라 실명회원을 대상으로 서비스를 제공합니다. 본인인증을 진행해주세요.</p>   
                     </div>
                     <div className="right">
                         <div className="mo_title pc_none">
-                            <h1>엑스퀘어 회원가입</h1>
+                            <h1>법인 회원가입</h1>
                         </div>
                         <form action="">
+                            {/* 본인인증 */}
                             <div className="confirm_wrap">
                                 <h2 className="title">본인인증</h2>
                                 <p className="sub_title">엑스퀘어는 [자본시장과 금융투자업에 관한 법률]에 따라 실명회원을 대상으로 서비스를 제공합니다. 본인인증을 진행해주세요.</p>
@@ -82,6 +83,8 @@ export default class Corporation_signup extends React.Component {
                                     <input type="text" placeholder="휴대전화 연락처"/>
                                 </div>
                             </div>
+
+                            {/* 계정정보 */}
                             <div className="info_wrap">
                                 <h2 className="title">계정정보</h2>
                                 <ul>
@@ -91,23 +94,24 @@ export default class Corporation_signup extends React.Component {
 
                                         {/* 아이디 유효성검사미통과시에 노출되는 문구↓ */}
                                         {/* <p className="error_msg">이미 존재하는 이메일 주소입니다. 다른 이메일 주소를 입력해주세요.</p> */}
-                                        <select name="" id="">
+                                        <select name="" id="" className="mt16">
                                             <option value="" >이메일 선택</option>
                                             <option value="" >직접입력</option>
                                         </select>
 
                                         {/* select 선택하면 나오는 input box */}
                                         <div className="email_select">
-                                            {/* select에서 naver,daum, ..등등 선택시 노출↓ */}
+                                        {/* select에서 naver,daum, ..등등 선택시 노출↓ */}
                                             <ul className="clearfix2">
                                                 <li><input type="text" placeholder="username"/></li>
                                                 <li className="clearfix2"><span>@</span><input type="text" value="naver.com" readOnly disabled/></li>
                                             </ul>
                                             <button type="button" className="form_btn green_btn">사용 가능</button>
 
-                                            {/* select에서 직접입력 선택시 노출↓ */}
-                                            {/* <input type="text" value="username@mail.com"/>
-                                            <button type="button" className="form_btn unable_btn">중복확인</button> */}
+                                        {/* select에서 직접입력 선택시 노출↓ */}
+                                            {/* <input type="text" value="username@mail.com" className="mb16"/>
+                                            <button type="button" className="form_btn navy_btn">중복확인</button> */}
+                                            {/* 중복확인완료시 button class에 unable_btn 추가 ↑ */}
                                         </div>
 
                                     </li>
@@ -119,14 +123,68 @@ export default class Corporation_signup extends React.Component {
                                         {/* 비밀번호 유효성검사통과시에 노출되는 문구↓ */}
                                         {/* <p className="input_sub_title green_color">사용 가능한 비밀번호 입니다.</p> */}
 
-                                        <input type="password" placeholder="비밀번호 입력" className="mb16"/>
+                                        <input type="password" placeholder="비밀번호 입력" className="mb16 mt16"/>
 
                                         {/* 비밀번호 유효성검사미통과시에 div class에 alert 추가↓ */}
                                         <div className="check_input"><input type="password" placeholder="비밀번호 확인"/></div>
                                     </li>
                                 </ul>
                             </div>
+                            
+                            {/* 법인정보 */}
+                            <div className="corpor_wrap">
+                                <h2 className="title">법인정보</h2>
+                                <ul>
+                                    <li>
+                                        <h3 className="input_title">법인명</h3>
+                                        {/* 법인명 유효성검사미통과시에 노출되는 문구↓ */}
+                                        {/* <p className="error_msg">법인명은 한글만 입력 가능합니다.</p> */}
+                                        <input type="text" placeholder="법인명 입력" className="mt16"/>
+                                    </li>
+                                    <li>
+                                        <h3 className="input_title">대표자 성함</h3>
+                                        {/* 대표자성함 유효성검사미통과시에 노출되는 문구↓ */}
+                                        {/* <p className="error_msg">대표자 성함은 한글만 입력 가능합니다.</p> */}
+                                        <input type="text" placeholder="대표자 성함 입력" className="mt16"/>
+                                    </li>
+                                    <li>
+                                        <h3 className="input_title">사업자 등록 번호</h3>
+                                        {/* 사업자번호 유효성검사미통과시에 노출되는 문구↓ */}
+                                        {/* <p className="error_msg">이미 가입된 법인입니다.</p> */}
+                                        <input type="text" placeholder="10자리 숫자 입력" className="mt16"/>
+                                    </li>
+                                    <li><button type="button" className="form_btn navy_btn">중복확인</button></li>
+                                        {/* 중복확인완료시 button class에 unable_btn 추가 ↑ */}
+                                    <li>
+                                        <h3 className="input_title">법인 등록 번호</h3>
+                                        {/* 법인등록번호 유효성검사미통과시에 노출되는 문구↓ */}
+                                        <p className="error_msg">숫자만 입력 가능합니다.</p>
+                                        <input type="text" placeholder="13자리 숫자 입력" className="mt16"/>
+                                    </li>
+                                    <li>
+                                        <h3 className="input_title">법인 설립일</h3>
+                                        {/* 법인설립일 유효성검사미통과시에 노출되는 문구↓ */}
+                                        <p className="error_msg">숫자만 입력 가능합니다.</p>
+                                        <input type="text" placeholder="예시 : 20200310" className="mt16"/>
+                                    </li>
+                                    <li>
+                                        <h3 className="input_title">회사 전화번호</h3>
+                                        {/* 회사전화번호 유효성검사미통과시에 노출되는 문구↓ */}
+                                        <p className="error_msg">숫자만 입력 가능합니다.</p>
+                                        <input type="text" placeholder="연락가능한 대표 전화번호" className="mt16"/>
+                                    </li>
+                                    <li>
+                                        <h3 className="input_title">파일 업로드</h3>
+                                        <p className="input_sub_title">사실여부 확인을 위해 사업자등록증을 스캔한 이미지를 등록해주세요 (최대20MB,jpg/jpeg/png/pdf)</p>
+                                        <div className="file_wrap clearfix mt16">
+                                            <input type="file" id="file_up"/>
+                                            <input type="text" className="file_name" placeholder="이미지파일" disabled readOnly/><label htmlFor="file_up" className="file_up_btn">업로드</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
 
+                            {/* 이용약관 */}
                             <div className="terms_wrap">
                                 <h2 className="title">이용약관</h2>
                                 <ul className="agree_box">

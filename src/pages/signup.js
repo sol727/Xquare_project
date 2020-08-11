@@ -24,7 +24,7 @@ export default class Signup extends React.Component {
                     <div className="right">
                         <div className="mo_title pc_none">
                             <h1>회원가입</h1>
-                            <p>에너지엑스 스퀘어의 다양한 서비스를 이용하시려면 회원가입을 해주세요.</p>
+                            <p>엑스퀘어의 다양한 서비스를 이용하시려면 회원가입을 해주세요.</p>
                         </div>
                         <form action="">
                             <h2 className="orange_title">SNS 계정으로 간편 로그인</h2>

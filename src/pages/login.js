@@ -19,12 +19,12 @@ export default class Login extends React.Component {
                     <div className="bg_gradient mo_none">
                         <img src={ require('../images/form_left_bg.png') } alt="물방울bg"/>
                         <h1 className="title">로그인</h1>   
-                        <p className="sub_title">에너지엑스 스퀘어의 다양한 서비스를 이용하시려면 로그인을 해주세요.</p>   
+                        <p className="sub_title">엑스퀘어의 다양한 서비스를 이용하시려면 로그인을 해주세요.</p>   
                     </div>
                     <div className="right">
                         <div className="mo_title pc_none">
                             <h1>로그인</h1>
-                            <p>에너지엑스 스퀘어의 다양한 서비스를 이용하시려면 로그인을 해주세요.</p>
+                            <p>엑스퀘어의 다양한 서비스를 이용하시려면 로그인을 해주세요.</p>
                         </div>
                         <form action="">
                             <h2 className="orange_title">SNS 계정으로 간편 로그인</h2>
