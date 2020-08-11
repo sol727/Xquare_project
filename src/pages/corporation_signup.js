@@ -15,7 +15,19 @@ export default class Corporation_signup extends React.Component {
 
         //높이맞추기
         const height = $('.signup.signup2 .right').height();
-        $('.signup.signup2 .bg_gradient').height(height)
+        $('.signup.signup2 .bg_gradient').height(height);
+
+        //파일업로드 네임
+        var fileTarget = $('.file_wrap input[type="file"]'); 
+        fileTarget.on('change', function(){
+            if(window.FileReader){ // modern browser 
+                var filename = $(this)[0].files[0].name;
+            }else { // old IE 
+                var filename = $(this).val().split('/').pop().split('\\').pop();
+            } 
+            $(this).siblings('.file_name').val(filename).css({'color':'#343332'});
+            $(this).siblings('.file_up_btn').addClass('on');
+        });
 
         //이용약관
         $('.agree_box .all_agree_wrap .down_btn').on('click',function(){
@@ -106,12 +118,25 @@ export default class Corporation_signup extends React.Component {
                                                 <li><input type="text" placeholder="username"/></li>
                                                 <li className="clearfix2"><span>@</span><input type="text" value="naver.com" readOnly disabled/></li>
                                             </ul>
-                                            <button type="button" className="form_btn green_btn">사용 가능</button>
+                                            {/* 중복확인 비활성화 버튼↓ */}
+                                            <button type="button" className="form_btn unable_btn">중복확인</button>
+
+                                            {/* 중복확인 비활성화 버튼↓ */}
+                                            {/* <button type="button" className="form_btn navy_btn">중복확인</button> */}
+
+                                            {/* 중복확인 통과시 버튼↓ */}
+                                            {/* <button type="button" className="form_btn green_btn">사용 가능</button> */}
 
                                         {/* select에서 직접입력 선택시 노출↓ */}
-                                            {/* <input type="text" value="username@mail.com" className="mb16"/>
-                                            <button type="button" className="form_btn navy_btn">중복확인</button> */}
-                                            {/* 중복확인완료시 button class에 unable_btn 추가 ↑ */}
+                                            {/* <input type="text" value="username@mail.com" className="mb16"/> */}
+                                            {/* 중복확인 비활성화 버튼↓ */}
+                                            {/* <button type="button" className="form_btn unable_btn">중복확인</button> */}
+
+                                            {/* 중복확인 비활성화 버튼↓ */}
+                                            {/* <button type="button" className="form_btn navy_btn">중복확인</button> */}
+
+                                            {/* 중복확인 통과시 버튼↓ */}
+                                            {/* <button type="button" className="form_btn green_btn">사용 가능</button> */}
                                         </div>
 
                                     </li>
@@ -132,7 +157,7 @@ export default class Corporation_signup extends React.Component {
                             </div>
                             
                             {/* 법인정보 */}
-                            <div className="corpor_wrap">
+                            <div>
                                 <h2 className="title">법인정보</h2>
                                 <ul>
                                     <li>
@@ -153,35 +178,62 @@ export default class Corporation_signup extends React.Component {
                                         {/* <p className="error_msg">이미 가입된 법인입니다.</p> */}
                                         <input type="text" placeholder="10자리 숫자 입력" className="mt16"/>
                                     </li>
-                                    <li><button type="button" className="form_btn navy_btn">중복확인</button></li>
-                                        {/* 중복확인완료시 button class에 unable_btn 추가 ↑ */}
+                                    <li>
+                                        {/* 중복확인 비활성화 버튼↓ */}
+                                        <button type="button" className="form_btn unable_btn">중복확인</button>
+
+                                        {/* 중복확인 비활성화 버튼↓ */}
+                                        {/* <button type="button" className="form_btn navy_btn">중복확인</button> */}
+
+                                        {/* 중복확인 통과시 버튼↓ */}
+                                        {/* <button type="button" className="form_btn green_btn">사용 가능</button> */}
+                                    </li>
                                     <li>
                                         <h3 className="input_title">법인 등록 번호</h3>
                                         {/* 법인등록번호 유효성검사미통과시에 노출되는 문구↓ */}
-                                        <p className="error_msg">숫자만 입력 가능합니다.</p>
+                                        {/* <p className="error_msg">숫자만 입력 가능합니다.</p> */}
                                         <input type="text" placeholder="13자리 숫자 입력" className="mt16"/>
                                     </li>
                                     <li>
                                         <h3 className="input_title">법인 설립일</h3>
                                         {/* 법인설립일 유효성검사미통과시에 노출되는 문구↓ */}
-                                        <p className="error_msg">숫자만 입력 가능합니다.</p>
+                                        {/* <p className="error_msg">숫자만 입력 가능합니다.</p> */}
                                         <input type="text" placeholder="예시 : 20200310" className="mt16"/>
                                     </li>
                                     <li>
                                         <h3 className="input_title">회사 전화번호</h3>
                                         {/* 회사전화번호 유효성검사미통과시에 노출되는 문구↓ */}
-                                        <p className="error_msg">숫자만 입력 가능합니다.</p>
+                                        {/* <p className="error_msg">숫자만 입력 가능합니다.</p> */}
                                         <input type="text" placeholder="연락가능한 대표 전화번호" className="mt16"/>
                                     </li>
                                     <li>
                                         <h3 className="input_title">파일 업로드</h3>
                                         <p className="input_sub_title">사실여부 확인을 위해 사업자등록증을 스캔한 이미지를 등록해주세요 (최대20MB,jpg/jpeg/png/pdf)</p>
                                         <div className="file_wrap clearfix mt16">
-                                            <input type="file" id="file_up"/>
-                                            <input type="text" className="file_name" placeholder="이미지파일" disabled readOnly/><label htmlFor="file_up" className="file_up_btn">업로드</label>
+                                            <input type="file" id="file_up" accept=".jpg,.jpeg,.png,.pdf"/>
+                                            <input type="text" className="file_name" placeholder="이미지파일" disabled readOnly/>
+                                            {/* 업로드활성화시 class에 on 추가↓ */}
+                                            <label htmlFor="file_up" className="file_up_btn">업로드</label>
                                         </div>
                                     </li>
                                 </ul>
+                            </div>
+
+                            {/* 추가연락처등록 */}
+                            <div className="add_wrap">
+                                <h2 className="title">추가 연락처 등록 (선택)</h2>
+                                <p className="input_sub_title">담당자와의 연락이 어려운 경우를 대비해 연락 가능한 휴대전화 번호를 등록해 주시기 바랍니다.</p>
+                                <ul>
+                                    <li className="clearfix2">
+                                        <input type="text" placeholder="휴대전화번호"/>
+                                        {/* 삭제버튼활성화시 class에 on 추가↓ */}
+                                        <button type="button" className="delt_btn">삭제</button>
+                                    </li>
+                                </ul>
+                                <button type="button" className="form_btn navy_btn">
+                                    {/* <img src={ require('../images/form_left_bg.png') } alt="plus 아이콘"/> */}
+                                    추가
+                                </button>
                             </div>
 
                             {/* 이용약관 */}
