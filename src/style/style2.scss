@@ -1,8 +1,15 @@
 
 //공통
+input[type="file"]{display: none;}
+.file_wrap{
+    .file_name{width:calc(100% - 104px);float: left;}
+    .file_name:disabled,.file_name:read-only{background:#fff;border-color:#E8E8E8;}
+    .file_up_btn{display: block;width:78px;height:38px;border-radius: 4px;font-size:15px;color:#bfbfbf;background:#eaedf1;text-align: center;line-height:38px;float: right;cursor: pointer;}
+}
 .red_color{color:#ff513e !important;}
 .green_color{color:#5dcf17 !important;}
 .mb16{margin-bottom:16px;}
+.mt16{margin-top:16px;}
 .pc_none {display: none;}
 select{width:100%;height: 40px;border: 1px solid #d6d6d6;border-radius:2px;padding:0 16px;background-image:url(../images/icons/select_icon.png);background-repeat: no-repeat;background-position-x: calc(100% - 16px);background-position-y:center;font-size:15px;}
 input:read-only{background: #f8f9fb;border-color:#f8f9fb;}
@@ -107,6 +114,9 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     .right{padding:0px 102px 0px;
         .title{font-size:18px;font-weight:600;height: 52px;line-height: 52px;}
         .sub_title{font-size:13px;line-height:20px;}
+        .input_title{font-size:15px;color:#000000;}
+        .input_sub_title{font-size:13px;color:#6e6e6d;line-height: 20px;}
+        .input_title + .input_sub_title{margin-top:4px;}
     }
     .confirm_wrap{
         button{margin-bottom:16px;margin-top:16px;}
@@ -120,8 +130,7 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
             ul li:first-child{width:45%;margin-bottom:16px;}
             ul li:last-child{width:50%;margin-bottom:16px;}
             ul li:last-child input{width:calc(100% - 22px);}
-            ul li:last-child span{line-height: 50px;}
-            .unable_btn{margin-top: 16px;}
+            ul li:last-child span{line-height: 40px;}
         }
 
     }
@@ -133,7 +142,7 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
             input[type="checkbox"].all_agree + label{position: relative;}
             input[type="checkbox"].all_agree + label:after{position: absolute;content:'';width:24px;height: 24px;background-image:url(../images/icons/all_check_img.png);left:-2px;top:-2px;display: none;}
             .agree_wrap{display:none;
-                .oc-scrollbar-container { height: 200px;display: none;margin-top:20px;}
+                .oc-scrollbar-container { height: 240px;display: none;margin-top:20px;}
                 .ps__rail-y{opacity: 1;width:4px;right:6px;}
                 .ps__rail-y:hover{background-color:transparent;}
                 .ps__thumb-y { background-color:#000;width:4px;}
@@ -143,16 +152,18 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
             .txt_box2{padding:0px 34px;font-size: 13px;color:#343332;line-height: 20px;display: block;}
         }
     }
+    .corpor_wrap{
+        li{margin-bottom:16px;}
+
+    }
     .btn_wrap{padding-bottom:173px;
         .back_btn{width:78px;height:38px;color:#fe8d40;font-size:15px;}
         .unable_btn{width:calc(100% - 102px);}
     }
 }
 
-.input_title{font-size:15px;color:#000000;}
-.input_sub_title{font-size:13px;color:#6e6e6d;margin-bottom:16px;line-height: 20px;}
-.input_title + .input_sub_title{margin-top:4px;}
-.input_title + .error_msg{margin-bottom:16px;}
+
+
 
 .check_input{position: relative;
     &:after{position: absolute;content:'';width:24px;height: 24px;right:16px;top:50%;transform: translateY(-50%);background-image: url(../images/icons/check_input_alert.png);display:none;}
