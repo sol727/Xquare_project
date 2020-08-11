@@ -245,7 +245,7 @@ export default class Corporation_signup extends React.Component {
                             </div> 
 
                             <div className="btn_wrap clearfix2">
-                                <button type="button" className="back_btn">이전</button>
+                                <button type="button" className="back_btn" onClick={() => window.history.back()}>이전</button>
 
                                 {/* 가입완료활성화될때 class에 orange_btn 추가↓ */}
                                 <button type="button" className="unable_btn">가입완료</button>

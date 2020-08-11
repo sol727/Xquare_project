@@ -52,14 +52,14 @@ export default class Login extends React.Component {
                                     <div className="clearfix"><input type="checkbox" id="check"/><label htmlFor="check"></label><label className="label_txt" htmlFor="check">아이디 저장</label>
                                     </div>
                                     <div className="find_txt">
-                                        <Link to="/find_id.js"><span>아이디 · 비밀번호 찾기</span></Link>
+                                        <Link to="/find_id"><span>아이디 · 비밀번호 찾기</span></Link>
                                     </div>
                                 </li>
                             </ul>
                             <button type="button" className="form_btn">로그인</button>
                             {/* 로그인버튼 활성화되면 class에 point_bg 추가해주세요*/}
                             <div className="signup_txt">
-                                아직 회원이 아니세요?<Link to="/signup.js"><span>회원가입</span></Link>
+                                아직 회원이 아니세요?<Link to="/signup"><span>회원가입</span></Link>
                             </div>
                         </form>
                     </div>
