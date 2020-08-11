@@ -74,13 +74,11 @@ code {
     background-image: url(../images/main_banner_bg_mo.png);   
    }
    li {
+     width: 100%;
     height: 100%;
-  }
-    a{
-      width: 100%; 
-      height: 100%; 
-      position: relative;
-    }   
+    position: relative;
+    cursor: pointer;
+    }    
     .text{
       position: absolute;
       left: 15%; 
@@ -577,7 +575,6 @@ code {
     }
 }
 
-
 .goal_box {
   margin-bottom: 24px;
   height: 112px;
@@ -602,7 +599,7 @@ code {
   }
 }
 
-
+//탭 --------------------
 .tab_wrap {
   text-align: center;
   margin-top: 24px;  
@@ -619,9 +616,12 @@ code {
     } 
   }
   li.active a span{color: #ff8e40;}
-  li.active {border-bottom: 4px solid #ff8e40;}
+  li.active {border-bottom: 4px solid #ff8e40;}  
 }
+//----------------------------------------------------
 
+//투자하기 상세 탭------------------------------------
+//핵심정보
 
 
 

@@ -46,17 +46,26 @@ export default class Invest_index extends React.Component {
                } )
           }
 
+          onClickPrev = () => {
+               this.ref.slickPrev()
+          }
+
+          onClickNext = () => {
+               this.ref.slickNext()
+          }
+
     render() {
         return (
             <>
                <Header />
 
                <section className="invest_index">
+                    {/* 상세 탑 부분 */}
                     <div className="top">
                          <div className="title_area clearfix2 container">                           
                               <div className="img_slider_wrap">
                                    <ul className="img_box slider">
-                                        <Slider slidesToShow={1} slidesToScroll={1} speed={500} dots={false}  beforeChange={this.sliderEvent} >
+                                        <Slider ref={sliderRef => this.ref = sliderRef}  slidesToShow={1} slidesToScroll={1} speed={500} dots={false}  beforeChange={this.sliderEvent} >
                                              <li>
                                                   <img src={ require('../images/detail_sample.png') } alt="투자상세이미지"/>
                                              </li>
@@ -69,8 +78,8 @@ export default class Invest_index extends React.Component {
                                         </Slider>
                                    </ul>
                                    <ul className="slider_arrow">
-                                        <li className="prev_arrow"></li>
-                                        <li className="next_arrow"></li>
+                                        <li className="prev_arrow" onClick={this.onClickPrev}></li>
+                                        <li className="next_arrow" onClick={this.onClickNext}></li>
                                    </ul>
                                    <ul className="dot_wrap clearfix">
                                         <li className={ this.state.focus === 0 ? "active" : ""  } ></li>
@@ -137,7 +146,6 @@ export default class Invest_index extends React.Component {
                                      </div>
                                    */}
 
-
                                     {/* 진행중일 때 활성화 되는 영역↓*/}
                                     <div className="project_ing bottom_box">
                                         <ul className="goal_box clearfix">                                            
@@ -166,9 +174,9 @@ export default class Invest_index extends React.Component {
                                              </ul>
                                         </div>
                                    </div>
-
                               </div>
                          </div>
+                         {/* 탭영역 */}
                          <ul className="tab_wrap">
                               <li className="active"><Link to="/"><span>핵심정보</span></Link></li>
                               <li><Link to="/"><span>새소식</span></Link></li>
@@ -176,6 +184,23 @@ export default class Invest_index extends React.Component {
                               <li><Link to="/"><span>부가정보</span></Link></li>
                               <li><Link to="/"><span>투자 현황</span></Link></li>
                          </ul>
+                    </div>
+                    {/* 탭컨텐츠영역 - 핵심정보*/}
+                    <div className="detail_cont">
+                         <ul className="total_box">
+                              <li>
+                                   <p>펀딩시작일</p>
+                                   <h3 className="playF">yyyy.mm.dd</h3>
+                              </li>
+                              <li>
+                                   <p>펀딩종료일</p>
+                                   <h3 className="playF">yyyy.mm.dd</h3>
+                              </li>
+                              <li>
+                                   <p>증권입고일</p>
+                                   <h3 className="playF">yyyy.mm.dd</h3>
+                              </li>
+                         </ul>                         
                     </div>
                </section>
                <Footer />
