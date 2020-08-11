@@ -14,6 +14,7 @@ import Login from './pages/login';
 import Signup from './pages/signup';
 import Signup2 from './pages/signup2';
 import Invest_index from './pages/invest_index';
+import Corporation_signup from './pages/corporation_signup';
 
 
 /* 페이지 */
@@ -27,6 +28,7 @@ function App() {
         <Route path="/login" component={Login}/>
         <Route path="/signup" component={Signup}/>
         <Route path="/signup2" component={Signup2}/>
+        <Route path="/corporation_signup" component={Corporation_signup}/>
     </BrowserRouter>
   );
 }
