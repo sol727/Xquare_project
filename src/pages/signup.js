@@ -34,10 +34,12 @@ export default class Signup extends React.Component {
                                 <button type="button"><img src={ require('../images/icons/sns_face.png') } alt="페이스북 아이콘"/>구글로 가입하기</button>
                                 <button type="button"><img src={ require('../images/icons/sns_naver.png') } alt="네이버 아이콘"/>페이스북으로 가입하기</button>
                             </div>
-                            <button type="button" className="email_signup_btn"><img src={ require('../images/icons/email_signup_icon.png') } alt="이메일 아이콘"/>이메일로 가입하기</button>
+                            <button type="button" className="email_signup_btn">
+                                <img src={ require('../images/icons/email_signup_icon.png') } alt="이메일 아이콘"/>이메일로 가입하기
+                            </button>
                             <div className="signup_txt">
                                 <p>펀딩 오픈 혹은 법인으로 투자하기를 원하시나요?</p>
-                                <Link to="/signup.js"><span>법인 회원가입</span>을 진행해주세요.</Link>
+                                <Link to="/corporation_signup"><span>법인 회원가입</span>을 진행해주세요.</Link>
                             </div>
                         </form>
                     </div>
