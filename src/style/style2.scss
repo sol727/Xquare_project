@@ -10,6 +10,8 @@ input[type="file"]{display: none;}
 }
 .red_color{color:#ff513e !important;}
 .green_color{color:#5dcf17 !important;}
+.gray2_color{color:#6e6e6d;}
+.gray3_color{color:#535352;}
 .mb12{margin-bottom: 12px;}
 .mb16{margin-bottom:16px;}
 .mt16{margin-top:16px;}
@@ -285,7 +287,27 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     .btn_wrap{width:384px;margin:0 auto 40px;
         .unable_btn{width:calc(100% - 102px);}
     }
+}
 
+// 투자한도조회
+.invest_check{
+    .cont{margin-top:70px;
+        ul{border:1px solid #eaedf1;border-radius: 4px;}
+        .top{padding:16px;overflow: hidden;}
+        .top p{position: relative;padding:10px 0;}
+        .top p::after{position: absolute;content:'';width:8px;height:100%;background:#ff8e40;left:-20px;top:0;border-radius:4px;}
+        .logo_box{text-align: center;padding:48px 0px;border-top:1px solid #eaedf1;border-bottom:1px solid #eaedf1;
+            img{margin-right:48px;vertical-align:bottom;}
+            img:last-child{margin-right:0px;}
+        }
+        .loading_box{padding:24px 0 32px;text-align:center;background: #f8f9fb;
+            button{padding:8px 12px;font-size:14px;color:#fff;font-weight: 600;background:#292f40;border-radius: 100px;}
+            .loading_bar{width:588px;height:4px;background: #eeeff5;margin:16px auto 0px;position: relative;}
+            .loading_bar::after{position: absolute;content: '';width:80%;height:100%;background:#ff8e40;left:0;top:0;}
+        }
+        .api_box{height: 512px;background: #f8f9fb;border-radius: 4px;margin-bottom:40px;}
+    }
+    
 }
 
 

@@ -24,7 +24,7 @@ export default class Invest_prepare extends React.Component {
                     <div className="top_banner">
                         <h1>투자하기</h1>
                     </div>
-                    <div className="invest_top_box">
+                    <div className="invest_top_box mo_none">
                         <ul className="clearfix">
                             <li>
                                 <Link>
