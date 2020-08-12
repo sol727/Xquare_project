@@ -12,6 +12,8 @@ input[type="file"]{display: none;}
 .green_color{color:#5dcf17 !important;}
 .mb16{margin-bottom:16px;}
 .mt16{margin-top:16px;}
+.mt24{margin-top: 24px;}
+.mb24{margin-bottom: 24px;}
 .font_13{font-size: 13px;}
 .pc_none {display: none;}
 select{width:100%;height: 40px;border: 1px solid #d6d6d6;border-radius:2px;padding:0 16px;background-image:url(../images/icons/select_icon.png);background-repeat: no-repeat;background-position-x: calc(100% - 16px);background-position-y:center;font-size:15px;}
@@ -26,8 +28,8 @@ input.error + .input_delt_btn{
     display: block;}
 
 //btn
-.navy_btn{width: 100%;height: 44px;background:#282d40;border-radius:4px;color:#fff;font-size: 18px;font-weight: 600;}
-.green_btn{color:#fff;background:#5dcf17;font-weight: 600;}
+.navy_btn{width: 100%;height: 44px;background:#282d40;border-radius:4px;color:#fff;font-size: 18px;}
+.green_btn{color:#fff;background:#5dcf17;}
 .unable_btn{width:100%;height:44px;border-radius:4px;font-size:18px;color:#bfbfbf;background: #eaedf1;}
 .orange_btn{background:#ff8e40;color:#fff;}
 
@@ -95,7 +97,7 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
 
 // 로그인
 .login {
-    .form_btn{color:#fff;font-weight: 600;}
+    .form_btn{color:#fff;}
 }
 
 // 회원가입
@@ -115,9 +117,6 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     .right{padding:0px 102px 0px;
         .title{font-size:18px;font-weight:600;height: 52px;line-height: 52px;}
         .sub_title{font-size:13px;line-height:20px;}
-        .input_title{font-size:15px;color:#000000;}
-        .input_sub_title{font-size:13px;color:#6e6e6d;line-height: 20px;}
-        .input_title + .input_sub_title{margin-top:4px;}
     }
     .confirm_wrap{
         button{margin-bottom:16px;margin-top:16px;}
@@ -168,12 +167,20 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     }
 }
 
+.input_title{font-size:15px;color:#000000;}
+.input_sub_title{font-size:13px;color:#6e6e6d;line-height: 20px;}
+.input_title + .input_sub_title{margin-top:4px;}
+
 // 아이디,비번찾기페이지
 .search_page{min-height: calc(100vh - 446px);
     .container{width:588px;}
     .title_wrap{padding:32px 0px 16px;border-bottom:1px solid #eaedf1;text-align:center;
-        h1{font-size:50px;}
+        h1{font-size:50px;line-height:1.5;}
         p{font-size:20px;margin-top:20px;}
+    }
+    .tab_btn_box{border-radius:6px;border:1px solid #d0d0cf;overflow: hidden;margin-bottom:24px;
+        li{width:50%;padding:9px 0;text-align: center;cursor: pointer;font-size: 14px;}
+        li.on{background:#fe8d40;color:#fff;}
     }
     .form_box{max-width: 384px;margin:30px auto 0;
         .certify_btn_wrap{padding:24px 0;}
@@ -192,7 +199,20 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
                 button{width:calc(50% - 12px);}
             }
         }
+        .certify_after2{
+            .date_txt{margin-top:24px;
+                span{background:#282d40;}
+            }
+            .email_box{
+                h4{margin-top:0px;}
+            }
+        }
+        .txt_box{text-align: center;margin:24px auto 76px;
+            p{font-size:14px;color:#6e6e6d;line-height: 22px;}
+            a{font-size:14px;color:#000000;text-decoration: underline;font-weight: 600;}
+        }
     }
+    button{font-size:15px;}
 }
 
 

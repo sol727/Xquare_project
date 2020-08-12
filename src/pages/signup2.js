@@ -109,21 +109,22 @@ export default class Signup2 extends React.Component {
                                                 <li className="clearfix2"><span>@</span><input type="text" value="naver.com" readOnly disabled/></li>
                                             </ul>
                                             {/* 중복확인 비활성화 버튼↓ */}
-                                            <button type="button" className="form_btn unable_btn">중복확인</button>
+                                            <button type="button" className="unable_btn">중복확인</button>
 
-                                            {/* 중복확인 비활성화 버튼↓ */}
-                                            {/* <button type="button" className="form_btn navy_btn">중복확인</button> */}
+                                            {/* 중복확인 활성화 버튼↓ */}
+                                            {/* <button type="button" className="navy_btn">중복확인</button> */}
 
                                             {/* 중복확인 통과시 버튼↓ */}
                                             {/* <button type="button" className="form_btn green_btn">사용 가능</button> */}
 
                                         {/* select에서 직접입력 선택시 노출↓ */}
                                             {/* <input type="text" value="username@mail.com" className="mb16"/> */}
-                                            {/* 중복확인 비활성화 버튼↓ */}
-                                            {/* <button type="button" className="form_btn unable_btn">중복확인</button> */}
 
                                             {/* 중복확인 비활성화 버튼↓ */}
-                                            {/* <button type="button" className="form_btn navy_btn">중복확인</button> */}
+                                            {/* <button type="button" className="unable_btn">중복확인</button> */}
+
+                                            {/* 중복확인 활성화 버튼↓ */}
+                                            {/* <button type="button" className="navy_btn">중복확인</button> */}
 
                                             {/* 중복확인 통과시 버튼↓ */}
                                             {/* <button type="button" className="form_btn green_btn">사용 가능</button> */}

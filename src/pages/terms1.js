@@ -4,7 +4,7 @@ import Header from '../components/header'
 import Footer from '../components/footer';
 import $ from 'jquery'
 
-export default class Corporation_find_id extends React.Component {
+export default class Terms1 extends React.Component {
     
     constructor(props) {
     super(props);
@@ -12,19 +12,6 @@ export default class Corporation_find_id extends React.Component {
 
     componentDidMount(){
         
-        //tab
-        $('.tab_btn_box li').on('click',function(){
-            var idx = $(this).index();
-            $('.tab_btn_box li').removeClass('on');
-            $(this).addClass('on');
-            $('.tab_cont_wrap .tab_cont').hide();
-            $('.tab_cont_wrap .tab_cont').eq(idx).show();
-        });
-        $('.tab_cont_wrap .tab_cont').hide();
-        if($('.tab_btn_box li').hasClass('on')){
-            var idx = $('.tab_btn_box li.on').index();
-            $('.tab_cont_wrap .tab_cont').eq(idx).show();
-        };
     
     }
 
