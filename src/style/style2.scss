@@ -171,6 +171,12 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
 .input_sub_title{font-size:13px;color:#6e6e6d;line-height: 20px;}
 .input_title + .input_sub_title{margin-top:4px;}
 
+
+.tab_btn_box{border-radius:6px;border:1px solid #d0d0cf;overflow: hidden;margin-bottom:24px;
+    li{width:50%;padding:9px 0;text-align: center;cursor: pointer;font-size: 14px;}
+    li.on{background:#fe8d40;color:#fff;}
+}
+
 // 아이디,비번찾기페이지
 .search_page{min-height: calc(100vh - 446px);
     .container{width:588px;}
@@ -178,10 +184,7 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
         h1{font-size:50px;line-height:1.5;}
         p{font-size:20px;margin-top:20px;}
     }
-    .tab_btn_box{border-radius:6px;border:1px solid #d0d0cf;overflow: hidden;margin-bottom:24px;
-        li{width:50%;padding:9px 0;text-align: center;cursor: pointer;font-size: 14px;}
-        li.on{background:#fe8d40;color:#fff;}
-    }
+    
     .form_box{max-width: 384px;margin:30px auto 0;
         .certify_btn_wrap{padding:24px 0;}
         .corporation_find_wrap{text-align: center;
@@ -216,13 +219,14 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
 }
 
 .pre{white-space: pre-line;line-height: 1.5;}
+
 //약관페이지
 .terms_page{
     .title_wrap{padding:32px 0px 16px;text-align:center;
         h1{font-size:50px;line-height:1.5;}
         p{font-size:20px;margin-top:20px;line-height: 1.5;}
     }
-    .tab_ul{margin-top:24px;border-bottom:1px solid #eaedf1;
+    .tab_ul_wrap ul{margin-top:24px;border-bottom:1px solid #eaedf1;
         li{width: 33.333%;}
         li.on a{color:#fe8d40;border-bottom:4px solid #fe8d40;}
         a{text-align: center;font-size: 14px;width:100%;padding:8px 0;color:#000;font-weight: 600;}
@@ -232,15 +236,40 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
         h1{font-size: 24px;font-weight: 600;margin-bottom: 16px;}
         p{font-size: 13px;color:#6e6e6d;text-align: right;}
     }
-    .terms_ul{
+    .terms_ul{padding:16px 0 25px;
         li{margin-bottom:16px;}
         .line_title{font-size:16px;padding-bottom: 4px;border-bottom:1px solid #eaedf1;}
         .line_title span{margin-right: 8px;}
-        .li_title{font-size:14px;}
+        .li_title{font-size:14px;font-weight: 600;}
         .li_txt{font-size: 14px;line-height: 1.5;}
+        .terms_table{border-top:2px solid #ff8e40;border-bottom:2px solid #ff8e40;border-left:1px solid #eaedf1;text-align: center;
+            th{font-size: 13px;font-weight: 600;padding:10px 0;background:#f9f9f9;border-right:1px solid #eaedf1;border-bottom:1px solid #eaedf1;}
+            td{font-size: 13px;padding:10px 0;border-right:1px solid #eaedf1;border-bottom:1px solid #eaedf1;line-height: 1.4;}
+        }
+        .terms_table.table1{width:588px;}
+        .terms_table.table2{width:100%;
+            td{padding: 8px;text-align: left !important;}
+        }
+        .terms_table.table3{width:893px;
+            td{padding: 8px 16px;}
+        }
     }
 }
 
+//에러페이지
+.error_page{min-height: calc(100vh - 446px);
+    .container{position: relative;padding-bottom:220px;}
+    .text_box{
+        p{font-size: 30px;margin:40px 0 24px;}
+        h1{font-size: 50px;margin-bottom:24px;}
+        .txt{font-size: 15px;line-height: 1.5;}
+    }
+    .btn_wrap{width: 588px;margin-top:80px;
+        button{width:calc(50% - 12px);height: 38px;font-size: 15px;border-radius:4px;border: 1px solid #eaedf1;}
+        button:last-child{border: 1px solid #ff8e40;background:#ff8e40;color:#fff;}
+    }
+    img{position: absolute;right:0;bottom:19px;}
+}
 
 
 .check_input{position: relative;
