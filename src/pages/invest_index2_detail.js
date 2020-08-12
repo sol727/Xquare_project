@@ -36,7 +36,11 @@ export default class Invest_index2_detail extends React.Component {
 
           $('.btn_wrap2 .alarm_btn').click(function(){
                $(this).toggleClass('on');              
-          });          
+          });   
+          
+          $('.feeling_box li').click(function(){
+               $(this).toggleClass('on');              
+          });
       
         }//최종괄호
 
@@ -59,9 +63,9 @@ export default class Invest_index2_detail extends React.Component {
             <>
                <Header />
 
-               <section className="invest_index">
+               <section className="invest_index detail">
                     {/* 상세 탑 부분 */}
-                    <div className="top">
+                    <div className="top mo_none">
                          <div className="title_area clearfix2 container">                           
                               <div className="img_slider_wrap">
                                    <ul className="img_box slider">
@@ -188,14 +192,79 @@ export default class Invest_index2_detail extends React.Component {
                          </div>                        
                     </div>
                     {/* 탭컨텐츠영역 - 새소식*/}
-                    <div className="detail_cont">
-                        <div className="detail_container tab2">
-                           
-                              <div className="list_table_wrap">
+                    <div className="detail_cont">                              
+                        <div className="detail_container tab2"> 
+                              <div className="clearfix2 detail_table_title">
                                    <h2 className="tabel_title">새소식</h2>
-                                   
-                              </div>
-                              
+                                   <button type="button"  className="title_btn">목록으로</button>
+                              </div>                             
+                              <div className="list_table_wrap">
+                                   <div className="detail_table2">
+                                        <div className="top">
+                                             <div className="user_type mb12 clearfix">
+                                                  <p className="user feel_a black_color ">username</p>
+                                                  <p className="user_label">법인회원(발행인)</p>
+                                             </div>
+                                             <h3 className="title black_color mb12">The Calm meditation app is getting its own celebrity-filled HBO Max show</h3>
+                                             <p className="dete mb12">2020.05.01 06:05:46</p>
+                                             <p className="text_area font_14 black_color">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
+                                        </div>
+                                        <div className="comment_box clearfix">
+                                             <h2 className="tabel_title">댓글 <span className="point_color">3</span></h2>
+                                             <input type="text" placeholder="댓글을 입력해주세요" className="mb16"/>
+                                             <div className="mb8 clearfix floatR"> 
+                                                  <ul className="feeling_box clearfix">
+                                                       <li className="font_13">감정</li>
+                                                       <li><button type="button" className="feel_a"></button></li>
+                                                       <li><button type="button" className="feel_b"></button></li>
+                                                       <li><button type="button" className="feel_c"></button></li>
+                                                  </ul>
+                                                  <button type="button" className="btn_gray ml16">등록</button>
+                                             </div>                                             
+                                             <ul className="comment_list">
+                                                  <li>
+                                                       <div className="user_type mb12 clearfix">
+                                                            <p className="user feel_a black_color ">username</p>
+                                                            <p className="user_label">개인회원(일반투자자)</p>
+                                                       </div>
+                                                       <p className="dete mb12">2020.05.01 06:05:46</p>
+                                                       <p className="text_area font_13 black_color mb12">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
+                                                       <button type="button" className="btn_border">답글 1</button>
+                                                  </li>
+                                                  <li>
+                                                       <div className="user_type mb12 clearfix">
+                                                            <p className="user feel_a black_color ">username</p>
+                                                            <p className="user_label">개인회원(일반투자자)</p>
+                                                       </div>
+                                                       <p className="dete mb12">2020.05.01 06:05:46</p>
+                                                       <p className="text_area font_13 black_color mb12">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
+                                                       <button type="button" className="btn_border mb12">답글 1</button>
+                                                       <ul className="in_comment">
+                                                            <li>
+                                                                 <div className="user_type mb12 clearfix">
+                                                                      <p className="user feel_a black_color ">username</p>
+                                                                      <p className="user_label">개인회원(일반투자자)</p>
+                                                                 </div>
+                                                                 <p className="dete mb12">2020.05.01 06:05:46</p>
+                                                                 <p className="text_area font_13 black_color mb12 ">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore
+                                                                  </p>
+                                                                 <input type="text" value="좋습니다!"/>
+                                                                 <div className="mb8 clearfix floatR"> 
+                                                                 <ul className="feeling_box clearfix">
+                                                                      <li className="font_13">감정</li>
+                                                                      <li><button type="button" className="feel_a"></button></li>
+                                                                      <li><button type="button" className="feel_b"></button></li>
+                                                                      <li className="on"><button type="button" className="feel_c"></button></li>
+                                                                 </ul>
+                                                                 <button type="button" className="btn ml16">등록</button>
+                                                            </div>      
+                                                            </li>
+                                                       </ul>
+                                                  </li>
+                                             </ul>
+                                        </div>                                        
+                                   </div>
+                              </div>                              
                         </div>
                     </div>
                </section>
