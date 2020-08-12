@@ -275,11 +275,32 @@ $mob-s-width		: 375px;
 	.container.tab5 .table_wrap:first-of-type {width: 100%;}
 	.container.tab5 .table_wrap:last-of-type {width: 100%;}
 
-
+	//////////////////////////////////투자하기
+	
+	.invest_page .title_wrap {
+		width: 100%;
+		margin: 16px auto 24px;
+		h1 {font-size: 28px; line-height: 42px; margin-bottom: 4px;}
+		h3 {font-size: 14px; line-height: 22px;}
+	}
+	.invest_page .input_wrap ul {width: 100%;}
+	.invest_page .input_wrap ul li{
+		width: 100%;
+		&:first-child, &:nth-child(2){width: calc(50% - 4px); margin-bottom: 16px; margin-right: 0;}
+		&:nth-child(2){margin-left: 8px;}
+		&:last-child select{width: 100%; margin-bottom: 16px;}
+	}
+	.invest_page .search_box {
+		width: 100%;
+		input {width: 100%;}
+	}
+	.invest_page .list_wrap{margin-top: 0;}
+	
 }
 
 @include mob {
 	.mo_only {display: block;}
+	.invest_page .cont .list_wrap > li {width: 100%; margin-right: 0;}
 }
 
 
