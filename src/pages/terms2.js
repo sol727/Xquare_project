@@ -71,7 +71,7 @@ export default class Terms2 extends React.Component {
                                 ①	회사는 법령에 따른 개인정보 보유ㆍ이용기간 또는 정보주체로부터 개인정보를 수집시에 동의받은 개인정보 보유ㆍ이용기간 내에서 개인정보를 처리ㆍ보유합니다. 
                                 ②	각각의 개인정보 처리 및 보유 기간은 다음과 같습니다.
                                 </li>
-                                <li>
+                                <li className="table_li">
                                     <table className="terms_table table1">
                                         <thead>
                                             <tr>
@@ -144,7 +144,7 @@ export default class Terms2 extends React.Component {
                                 <li className="li_txt pre">
                                 ①	회사는 이용자의 동의가 있거나 '정보통신망 이용촉진 및 정보보호 등에 관한 법률' 등 관련법령의 규정에 의한 경우, 회사가 이용자에게 제공하는 서비스의 공급을 위하여 필요한 경우를 제외하고는 본 개인정보처리방침에서 고지한 범위를 넘어 이용자의 개인정보를 이용하거나 타인 또는 타기업/기관에 제공하지 않습니다. 이용자의 개인정보를 제3자 제공하는 경우에는 사전에 제공받는 자, 목적, 제공하는 개인정보 항목 등을 개인정보처리방침 및 홈페이지 등을 통해 고지한 후 동의를 구합니다.
                                 </li>
-                                <li>
+                                <li className="table_li">
                                     <table className="terms_table table2">
                                         <colgroup>
                                             <col width="25%"/>
@@ -199,7 +199,7 @@ export default class Terms2 extends React.Component {
                                 <li className="li_txt pre">
                                 ①	회사는 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다. 
                                 </li>
-                                <li>
+                                <li className="table_li">
                                     <table className="terms_table table3">
                                         <colgroup>
                                             <col width="33.333%"/>
