@@ -4,7 +4,7 @@ import Header from '../components/header'
 import Footer from '../components/footer';
 import $ from 'jquery'
 
-export default class Error_page extends React.Component {
+export default class Invest_prepare extends React.Component {
     
     constructor(props) {
     super(props);

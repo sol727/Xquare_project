@@ -57,6 +57,8 @@ $mob-s-width		: 375px;
 }
 
 @include tab{
+    .container{width:calc(100% - 38px);}
+
     //form_page
     .form_page{width:100%;min-height:calc(100vh - 446px);
         .bg_gradient{width: 50%;min-height:calc(100vh - 446px);}
@@ -95,6 +97,14 @@ $mob-s-width		: 375px;
         }
     }
 
+    //약관페이지
+    .terms_page{
+        .title_wrap{
+            h1{font-size:28px;}
+            p{font-size:14px;}
+        }
+    }
+
     //footer
     footer {padding-top:42px;
         .top{
@@ -118,6 +128,30 @@ $mob-s-width		: 375px;
         .form_box{max-width:100%;}
     }
 
+    //약관페이지
+    .terms_page{
+        .tab_ul_wrap{overflow-x:auto;
+            ul{width: max-content;
+                li{width: auto;}
+                a{padding:8px 24px;}
+            }
+            
+        }
+    }
+
+    //에러페이지
+    .error_page{
+        .container{padding-bottom:0px;padding-top:160px;}
+        .text_box{
+            p{font-size: 14px;margin:40px 0 12px;}
+            h1{font-size: 20px;margin-bottom:12px;}
+            .txt{font-size: 13px;line-height: 1.5;}
+        }
+        .btn_wrap{width:100%;
+            button{width:100%;float: none;margin-bottom:24px;}
+        }
+        img{width:100%;right:unset;top:0;left:50%;transform: translateX(-50%);}
+    }
 }
 
 
