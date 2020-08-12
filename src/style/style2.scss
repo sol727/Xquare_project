@@ -10,11 +10,14 @@ input[type="file"]{display: none;}
 }
 .red_color{color:#ff513e !important;}
 .green_color{color:#5dcf17 !important;}
+.mb12{margin-bottom: 12px;}
 .mb16{margin-bottom:16px;}
 .mt16{margin-top:16px;}
 .mt24{margin-top: 24px;}
 .mb24{margin-bottom: 24px;}
+.mb40{margin-bottom:40px;}
 .font_13{font-size: 13px;}
+.font_14{font-size: 14px;}
 .pc_none {display: none;}
 select{width:100%;height: 40px;border: 1px solid #d6d6d6;border-radius:2px;padding:0 16px;background-image:url(../images/icons/select_icon.png);background-repeat: no-repeat;background-position-x: calc(100% - 16px);background-position-y:center;font-size:15px;}
 input:read-only{background: #f8f9fb;border-color:#f8f9fb;}
@@ -32,6 +35,7 @@ input.error + .input_delt_btn{
 .green_btn{color:#fff;background:#5dcf17;}
 .unable_btn{width:100%;height:44px;border-radius:4px;font-size:18px;color:#bfbfbf;background: #eaedf1;}
 .orange_btn{background:#ff8e40;color:#fff;}
+.back_btn{width:78px;height:44px;color:#fe8d40;font-size:15px;}
 
 
 //footer
@@ -162,7 +166,6 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
 
     }
     .btn_wrap{padding-bottom:173px;
-        .back_btn{width:78px;height:38px;color:#fe8d40;font-size:15px;}
         .unable_btn{width:calc(100% - 102px);}
     }
 }
@@ -247,7 +250,7 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
             td{font-size: 13px;padding:10px 0;border-right:1px solid #eaedf1;border-bottom:1px solid #eaedf1;line-height: 1.4;}
         }
         .terms_table.table1{width:588px;}
-        .terms_table.table2{width:100%;
+        .terms_table.table2{width:1200px;
             td{padding: 8px;text-align: left !important;}
         }
         .terms_table.table3{width:893px;
@@ -255,6 +258,36 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
         }
     }
 }
+
+// 투자하기페이지
+.invest_page{
+    .top_banner{background-image: url(../images/top_banner_img.png);height:252px;text-align:center;
+        h1{font-size: 50px;color:#fff;line-height: 252px;}
+    }
+    .invest_top_box{border-bottom:1px solid #eaedf1;
+        ul{width:1200px;margin:0 auto;}
+        li:nth-child(1){width:56px;text-align: center;padding:0;}
+        li:nth-child(1) a{width: 100%;height: 100%;padding-top:18px;}
+        li{width: 204px;height:56px;padding:18px 0 0 24px;border-right:1px solid #eaedf1;font-weight: 600;}
+        li.on{color:#fe8d40;}
+    }
+    .big_title{font-size: 50px;width:588px;padding:30px 0px;text-align: center;margin:0 auto;border-bottom:1px solid #eaedf1;}
+    .prepare_ul{width:996px;margin:60px auto 0;
+        li{width:100%;padding:16px;border:1px solid #eaedf1;border-radius:4px;overflow: hidden;margin-bottom:24px;}
+        li .txt{width:572px;position: relative;
+            h3{font-size: 18px;font-weight: 600;padding-top:12px;}
+            p{font-size:13px;line-height: 1.4;padding:12px 0 10px;}
+        }
+        li .txt::after{position: absolute;content:'';width:8px;height:100%;background:#ff8e40;left:-20px;top:0;border-radius:4px;}
+        li button{width:calc(100% - 612px);margin-top:20px;}
+        .account_box{padding:32px 42px;background:#f9f9f9;border-radius:8px;width:max-content;margin:35px auto 16px;box-shadow:0px 5px 7px 0px rgba(0,0,0,0.4);text-align: center;}
+    }
+    .btn_wrap{width:384px;margin:0 auto 40px;
+        .unable_btn{width:calc(100% - 102px);}
+    }
+
+}
+
 
 //에러페이지
 .error_page{min-height: calc(100vh - 446px);
