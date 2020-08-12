@@ -4,7 +4,7 @@ import Header from '../components/header'
 import Footer from '../components/footer';
 import $ from 'jquery'
 
-export default class Find_id extends React.Component {
+export default class Corporation_find_id extends React.Component {
     
     constructor(props) {
     super(props);

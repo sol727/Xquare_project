@@ -168,7 +168,7 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     }
 }
 
-
+// 아이디,비번찾기페이지
 .search_page{min-height: calc(100vh - 446px);
     .container{width:588px;}
     .title_wrap{padding:32px 0px 16px;border-bottom:1px solid #eaedf1;text-align:center;
@@ -185,9 +185,10 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
                 span{font-size: 13px;color:#fff;background:#ff8e40;padding:2px 13px;border-radius:2px;margin-right:12px;}
             }
             .email_box{background:#f8f9fb;padding:24px 0px;text-align: center;
+                h3{line-height: 20px;}
                 h4{margin-top:10px;}
             }
-            .btn_wrap{margin-top:32px;
+            .btn_wrap{margin:32px auto 117px;
                 button{width:calc(50% - 12px);}
             }
         }

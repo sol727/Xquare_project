@@ -15,9 +15,7 @@ export default class Index2 extends React.Component {
                 <Link to="/signup2.js"><span>개인회원가입</span></Link>
                 <Link to="/corporation_signup.js"><span>법인 회원가입</span></Link>
                 <Link to="/find_id.js"><span>아이디 비밀번호 찾기</span></Link>
-                <Link to="/find_id_detail.js"><span>아이디 비번 상세</span></Link>
-                <Link to="/corporation_find.js"><span>법인 아이디 비밀번호 찾기</span></Link>
-                <Link to="/corporation_find_detail.js"><span>법인 아이디 비번 상세</span></Link>
+                <Link to="/corporation_find_id.js"><span>법인 아이디 비밀번호 찾기</span></Link>
                 <Link to="/set_password.js"><span>비밀번호 재설정</span></Link>
                 <Link to="/corporation_signup.js"><span>법인회원가입</span></Link>           
                 <Link to="/invest_index.js"><span>투자하기 메인</span></Link>
