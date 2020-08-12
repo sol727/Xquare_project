@@ -18,6 +18,7 @@ import Invest_index2 from './pages/invest_index2';
 import Invest_index2_detail from './pages/invest_index2_detail';
 import Invest_index3 from './pages/invest_index3';
 import Invest_index3_detail from './pages/invest_index3_detail';
+import Invest_index3_add from './pages/invest_index3_add';
 import Invest_index4 from './pages/invest_index4';
 import Invest_index5 from './pages/invest_index5';
 import Corporation_signup from './pages/corporation_signup';
@@ -28,6 +29,8 @@ import Terms1 from './pages/terms1';
 import Terms2 from './pages/terms2';
 import Terms3 from './pages/terms3';
 import Error_page from './pages/error_page';
+import Invest_prepare from './pages/invest_prepare';
+import Invest_check from './pages/invest_check';
 
 
 /* 페이지 */
@@ -41,6 +44,7 @@ function App() {
         <Route path="/invest_index2_detail" component={Invest_index2_detail}/>
         <Route path="/invest_index3" component={Invest_index3}/>
         <Route path="/invest_index3_detail" component={Invest_index3_detail}/>
+        <Route path="/invest_index3_add" component={Invest_index3_add}/>
         <Route path="/invest_index4" component={Invest_index4}/>
         <Route path="/invest_index5" component={Invest_index5}/>
         <Route path="/page" component={page}/>
@@ -55,6 +59,8 @@ function App() {
         <Route path="/terms2" component={Terms2}/>
         <Route path="/terms3" component={Terms3}/>
         <Route path="/error_page" component={Error_page}/>
+        <Route path="/invest_prepare" component={Invest_prepare}/>
+        <Route path="/invest_check" component={Invest_check}/>
     </BrowserRouter>
   );
 }
