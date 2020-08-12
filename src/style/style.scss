@@ -303,10 +303,7 @@ code {
         border-top: 4px solid #ff8e40;
         margin-top: -16px;
         box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-      }
-      &:hover h3 {
-          
-      }
+      }      
       h3{
         font-size: 30px;       
       }
@@ -709,7 +706,26 @@ code {
   .body {font-size: 14px;}
   .caption {font-size: 13px; color: #6e6e6d;}
 }
-
+//새소식
+.tabel_title { 
+  padding: 12px 16px; 
+  font-size: 18px; 
+  color: #000000; 
+  span {font-size: 18px; margin-left: 5px; color: #ff8e40;}
+}
+.list_table {
+  width: 100%;
+  border-top: 2px solid #ff8e40;
+  border-bottom: 2px solid #ff8e40;
+  li {
+    border-bottom: 1px solid #eaedf1;    
+    &:last-child {border-bottom: none;}
+    &.thead {background: #f9f9f9;}
+  }  
+}
+.list_table li p:first-child { width: 80%; border-right: 1px solid #eaedf1;  padding: 8px 16px; font-size: 14px; font-weight: 600;}
+.list_table li p:last-child {width: 20%; padding: 8px 16px; font-size: 14px; font-weight: 600; color: #6e6e6d; text-align: center;}
+ 
 
 
 
