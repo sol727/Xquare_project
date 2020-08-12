@@ -13,14 +13,14 @@ import page from './pages/page'
 import Login from './pages/login';
 import Signup from './pages/signup';
 import Signup2 from './pages/signup2';
-import Invest_index from './pages/invest_index';
-import Invest_index2 from './pages/invest_index2';
-import Invest_index2_detail from './pages/invest_index2_detail';
-import Invest_index3 from './pages/invest_index3';
-import Invest_index3_detail from './pages/invest_index3_detail';
-import Invest_index3_add from './pages/invest_index3_add';
-import Invest_index4 from './pages/invest_index4';
-import Invest_index5 from './pages/invest_index5';
+import Invest_detail from './pages/invest_detail';
+import Invest_detail2 from './pages/invest_detail2';
+import Invest_detail2_detail from './pages/invest_detail2_detail';
+import Invest_detail3 from './pages/invest_detail3';
+import Invest_detail3_detail from './pages/invest_detail3_detail';
+import Invest_detail3_add from './pages/invest_detail3_add';
+import Invest_detail4 from './pages/invest_detail4';
+import Invest_detail5 from './pages/invest_detail5';
 import Corporation_signup from './pages/corporation_signup';
 import Find_id from './pages/find_id';
 import Corporation_find_id from './pages/corporation_find_id';
@@ -31,6 +31,7 @@ import Terms3 from './pages/terms3';
 import Error_page from './pages/error_page';
 import Invest_prepare from './pages/invest_prepare';
 import Invest_check from './pages/invest_check';
+import Invest_search from './pages/invest_search';
 
 
 /* 페이지 */
@@ -39,14 +40,14 @@ function App() {
   return (
     <BrowserRouter>
         <Route exact path="/" component={index}/>
-        <Route path="/invest_index" component={Invest_index}/>
-        <Route path="/invest_index2" component={Invest_index2}/>
-        <Route path="/invest_index2_detail" component={Invest_index2_detail}/>
-        <Route path="/invest_index3" component={Invest_index3}/>
-        <Route path="/invest_index3_detail" component={Invest_index3_detail}/>
-        <Route path="/invest_index3_add" component={Invest_index3_add}/>
-        <Route path="/invest_index4" component={Invest_index4}/>
-        <Route path="/invest_index5" component={Invest_index5}/>
+        <Route path="/invest_detail" component={Invest_detail}/>
+        <Route path="/invest_detail2" component={Invest_detail2}/>
+        <Route path="/invest_detail2_detail" component={Invest_detail2_detail}/>
+        <Route path="/invest_detail3" component={Invest_detail3}/>
+        <Route path="/invest_detail3_detail" component={Invest_detail3_detail}/>
+        <Route path="/invest_detail3_add" component={Invest_detail3_add}/>
+        <Route path="/invest_detail4" component={Invest_detail4}/>
+        <Route path="/invest_detail5" component={Invest_detail5}/>
         <Route path="/page" component={page}/>
         <Route path="/login" component={Login}/>
         <Route path="/signup" component={Signup}/>
@@ -61,6 +62,7 @@ function App() {
         <Route path="/error_page" component={Error_page}/>
         <Route path="/invest_prepare" component={Invest_prepare}/>
         <Route path="/invest_check" component={Invest_check}/>
+        <Route path="/invest_search" component={Invest_search}/>
     </BrowserRouter>
   );
 }

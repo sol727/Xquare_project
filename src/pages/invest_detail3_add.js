@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.scss";
 import $ from 'jquery'
 
-export default class Invest_index5 extends React.Component {
+export default class Invest_detail3_add extends React.Component {
 
      constructor(props) {
           super(props);
@@ -36,7 +36,11 @@ export default class Invest_index5 extends React.Component {
 
           $('.btn_wrap2 .alarm_btn').click(function(){
                $(this).toggleClass('on');              
-          });          
+          });   
+          
+          $('.feeling_box li').click(function(){
+               $(this).toggleClass('on');              
+          });
       
         }//최종괄호
 
@@ -59,9 +63,9 @@ export default class Invest_index5 extends React.Component {
             <>
                <Header />
 
-               <section className="invest_index">
+               <section className="invest_index add">
                     {/* 상세 탑 부분 */}
-                    <div className="top">
+                    <div className="top mo_none">
                          <div className="title_area clearfix2 container">                           
                               <div className="img_slider_wrap">
                                    <ul className="img_box slider">
@@ -180,16 +184,52 @@ export default class Invest_index5 extends React.Component {
                          <div className="overflow-div">
                               <ul className="tab_wrap">
                                    <li ><Link to="/Invest_index"><span>핵심정보</span></Link></li>
-                                   <li ><Link to="/Invest_index2"><span>새소식</span></Link></li>
-                                   <li ><Link to="/Invest_index3"><span>커뮤니티</span></Link></li>
-                                   <li ><Link to="/Invest_index4"><span>부가정보</span></Link></li>
-                                   <li className="active"><Link to="/Invest_index5"><span>투자 현황</span></Link></li>
+                                   <li><Link to="/Invest_index2"><span>새소식</span></Link></li>
+                                   <li  className="active"><Link to="/Invest_index3"><span>커뮤니티</span></Link></li>
+                                   <li><Link to="/Invest_index4"><span>부가정보</span></Link></li>
+                                   <li><Link to="/Invest_index5"><span>투자 현황</span></Link></li>
                               </ul>
                          </div>                        
                     </div>
-                    {/* 탭컨텐츠영역 - 투자현황*/}
-                    <div className="detail_cont">
-                        
+                                        {/* 탭컨텐츠영역 - 커뮤니티 글쓰기*/}
+                                        <div className="detail_cont add">
+                         <div className="detail_container tab3"> 
+                              <div className="clearfix2 detail_table_title">
+                                   <h2 className="table_title">커뮤니티</h2>
+                                   <button type="button"  className="title_btn">목록으로</button>
+                              </div> 
+                              <div className="add_area">
+                                   <form action="">
+                                        <div className="clearfix2 add_top mb8">
+                                             <p className="font_15 bold">구분 선택</p>
+                                             <ul className="radio_wrap clearfix">
+                                                  <li className="on"><input type="radio" id="radio1"name="radio" checked/><label htmlFor="radio1">일반</label></li>
+                                                  <li><input type="radio" id="radio2" name="radio"/><label htmlFor="radio2">질문</label></li>
+                                             </ul>
+                                        </div>
+                                        <p className="font_15 bold mb8">상세 내용</p>
+                                        <div className="count_input mb8">
+                                             <input type="text" placeholder="제목 (최대 60자)"/>
+                                             <span className="text_count font_13">(0/60)</span>
+                                        </div>
+                                        <textarea name="" id="" cols="30" rows="10" placeholder="내용을 입력해주세요"></textarea>
+                                        <p className="centerT info_text font_13 black_color">예탁결제원의 크라우드펀딩업 규정에 따라 수정 및 삭제가 불가능합니다. 신중히 작성해주세요.</p>
+                                        <div className="clearfix">
+                                             <div className="mb8 clearfix floatR"> 
+                                                  <ul className="feeling_box clearfix">
+                                                       <li className="font_13">감정</li>
+                                                       <li className="on"><button type="button" className="feel_a"></button></li>
+                                                       <li className="on"><button type="button" className="feel_b"></button></li>
+                                                       <li className="on"><button type="button" className="feel_c"></button></li>
+                                                  </ul>
+                                                  {/* 버튼 활성화시 ↓*/}
+                                                  {/*  <button type="button" className="btn  orange ml16">등록</button> */}
+                                                  <button type="button" className="btn_gray ml16">등록</button>                                             
+                                             </div>
+                                        </div>                                        
+                                   </form>
+                              </div>
+                         </div>
                     </div>
                </section>
                <Footer />

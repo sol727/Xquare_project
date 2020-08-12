@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.scss";
 import $ from 'jquery'
 
-export default class Invest_index2 extends React.Component {
+export default class Invest_detail2 extends React.Component {
 
      constructor(props) {
           super(props);
@@ -179,11 +179,11 @@ export default class Invest_index2 extends React.Component {
                          {/* 탭영역 */}
                          <div className="overflow-div">
                               <ul className="tab_wrap">
-                                   <li ><Link to="/Invest_index"><span>핵심정보</span></Link></li>
-                                   <li className="active"><Link to="/Invest_index2"><span>새소식</span></Link></li>
-                                   <li><Link to="/Invest_index3"><span>커뮤니티</span></Link></li>
-                                   <li><Link to="/Invest_index4"><span>부가정보</span></Link></li>
-                                   <li><Link to="/Invest_index5"><span>투자 현황</span></Link></li>
+                                   <li ><Link to="/Invest_detail"><span>핵심정보</span></Link></li>
+                                   <li className="active"><Link to="/Invest_detail2"><span>새소식</span></Link></li>
+                                   <li><Link to="/Invest_detail3"><span>커뮤니티</span></Link></li>
+                                   <li><Link to="/Invest_detail4"><span>부가정보</span></Link></li>
+                                   <li><Link to="/Invest_detail5"><span>투자 현황</span></Link></li>
                               </ul>
                          </div>                        
                     </div>
@@ -209,31 +209,31 @@ export default class Invest_index2 extends React.Component {
                                              <p className="th centerT">등록일</p>
                                         </li>
                                         <li> 
-                                             <Link to="/Invest_index2_detail">
+                                             <Link to="/Invest_detail2_detail">
                                                   <p className="td">article title</p>
                                                   <p className="td">yyyy-mm-dd</p>
                                              </Link>
                                         </li>
                                         <li>
-                                             <Link to="/Invest_index2_detail">
+                                             <Link to="/Invest_detail2_detail">
                                                   <p className="td">17 Iconic Movies That Got Surprisingly Low Ratings</p>
                                                   <p className="td">2020-09-26</p>
                                              </Link>
                                         </li>
                                         <li>
-                                             <Link to="/Invest_index2_detail">
+                                             <Link to="/Invest_detail2_detail">
                                                   <p className="td">What to Watch on Wednesday: Peacock finally hatches with Brave New World, Psych 2, and more</p>
                                                   <p className="td">2020-08-02</p>
                                              </Link>
                                         </li>
                                         <li>
-                                             <Link to="/Invest_index2_detail">
+                                             <Link to="/Invest_detail2_detail">
                                                   <p className="td">Ted Sarandos named co-CEO at Netflix</p>
                                                   <p className="td">2020-04-28</p>
                                              </Link>
                                         </li>
                                         <li>
-                                             <Link to="/Invest_index2_detail">
+                                             <Link to="/Invest_detail2_detail">
                                                   <p className="td">Immersive chat startups have a very different vision for the future of voice</p>
                                                   <p className="td">2020-01-31</p>
                                              </Link>

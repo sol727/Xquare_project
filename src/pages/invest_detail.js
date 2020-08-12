@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.scss";
 import $ from 'jquery'
 
-export default class Invest_index2_detail extends React.Component {
+export default class Invest_detail extends React.Component {
 
      constructor(props) {
           super(props);
@@ -36,11 +36,7 @@ export default class Invest_index2_detail extends React.Component {
 
           $('.btn_wrap2 .alarm_btn').click(function(){
                $(this).toggleClass('on');              
-          });   
-          
-          $('.feeling_box li').click(function(){
-               $(this).toggleClass('on');              
-          });
+          });          
       
         }//최종괄호
 
@@ -63,9 +59,9 @@ export default class Invest_index2_detail extends React.Component {
             <>
                <Header />
 
-               <section className="invest_index detail">
+               <section className="invest_index">
                     {/* 상세 탑 부분 */}
-                    <div className="top mo_none">
+                    <div className="top">
                          <div className="title_area clearfix2 container">                           
                               <div className="img_slider_wrap">
                                    <ul className="img_box slider">
@@ -183,98 +179,107 @@ export default class Invest_index2_detail extends React.Component {
                          {/* 탭영역 */}
                          <div className="overflow-div">
                               <ul className="tab_wrap">
-                                   <li ><Link to="/Invest_index"><span>핵심정보</span></Link></li>
-                                   <li className="active"><Link to="/Invest_index2"><span>새소식</span></Link></li>
-                                   <li><Link to="/Invest_index3"><span>커뮤니티</span></Link></li>
-                                   <li><Link to="/Invest_index4"><span>부가정보</span></Link></li>
-                                   <li><Link to="/Invest_index5"><span>투자 현황</span></Link></li>
+                                   <li className="active"><Link to="/Invest_detail"><span>핵심정보</span></Link></li>
+                                   <li><Link to="/Invest_detail2"><span>새소식</span></Link></li>
+                                   <li><Link to="/Invest_detail3"><span>커뮤니티</span></Link></li>
+                                   <li><Link to="/Invest_detail4"><span>부가정보</span></Link></li>
+                                   <li><Link to="/Invest_detail5"><span>투자 현황</span></Link></li>
                               </ul>
                          </div>                        
                     </div>
-                    {/* 탭컨텐츠영역 - 새소식*/}
-                    <div className="detail_cont">                              
-                        <div className="detail_container tab2"> 
-                              <div className="clearfix2 detail_table_title">
-                                   <h2 className="table_title">새소식</h2>
-                                   <button type="button"  className="title_btn">목록으로</button>
-                              </div>                             
-                              <div className="list_table_wrap">
-                                   <div className="detail_table2">
-                                        <div className="top">
-                                             <div className="user_type mb12 clearfix">
-                                                  <p className="user feel_a black_color ">username</p>
-                                                  <p className="user_label">법인회원(발행인)</p>
-                                             </div>
-                                             <h3 className="title black_color mb12">The Calm meditation app is getting its own celebrity-filled HBO Max show</h3>
-                                             <p className="date mb12">2020.05.01 06:05:46</p>
-                                             <p className="text_area font_14 black_color">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
-                                        </div>
-                                        
-                                        <div className="comment_box ">
-                                             {/*개설자뷰에서는 comment_input hidden*/}
-                                             <div className="comment_input clearfix">
-                                                  <h2 className="table_title">댓글 <span className="point_color">3</span></h2>
-                                                  <input type="text" placeholder="댓글을 입력해주세요" className="mb16"/>
-                                                  <div className="mb8 clearfix floatR"> 
-                                                       <ul className="feeling_box clearfix">
-                                                            <li className="font_13">감정</li>
-                                                            <li className="on"><button type="button" className="feel_a"></button></li>
-                                                            <li className="on"><button type="button" className="feel_b"></button></li>
-                                                            <li className="on"><button type="button" className="feel_c"></button></li>
-                                                       </ul>
-                                                       {/* 버튼 활성화시 btn_gray > btn 으로 class 변경 */}
-                                                       <button type="button" className="btn_gray ml16">등록</button>
-                                                  </div>                      
-                                             </div>
-                                                                    
-                                             <ul className="comment_list">
-                                                  <li>
-                                                       <div className="user_type mb12 clearfix">
-                                                            <p className="user feel_a black_color ">username</p>
-                                                            <p className="user_label">개인회원(일반투자자)</p>
-                                                       </div>
-                                                       <p className="date mb12">2020.05.01 06:05:46</p>
-                                                       <p className="text_area font_13 black_color mb12">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
-                                                       <button type="button" className="btn_border">답글 1</button>
-                                                  </li>
-                                                  <li>
-                                                       <div className="user_type mb12 clearfix">
-                                                            <p className="user feel_a black_color ">username</p>
-                                                            <p className="user_label">개인회원(일반투자자)</p>
-                                                       </div>
-                                                       <p className="date mb12">2020.05.01 06:05:46</p>
-                                                       <p className="text_area font_13 black_color mb12">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
-                                                       <button type="button" className="btn_border mb12">답글 1</button>
-                                                       <ul className="in_comment">
-                                                            <li className="">
-                                                                 <div className="user_type mb12 clearfix">
-                                                                      <p className="user feel_a black_color ">username</p>
-                                                                      <p className="user_label">개인회원(일반투자자)</p>
-                                                                 </div>
-                                                                 <p className="date mb12">2020.05.01 06:05:46</p>
-                                                                 <p className="text_area font_13 black_color mb12 ">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore
-                                                                  </p>
-                                                                 <input type="text" />
-                                                                 {/*개설자뷰에서는 comment_input hidden*/}
-                                                                 <div className=" comment_input clearfix mt16">
-                                                                      <div className="clearfix floatR"> 
-                                                                           <ul className="feeling_box clearfix">
-                                                                                <li className="font_13">감정</li>
-                                                                                <li><button type="button" className="feel_a"></button></li>
-                                                                                <li><button type="button" className="feel_b"></button></li>
-                                                                                <li className="on"><button type="button" className="feel_c"></button></li>
-                                                                           </ul>
-                                                                           <button type="button" className="btn ml16">등록</button>
-                                                                      </div>
-                                                                 </div>
-                                                            </li>
-                                                       </ul>
-                                                  </li>
-                                             </ul>
-                                        </div>                                        
-                                   </div>
-                              </div>                              
-                        </div>
+                    {/* 탭컨텐츠영역 - 핵심정보*/}
+                    <div className="detail_cont">
+                         <div className="detail_container tab1">
+                              <ul className="total_box clearfix">                                   
+                                   <li>
+                                        <p>펀딩시작일</p>
+                                        <h3 className="playF">yyyy.mm.dd</h3>
+                                   </li>
+                                   <li>
+                                        <p>펀딩종료일</p>
+                                        <h3 className="playF">yyyy.mm.dd</h3>
+                                   </li>
+                                   <li>
+                                        <p>증권입고일</p>
+                                        <h3 className="playF">yyyy.mm.dd</h3>
+                                   </li>
+                              </ul>    
+                              {/* 펀딩정보 */}                           
+                              <h2 className="sub_title">펀딩 정보</h2>
+                              <ul className="detail_table">
+                                   <li >
+                                        <p className="th">주식종류</p>
+                                        <p className="td">일반회사채</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">1주당 가격</p>
+                                        <p className="td">10,000원</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">최소 투자가능금액</p>
+                                        <p className="td">100,000원(주)</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">성공시 지분율</p>
+                                        <p className="td">3%</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">발행예정 주식수</p>
+                                        <p className="td">100주</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">기업가치</p>
+                                        <p className="td">300,000,000원</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">최저배당이율</p>
+                                        <p className="td">액면금액 연 1%</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">상환청구기간</p>
+                                        <p className="td">2020.03.12~2020.04.01</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">상환 이자율</p>
+                                        <p className="td">연 복리 5%</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">전환 청구 기간</p>
+                                        <p className="td">2020.03017~2020.04.01</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">전환조건</p>
+                                        <p className="td">보통주 1:1 전환</p>
+                                   </li>
+                              </ul>
+
+                              {/* 펀딩상세 세부정보 */}
+                              <div className="info">
+                                   <h2 className="info_title centerT mb12">펀딩 상세 세부정보 소제목이 나타납니다.</h2>
+                                   <p className="point_color sutbitle mb12">sutbitle here Amet faucibus netus purus tristique dolor.</p>
+                                   <img src={ require('../images/info_sample.jpg') } alt="펀딩상세이미지" className="mb12"/>
+                                   <p className="body mb12">body here
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper molestie pellentesque integer bibendum. Ut fusce ut adipiscing venenatis consectetur nulla consequat semper. Est massa mattis ac purus aliquam vitae. Integer facilisi consequat senectus facilisis. Est non et egestas nisl a amet. Bibendum egestas nibh pretium vel diam mauris vitae eget aenean.</p>
+                                   <p className="caption"></p>
+                               </div>   
+
+                               {/* 투자위험 */}
+                               <h2 className="sub_title">투자위험</h2>
+                              <ul className="detail_table detail_table2">
+                                   <li >
+                                        <p className="th">사업위험</p>
+                                        <p className="td">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam rutrum elementum, congue vulputate magna dictum nisi, feugiat purus.</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">회사위험</p>
+                                        <p className="td">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam rutrum elementum, congue vulputate magna dictum nisi, feugiat purus.</p>
+                                   </li>
+                                   <li >
+                                        <p className="th">기타위험</p>
+                                        <p className="td">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor, lobortis turpis imperdiet lobortis. Varius sagittis risus lorem neque tempor arcu fames proin. Quam placerat enim dui, nisi faucibus pulvinar. Egestas metus in varius auctor. Pretium urna mi tincidunt elit, laoreet.</p>
+                                   </li>                                   
+                              </ul>                              
+                         </div>                                           
                     </div>
                </section>
                <Footer />

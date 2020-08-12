@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.scss";
 import $ from 'jquery'
 
-export default class Invest_index3_add extends React.Component {
+export default class Invest_detail4 extends React.Component {
 
      constructor(props) {
           super(props);
@@ -56,7 +56,7 @@ export default class Invest_index3_add extends React.Component {
 
     render() {
         return (
-          <>
+            <>
                <Header />
 
                <section className="invest_index">
@@ -179,46 +179,64 @@ export default class Invest_index3_add extends React.Component {
                          {/* 탭영역 */}
                          <div className="overflow-div">
                               <ul className="tab_wrap">
-                                   <li ><Link to="/"><span>핵심정보</span></Link></li>
-                                   <li ><Link to="/"><span>새소식</span></Link></li>
-                                   <li className="active"><Link to="/"><span>커뮤니티</span></Link></li>
-                                   <li><Link to="/"><span>부가정보</span></Link></li>
-                                   <li><Link to="/"><span>투자 현황</span></Link></li>
+                                   <li ><Link to="/Invest_detail"><span>핵심정보</span></Link></li>
+                                   <li ><Link to="/Invest_detail2"><span>새소식</span></Link></li>
+                                   <li ><Link to="/Invest_detail3"><span>커뮤니티</span></Link></li>
+                                   <li className="active"><Link to="/Invest_detail4"><span>부가정보</span></Link></li>
+                                   <li><Link to="/Invest_detail5"><span>투자 현황</span></Link></li>
                               </ul>
                          </div>                        
-                    </div> 
-                    {/* 탭컨텐츠영역 - 커뮤니티 글쓰기*/}
-                    <div className="detail_cont add">                              
-                         <div className="detail_container tab3"> 
-                              <div className="clearfix2 detail_table_title">
-                                   <h2 className="table_title">커뮤니티</h2>
-                                   <button type="button"  className="title_btn">목록으로</button>
-                              </div> 
-                              <div className="add_area">
-                                   <form action="">
-                                        <div className="clearfix2 add_top mb8">
-                                             <p className="font_15 bold">구분 선택</p>
-                                             <ul className="radio_wrap clearfix">
-                                                  <li className="on"><input type="radio" id="radio1"name="radio" checked/><label htmlFor="radio1">일반</label></li>
-                                                  <li><input type="radio" id="radio2" name="radio"/><label htmlFor="radio2">질문</label></li>
-                                             </ul>
-                                        </div>
-                                        <p className="font_15 bold mb8">상세 내용</p>
-                                        <div className="count_input mb8">
-                                             <input type="text" placeholder="제목 (최대 60자)" />
-                                             <span className="text_count font_13">(0/60)</span>
-                                        </div>
-                                        <textarea name="" id="" cols="30" rows="10" placeholder="내용을 입력해주세요"></textarea>
-                                        <p className="centerT alert_text mt16">예탁결제원의 크라우드펀딩업 규정에 따라 수정 및 삭제가 불가능합니다. 신중히 작성해주세요.</p>
-                                   </form>
-                              </div>      
-                         </div>         
                     </div>
-                 
+                    {/* 탭컨텐츠영역 - 부가정보*/}
+                    <div className="detail_cont">
+                         <div className="detail_container tab4"> 
+                               <div className="clearfix2 detail_table_title">
+                                   <h2 className="table_title">투자설명서</h2>                                   
+                              </div>               
+                              <ul className="down_list">
+                                   <li className="clearfix2">
+                                        <p>솔로몬(270kW) 투자설명서</p>
+                                        <button type="button" className="download_btn">다운로드<img src={ require('../images/icons/down_icon.png') } alt="다운로드아이콘"/></button>
+                                   </li>
+                              </ul>      
+
+                              <div className="clearfix2 detail_table_title">
+                                   <h2 className="table_title">참고자료</h2>                                   
+                              </div>               
+                              <ul class="down_list">
+                                   <li className="clearfix2">
+                                        <p>사업자등록증</p>
+                                        <button type="button" className="download_btn">다운로드<img src={ require('../images/icons/down_icon.png') } alt="다운로드아이콘"/></button>
+                                   </li>
+                                   <li className="clearfix2">
+                                        <p>법인등기부등본</p>
+                                        <button type="button" className="download_btn">다운로드<img src={ require('../images/icons/down_icon.png') } alt="다운로드아이콘"/></button>
+                                   </li>
+                                   <li className="clearfix2">
+                                        <p>주정관</p>
+                                        <button type="button" className="download_btn">다운로드<img src={ require('../images/icons/down_icon.png') } alt="다운로드아이콘"/></button>
+                                   </li>
+                                   <li className="clearfix2">
+                                        <p>재무재표</p>
+                                        <button type="button" className="download_btn">다운로드<img src={ require('../images/icons/down_icon.png') } alt="다운로드아이콘"/></button>
+                                   </li>
+                                   <li className="clearfix2">
+                                        <p>청약서</p>
+                                        <button type="button" className="download_btn">다운로드<img src={ require('../images/icons/down_icon.png') } alt="다운로드아이콘"/></button>
+                                   </li>
+                                   <li className="clearfix2">
+                                        <p>재무상태 확인서</p>
+                                        <button type="button" className="download_btn">다운로드<img src={ require('../images/icons/down_icon.png') } alt="다운로드아이콘"/></button>
+                                   </li>
+                              </ul>                   
+                         </div>
+                    </div>
                </section>
                <Footer />
 
-               </>
+
+
+            </>
         )
     }
 }
