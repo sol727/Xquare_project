@@ -23,63 +23,28 @@ export default class Set_password extends React.Component {
                 <section className="search_page">
                     <div className="container">
                         <div className="title_wrap">
-                            <h1>법인회원<br/>아이디·비밀번호찾기</h1>
+                            <h1>비밀번호 재설정</h1>
                         </div>
                         <div className="form_box">
                             <form action="">
-                                <ul className="tab_btn_box clearfix">
-                                    <li className="on">아이디 찾기</li>
-                                    <li>비밀번호 찾기</li>
+                                <ul className="mb24">
+                                    <li>
+                                        <h3 className="input_title">비밀번호 입력</h3>
+                                        {/* 비밀번호 유효성검사미통과시에 class에 red_color 추가↓ */}
+                                        <p className="input_sub_title ">영문, 숫자, 특수문자(&#33;&#64;&#35;&#36;&#37;&#94;&amp;&#42;)를 조합한 8~20자 이내, 연속된 3자리 이상의 문자는 사용할 수 없습니다.</p>
+                                        <input type="password" placeholder="비밀번호 입력" className="mt16"/>                                    
+                                    </li>
+                                    <li className="mt24">
+                                        <h3 className="input_title">비밀번호 재입력</h3>
+                                        {/* 비밀번호 유효성검사미통과시에 div class에 alert 추가↓ */}
+                                        <div className="check_input mt16"><input type="password" placeholder="비밀번호 확인"/></div>                                 
+                                    </li>
                                 </ul>
-                                <div className="tab_cont_wrap">
-                                    <div className="tab_cont">
-                                        <h3 className="input_title">사업자 등록번호</h3>
-                                        <p className="error_msg">사업자등록번호를 다시 확인해주세요.</p>
-                                        <input type="text" placeholder="10자리 숫자를 입력하세요" className="mt16"/>
+                                {/* 중복확인 비활성화 버튼↓ */}
+                                <button type="button" className="unable_btn">비밀번호 변경하기</button>
 
-                                        {/* 아이디찾기후 노출↓ */}
-                                        <div className="certify_after certify_after2">
-                                            <p className="date_txt"><span>법인회원</span>가입일 : yyyy.mm.dd</p>
-                                            <div className="email_box">
-                                                <h4>usern***@mail.com</h4>
-                                            </div>
-                                        </div>
-
-                                        {/* 비활성화 버튼↓ */}
-                                        <button type="button" className="unable_btn mt24">아이디 찾기</button>
-
-                                        {/*  활성화 버튼↓ */}
-                                        {/* <button type="button" className="navy_btn mt24">아이디 찾기</button> */}
-                                        <div className="txt_box">
-                                            <p>아이디가 기억나지 않으시나요?<br/><Link>1:1문의하기</Link>를 남겨주세요.</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="tab_cont">
-                                        <ul>
-                                            <li>
-                                                <h3 className="input_title">아이디</h3>
-                                                <p className="error_msg">아이디를 다시확인해주세요.</p>
-                                                <input type="text" placeholder="이메일 주소를 입력하세요" className="mt16"/>
-                                            </li>
-                                            <li className="mt24">
-                                                <h3 className="input_title">사업자 등록번호</h3>
-                                                <p className="error_msg">사업자등록번호를 다시 확인해주세요.</p>
-                                                <input type="text" placeholder="10자리 숫자를 입력하세요" className="mt16"/>
-                                            </li>
-                                        </ul>
-
-                                        {/* 비활성화 버튼↓ */}
-                                        <button type="button" className="unable_btn mt24">비밀번호 찾기</button>
-
-                                        {/*  활성화 버튼↓ */}
-                                        {/* <button type="button" className="navy_btn mt24">비밀번호 찾기</button> */}
-                                        <div className="txt_box">
-                                            <p>아이디가 기억나지 않으시나요?<br/><Link>1:1문의하기</Link>를 남겨주세요.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
+                                {/* 중복확인 활성화 버튼↓ */}
+                                {/* <button type="button" className="navy_btn">비밀번호 변경하기</button> */}
                             </form>
                         </div>
                     </div>
