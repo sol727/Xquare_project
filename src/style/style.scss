@@ -64,14 +64,20 @@ code {
 .ml16 {margin-left: 16px;}
 .mb24 {margin-bottom: 24px;}
 .mt24 {margin-top: 24px !important;}
+.mt60 {margin-top: 60px;}
+.d_ib {display: inline-block;}
 //btn
+.btn {width: 97px; height: 38px; line-height: 36px;  background: #292f40; color: #fff; border-radius: 4px;}
+.btn.big {width: 257px;}
 .btn_small {background: #292f40; color: #fff; border-radius: 4px; padding: 8px 12px;}
 .btn_small + .btn_small {margin-left: 24px;}
 .btn_gray {width: 97px; height: 38px; line-height: 36px; color:#bfbfbf; background: #eaedf1;  border-radius: 4px;}
 .btn_border {width: 97px; height: 38px; line-height: 36px;background: #fff; color: #343332; border: 1px solid #eaedf1; border-radius: 4px;}
 .more_btn2 {border-radius:  4px; border: 1px solid #eaedf1; color: #b8c4d2; font-size: 15px; padding: 9px 24px;}
+.download_btn {border: 1px solid #eaedf1; color: #535352; padding: 8px 20px; font-size: 14px;}
 //color
 .black_color {color: #000;}
+
 //css------------------------------------
 //index
 .index{ 
@@ -529,7 +535,7 @@ code {
    top:44%;
    transform: translateY(-50%);
    li {
-     width: 32px; height: 48px; background: #c0c5ca; border-radius: 2px;         
+     width: 32px; height: 48px; background: #c0c5ca; border-radius: 2px;  cursor: pointer;       
     }
     li.prev_arrow {
       position: absolute;
@@ -543,7 +549,8 @@ code {
        right: 0;
       background-image: url(../images/icons/btn_next.png);
       background-position: center;
-      background-repeat: no-repeat;      
+      background-repeat: no-repeat;    
+
      }
 }
 
@@ -663,6 +670,15 @@ code {
 //투자하기 상세 탭------------------------------------
 .detail_container {width: 996px; margin: 24px auto 0;}
 .detail_container.tab1 {margin: 24px auto 55px;}
+.alert_text {
+  position: relative;
+  &:after {position: absolute; content:''; width: 20px; height: 20px; }
+}
+
+//공통
+.date {font-size: 13px; color: #b8c4d2;  }
+.label2 {display:inline-block; border:1px solid #e9edf1; color: #8d9daf; font-size: 13px; margin-right: 12px; padding: 2px 10px; } 
+
 //핵심정보
 .detail_cont .total_box{
   margin: 0 51px 24px;
@@ -729,7 +745,7 @@ code {
     p {padding-top: 4px; padding-left: 5px;}
   }
 }
-.tabel_title { 
+.table_title { 
   padding: 12px 16px; 
   font-size: 18px; 
   color: #000000; 
@@ -758,38 +774,9 @@ code {
  .top {
    padding: 24px 16px;     
   }
-  .title {font-size: 18px;  line-height: 1.56;}
-  .dete {font-size: 13px; color: #b8c4d2;  }
+  .title {font-size: 18px;  line-height: 1.56;} 
   .text_area {line-height: 1.57;}
-  .user_type .user{margin-bottom: 13px; position: relative; padding-left: 28px; line-height: 23px;}
-  .user_type .user_label {border: 1px solid #e9edf1; border-radius: 2px; padding: 1px 8px; color: #6e6e6d; font-size: 14px; margin-left: 4px; line-height: 20px; background: #fff;}
-  .user_type .user.feel_a:after {
-    position: absolute; 
-    content:''; 
-    width: 24px;
-    height: 24px;
-    left: 0;
-    background-image: url(../images/icons/feeling_a.png);
-    background-position: center;  
-  }
-  .user_type .user.feel_b:after {
-    position: absolute; 
-    content:''; 
-    width: 24px;
-    height: 24px;
-    left: 0;
-    background-image: url(../images/icons/feeling_b.png);
-    background-position: center;  
-  }
-  .user_type .user.feel_c:after {
-    position: absolute; 
-    content:''; 
-    width: 24px;
-    height: 24px;
-    left: 0;
-    background-image: url(../images/icons/feeling_c.png);
-    background-position: center;  
-  }
+ 
 }
 //댓글창
 .comment_box {background: #f8f9fb; padding: 8px 16px;}
@@ -804,7 +791,35 @@ code {
       background: #f9f9f9 ;     
     }
   }
-
+}
+.user_type .user{margin-bottom: 13px; position: relative; padding-left: 28px; line-height: 23px; font-weight: 600;}
+.user_type .user_label {border: 1px solid #e9edf1; border-radius: 2px; padding: 1px 8px; color: #6e6e6d; font-size: 14px; margin-left: 4px; line-height: 20px; background: #fff;}
+.user_type .user.feel_a:after {
+  position: absolute; 
+  content:''; 
+  width: 24px;
+  height: 24px;
+  left: 0;
+  background-image: url(../images/icons/feeling_a.png);
+  background-position: center;  
+}
+.user_type .user.feel_b:after {
+  position: absolute; 
+  content:''; 
+  width: 24px;
+  height: 24px;
+  left: 0;
+  background-image: url(../images/icons/feeling_b.png);
+  background-position: center;  
+}
+.user_type .user.feel_c:after {
+  position: absolute; 
+  content:''; 
+  width: 24px;
+  height: 24px;
+  left: 0;
+  background-image: url(../images/icons/feeling_c.png);
+  background-position: center;  
 }
 .feeling_box {
   background: #fff; border-radius: 4px; padding: 7px 16px; 
@@ -874,5 +889,76 @@ code {
   background-image: url(../images/icons/feeling_c.png);
   background-position: center;  
 }
+
+//커뮤니티탭
+.detail_container.tab3 {margin: 24px auto 100px;} 
+.detail_container.tab3 .list_wrap {
+  margin-top: 0 ;background: #f9f9f9; padding: 8px; border-bottom: 2px solid #ff8e40;
+  li {
+    background: #fff; margin-bottom: 8px; padding: 8px 16px;
+    &:last-child {margin-bottom: 0;}
+    a {width: 100%;}
+  }
+}
+.detail_container.tab3 .date {color: #6e6e6d; font-size: 14px;}
+.detail_container.tab3 .user {margin-bottom: 0;}
+.detail_container.tab3 .user_label {color: #6e6e6d; border: none; font-size: 13px; line-height: 23px;}
+.detail_container.tab3 .title {line-height: 1.5;}
+
+//커뮤니티탭 상세
+.detail .detail_container.tab3 .user_label {border: 1px solid #e9edf1;}
+//커뮤니티탭 글작성하기
+.detail_cont.add {
+  .add_area {
+    margin: 48px 0; padding: 0 16px; 
+    textarea {border-radius: 2px;}
+  }
+  .add_top p {margin-top: 11px;}
+  .radio_wrap{width: 386px; height: 40px; border-radius:6px;border:1px solid #d0d0cf;overflow: hidden;
+    li{width:50%; height: 100%;}   
+  }
+  .count_input {
+    position: relative;
+    input {padding: 16px 13px; height: auto; border-radius: 2px;}
+    .text_count {
+      position: absolute;
+      color: #bfbfbf;
+      right: 16px;
+      bottom: 10px;
+    }
+  }
+ 
+}
+.radio_wrap  input[type="radio"] {display: none;}
+.radio_wrap  input[type="radio"] + label{width: 100% ; height: 100%; text-align: center; font-size: 14px; color: #343332;padding: 10px 0; background: #ffffff; display: block; cursor: pointer;}
+.radio_wrap  input[type="radio"]:checked + label {color: #fff; background: #fe8d40;}
+
+
+
+
+
+
+
+
+
+
+//부가정보탭
+.detail_container.tab4 .detail_table_title:last-of-type {margin-top: 60px;}
+.detail_container.tab4 {margin: 60px auto 100px;} 
+.down_list {
+  li{
+    padding: 10px 30px;    
+    border-bottom: 1px solid #eaedf1;
+    p {width: calc(100% - 120px);line-height: 30px;
+    }
+    button{      
+      img {margin-left: 5px;}
+    }    
+  } 
+}
+
+
+
+
 
 

@@ -189,7 +189,47 @@ export default class Invest_index4 extends React.Component {
                     </div>
                     {/* 탭컨텐츠영역 - 부가정보*/}
                     <div className="detail_cont">
-                        
+                         <div className="detail_container tab4"> 
+                               <div className="clearfix2 detail_table_title">
+                                   <h2 className="table_title">투자설명서</h2>                                   
+                              </div>               
+                              <ul className="down_list">
+                                   <li className="clearfix2">
+                                        <p>솔로몬(270kW) 투자설명서</p>
+                                        <button type="button" className="download_btn">다운로드<img src={ require('../images/icons/down_icon.png') } alt="다운로드아이콘"/></button>
+                                   </li>
+                              </ul>      
+
+                              <div className="clearfix2 detail_table_title">
+                                   <h2 className="table_title">참고자료</h2>                                   
+                              </div>               
+                              <ul class="down_list">
+                                   <li className="clearfix2">
+                                        <p>사업자등록증</p>
+                                        <button type="button" className="download_btn">다운로드<img src={ require('../images/icons/down_icon.png') } alt="다운로드아이콘"/></button>
+                                   </li>
+                                   <li className="clearfix2">
+                                        <p>법인등기부등본</p>
+                                        <button type="button" className="download_btn">다운로드<img src={ require('../images/icons/down_icon.png') } alt="다운로드아이콘"/></button>
+                                   </li>
+                                   <li className="clearfix2">
+                                        <p>주정관</p>
+                                        <button type="button" className="download_btn">다운로드<img src={ require('../images/icons/down_icon.png') } alt="다운로드아이콘"/></button>
+                                   </li>
+                                   <li className="clearfix2">
+                                        <p>재무재표</p>
+                                        <button type="button" className="download_btn">다운로드<img src={ require('../images/icons/down_icon.png') } alt="다운로드아이콘"/></button>
+                                   </li>
+                                   <li className="clearfix2">
+                                        <p>청약서</p>
+                                        <button type="button" className="download_btn">다운로드<img src={ require('../images/icons/down_icon.png') } alt="다운로드아이콘"/></button>
+                                   </li>
+                                   <li className="clearfix2">
+                                        <p>재무상태 확인서</p>
+                                        <button type="button" className="download_btn">다운로드<img src={ require('../images/icons/down_icon.png') } alt="다운로드아이콘"/></button>
+                                   </li>
+                              </ul>                   
+                         </div>
                     </div>
                </section>
                <Footer />

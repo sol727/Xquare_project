@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.scss";
 import $ from 'jquery'
 
-export default class Invest_index3 extends React.Component {
+export default class Invest_index3_add extends React.Component {
 
      constructor(props) {
           super(props);
@@ -56,7 +56,7 @@ export default class Invest_index3 extends React.Component {
 
     render() {
         return (
-            <>
+          <>
                <Header />
 
                <section className="invest_index">
@@ -186,121 +186,39 @@ export default class Invest_index3 extends React.Component {
                                    <li><Link to="/"><span>투자 현황</span></Link></li>
                               </ul>
                          </div>                        
-                    </div>
-                    {/* 탭컨텐츠영역 - 커뮤니티*/}
-                    <div className="detail_cont">
+                    </div> 
+                    {/* 탭컨텐츠영역 - 커뮤니티 글쓰기*/}
+                    <div className="detail_cont add">                              
                          <div className="detail_container tab3"> 
-
-                               {/* 개설자에게만 보이는 영역 ↓ */}
-                             <div className="alert_box centerT mb24">
-                                  <div className="alert clearfix">
-                                        <img src={ require('../images/icons/check_input_alert.png') } alt="alert아이콘"/>
-                                        <p className="font_13 black_color">댓글 등록은 스튜디오에서 가능합니다.</p>
-                                  </div>                                  
-                                   <div className="btn_wrap centerT mt8">                                        
-                                        <button type="button" className="btn big">투자자 의견 바로가기</button>
-                                   </div>
-                             </div>
-
-                             {/* 컨텐츠영역 */}
                               <div className="clearfix2 detail_table_title">
-                                   <h2 className="table_title">커뮤니티 <span>06</span></h2>
-                                   {/*개설자 뷰에서는 hidden*/}
-                                   <button type="button"  className="title_btn write_btn">글쓰기</button>
-                              </div>    
-                              <ul className="list_wrap">
-                                   <li>
-                                        <Link to="/Invest_index3_detail">                                     
-                                             <div className="clearfix2 mb8">
-                                                  <div>
-                                                       <span className="label2">일반</span>
-                                                       <p className="date d_ib font_14">yyyy.mm.dd hh:mm</p>
-                                                  </div>
-                                                  <p className="font_15 bold count">댓글 0</p>
-                                             </div>
-                                             <div className="user_type mb8 clearfix">
-                                                  <p className="user feel_a black_color ">username</p>
-                                                  <p className="user_label">개인회원(일반투자자)</p>
-                                             </div>
-                                             <p className=" black_color title bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </Link>
-                                   </li>
-                                   <li>
-                                        <Link to="/Invest_index3_detail">                                       
-                                             <div className="clearfix2 mb8">
-                                                  <div>
-                                                       <span className="label2">일반</span>
-                                                       <p className="date d_ib font_14">yyyy.mm.dd hh:mm</p>
-                                                  </div>
-                                                  <p className="font_15 bold count">댓글 1</p>
-                                             </div>
-                                             <div className="user_type mb8 clearfix">
-                                                  <p className="user feel_a black_color ">username</p>
-                                                  <p className="user_label">개인회원(일반투자자)</p>
-                                             </div>
-                                             <p className=" black_color title bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </Link>
-                                   </li>
-                                   <li>
-                                        <Link to="/Invest_index3_detail">                
-                                             <div className="clearfix2 mb8">
-                                                  <div>
-                                                       <span className="label2">일반</span>
-                                                       <p className="date d_ib font_14">yyyy.mm.dd hh:mm</p>
-                                                  </div>
-                                                  <p className="font_15 bold count">댓글 99</p>
-                                             </div>
-                                             <div className="user_type mb8 clearfix">
-                                                  <p className="user feel_a black_color ">username</p>
-                                                  <p className="user_label">개인회원(일반투자자)</p>
-                                             </div>
-                                             <p className=" black_color title bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis malesuada egestas nulla euismod non cursus diam.</p>
-                                        </Link>
-                                   </li>
-                                   <li>
-                                        <Link to="/Invest_index3_detail">                
-                                             <div className="clearfix2 mb8">
-                                                  <div>
-                                                       <span className="label2">일반</span>
-                                                       <p className="date d_ib font_14">yyyy.mm.dd hh:mm</p>
-                                                  </div>
-                                                  <p className="font_15 bold count">댓글 0</p>
-                                             </div>
-                                             <div className="user_type mb8 clearfix">
-                                                  <p className="user feel_a black_color ">username</p>
-                                                  <p className="user_label">개인회원(일반투자자)</p>
-                                             </div>
-                                             <p className=" black_color title bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </Link>
-                                   </li>
-                                   <li>
-                                        <Link to="/Invest_index3_detail">                
-                                             <div className="clearfix2 mb8">
-                                                  <div>
-                                                       <span className="label2">일반</span>
-                                                       <p className="date d_ib font_14">yyyy.mm.dd hh:mm</p>
-                                                  </div>
-                                                  <p className="font_15 bold count">댓글 0</p>
-                                             </div>
-                                             <div className="user_type mb8 clearfix">
-                                                  <p className="user feel_a black_color ">username</p>
-                                                  <p className="user_label">개인회원(일반투자자)</p>
-                                             </div>
-                                             <p className=" black_color title bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </Link>
-                                   </li>                                   
-                              </ul>
-                              <div className="btn_wrap centerT mt24">
-                                   <button type="button" className="more_btn2">더보기(5/6) <img src={ require('../images/icons/more_arrow2.png') } alt="화살표아이콘"/></button>
-                              </div>
-                         </div>
+                                   <h2 className="table_title">커뮤니티</h2>
+                                   <button type="button"  className="title_btn">목록으로</button>
+                              </div> 
+                              <div className="add_area">
+                                   <form action="">
+                                        <div className="clearfix2 add_top mb8">
+                                             <p className="font_15 bold">구분 선택</p>
+                                             <ul className="radio_wrap clearfix">
+                                                  <li className="on"><input type="radio" id="radio1"name="radio" checked/><label htmlFor="radio1">일반</label></li>
+                                                  <li><input type="radio" id="radio2" name="radio"/><label htmlFor="radio2">질문</label></li>
+                                             </ul>
+                                        </div>
+                                        <p className="font_15 bold mb8">상세 내용</p>
+                                        <div className="count_input mb8">
+                                             <input type="text" placeholder="제목 (최대 60자)" />
+                                             <span className="text_count font_13">(0/60)</span>
+                                        </div>
+                                        <textarea name="" id="" cols="30" rows="10" placeholder="내용을 입력해주세요"></textarea>
+                                        <p className="centerT alert_text mt16">예탁결제원의 크라우드펀딩업 규정에 따라 수정 및 삭제가 불가능합니다. 신중히 작성해주세요.</p>
+                                   </form>
+                              </div>      
+                         </div>         
                     </div>
+                 
                </section>
                <Footer />
 
-
-
-            </>
+               </>
         )
     }
 }

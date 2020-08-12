@@ -202,7 +202,7 @@ export default class Invest_index2 extends React.Component {
                                    </div>
                              </div>
                               <div className="list_table_wrap">
-                                   <h2 className="tabel_title">새소식 <span className="">06</span></h2>
+                                   <h2 className="table_title">새소식 <span className="">06</span></h2>
                                    <ul className="list_table">
                                         <li className="thead ">                                            
                                              <p className="th centerT">제목</p>
