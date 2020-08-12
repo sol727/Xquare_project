@@ -215,6 +215,31 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     button{font-size:15px;}
 }
 
+.pre{white-space: pre-line;line-height: 1.5;}
+//약관페이지
+.terms_page{
+    .title_wrap{padding:32px 0px 16px;text-align:center;
+        h1{font-size:50px;line-height:1.5;}
+        p{font-size:20px;margin-top:20px;line-height: 1.5;}
+    }
+    .tab_ul{margin-top:24px;border-bottom:1px solid #eaedf1;
+        li{width: 33.333%;}
+        li.on a{color:#fe8d40;border-bottom:4px solid #fe8d40;}
+        a{text-align: center;font-size: 14px;width:100%;padding:8px 0;color:#000;font-weight: 600;}
+    }
+    .top_box{margin-top:56px;
+        button{width: 166px;height:38px;font-size:15px;margin-bottom:16px;}
+        h1{font-size: 24px;font-weight: 600;margin-bottom: 16px;}
+        p{font-size: 13px;color:#6e6e6d;text-align: right;}
+    }
+    .terms_ul{
+        li{margin-bottom:16px;}
+        .line_title{font-size:16px;padding-bottom: 4px;border-bottom:1px solid #eaedf1;}
+        .line_title span{margin-right: 8px;}
+        .li_title{font-size:14px;}
+        .li_txt{font-size: 14px;line-height: 1.5;}
+    }
+}
 
 
 
