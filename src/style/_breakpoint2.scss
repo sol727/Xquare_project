@@ -1,0 +1,199 @@
+// Break Point (Desktop First 기준 내림차순 설정)
+$desktop-l-width	: 1440px;
+$tablet-l-width		: 1200px;
+$tablet-s-width		: 768px;
+$mob-m-width		: 480px;
+$mob-s-width		: 375px;
+
+// only PC
+@mixin pc-only {
+	@media screen and (min-width: #{$tablet-l-width + 1}) {
+		@content;
+	}
+}
+// PC large
+@mixin pc-large {
+	@media screen and (min-width: #{$desktop-l-width + 1}) {
+		@content;
+	}
+}
+
+// --------------------------------------------------
+
+// 태블릿
+@mixin tab {
+	@media screen and (max-width: #{$tablet-l-width}) {
+		@content;
+	}
+}
+// 모바일
+@mixin tab-small {
+	@media screen and (max-width: #{$tablet-s-width}) {
+		@content;
+	}
+}
+// 모바일 large
+@mixin mob-large {
+	@media screen and (max-width: #{$mob-l-width}) {
+		@content;
+	}
+}
+// 모바일 mid
+@mixin mob {
+	@media screen and (max-width: #{$mob-m-width}) {
+		@content;
+	}
+}
+// 모바일 small
+@mixin mob-small {
+	@media screen and (max-width: #{$mob-s-width}) {
+		@content;
+	}
+}
+
+
+@include pc-only{
+  .mo_none {display: block;}
+}
+
+@include tab{
+    .container{width:calc(100% - 38px);}
+
+    //form_page
+    .form_page{width:100%;min-height:calc(100vh - 446px);
+        .bg_gradient{width: 50%;min-height:calc(100vh - 446px);}
+        .right{width:50%;padding:56px 70px 0;}
+    }
+
+    //회원가입
+    .signup.signup2 .right{padding:0px 30px 0px;}
+
+    // 투자하기페이지
+    .invest_page{
+        .top_banner{height: 132px;
+            h1{font-size: 28px;line-height: 132px;}
+        }
+        .invest_top_box{
+            ul{width:100%;}
+        }
+        .big_title{font-size: 28px;width: 100%;}
+        .prepare_ul{width:100%;margin:60px auto 0;
+            li .txt{width:100%;float: none;}
+            li button{width:100%;float: none;}
+        }
+        .btn_wrap{width:100%;
+        }
+    }
+
+    // 투자한도조회
+    .invest_check{
+        .cont{margin-top:70px;
+            .logo_box{padding:48px 0px;
+                img{margin-right:auto !important;display: block;margin:0 auto 16px;}
+                img:last-child{margin-bottom:0px;}
+            }
+            .loading_box{padding:24px 16px 32px;
+                .loading_bar{width:100%;}
+            }
+        }
+        
+    }
+    
+
+    //footer
+    footer .container{width:calc(100% - 38px);}
+}
+
+@include tab-small{
+    .pc_none {display: block;}
+    //form_page
+    .form_page{width:calc(100% - 38px);
+        .right{width:100%;padding:0px 0px 40px;margin-top:10px;}
+    }
+
+    //회원가입
+    .signup.signup2 .right{padding:0px;}
+
+    // 아이디,비번찾기페이지
+    .search_page{
+        .container{width:calc(100% - 80px);}
+        .title_wrap{
+            h1{font-size:28px;}
+            p{font-size: 14px;}
+        }
+        .form_box{margin:24px auto 0;
+            .certify_after{
+                .btn_wrap{margin:32px auto 84px;}
+            }
+        }
+    }
+
+    // 투자하기페이지
+    .invest_page{
+        .invest_top_box{
+            li{width:50%;}
+        }
+    }
+
+    //약관페이지
+    .terms_page{
+        .title_wrap{
+            h1{font-size:28px;}
+            p{font-size:14px;}
+        }
+        .table_li{overflow-x: auto;}
+    }
+
+    //footer
+    footer {padding-top:42px;
+        .top{
+            >div{float: none !important;}
+
+            >div:first-child a{float: none !important;text-align: center;width: 100%;}
+            >div:first-child .terms_ul{float: none !important;width: max-content;margin:5px auto 0px;}
+            .service_box{margin-top:12px;}
+        }
+        .bottom{padding:30px 0 12px;
+            >div{float: none !important;}
+            .link_wrap{width: max-content;margin:12px auto 0;}
+        }
+    }
+}
+
+@include mob{
+    // 아이디,비번찾기페이지
+    .search_page{
+        .container{width:calc(100% - 38px);}
+        .form_box{max-width:100%;}
+    }
+
+    //약관페이지
+    .terms_page{
+        .tab_ul_wrap{overflow-x:auto;
+            ul{width: max-content;
+                li{width: auto;}
+                a{padding:8px 24px;}
+            }
+            
+        }
+    }
+
+    //에러페이지
+    .error_page{
+        .container{padding-bottom:0px;padding-top:160px;}
+        .text_box{
+            p{font-size: 14px;margin:40px 0 12px;}
+            h1{font-size: 20px;margin-bottom:12px;}
+            .txt{font-size: 13px;line-height: 1.5;}
+        }
+        .btn_wrap{width:100%;
+            button{width:100%;float: none;margin-bottom:24px;}
+        }
+        img{width:100%;right:unset;top:0;left:50%;transform: translateX(-50%);}
+    }
+}
+
+
+
+
+

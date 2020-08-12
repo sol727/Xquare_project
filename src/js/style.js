@@ -1,3 +1,6 @@
-export function a () {
-    console.log("?");
+import $ from 'jquery'
+
+export function show ( id , e ) {
+    $(  "#"+id  ).show()
+    $(e.target).hide()
 }
