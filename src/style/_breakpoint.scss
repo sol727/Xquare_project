@@ -2,7 +2,6 @@
 $desktop-l-width	: 1440px;
 $tablet-l-width		: 1200px;
 $tablet-s-width		: 768px;
-$mob-l-width		: 640px;
 $mob-m-width		: 480px;
 $mob-s-width		: 375px;
 
@@ -27,20 +26,14 @@ $mob-s-width		: 375px;
 		@content;
 	}
 }
-// 모바일
-@mixin mob {
+// 태블릿 small
+@mixin tab-small {
 	@media screen and (max-width: #{$tablet-s-width}) {
 		@content;
 	}
 }
-// 모바일 large
-@mixin mob-large {
-	@media screen and (max-width: #{$mob-l-width}) {
-		@content;
-	}
-}
-// 모바일 mid
-@mixin mob-mid {
+// 모바일
+@mixin mob {
 	@media screen and (max-width: #{$mob-m-width}) {
 		@content;
 	}
@@ -52,6 +45,8 @@ $mob-s-width		: 375px;
 	}
 }
 
+//------------------------------------------------------------------------------
+
 
 @include pc-only{
   .mo_none {display: block;}
@@ -62,10 +57,9 @@ $mob-s-width		: 375px;
 	.section3{
 		.box_list li {margin-bottom: 10px;}
 	}
-
 }
 
-@include mob{
+@include tab-small(){
   .pc_none {display: block;}
   .mo_none {display: none;}
   .overflow-div {width: calc(100% - 38px); overflow-y: auto; margin: auto;}
@@ -74,7 +68,7 @@ $mob-s-width		: 375px;
   .main_banner_wrap .dot_wrap {width: calc(100% - 38px);}
   .main_banner_wrap .dot_wrap li{width: calc(33.333% - 8px);}
 
-
+//--------------------------------------------------------------------------
  
   .container {
 	width: calc(100% - 38px);
@@ -222,7 +216,7 @@ $mob-s-width		: 375px;
 
 }
 
-@include mob-mid {
+@include mob {
 	.mo_only {display: block;}
 }
 
