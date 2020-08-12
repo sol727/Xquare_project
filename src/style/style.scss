@@ -58,7 +58,16 @@ code {
 }
 //common-------------------------------
 .mo_only {display: none;}
+.mt8 {margin-top: 8px;}
 .mb12 {margin-bottom: 12px;}
+.mb24 {margin-bottom: 24px;}
+.mt24 {margin-top: 24px !important;}
+//btn
+.btn_small {background: #292f40; color: #fff; border-radius: 4px; padding: 8px 12px;}
+.btn_small + .btn_small {margin-left: 24px;}
+.more_btn2 {border-radius:  4px; border: 1px solid #eaedf1; color: #b8c4d2; font-size: 15px; padding: 9px 24px;}
+//color
+.black_color {color: #000;}
 //css------------------------------------
 //index
 .index{ 
@@ -482,8 +491,7 @@ code {
     .title {font-size: 28px;}
   }
   .btn_wrap {   
-    text-align: center;
-    margin: auto;
+    text-align: center;    
     button.submit {width: 384px; height: 44px; background: #ff8e40; color: #ffffff; border-radius: 4px; margin-bottom: 24px;}
     ul{
       width: 384px; 
@@ -707,6 +715,16 @@ code {
   .caption {font-size: 13px; color: #6e6e6d;}
 }
 //새소식
+.detail_container.tab2 {margin: 24px auto 100px;}
+.alert_box {  
+  .alert {    
+    display: inline-block;
+    background: #f8f9fb;
+    border-radius: 100px;
+    padding: 8px 12px;  
+    p {padding-top: 4px; padding-left: 5px;}
+  }
+}
 .tabel_title { 
   padding: 12px 16px; 
   font-size: 18px; 
@@ -718,13 +736,17 @@ code {
   border-top: 2px solid #ff8e40;
   border-bottom: 2px solid #ff8e40;
   li {
+    display: table;
+    width: 100%;
     border-bottom: 1px solid #eaedf1;    
     &:last-child {border-bottom: none;}
     &.thead {background: #f9f9f9;}
+    a {display: table; width: 100%;}
   }  
 }
-.list_table li p:first-child { width: 80%; border-right: 1px solid #eaedf1;  padding: 8px 16px; font-size: 14px; font-weight: 600;}
-.list_table li p:last-child {width: 20%; padding: 8px 16px; font-size: 14px; font-weight: 600; color: #6e6e6d; text-align: center;}
+.list_table li.thead p {color: #000000 !important;}
+.list_table li p:first-child { width: 80%; border-right: 1px solid #eaedf1;  padding: 8px 16px; font-size: 14px; font-weight: 600; line-height: 1.57; display: table-cell;}
+.list_table li p:last-child {width: 20%; padding: 8px 16px; font-size: 14px; font-weight: 600; color: #6e6e6d; text-align: center; line-height: 1.57; display: table-cell; vertical-align: middle;}
  
 
 

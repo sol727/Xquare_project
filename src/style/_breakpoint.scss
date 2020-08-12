@@ -213,6 +213,10 @@ $mob-s-width		: 375px;
 	.detail_table.detail_table2 > li .th {width: 100%; display: block;}
 	.detail_table > li .td {padding: 8px 16px;}
 
+	//투자하기 상세 새소식탭
+	.detail_container.tab2 {margin: 24px auto;}
+	.list_table li p:first-child {width: 65%;}
+	.list_table li p:last-child {width: 35%;}
 
 }
 

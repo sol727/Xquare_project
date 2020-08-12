@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.scss";
 import $ from 'jquery'
 
-export default class Invest_index2 extends React.Component {
+export default class Invest_index2_detail extends React.Component {
 
      constructor(props) {
           super(props);
@@ -190,59 +190,12 @@ export default class Invest_index2 extends React.Component {
                     {/* 탭컨텐츠영역 - 새소식*/}
                     <div className="detail_cont">
                         <div className="detail_container tab2">
-                             {/* 개설자에게 보이는 영역 ↓ */}
-                             <div className="alert_box centerT mb24">
-                                  <div className="alert clearfix">
-                                        <img src={ require('../images/icons/check_input_alert.png') } alt="alert아이콘"/>
-                                        <p className="font_13 black_color">새소식 등록과 댓글 등록은 스튜디오에서 가능합니다.</p>
-                                  </div>                                  
-                                   <div className="btn_wrap centerT mt8">
-                                        <button type="button" className="btn_small">새소식 관리</button>
-                                        <button type="button" className="btn_small">투자자 의견</button>
-                                   </div>
-                             </div>
+                           
                               <div className="list_table_wrap">
-                                   <h2 className="tabel_title">새소식 <span className="">06</span></h2>
-                                   <ul className="list_table">
-                                        <li className="thead ">                                            
-                                             <p className="th centerT">제목</p>
-                                             <p className="th centerT">등록일</p>
-                                        </li>
-                                        <li> 
-                                             <Link to="/Invest_index2_detail">
-                                                  <p className="td">article title</p>
-                                                  <p className="td">yyyy-mm-dd</p>
-                                             </Link>
-                                        </li>
-                                        <li>
-                                             <Link to="/Invest_index2_detail">
-                                                  <p className="td">17 Iconic Movies That Got Surprisingly Low Ratings</p>
-                                                  <p className="td">2020-09-26</p>
-                                             </Link>
-                                        </li>
-                                        <li>
-                                             <Link to="/Invest_index2_detail">
-                                                  <p className="td">What to Watch on Wednesday: Peacock finally hatches with Brave New World, Psych 2, and more</p>
-                                                  <p className="td">2020-08-02</p>
-                                             </Link>
-                                        </li>
-                                        <li>
-                                             <Link to="/Invest_index2_detail">
-                                                  <p className="td">Ted Sarandos named co-CEO at Netflix</p>
-                                                  <p className="td">2020-04-28</p>
-                                             </Link>
-                                        </li>
-                                        <li>
-                                             <Link to="/Invest_index2_detail">
-                                                  <p className="td">Immersive chat startups have a very different vision for the future of voice</p>
-                                                  <p className="td">2020-01-31</p>
-                                             </Link>
-                                        </li>
-                                   </ul>
+                                   <h2 className="tabel_title">새소식</h2>
+                                   
                               </div>
-                              <div className="btn_wrap centerT mt24">
-                                   <button type="button" className="more_btn2">더보기(5/6) <img src={ require('../images/icons/more_arrow2.png') } alt="화살표아이콘"/></button>
-                              </div>
+                              
                         </div>
                     </div>
                </section>
