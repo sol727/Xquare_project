@@ -167,7 +167,7 @@ export default class Invest_detail extends React.Component {
                                              <div className="bar"></div>
                                         </div>                                  
                                         <div className="btn_wrap">
-                                             <button type="button" className="submit">지금 투자하기</button>
+                                             <button type="button" className="submit" onClick={() => window.location.pathname = "/invest_prepare"}>지금 투자하기</button>
                                              <ul className="clearfix2">
                                                   <li><button type="button" className="like_btn">nnn</button></li>
                                                   <li><button type="button" className="share_btn"> nnn</button></li>
