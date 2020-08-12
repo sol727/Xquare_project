@@ -29,7 +29,7 @@ export default class Find_id extends React.Component {
                             <form action="">
                                 <div className="certify_btn_wrap">
                                     <button type="button" className="navy_btn">본인인증</button>
-                                    {/* 본인인증 완료 후 버튼노출↓*/}
+                                    {/* 본인인증 완료 후 버튼↓*/}
                                     {/* <button type="button" className="unable_btn">본인인증</button> */}
                                 </div>
 
