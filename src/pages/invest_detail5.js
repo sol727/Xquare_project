@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.scss";
 import $ from 'jquery'
 
-export default class Invest_index extends React.Component {
+export default class Invest_detail5 extends React.Component {
 
      constructor(props) {
           super(props);
@@ -179,107 +179,97 @@ export default class Invest_index extends React.Component {
                          {/* 탭영역 */}
                          <div className="overflow-div">
                               <ul className="tab_wrap">
-                                   <li className="active"><Link to="/Invest_index"><span>핵심정보</span></Link></li>
-                                   <li><Link to="/Invest_index2"><span>새소식</span></Link></li>
-                                   <li><Link to="/Invest_index3"><span>커뮤니티</span></Link></li>
-                                   <li><Link to="/Invest_index4"><span>부가정보</span></Link></li>
-                                   <li><Link to="/Invest_index5"><span>투자 현황</span></Link></li>
+                                   <li ><Link to="/Invest_detail"><span>핵심정보</span></Link></li>
+                                   <li ><Link to="/Invest_detail2"><span>새소식</span></Link></li>
+                                   <li ><Link to="/Invest_detail3"><span>커뮤니티</span></Link></li>
+                                   <li ><Link to="/Invest_detail4"><span>부가정보</span></Link></li>
+                                   <li className="active"><Link to="/Invest_detail5"><span>투자 현황</span></Link></li>
                               </ul>
                          </div>                        
                     </div>
-                    {/* 탭컨텐츠영역 - 핵심정보*/}
+                    {/* 탭컨텐츠영역 - 투자현황*/}
                     <div className="detail_cont">
-                         <div className="detail_container tab1">
-                              <ul className="total_box clearfix">                                   
-                                   <li>
-                                        <p>펀딩시작일</p>
-                                        <h3 className="playF">yyyy.mm.dd</h3>
-                                   </li>
-                                   <li>
-                                        <p>펀딩종료일</p>
-                                        <h3 className="playF">yyyy.mm.dd</h3>
-                                   </li>
-                                   <li>
-                                        <p>증권입고일</p>
-                                        <h3 className="playF">yyyy.mm.dd</h3>
-                                   </li>
-                              </ul>    
-                              {/* 펀딩정보 */}                           
-                              <h2 className="sub_title">펀딩 정보</h2>
-                              <ul className="detail_table">
-                                   <li >
-                                        <p className="th">주식종류</p>
-                                        <p className="td">일반회사채</p>
-                                   </li>
-                                   <li >
-                                        <p className="th">1주당 가격</p>
-                                        <p className="td">10,000원</p>
-                                   </li>
-                                   <li >
-                                        <p className="th">최소 투자가능금액</p>
-                                        <p className="td">100,000원(주)</p>
-                                   </li>
-                                   <li >
-                                        <p className="th">성공시 지분율</p>
-                                        <p className="td">3%</p>
-                                   </li>
-                                   <li >
-                                        <p className="th">발행예정 주식수</p>
-                                        <p className="td">100주</p>
-                                   </li>
-                                   <li >
-                                        <p className="th">기업가치</p>
-                                        <p className="td">300,000,000원</p>
-                                   </li>
-                                   <li >
-                                        <p className="th">최저배당이율</p>
-                                        <p className="td">액면금액 연 1%</p>
-                                   </li>
-                                   <li >
-                                        <p className="th">상환청구기간</p>
-                                        <p className="td">2020.03.12~2020.04.01</p>
-                                   </li>
-                                   <li >
-                                        <p className="th">상환 이자율</p>
-                                        <p className="td">연 복리 5%</p>
-                                   </li>
-                                   <li >
-                                        <p className="th">전환 청구 기간</p>
-                                        <p className="td">2020.03017~2020.04.01</p>
-                                   </li>
-                                   <li >
-                                        <p className="th">전환조건</p>
-                                        <p className="td">보통주 1:1 전환</p>
-                                   </li>
-                              </ul>
-
-                              {/* 펀딩상세 세부정보 */}
-                              <div className="info">
-                                   <h2 className="info_title centerT mb12">펀딩 상세 세부정보 소제목이 나타납니다.</h2>
-                                   <p className="point_color sutbitle mb12">sutbitle here Amet faucibus netus purus tristique dolor.</p>
-                                   <img src={ require('../images/info_sample.jpg') } alt="펀딩상세이미지" className="mb12"/>
-                                   <p className="body mb12">body here
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper molestie pellentesque integer bibendum. Ut fusce ut adipiscing venenatis consectetur nulla consequat semper. Est massa mattis ac purus aliquam vitae. Integer facilisi consequat senectus facilisis. Est non et egestas nisl a amet. Bibendum egestas nibh pretium vel diam mauris vitae eget aenean.</p>
-                                   <p className="caption"></p>
-                               </div>   
-
-                               {/* 투자위험 */}
-                               <h2 className="sub_title">투자위험</h2>
-                              <ul className="detail_table detail_table2">
-                                   <li >
-                                        <p className="th">사업위험</p>
-                                        <p className="td">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam rutrum elementum, congue vulputate magna dictum nisi, feugiat purus.</p>
-                                   </li>
-                                   <li >
-                                        <p className="th">회사위험</p>
-                                        <p className="td">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam rutrum elementum, congue vulputate magna dictum nisi, feugiat purus.</p>
-                                   </li>
-                                   <li >
-                                        <p className="th">기타위험</p>
-                                        <p className="td">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor, lobortis turpis imperdiet lobortis. Varius sagittis risus lorem neque tempor arcu fames proin. Quam placerat enim dui, nisi faucibus pulvinar. Egestas metus in varius auctor. Pretium urna mi tincidunt elit, laoreet.</p>
-                                   </li>                                   
-                              </ul>                              
-                         </div>                                           
+                         <div className="container tab5 clearfix2"> 
+                              <div className="table_wrap mt24">
+                                   <div className="clearfix2 detail_table_title">
+                                        <h2 className="table_title">투자자 통계</h2>                                   
+                                   </div>
+                                   <table className="tab_table">                                    
+                                        <colgroup>
+                                             <col width="15%"/>
+                                             <col width="35%"/>
+                                             <col width="20%"/>
+                                             <col width="30%"/>
+                                        </colgroup>                                        
+                                        <thead>
+                                             <tr>
+                                                  <th colSpan="2">구분</th>
+                                                  <th>인원</th>
+                                                  <th>누적 투자 금액</th>
+                                             </tr>
+                                        </thead>
+                                        <tbody>
+                                             <tr>
+                                                  <th rowSpan="3">개인</th>
+                                                  <th>일반투자자</th>
+                                                  <td>284명</td>
+                                                  <td>37,919,340원</td>
+                                             </tr>
+                                             <tr>                                                  
+                                                  <th>적격투자자</th>
+                                                  <td>30명</td>
+                                                  <td>40,705,441원</td>
+                                             </tr>
+                                             <tr>                                                  
+                                                  <th>전문투자자</th>
+                                                  <td>30명</td>
+                                                  <td>791,725,363원</td>
+                                             </tr>
+                                             <tr>                                                  
+                                                  <th colSpan="2">법인투자자</th>
+                                                  <td>0명</td>
+                                                  <td>0원</td>
+                                             </tr>
+                                        </tbody>
+                                   </table>
+                              </div>   
+                              <div className="table_wrap mt24">
+                                   <div className="clearfix2 detail_table_title">
+                                        <h2 className="table_title">실시간 투자 현황</h2>                                   
+                                   </div>
+                                   <table className="tab_table">                                    
+                                        <colgroup>
+                                             <col width="65%"/>
+                                             <col width="35%"/>
+                                        </colgroup>                                      
+                                        <tbody>
+                                             <tr>                                                
+                                                  <td>민xx님이 투자합니다.</td>
+                                                  <td>비공개</td>
+                                             </tr>
+                                             <tr>                                                
+                                                  <td>홍길동님이 투자합니다.</td>
+                                                  <td>500,000원</td>
+                                             </tr>
+                                             <tr>                                                
+                                                  <td>민xx님이 투자합니다.</td>
+                                                  <td>비공개</td>
+                                             </tr>
+                                             <tr>                                                
+                                                  <td>민xx님이 투자합니다.</td>
+                                                  <td>비공개</td>
+                                             </tr>
+                                             <tr>                                                
+                                                  <td>민xx님이 투자합니다.</td>
+                                                  <td>비공개</td>
+                                             </tr>
+                                        </tbody>
+                                   </table>
+                                   <div className="btn_wrap centerT mt24">
+                                        <button type="button" className="more_btn2">더보기(5/6) <img src={ require('../images/icons/more_arrow2.png') } alt="화살표아이콘"/></button>
+                                   </div>
+                              </div>                                                           
+                         </div>
                     </div>
                </section>
                <Footer />

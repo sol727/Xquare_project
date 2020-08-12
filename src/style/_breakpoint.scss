@@ -57,12 +57,13 @@ $mob-s-width		: 375px;
 	.section3{
 		.box_list li {margin-bottom: 10px;}
 	}
+	.invest_index .btn_wrap button.submit {width: 100%;}
 }
 
 @include tab-small(){
   .pc_none {display: block;}
   .mo_none {display: none;}
-  .overflow-div {width: calc(100% - 38px); overflow-y: auto; margin: auto;}
+  .overflow-div {width: 100%; overflow-y: auto; margin: auto;}
   
   //slide
   .main_banner_wrap .dot_wrap {width: calc(100% - 38px);}
@@ -242,6 +243,15 @@ $mob-s-width		: 375px;
 	//커뮤니티탭 상세
 	.invest_index.detail .detail_container.tab3 .table_title {padding: 12px 16px;}
 	.invest_index.detail .detail_container.tab3 {width: 100%; margin-bottom: 0;}
+	//커뮤니티탭 글쓰기
+	.detail_cont.add .add_area {margin: 24px 0 ;}
+	.invest_index.add .detail_container.tab3 {width: 100%; margin-bottom: 0;}
+	.invest_index.add .detail_container.tab3 .table_title {padding: 12px 16px;}
+	.detail_cont.add .add_top p {margin-bottom: 8px; margin-top: 0;}
+	.detail_cont.add .radio_wrap {width: 100%;}
+	.info_text {width: 100%; text-align: left ;}
+	
+
 
 	//부가정보탭
 	.detail_container.tab4 {margin: 30px auto 58px;} 
@@ -259,7 +269,11 @@ $mob-s-width		: 375px;
 		  }    
 		} 
 	   }
-
+	//투자 현황 탭
+	.container.tab5 {margin: 0 auto 24px;} 
+	.container.tab5 .table_title{padding-left: 0;}
+	.container.tab5 .table_wrap:first-of-type {width: 100%;}
+	.container.tab5 .table_wrap:last-of-type {width: 100%;}
 
 
 }

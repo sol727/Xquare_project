@@ -22,14 +22,14 @@ export default class Index2 extends React.Component {
                 <Link to="/invest_prepare"><span>투자하기 - 투자준비하기</span></Link>
                 <Link to="/invest_check"><span>투자하기 - 투자한도조회하기</span></Link>
 
-                <Link to="/invest_index"><span>투자하기 상세 - 핵심정보탭</span></Link>
-                <Link to="/invest_index2"><span>투자하기 상세 - 새소식탭</span></Link>
-                <Link to="/invest_index2_detail"><span>투자하기 상세 - 새소식탭 상세</span></Link>
-                <Link to="/invest_index3"><span>투자하기 상세 - 커뮤니티탭</span></Link>
-                <Link to="/invest_index3_detail"><span>투자하기 상세 - 커뮤니티탭 상세</span></Link>
-                <Link to="/invest_index3_add"><span>투자하기 상세 - 커뮤니티탭 글작성</span></Link>
-                <Link to="/invest_index4"><span>투자하기 상세 - 부가정보탭</span></Link>
-                <Link to="/invest_index5"><span>투자하기 상세 - 투자현황탭</span></Link>
+                <Link to="/invest_detail"><span>투자하기 상세 - 핵심정보탭</span></Link>
+                <Link to="/invest_detail2"><span>투자하기 상세 - 새소식탭</span></Link>
+                <Link to="/invest_detail2_detail"><span>투자하기 상세 - 새소식탭 상세</span></Link>
+                <Link to="/invest_detail3"><span>투자하기 상세 - 커뮤니티탭</span></Link>
+                <Link to="/invest_detail3_detail"><span>투자하기 상세 - 커뮤니티탭 상세</span></Link>
+                <Link to="/invest_detail3_add"><span>투자하기 상세 - 커뮤니티탭 글작성</span></Link>
+                <Link to="/invest_detail4"><span>투자하기 상세 - 부가정보탭</span></Link>
+                <Link to="/invest_detail5"><span>투자하기 상세 - 투자현황탭</span></Link>
 
                 <Link to="/terms1"><span>이용약관 - 가입약관</span></Link>
                 <Link to="/terms2"><span>이용약관 - 개인정보처리방침</span></Link>

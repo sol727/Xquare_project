@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.scss";
 import $ from 'jquery'
 
-export default class Invest_index3_detail extends React.Component {
+export default class Invest_detail2_detail extends React.Component {
 
      constructor(props) {
           super(props);
@@ -183,25 +183,24 @@ export default class Invest_index3_detail extends React.Component {
                          {/* 탭영역 */}
                          <div className="overflow-div">
                               <ul className="tab_wrap">
-                                   <li ><Link to="/Invest_index"><span>핵심정보</span></Link></li>
-                                   <li><Link to="/Invest_index2"><span>새소식</span></Link></li>
-                                   <li  className="active"><Link to="/Invest_index3"><span>커뮤니티</span></Link></li>
-                                   <li><Link to="/Invest_index4"><span>부가정보</span></Link></li>
-                                   <li><Link to="/Invest_index5"><span>투자 현황</span></Link></li>
+                                   <li ><Link to="/Invest_detail"><span>핵심정보</span></Link></li>
+                                   <li className="active"><Link to="/Invest_detail2"><span>새소식</span></Link></li>
+                                   <li><Link to="/Invest_detail3"><span>커뮤니티</span></Link></li>
+                                   <li><Link to="/Invest_detail4"><span>부가정보</span></Link></li>
+                                   <li><Link to="/Invest_detail5"><span>투자 현황</span></Link></li>
                               </ul>
                          </div>                        
                     </div>
                     {/* 탭컨텐츠영역 - 새소식*/}
                     <div className="detail_cont">                              
-                        <div className="detail_container tab3"> 
+                        <div className="detail_container tab2"> 
                               <div className="clearfix2 detail_table_title">
-                                   <h2 className="table_title">커뮤니티</h2>
+                                   <h2 className="table_title">새소식</h2>
                                    <button type="button"  className="title_btn">목록으로</button>
                               </div>                             
                               <div className="list_table_wrap">
                                    <div className="detail_table2">
                                         <div className="top">
-                                             <p className="label2 mb12">일반</p>
                                              <div className="user_type mb12 clearfix">
                                                   <p className="user feel_a black_color ">username</p>
                                                   <p className="user_label">법인회원(발행인)</p>
@@ -236,7 +235,7 @@ export default class Invest_index3_detail extends React.Component {
                                                        </div>
                                                        <p className="date mb12">2020.05.01 06:05:46</p>
                                                        <p className="text_area font_13 black_color mb12">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
-                                                       <button type="button" className="btn_border ">답글 1</button>
+                                                       <button type="button" className="btn_border">답글 1</button>
                                                   </li>
                                                   <li>
                                                        <div className="user_type mb12 clearfix">

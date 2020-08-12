@@ -67,11 +67,12 @@ code {
 .mt60 {margin-top: 60px;}
 .d_ib {display: inline-block;}
 //btn
-.btn {width: 97px; height: 38px; line-height: 36px;  background: #292f40; color: #fff; border-radius: 4px;}
+.btn {width: 97px; height: 38px; line-height: 36px;  background: #292f40; color: #fff; border-radius: 4px; font-size: 15px;}
 .btn.big {width: 257px;}
-.btn_small {background: #292f40; color: #fff; border-radius: 4px; padding: 8px 12px;}
+.btn_small {background: #292f40; color: #fff; border-radius: 4px; padding: 8px 12px; font-size: 15px;}
+.btn.orange {background: #fe8d40; }
 .btn_small + .btn_small {margin-left: 24px;}
-.btn_gray {width: 97px; height: 38px; line-height: 36px; color:#bfbfbf; background: #eaedf1;  border-radius: 4px;}
+.btn_gray {width: 97px; height: 38px; line-height: 36px; color:#bfbfbf; background: #eaedf1;  border-radius: 4px; font-size: 15px;}
 .btn_border {width: 97px; height: 38px; line-height: 36px;background: #fff; color: #343332; border: 1px solid #eaedf1; border-radius: 4px;}
 .more_btn2 {border-radius:  4px; border: 1px solid #eaedf1; color: #b8c4d2; font-size: 15px; padding: 9px 24px;}
 .download_btn {border: 1px solid #eaedf1; color: #535352; padding: 8px 20px; font-size: 14px;}
@@ -463,9 +464,9 @@ code {
 //투자하기 상세---------------------------------------------------------------------------------
 .invest_index {
   padding-top: 24px;
-  >.top {
+ /*  >.top {
     border-bottom: 1px solid #eaedf1;
-  }
+  } */
   .title_area {
     padding-top: 24px;
     display: table;
@@ -647,6 +648,7 @@ code {
 }
 
 //탭 --------------------
+.overflow-div {width: 1200px; margin: auto; border-bottom: 1px solid #eaedf1;}
 .tab_wrap {
   text-align: center;
   margin-top: 24px;  
@@ -765,9 +767,10 @@ code {
     a {display: table; width: 100%;}
   }  
 }
-.list_table li.thead p {color: #000000 !important;}
-.list_table li p:first-child { width: 80%; border-right: 1px solid #eaedf1;  padding: 8px 16px; font-size: 14px; font-weight: 600; line-height: 1.57; display: table-cell;}
-.list_table li p:last-child {width: 20%; padding: 8px 16px; font-size: 14px; font-weight: 600; color: #6e6e6d; text-align: center; line-height: 1.57; display: table-cell; vertical-align: middle;}
+.list_table li.thead p {color: #000000 !important; padding: 8px 16px; font-size: 14px; font-weight: 600; line-height: 1.57; display: table-cell; vertical-align: middle; text-align: center;}
+.list_table li p:first-child { width: 80%; border-right: 1px solid #eaedf1; padding: 8px 16px; font-size: 14px; font-weight: 600; line-height: 1.57; display: table-cell; vertical-align: middle; }
+.list_table li p:last-child {width: 20%; vertical-align: middle; padding: 8px 16px; font-size: 14px; font-weight: 600; line-height: 1.57; display: table-cell;  text-align: center;}
+
 //새소식 상세
 .detail_table_title {border-bottom: 2px solid #ff8e40;}
 .detail_table2 {  
@@ -912,6 +915,7 @@ code {
   .add_area {
     margin: 48px 0; padding: 0 16px; 
     textarea {border-radius: 2px;}
+    .feeling_box {background: #f8f9fb;}
   }
   .add_top p {margin-top: 11px;}
   .radio_wrap{width: 386px; height: 40px; border-radius:6px;border:1px solid #d0d0cf;overflow: hidden;
@@ -926,21 +930,20 @@ code {
       right: 16px;
       bottom: 10px;
     }
-  }
- 
+  } 
 }
+.info_text {
+  position: relative;
+  padding-left: 34px;  
+  width: max-content;
+  margin: 16px auto 8px;
+  line-height: 24px;
+  &:after {position: absolute; content:''; width: 24px; height: 24px; top:0; left:0; background-image:url(../images/icons/info_icon.png); background-position: center;}
+}
+
 .radio_wrap  input[type="radio"] {display: none;}
 .radio_wrap  input[type="radio"] + label{width: 100% ; height: 100%; text-align: center; font-size: 14px; color: #343332;padding: 10px 0; background: #ffffff; display: block; cursor: pointer;}
 .radio_wrap  input[type="radio"]:checked + label {color: #fff; background: #fe8d40;}
-
-
-
-
-
-
-
-
-
 
 //부가정보탭
 .detail_container.tab4 .detail_table_title:last-of-type {margin-top: 60px;}
@@ -956,6 +959,14 @@ code {
     }    
   } 
 }
+.container.tab5 {margin: 0 auto 100px;}
+.container.tab5 .table_wrap:first-of-type {width: 50%;}
+.container.tab5 .table_wrap:last-of-type {width: 40%;}
+.tab_table {width: 100%;   border-bottom: 2px solid #fe8d40;}
+.tab_table tr th , td {padding: 8px; font-size: 13px; text-align: center; border: 1px solid #eaedf1;}
+.tab_table tr th:first-child  , .tab_table tr td:first-child {border-left: none;}
+.tab_table tr th:last-child  , .tab_table tr td:last-child {border-right: none;}
+.tab_table tr th {background: #f9f9f9;} 
 
 
 
