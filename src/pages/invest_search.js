@@ -67,9 +67,9 @@ export default class Invest_search extends React.Component {
                     </div>
                     {/* 노데이터일경우 노출 ▼ */}
                     {/* <div className="no_data centerT">
-                         <img src={ require('../images/icons/search_icon.png') } alt="노데이터이미지"/>
+                         <img src={ require('../images/icons/ic_searching_eye.png') } alt="노데이터이미지"/>
                          <p>'검색어'에 대한 검색결과가 없습니다.</p>
-                    </div> */}
+                    </div>  */}
                     <div className="cont">
                          <div className="container">
                               <ul className="list_wrap clearfix">

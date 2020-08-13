@@ -11,7 +11,7 @@ import $ from 'jquery'
 
 SwiperCore.use([Pagination]);
 
-export default class invest_index extends React.Component {
+export default class Test extends React.Component {
     
      constructor(props) {
           super(props);          
@@ -178,29 +178,6 @@ export default class invest_index extends React.Component {
                                <div className="btn_wrap centerT">
                                    <button type="button" className="more_btn small">더보기<img src={ require('../images/icons/more_arrow.png') } alt="더보기아이콘"/></button>
                               </div>
-                         </div>
-                    </div>
-                    <div className="section section2 gray_bg">
-                         <div className="container">
-                              <div className="title_wrap centerT mb24">
-                                   <h1 className="mb16">오픈예정</h1>
-                                   <h3>엑스퀘어 투자자분들께 소개드리는 오픈 예정 프로젝트</h3>
-                              </div>
-                              <ul className="list_wrap slide_wrap clearfix mb24">
-                                   <Swiper      spaceBetween={24}      slidesPerView={4} pagination={{ clickable: true }} onSwiper={(swiper) => console.log(swiper)}  onSlideChange={() => console.log('slide change')} >
-                                   <SwiperSlide>
-                                   <li onClick={() => window.location.pathname = "/Invest_detail"}>
-                                        <div className="img_box">
-                                             <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
-                                        </div>
-                                        <div className="text">                                        
-                                             <h2 className="ellipsis2">상품 제목이 나타납니다. 상품 제목이 나타납니다.상품 제목이 나타납니다.</h2>
-                                             <p>100,218,392,500원</p>
-                                        </div>
-                                   </li>
-                                   </SwiperSlide>
-                                   </Swiper>
-                              </ul>
                          </div>
                     </div>
                 </section>

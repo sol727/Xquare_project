@@ -36,6 +36,29 @@ export default class Invest_step3 extends React.Component {
                         </ul>
                     </div>
                      {/*---------------------상단부분끝 */}
+                     <div className="container step3">
+                        <div className="step_progress">
+                            <ul className="">
+                                <li className="past"><div></div><p>투자정보입력</p></li>
+                                <li className="past"><div></div><p className="centerT">약관 및 투자위험</p></li>
+                                <li className="clearfix3 now"><div className=""></div><p className="rightT">투자금 결제</p></li>
+                            </ul>
+                            <div className="step_bar step_bar1"></div>
+                            <div className="step_bar step_bar2"></div>
+                        </div>
+                        <div className="title_box centerT">
+                            <p className="font_13 gray4_color">STEP 03</p>
+                            <h1 className="title">투자금 결제</h1>
+                        </div>
+                        <div className="gray_bg">
+                            
+                        </div>
+                        <div className="page_btn centerT">
+                            <button className="point_color font_15 mr24 d_ib">이전</button>
+                            <button className="unable_btn d_ib" >다음</button>
+                        </div>
+                     </div>
+
                 </section>
                 <Footer />
             </>
