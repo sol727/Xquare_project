@@ -67,6 +67,37 @@ $mob-s-width		: 375px;
 
     //회원가입
     .signup.signup2 .right{padding:0px 30px 0px;}
+
+    // 투자하기페이지
+    .invest_page{
+        .top_banner{height: 132px;
+            h1{font-size: 28px;line-height: 132px;}
+        }
+        .invest_top_box{
+            ul{width:100%;}
+        }
+        .big_title{font-size: 28px;width: 100%;}
+        .prepare_ul{width:100%;margin:60px auto 0;
+            li .txt{width:100%;float: none;}
+            li button{width:100%;float: none;}
+        }
+        .btn_wrap{width:100%;
+        }
+    }
+
+    // 투자한도조회
+    .invest_check{
+        .cont{margin-top:70px;
+            .logo_box{padding:48px 0px;
+                img{margin-right:auto !important;display: block;margin:0 auto 16px;}
+                img:last-child{margin-bottom:0px;}
+            }
+            .loading_box{padding:24px 16px 32px;
+                .loading_bar{width:100%;}
+            }
+        }
+        
+    }
     
 
     //footer
@@ -94,6 +125,13 @@ $mob-s-width		: 375px;
             .certify_after{
                 .btn_wrap{margin:32px auto 84px;}
             }
+        }
+    }
+
+    // 투자하기페이지
+    .invest_page{
+        .invest_top_box{
+            li{width:50%;}
         }
     }
 
