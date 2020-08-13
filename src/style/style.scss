@@ -228,7 +228,7 @@ code {
 }
 
 
-.section2{
+.main.index .section2{
   .gray_bg {
     padding: 100px 0 96px;    
   }
@@ -268,7 +268,7 @@ code {
     
   }
 }
-.section3 {
+.main.index .section3 {
   .container{
     padding: 48px 0;
     text-align: center;
@@ -355,7 +355,7 @@ code {
 }
 
 
-.section4 {
+.main.index .section4 {
   .container{
     margin-top: 196px;
   }
@@ -1018,19 +1018,52 @@ code {
 //투자하기 메인페이지--------------
 .invest_page.index {
   .btn_wrap.rightT {width:auto; margin: 32px auto;}
-   section {
+   .section {
      margin: 100px 0 124px;
   }  
+  .section1 {padding: 0;}
   .section2 {
     ul {border-top: none; background: transparent; box-shadow: none;}
-    padding: 100px 0;
-    .slide_wrap {
-     
-
+    padding: 100px 0 60px;
+    .slide_wrap2 {
+      .swiper-wrapper {padding: 5px 5px 26px;}
+      li{
+        height: 339px;
+        box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+        .img_box {height: 62%;}
+        .text {height: 38%; position: relative;
+        p {position: absolute; bottom: 16px; right: 16px; }
+        }
+      }
     }
-
+  }  
+  .section3 {
+    .slide_wrap2 li{height: 182px;
+      .text {height: 43%; position: relative; padding: 8px;        
+        h2 {font-size: 13px; line-height: 20px;}
+        p {position: absolute; bottom: 8px; right: 8px;   font-size: 13px;}
+        }    
+    }    
+    .slide3_container {position: relative;
+      padding: 0 102px;     
+    }
   }
 }
+
+.slide3_container .swiper-button-prev  {
+  width: 32px;
+  height: 48px;  
+  background-image: url(../images/icons/btn_prev.png);
+  background-position: center;
+}
+.slide3_container .swiper-button-next  {
+  width: 32px;
+  height: 48px;  
+  background-image: url(../images/icons/btn_next.png);
+  background-position: center;
+}
+.swiper-button-prev:after, .swiper-button-next:after{display: none;}
+
 
 .invest_page.index .section.section1 .list_wrap li:hover {margin-top: 0;}
 
@@ -1286,5 +1319,8 @@ code {
       }
   }
 }
+
+
+
 
 

@@ -49,7 +49,7 @@ export default class index extends React.Component {
     return (
       <>
         <Header />
-        <section className="index">           
+        <section className="index main">           
           <div className="main_banner_wrap">
             <ul className="main_banner" >
               <Slider slidesToShow={1} slidesToScroll={1} speed={500} dots={false} infinite={false} beforeChange={this.sliderEvent}>
@@ -89,7 +89,7 @@ export default class index extends React.Component {
             <div className="container">
               <h1 className="title centerT playF">Xquare List</h1>
               <p className="sub_title centerT">엑스퀘어의 친환경 투자상품을 소개합니다.</p>
-              <ul className="list_wrap clearfix">
+              <ul className="list_wrap  clearfix">
                 {
                   this.state.width > 767 ?
                   <>
