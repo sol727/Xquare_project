@@ -37,7 +37,7 @@ export default class Invest_check extends React.Component {
                     </div>
                     <div className="container">
                         <h1 className="big_title">투자 한도 조회</h1>
-                        <div className="cont">
+                        <div className="content">
                             <ul>
                                 <li className="top">
                                     <p><span className="point_color">홍길동</span>님의 안전한 투자를 위해 한국예탁결제원에서 투자등급과 투자한도를 조회합니다.</p>
@@ -47,7 +47,7 @@ export default class Invest_check extends React.Component {
                                     <img src={ require('../images/logo_ksd.png') } alt="ksd로고"/>
                                 </li>
                                 <li className="loading_box">
-                                    <button type="button">COMMENT</button>
+                                    <h3>COMMENT</h3>
                                     <p className="mt16 font_13 gray2_color">자본시장법은 투자자들의 무리한 투자를 방지하기 위하여 연간 투자한도를 정하고 있습니다.</p>
                                     <p className="mt16 font_13 gray3_color">잠시만 기다려 주세요</p>
                                     <div className="loading_bar"></div>
