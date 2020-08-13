@@ -27,7 +27,7 @@ export default class Invest_step2 extends React.Component {
                     <div className="invest_top_box">
                         <ul className="clearfix">
                             <li className="mo_none">
-                                <Link to="/invest_index">
+                                <Link to="/index">
                                     <img src={ require('../images/icons/home_icon.png') } alt="홈아이콘"/>
                                 </Link>
                             </li>
@@ -36,6 +36,9 @@ export default class Invest_step2 extends React.Component {
                         </ul>
                     </div>
                     {/* -------------상단부분끝 */}
+                    <div>
+                        
+                    </div>
                 </section>
                 <Footer />
             </>
