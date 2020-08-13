@@ -81,8 +81,14 @@ export default class Invest_step1 extends React.Component {
                                     <div className="title_area">
                                         <h2>투자금액 설정</h2>
                                         <p>이 펀딩에 투자 가능한 주식수는 <span>최소 10주 ~ 최대 46주 </span>입니다.</p>
-                                       {/*  <p>이 펀딩의 1인당 최소 투자 가능 금액은 <span>100만원</span>으로 홍길동 님이 투자하실 수 있는 최대 금액인 <span>50만원</span>보다 크기 때문에 <span>투자가 불가합니다.</span></p> */}
+                                        {/* 투자한도 문제생겼을 시 ------------------ */}
+                                         {/*<p>이 펀딩의 1인당 최소 투자 가능 금액은 <span>100만원</span>으로 홍길동 님이 투자하실 수 있는 최대 금액인 <span>50만원</span>보다 크기 때문에 <span>투자가 불가합니다.</span></p>
+                                       <div className="btn_wrap">
+                                            <button type="button" className="btn">투자한도 증액하러 가기</button>
+                                       </div> */}
+                                       {/* ------------------투자한도 문제생겼을 시  */}
                                     </div>
+                                    
                                     <div className="gray_bg2 mb16 funding_box">
                                         <p className="font_15 fw600">몇 주를 투자 하시겠습니까?</p>
                                         <p className="font_13 gray2_color">· 1주당 가격 : 450원</p>
@@ -118,20 +124,24 @@ export default class Invest_step1 extends React.Component {
                                         <li className="mr24 clearfix2">
                                             <p className="font_15 fw600">이름 노출 여부</p>
                                             <ul className="radio_wrap clearfix">
-                                                <li><input type="radio" name="name" id="name1" checked/><label htmlFor="name1">비공개</label></li>
+                                                <li><input type="radio" name="name" id="name1" /><label htmlFor="name1">비공개</label></li>
                                                 <li><input type="radio" name="name" id="name2"/><label htmlFor="name2">공개</label></li>
                                             </ul>
                                         </li>
                                         <li className="clearfix2">
                                             <p className="font_15 fw600">금액 노출 여부</p>
                                             <ul className="radio_wrap clearfix">
-                                                <li><input type="radio" name="money" id="money1" checked/><label htmlFor="money1">비공개</label></li>
+                                                <li><input type="radio" name="money" id="money1" /><label htmlFor="money1">비공개</label></li>
                                                 <li><input type="radio" name="money" id="money2"/><label htmlFor="money2">공개</label></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
+                        </div>
+                        <div className="page_btn centerT">
+                            <button className="point_color font_15 mr24 d_ib">이전</button>
+                            <button className="unable_btn d_ib" >다음</button>
                         </div>
                     </div>
                 </section>

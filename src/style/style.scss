@@ -128,6 +128,7 @@ code {
 .list_wrap{   
   margin-top: 48px;
   a {
+    width: 100%;
     height: 100%;
   }    
   li.slick-item , >li{
@@ -207,6 +208,7 @@ code {
     }
   }       
 }
+
 //label
 .label.funding {background: #ff8e40; color: #ffffff; }
 .label.open {background: #3b59c8; color: #ffffff; }
@@ -222,7 +224,9 @@ code {
   img{
     margin-left: 8px;
   }
+  &.small {width: 122px; border-radius: 4px;}
 }
+
 
 .section2{
   .gray_bg {
@@ -370,11 +374,16 @@ code {
         height: 172px;    
         transition: all 0.5s;     
         box-shadow: 0 2px 2px rgba(0,0,0,0.4);
+        overflow: hidden;
         &:hover .hidden_box{
           display: block;
         }   
         >img {
           width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
         }
       }     
     }
@@ -1010,13 +1019,21 @@ code {
 .invest_page.index {
   .btn_wrap.rightT {width:auto; margin: 32px auto;}
    section {
-     margin: 100px 0 124px;  
-  
-  }
-  .section1 {
-    .list_wrap li:hover {margin-top: 0;}
+     margin: 100px 0 124px;
+  }  
+  .section2 {
+    ul {border-top: none; background: transparent; box-shadow: none;}
+    padding: 100px 0;
+    .slide_wrap {
+     
+
+    }
+
   }
 }
+
+.invest_page.index .section.section1 .list_wrap li:hover {margin-top: 0;}
+
 
 //투자하기 - 지금 투자하기
 
@@ -1062,7 +1079,7 @@ code {
           content: '';
           width: 124%;
           height: 4px;
-          left: 28px;
+          left: 48px;
           top: 22px;
           background: #eaedf1;
           z-index: -1;
@@ -1076,7 +1093,7 @@ code {
           content: '';
           width: 124%;
           height: 4px;
-          left: 53%;
+          left: 60%;
           top: 22px;
           background: #eaedf1;
           z-index: -1;
@@ -1085,7 +1102,7 @@ code {
       }
       &:nth-child(2) div {margin: 0 auto 24px;}
       &:nth-child(3) div {margin-left: auto;}
-      &.now p {color: #343332;}
+      &.now p , &.past p{color: #343332;}
     }
   }
 }
@@ -1100,7 +1117,7 @@ code {
     .total {padding: 24px 16px; 
       h3 {font-size: 15px;
       span {font-size: 24px; margin-left: 12px;}
-      }
+      }      
     }
   }
   .title_box {
@@ -1135,9 +1152,13 @@ code {
     margin-top: 16px; font-size: 14px; line-height: 22px;
     span {color: #ff8e40; font-size: 14px;
       &.red {color: #ff513e;}
-    }
+    }    
+  }
+  .btn_wrap {max-width: 388px; margin: 16px auto !important;
+    button {width: 100%; }
   }
 }
+.invest_page .title_area .btn_wrap button {width: 100%; font-weight: 600;}
 
 .item_box {
   .img_box {
@@ -1164,3 +1185,106 @@ code {
     p {line-height: 22px; padding: 9px 0;}
  }
 }
+.step .page_btn {margin: 48px 0;}
+.step .page_btn button:first-child {width: 38px; height: 44px; }
+.step .page_btn button:last-child  {width: 282px;}
+
+
+
+////step2 이용약관 드롭다운
+
+.step2 .cont .terms {border: none;}
+.step2 .terms_wrap{
+  ul{
+    li {
+      margin-bottom: 24px;
+      .check_wrap {
+        background: #f8f9fb;
+        padding: 12px 8px;
+        cursor: pointer;
+        input[type="checkbox"] + label { margin-right: 12px;}
+       p {font-size: 15px;  line-height: 24px;}
+       &.on {
+        background: #ff8e40;
+        p {color: #fff;}
+       }
+      }
+      .terms_box {
+        display: none;
+        .terms {font-size: 13px; line-height: 20px; height: 240px;
+          margin-bottom: 16px;  padding: 16px 8px;
+          .oc-scrollbar-container {margin: 16px;}
+        }
+        .agree_btn{font-size: 15px; line-height: 22px; height: 38px;  border-radius: 0;}
+      }
+
+    }
+
+  }
+}
+
+//step3
+/* api연동후 삭제 ▼ */
+.step3 .gray_bg {height: 512px;}
+
+
+
+/////////////////SWIPER/////////////////
+
+
+
+
+.list_wrap.slide_wrap{   
+  margin-top: 0px;
+  .swiper-container {width: 100%;}
+  .swiper-wrapper {padding: 0 0 26px ;}
+  .swiper-pagination {bottom: 0;}
+  .swiper-pagination-bullet {background: #343332 !important; }
+  .swiper-pagination-bullet-active {background: #ff8e40 !important;}
+  .swiper-slide>li{
+    width: 100%;
+    height: 376px;
+    border-radius: 4px;
+    margin-right: 24px;    
+    box-shadow:3px 3px 3px rgba(0,0,0,0.3);
+    transition: all 0.3s;    
+      &:last-child {margin-right: 0;}
+      .img_box {
+        width: 100%; height: 57%; position: relative; overflow: hidden;
+        img {
+          width: 100%;
+          @include position_img;
+        }
+        .label {
+          width: max-content;
+          position: absolute;
+          left: 16px;
+          top: 12px; 
+          padding: 5px 10px;
+          border-radius: 2px;
+          font-size: 13px;
+        }
+      }
+      .text{
+        height: 43%;
+        padding: 16px 12px;
+        background: #ffffff;
+        h2 {
+          font-size: 18px; 
+          margin-bottom: 8px;
+          line-height: 28px;
+        }       
+        .total {
+          p:first-child{
+            font-size: 16px;
+          }
+          p:last-child{
+            font-size: 14px;
+            color: #b8c4d2;
+          }
+        }
+      }
+  }
+}
+
+

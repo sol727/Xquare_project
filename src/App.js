@@ -39,6 +39,7 @@ import Invest_step3 from './pages/invest_step3';
 import Mo_invest_prepare from './pages/mo_invest_prepare';
 import Mo_invest_account from './pages/mo_invest_account';
 import Mo_invest_test from './pages/mo_invest_test';
+import Test from './pages/test';
 
 
 /* 페이지 */
@@ -77,6 +78,7 @@ function App() {
         <Route path="/invest_step1" component={Invest_step1}/>
         <Route path="/invest_step2" component={Invest_step2}/>
         <Route path="/invest_step3" component={Invest_step3}/>
+        <Route path="/test" component={Test}/>
     </BrowserRouter>
   );
 }
