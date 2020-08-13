@@ -71,6 +71,7 @@ code {
 .btn.big {width: 257px;}
 .btn_small {background: #292f40; color: #fff; border-radius: 4px; padding: 8px 12px; font-size: 15px;}
 .btn.orange {background: #fe8d40; }
+.point_btn.big {width: 384px; height: 44px; color: #fff; border-radius: 4px; padding: 8px 12px; font-size: 15px; background: #fe8d40;}
 .btn_small + .btn_small {margin-left: 24px;}
 .btn_gray {width: 97px; height: 38px; line-height: 36px; color:#bfbfbf; background: #eaedf1;  border-radius: 4px; font-size: 15px;}
 .btn_border {width: 97px; height: 38px; line-height: 36px;background: #fff; color: #343332; border: 1px solid #eaedf1; border-radius: 4px;}
@@ -920,9 +921,6 @@ code {
     .feeling_box {background: #f8f9fb;}
   }
   .add_top p {margin-top: 11px;}
-  .radio_wrap{width: 386px; height: 40px; border-radius:6px;border:1px solid #d0d0cf;overflow: hidden;
-    li{width:50%; height: 100%;}   
-  }
   .count_input {
     position: relative;
     input {padding: 16px 13px; height: auto; border-radius: 2px;}
@@ -942,7 +940,9 @@ code {
   line-height: 24px;
   &:after {position: absolute; content:''; width: 24px; height: 24px; top:0; left:0; background-image:url(../images/icons/info_icon.png); background-position: center;}
 }
-
+.radio_wrap{width: 386px; height: 40px; border-radius:6px;border:1px solid #d0d0cf;overflow: hidden;
+  li{width:50%; height: 100%;}   
+}
 .radio_wrap  input[type="radio"] {display: none;}
 .radio_wrap  input[type="radio"] + label{width: 100% ; height: 100%; text-align: center; font-size: 14px; color: #343332;padding: 10px 0; background: #ffffff; display: block; cursor: pointer;}
 .radio_wrap  input[type="radio"]:checked + label {color: #fff; background: #fe8d40;}
@@ -1026,8 +1026,42 @@ code {
           margin-right: 0;
         }
       }
-
     }
   }
 }
 
+//투자하기 메인페이지--------------
+.invest_page.index {
+  .btn_wrap.rightT {width:auto; margin: 32px auto;}
+   section {
+     margin: 100px 0 124px;  
+  
+  }
+  .section1 {
+    .list_wrap li:hover {margin-top: 0;}
+  }
+}
+
+//투자하기 - 지금 투자하기
+.step_progress {
+  margin-top: 40px;
+  ul {
+    width: 588px;
+    li {
+      display: inline-block;
+     width: 48px;
+     height: 48px;
+     font-size: 18px;
+     color: #b8c4d2;
+     border: 4px solid #eaedf1;
+     border-radius: 50%;
+     &.now {
+       background-image: url(../images/icons/step_now.png);
+       background-position: center;
+       background-repeat: no-repeat;
+       border: none;
+     }
+  }
+  }
+
+}
