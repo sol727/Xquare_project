@@ -7,12 +7,30 @@ import $ from 'jquery'
 export default class Invest_prepare extends React.Component {
     
     constructor(props) {
-    super(props);
+        super(props);
+
     }
 
     componentDidMount(){
+
+        // 모바일일때 팝업안보이고 페이지이동
+        var width = $(window).width();
+        if(width <= 768){
+            $('.invest_prepare_pop_show').click(function(){
+                window.location.href = 'mo_invest_prepare';
+            });
+            $('.invest_account_pop_show').click(function(){
+                window.location.href = 'mo_invest_account';
+            });
+            $('.invest_test_pop_show').click(function(){
+                window.location.href = 'mo_invest_test';
+            });
+        }
+
+
+
         //파일업로드 네임
-        var fileTarget = $('.file_wrap input[type="file"]'); 
+        var fileTarget = $('.file_wrap input[type="file"]');
         fileTarget.on('change', function(){
             if(window.FileReader){ // modern browser 
                 var filename = $(this)[0].files[0].name;
@@ -25,9 +43,47 @@ export default class Invest_prepare extends React.Component {
 
         // 투자적합성테스트팝업 높이맞추기
         const r_height = $('.invest_test_pop .pop_cont .right').innerHeight();
+        console.log(r_height)
         $('.invest_test_pop .pop_cont .left').height(r_height);
-       
         
+       
+
+        // 팝업
+        $('.pop_close').on('click',function(){
+            $(this).parents('.pop_wrap').hide();
+
+            $('.invest_prepare_pop').css({'left':'100%','display':'block'});
+            $('.invest_prepare_pop .dim').hide();
+            $('.invest_prepare_pop .pop_cont').css('right','-100%');
+
+            $('.invest_account_pop').css({'left':'100%','display':'block'});
+            $('.invest_account_pop .dim').hide();
+            $('.invest_account_pop .pop_cont').css('right','-100%');
+
+            $('.invest_test_pop').css({'left':'100%','display':'block'});
+            $('.invest_test_pop .dim').hide();
+            $('.invest_test_pop .pop_cont').css('right','-100%');
+        });
+        
+
+        $('.invest_prepare_pop_show').on('click',function(){
+            $('.invest_prepare_pop').css('left','0');
+            $('.invest_prepare_pop .dim').show();
+            $('.invest_prepare_pop .pop_cont').css('right','0');
+        });
+
+
+        $('.invest_account_pop_show').on('click',function(){
+            $('.invest_account_pop').css('left','0');
+            $('.invest_account_pop .dim').show();
+            $('.invest_account_pop .pop_cont').css('right','0');
+        });
+
+        $('.invest_test_pop_show').on('click',function(){
+            $('.invest_test_pop').css('left','0');
+            $('.invest_test_pop .dim').show();
+            $('.invest_test_pop .pop_cont').css('right','0');
+        });
     
     }
 
@@ -60,7 +116,7 @@ export default class Invest_prepare extends React.Component {
                                         <h3>실명인증</h3>
                                         <p>본인확인을 위해 주민등록증 또는 운전면허증을 준비해주세요. 개인정보는 실명정보 확인 후 즉시 파기됩니다.</p>
                                     </div>
-                                    <button type="button" className="navy_btn">인증하기</button>
+                                    <button type="button" className="navy_btn invest_prepare_pop_show">인증하기</button>
 
                                     {/* 심사중 버튼↓*/}
                                     {/* <button type="button" className="navy_btn orange_btn">심사중</button> */}
@@ -76,10 +132,10 @@ export default class Invest_prepare extends React.Component {
                                         <h3>증권계좌등록</h3>
                                         <p>원활한 이용을 위해 증권을 거래할 수 있는 계좌를 등록해주세요.</p>
                                     </div>
-                                    <button type="button" className="navy_btn">등록하기</button>
+                                    <button type="button" className="navy_btn invest_account_pop_show">등록하기</button>
 
                                     {/* 증권계좌변경 버튼↓*/}
-                                    {/* <button type="button" className="navy_btn">증권계좌 변경</button> */}
+                                    {/* <button type="button" className="navy_btn invest_account_pop_show">증권계좌 변경</button> */}
                                 </div>
                                 <div className="account_box">
                                     <h4 className="mb12">KB 증권</h4>
@@ -105,7 +161,7 @@ export default class Invest_prepare extends React.Component {
                                         <h3>투자 적합성 테스트</h3>
                                         <p>자본시장법에 따라, 12개월마다 투자에 따른 위험성에 대해 이해하고 있는지 확인합니다.</p>
                                     </div>
-                                    <button type="button" className="navy_btn">테스트 진행하기</button>
+                                    <button type="button" className="navy_btn invest_test_pop_show">테스트 진행하기</button>
 
                                     {/* 테스트 통과 버튼↓*/}
                                     {/* <button type="button" className="navy_btn green_btn">테스트 통과</button> */}
@@ -400,6 +456,21 @@ export default class Invest_prepare extends React.Component {
                                 </div>
                                 
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* 투자적합테스트 성공하면 노출되는팝업 */}
+                <div className="pop_wrap test_pass_pop">
+                    <div className="dim"></div>
+                    <div className="pop_cont clearfix2">
+                        <div className="pop_img">
+                            <img src={ require('../images/party_img.png') } alt="폭죽 이미지"/>
+                        </div>
+                        <div className="txt_box">
+                            <h2 className="point_color">훌륭합니다!</h2>
+                            <p>‘투자’에 대해 잘 이해하고 계시군요.<br/>잠시 후 투자 준비 화면으로 이동합니다</p>
+                            <div className="loading_bar"></div>
                         </div>
                     </div>
                 </div>
