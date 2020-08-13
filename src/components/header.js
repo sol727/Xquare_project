@@ -20,7 +20,7 @@ export default class Header extends React.Component {
                     </div> 
                     <div className="center">
                         <Link to="/"><span className="menu">엑스퀘어 소개</span></Link>
-                        <Link to="/"><span className="menu">투자하기</span></Link>
+                        <Link to="/invest_prepare"><span className="menu">투자하기</span></Link>
                         <Link to="/"><span className="menu">소식</span></Link>
                     </div>                   
                 </div>
