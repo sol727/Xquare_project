@@ -309,6 +309,73 @@ export default class Invest_detail extends React.Component {
                     </div>
                </div>
 
+               {/* 비로그인유저가 핵심정보탭 외에 탭클릭했을때 보이는팝업 */}
+               <div className="pop_wrap member_pop">
+                    <div className="dim"></div>
+                    <div className="pop_cont">
+                         <button type="button" className="pop_close">
+                              <img src={ require('../images/icons/close_btn.png') } alt="닫기버튼 아이콘"/>
+                         </button>
+                         <p className="centerT font_18">엑스퀘어 회원에게만<br/>제공되는 서비스입니다<br/>로그인 또는 회원가입을 진행해주세요</p>
+                         <div className="btn_wrap clearfix2">
+                              <button type="button" className="navy_btn">회원가입</button>
+                              <button type="button" className="navy_btn">로그인</button>
+                         </div>
+                    </div>
+               </div>
+
+               {/* 공유하기 팝업 */}
+               <div className="pop_wrap share_pop">
+                    <div className="dim"></div>
+                    <div className="pop_cont">
+                         <button type="button" className="pop_close">
+                              <img src={ require('../images/icons/close_btn.png') } alt="닫기버튼 아이콘"/>
+                         </button>
+                         <p className="centerT font_18 bold mb16">공유하기</p>
+                         <p className="centerT font_14 gray3_color mb16">공유할 방법을 선택하세요</p>
+                         <div className="input_box clearfix2">
+                              <input type="text"/>
+                              <button type="button" className="navy_btn">복사</button>
+                         </div>
+                         <ul className="clearfix">
+                              <li>
+                                   <button type="button" className="centerT font_13 gray2_color">
+                                        <img src={ require('../images/icons/share_kakao.png') } alt="카카오톡 아이콘"/>
+                                        카카오톡
+                                   </button>
+                              </li>
+                              <li>
+                                   <button type="button" className="centerT font_13 gray2_color">
+                                        <img src={ require('../images/icons/share_face.png') } alt="페이스북 아이콘"/>
+                                        페이스북
+                                   </button>
+                              </li>
+                              <li>
+                                   <button type="button" className="centerT font_13 gray2_color">
+                                        <img src={ require('../images/icons/share_twitter.png') } alt="트위터 아이콘"/>
+                                        트위터
+                                   </button>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+
+               {/* 오픈예정일때 알림클릭시 보이는팝업 */}
+               <div className="pop_wrap alarm_pop">
+                    <div className="dim"></div>
+                    <div className="pop_cont">
+                         <button type="button" className="pop_close">
+                              <img src={ require('../images/icons/close_btn.png') } alt="닫기버튼 아이콘"/>
+                         </button>
+                         <p className="centerT font_18">엑스퀘어 회원에게만<br/>제공되는 서비스입니다<br/>로그인 또는 회원가입을 진행해주세요</p>
+                         <div className="btn_wrap clearfix2">
+                              <button type="button" className="navy_btn">회원가입</button>
+                              <button type="button" className="navy_btn">로그인</button>
+                         </div>
+                    </div>
+               </div>
+               
+
 
 
             </>
