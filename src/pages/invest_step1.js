@@ -9,9 +9,8 @@ export default class Invest_step1 extends React.Component {
     constructor(props) {
     super(props);
     }
-    // $(document).ready({ ... })sta
-    componentDidMount(){
 
+    componentDidMount(){
 
     }
 
@@ -146,6 +145,7 @@ export default class Invest_step1 extends React.Component {
                     </div>
                 </section>
                 <Footer />
+
             </>
         )
     }
