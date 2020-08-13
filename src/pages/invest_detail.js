@@ -36,9 +36,14 @@ export default class Invest_detail extends React.Component {
 
           $('.btn_wrap2 .alarm_btn').click(function(){
                $(this).toggleClass('on');              
-          });          
+          });    
+          
+          // 팝업
+          $('.pop_close').on('click',function(){
+               $(this).parents('.pop_wrap').hide();
+          });
       
-        }//최종괄호
+     }//최종괄호
 
         sliderEvent ( currentSlide, nextSlide ) {
                this.setState( { 
@@ -283,6 +288,26 @@ export default class Invest_detail extends React.Component {
                     </div>
                </section>
                <Footer />
+
+               {/* 재투자팝업 */}
+               <div className="pop_wrap reinvest_pop">
+                    <div className="dim"></div>
+                    <div className="pop_cont">
+                         <button type="button" className="pop_close">
+                              <img src={ require('../images/icons/close_btn.png') } alt="닫기버튼 아이콘"/>
+                         </button>
+                         <div>
+                              <h2 className="font_18 centerT">재투자를 원하시나요?<br/>기존 투자를 취소하고 다시 진행합니다</h2>
+                              <p className="font_13 gray2_color">증액을 위한 재투자 시, 기존 투자 취소후 진행해야 하기 때문에, 청약율이 100%가 넘은 경우 배정 순위에서 불이익을 받을 수 있다는 점 참고 바랍니다.<br/>
+                              <span className="font_13 red_color">한 번 취소한 투자는 복구되지 않으니 신중히 결정해주시기 바랍니다.</span>
+                              </p>
+                              <div className="btn_wrap">
+                                   <button type="button" className="form_btn">재투자 진행</button>
+                                   <button type="button" className="form_btn orange_btn">기존투자 유지</button>
+                              </div>
+                         </div>
+                    </div>
+               </div>
 
 
 

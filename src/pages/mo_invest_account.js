@@ -48,7 +48,7 @@ export default class Mo_invest_account extends React.Component {
                                         </li>
                                     </ul>
                                     <div className="btn_wrap clearfix2">
-                                        <button type="button" className="back_btn">이전</button>
+                                        <button type="button" className="back_btn" onClick={() => window.history.back()}>이전</button>
                                         <button type="button" className="unable_btn">추가하기</button>
                                         {/* 활성화 버튼↓*/}
                                         {/* <button type="button" className="unable_btn orange_btn">추가하기</button> */}

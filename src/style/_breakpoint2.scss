@@ -102,6 +102,14 @@ $mob-s-width		: 375px;
 
     //footer
     footer .container{width:calc(100% - 38px);}
+
+    // 팝업----------------------------------------------------------
+    .pop_cont{width: 60%;padding:16px !important;
+        .pop_img{float: none;text-align: center;margin-bottom:20px;}
+        .txt_box{float: none;margin:0 auto;}
+    }
+
+    .test_pass_pop .pop_cont{padding:40px 16px !important;}
 }
 
 @include tab-small{
@@ -143,6 +151,18 @@ $mob-s-width		: 375px;
         }
         .table_li{overflow-x: auto;}
     }
+    // 팝업----------------------------------------------------------
+    .pop_cont{width: calc(100% - 38px) !important;
+        .txt_box{width: 100%;}
+    }
+
+    
+    // 회원가입 토스트팝업
+    .toast_pop{top:unset;bottom:32px;}
+
+    // 실명인증팝업, 증권계좌추가팝업,투자적합성테스트팝업
+    .invest_prepare_pop,.invest_account_pop,.invest_test_pop{display: none;}
+    .invest_prepare_pop.mo_invest,.invest_account_pop.mo_invest,.invest_test_pop.mo_invest{display: block;}
 
     //footer
     footer {padding-top:42px;
