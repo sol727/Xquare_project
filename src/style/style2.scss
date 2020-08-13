@@ -20,6 +20,7 @@ input[type="file"]{display: none;}
 .mb40{margin-bottom:40px;}
 .font_13{font-size: 13px;}
 .font_14{font-size: 14px;}
+.font_18{font-size: 18px;}
 .pc_none {display: none;}
 select{width:100%;height: 40px;border: 1px solid #d6d6d6;border-radius:2px;padding:0 16px;background-image:url(../images/icons/select_icon.png);background-repeat: no-repeat;background-position-x: calc(100% - 16px);background-position-y:center;font-size:15px;}
 input:read-only{background: #f8f9fb;border-color:#f8f9fb;}
@@ -289,9 +290,26 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     }
 }
 
+// 실명인증팝업
+.invest_prepare_pop{position: fixed;width:100%;height: 100%;top:0;left: 0;
+    .dim{position: fixed;width:100%;height: 100%;top:0;left: 0;background: rgba(0, 0, 0, 0.61);}
+    .pop_cont{width:486px;position: absolute;right: 0;top:0;height: 100%;
+        .left{width: 52px;height: 100%;background-image: linear-gradient(to top,#ffa740, #ffb27c );border-radius:15px 0 0 0;}
+        .left>img{position: absolute;bottom: 0;left: 0;}
+        .left .pop_close{width:100%;padding:14px 0;}
+        .right{width:calc(100% - 52px);height:100%;background: #fff;padding-top:60px;}
+        .content{border-top:2px solid #ff8e40;padding:24px 16px 0;}
+        .top_txt{font-size: 13px;color:#6e6e6d;background:#f8f9fb;padding:4px 8px;line-height: 1.5;}
+        .input_li{line-height: 40px;text-align: center;}
+        .input_li input{width:calc(50% - 4px);}
+       
+    }
+}
+
+
 // 투자한도조회
 .invest_check{
-    .cont{margin-top:70px;
+    .content{margin-top:70px;
         ul{border:1px solid #eaedf1;border-radius: 4px;}
         .top{padding:16px;overflow: hidden;}
         .top p{position: relative;padding:10px 0;}
@@ -301,7 +319,7 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
             img:last-child{margin-right:0px;}
         }
         .loading_box{padding:24px 0 32px;text-align:center;background: #f8f9fb;
-            button{padding:8px 12px;font-size:14px;color:#fff;font-weight: 600;background:#292f40;border-radius: 100px;}
+            h3{padding:8px 12px;font-size:14px;color:#fff;width:max-content;background:#292f40;border-radius: 100px;margin:0 auto;}
             .loading_bar{width:588px;height:4px;background: #eeeff5;margin:16px auto 0px;position: relative;}
             .loading_bar::after{position: absolute;content: '';width:80%;height:100%;background:#ff8e40;left:0;top:0;}
         }
@@ -333,6 +351,7 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
 .check_input.alert{
     &:after{display:block;}
 }
+
 
 
 
