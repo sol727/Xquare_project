@@ -40,7 +40,6 @@ export default class Login extends React.Component {
                                     <div className="input_box">
                                         {/* 아이디,비밀번호 틀렸을시 input class에 error추가시 삭제버튼 노출됩니다↓*/}
                                         <input type="text" placeholder="아이디(이메일)"/>
-                                        
                                         <button type="button" className="input_delt_btn "><img src={ require('../images/icons/input_delt_icon.png')} alt="삭제아이콘"/></button>
                                     </div>
                                     {/* 아이디,비밀번호 틀렸을시 노출되는 메시지↓ */}
