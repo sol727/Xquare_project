@@ -1,6 +1,7 @@
 // Break Point (Desktop First 기준 내림차순 설정)
 $desktop-l-width	: 1440px;
 $tablet-l-width		: 1200px;
+$tablet-m-width		: 1023px;
 $tablet-s-width		: 768px;
 $mob-m-width		: 480px;
 $mob-s-width		: 375px;
@@ -23,6 +24,12 @@ $mob-s-width		: 375px;
 // 태블릿
 @mixin tab {
 	@media screen and (max-width: #{$tablet-l-width}) {
+		@content;
+	}
+}
+// 태블릿
+@mixin tab-middle {
+	@media screen and (max-width: #{$tablet-m-width}) {
 		@content;
 	}
 }
@@ -54,6 +61,17 @@ $mob-s-width		: 375px;
 }
 @include tab{
 	.mo_only {display: none;}
+	.overflow-div {overflow-y: auto; margin: auto;
+		.tab_wrap {
+			white-space: nowrap;
+			li {width: 100px;}
+		}
+	}  
+
+	.invest_page.index .section .container {width: calc(100% - 38px); margin: 0 auto;}
+
+	header .pc_header.container .left_box .center {min-width: 500px;}
+	header .pc_header.container .left_box .center li {width: 130px;}
 
 	//index------------------------------------------
 	.index.main{
@@ -61,11 +79,11 @@ $mob-s-width		: 375px;
 			.box_list li {
 				height: 335px;
 				margin-bottom: 10px;
+				p {font-size: 16px;}
 			}
 		}
 		.section4 {
 			.container {margin-top: 100px;}
-
 		}
 	}
 	  ///.index.main .section3 .box_list
@@ -88,13 +106,42 @@ $mob-s-width		: 375px;
 		padding-top: 155px;  
 	}	
 	.invest_index .btn_wrap button.submit {width: 100%;}
+
+
+	///투자하기 상세
+	.invest_detail .title_area .text_box {width: 100%; float: none; }
+	.invest_detail .img_slider_wrap {width: 100%; height: 218px; float: none !important ; margin-bottom: 16px;}
+	.invest_detail .title_area .img_box {
+		width: 100%; height: 100%;
+		text-align: center;
+		img{
+			max-width: 100%;
+			
+		}
+	}
+	.invest_detail .title_area {display: block;}
+
+	//투자하기 step1 
+	.step1 .slide_area {margin: 40px 0 85px;}
+	.step1 .swiper-container {width: 90%;}
+
+}
+@include tab-middle(){
+	.detail_container {width: calc(100% - 38px); margin: 0 auto;}
+	header .pc_header.container .left_box .logo {width: 100px;
+		img {width: 100%;}
+	}
+	header .pc_header.container .left_box .center {min-width: 230px;}
+	header .pc_header.container .left_box .center li {width: 80px;}
+	header .pc_header.container .left_box .center li .menu {font-size: 14px;}
+
 }
 
 @include tab-small(){
   .pc_none {display: block;}
   .mo_none {display: none !important;}
   .mo_only {display: none;}
-  .overflow-div {width: 100%; overflow-y: auto; margin: auto;}  
+ 
 
 
 //default css--------------------------------------------------------------------------
@@ -109,7 +156,6 @@ $mob-s-width		: 375px;
   .index.main{
 	.title {font-size: 30px;	}
 	.sub_title {font-size: 14px;}
-
 	.main_banner_wrap{
 		.main_banner{
 			li{
@@ -170,8 +216,7 @@ $mob-s-width		: 375px;
 				padding: 6px 16px;
 			}
 		}
-		.box_list li {
-			width: 100%;
+		.box_list li {			
 			height: 308px;
 			padding-top: 32px;
 			border-top: 4px solid #ff8e40;
@@ -190,6 +235,7 @@ $mob-s-width		: 375px;
 				font-size: 14px;
 				font-weight: bold;
 				margin-top: 12px;
+				br {display: none;}
 			}
 		}
 	}
@@ -248,43 +294,30 @@ $mob-s-width		: 375px;
 		padding-top: 120px;  
 	}	
 
-	.list_wrap{
-		li.slick-item {
-			width: 100%;
-			box-shadow: none;
-			&:hover {margin-top: 0;}
-		}
-	}
+	
 //-------------------------------------------------------------index끝
 
 
 //투자하기상세----------------------------------------------------------
 	//공통
 	.count {font-size: 15px;}
+
+ 
 	
-	.tab_wrap {
-		white-space: nowrap;
-		li {width: 100px;}
-	}
-	.img_slider_wrap {height: 218px; float: none !important ; margin-bottom: 16px;}
-	.invest_index .title_area .img_box {width: 100%; height: 100%;}
-	.invest_index .title_area {display: block;}
-	.invest_index .title_area .text_box {width: 100%; float: none; }
-	.invest_index .title_box {padding: 16px 0; margin: 8px 0;}
-	.detail_container {width: calc(100% - 38px); margin: 0 auto;}
-	.invest_index .btn_wrap button.submit {width: 100%;}
-	.invest_index .btn_wrap ul {width: 100%;}
+	.invest_detail .title_box {padding: 16px 0; margin: 8px 0;}	
+	.invest_detail .btn_wrap button.submit {width: 100%;}
+	.invest_detail .btn_wrap ul {width: 100%;}
 	.detail_cont .sub_title {margin: 8px 0;}
 	.detail_cont .total_box {margin: 24px 0;}
 	.detail_cont .total_box li p {font-size: 13px;}
 	.detail_cont .total_box li h3 {font-size: 12px;}
-	.invest_index .label_wrap li {border: 1px solid #e9edf1;}
+	.invest_detail .label_wrap li {border: 1px solid #e9edf1;}
 	.goal_box li h3 {font-size: 22px;}
 	.bar_box p {font-size: 16px;}
 	.bar_box p span {font-size: 13px;}
-	.invest_index .like_btn {padding: 5px 0 5px 34px; background-position: 50px center;}
-	.invest_index .like_btn.on {padding: 5px 0 5px 34px; background-position: 50px center;}
-	.invest_index .share_btn{padding: 5px 0 5px 34px; background-position: 50px center;}
+	.invest_detail .like_btn {padding: 5px 0 5px 34px; background-position: 50px center;}
+	.invest_detail .like_btn.on {padding: 5px 0 5px 34px; background-position: 50px center;}
+	.invest_detail .share_btn{padding: 5px 0 5px 34px; background-position: 50px center;}
 	.detail_table.detail_table2 > li .th {width: 100%; display: block;}
 	.detail_table > li .td {padding: 8px 16px;}
 
@@ -295,28 +328,28 @@ $mob-s-width		: 375px;
 	.list_table li p:last-child {width: 35%;}
 
 	//새소식탭 상세
-	.invest_index.detail {padding-top: 0;}
-	.invest_index.detail .detail_container.tab2 {width: 100%; margin-bottom: 0;}
+	.invest_detail.detail {padding-top: 0;}
+	.invest_detail.detail .detail_container.tab2 {width: 100%; margin-bottom: 0;}
 	.feeling_box {padding: 7px 11px;}
 
 	//커뮤니티탭	
-	.invest_index .detail_container.tab3 {margin: 24px auto;}
-	.invest_index .detail_container.tab3 .table_title {padding-left: 0;}
-	.invest_index .detail_container.tab3 .title_btn.write_btn {
+	.invest_detail .detail_container.tab3 {margin: 24px auto;}
+	.invest_detail .detail_container.tab3 .table_title {padding-left: 0;}
+	.invest_detail .detail_container.tab3 .title_btn.write_btn {
 		border: 1px solid #eaedf1; 
 		font-size: 14px;
 		border-radius: 4px;
 		padding: 6px 16px;
 		margin-top: 8px;		
 	}
-	.invest_index.detail .detail_container.tab3 .title {font-size: 14px;}
+	.invest_detail.detail .detail_container.tab3 .title {font-size: 14px;}
 	//커뮤니티탭 상세
-	.invest_index.detail .detail_container.tab3 .table_title {padding: 12px 16px;}
-	.invest_index.detail .detail_container.tab3 {width: 100%; margin-bottom: 0;}
+	.invest_detail.detail .detail_container.tab3 .table_title {padding: 12px 16px;}
+	.invest_detail.detail .detail_container.tab3 {width: 100%; margin-bottom: 0;}
 	//커뮤니티탭 글쓰기
 	.detail_cont.add .add_area {margin: 24px 0 ;}
-	.invest_index.add .detail_container.tab3 {width: 100%; margin-bottom: 0;}
-	.invest_index.add .detail_container.tab3 .table_title {padding: 12px 16px;}
+	.invest_detail.add .detail_container.tab3 {width: 100%; margin-bottom: 0;}
+	.invest_detail.add .detail_container.tab3 .table_title {padding: 12px 16px;}
 	.detail_cont.add .add_top p {margin-bottom: 8px; margin-top: 0;}
 	.detail_cont.add .radio_wrap {width: 100%;}
 	.info_text {width: 100%; text-align: left ;}
@@ -326,7 +359,7 @@ $mob-s-width		: 375px;
 	//부가정보탭
 	.detail_container.tab4 {margin: 30px auto 58px;} 
 	.detail_container.tab4 .detail_table_title:last-of-type {margin-top: 30px;}
-	.invest_index.detail .detail_container.tab4 .table_title {font-size: 16px;}
+	.invest_detail.detail .detail_container.tab4 .table_title {font-size: 16px;}
 	.download_btn {padding: 8px 11px; font-size: 13px;}
 	.down_list {
 		li{
@@ -371,13 +404,13 @@ $mob-s-width		: 375px;
 	//투자하기 스탭
 	.step_progress ul {width: 100%;}
 	.step .title_box h1 {font-size: 28px; line-height: 42px;}
-	.top_table {border-left: 1px solid #eaedf1;}
-	.top_table li {width: 50%; border-top: 1px solid #eaedf1;
+	.invest_page.step .top_table {border-left: 1px solid #eaedf1;}
+	.invest_page.step .top_table li {width: 50%; border-top: 1px solid #eaedf1;
 		&:nth-child(2n) {border-right: 1px solid #eaedf1; border-left: 1px solid #eaedf1;}
 	}
-	.step .cont > div.w50 {width: 100%; margin-bottom: 24px;}
-	.step .cont .item_wrap {box-shadow: 0 4px 4px rgba(0,0,0,0.2);}
-	.step .cont .radio_wrap {width: 100%; }
+	.invest_page.step .cont > div.w50 {width: 100%; margin-bottom: 24px;}
+	.invest_page.step .cont .item_wrap {box-shadow: 0 4px 4px rgba(0,0,0,0.2);}
+	.invest_page.step .cont .radio_wrap {width: 100%; }
 	.cont.radio > div > ul > li {width: 100%; 
 	 &:last-of-type {margin-top: 16px;}
 	}
@@ -388,6 +421,34 @@ $mob-s-width		: 375px;
 	.mo_only {display: block;}
 
 	//index------------------------------------------------
+
+	.list_wrap{
+		li.slick-item {
+			width: 100%;
+			box-shadow: none;
+			&:hover {margin-top: 0;}
+		}
+	}
+	.index.main .section3 {
+		.box_list li {width: 100%;
+			p {
+				br {display: block;}
+			}
+		}
+
+	}
+
+
+	.index.main .main_banner {height: 550px;}
+	.index.main .main_banner li {
+		background-image: url(../images/main_banner_bg_mo.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+
+
 	.index.main .section3 .box_list .slick-slide:first-child li {
 		background-image: url(../images/icons/about_icon1_on.png);
 		background-position: center 32px;
@@ -415,7 +476,7 @@ $mob-s-width		: 375px;
 		.btn_wrap {margin-bottom: 0;}	
 	}
 	.invest_page.index .section3 {margin: 40px 0 16px; 
-		.btn_wrap {margin-bottom: 0;}	
+		.btn_wrap {margin-bottom: 0;}			
 	}
 	.invest_page .cont .list_wrap > li {width: 100%; margin-right: 0;}
 	.invest_page.index .point_btn.big {width: 100%;}
@@ -441,10 +502,10 @@ $mob-s-width		: 375px;
 		}
 	}
 
+	//투자 step
+	.step1 .swiper-container {width: 80%;}
+	.step .page_btn button:first-child {width: 102px;}
+	.step .page_btn button:last-child {width: calc(100% - 126px);}
+
 
 }
-
-
-
-
-

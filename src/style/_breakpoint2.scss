@@ -61,7 +61,7 @@ $mob-s-width		: 375px;
 
     //form_page
     .form_page{width:100%;min-height:calc(100vh - 446px);
-        .bg_gradient{width: 50%;min-height:calc(100vh - 446px);}
+        .bg_gradient{width: 50%;}
         .right{width:50%;padding:56px 70px 0;}
     }
 
@@ -87,7 +87,7 @@ $mob-s-width		: 375px;
 
     // 투자한도조회
     .invest_check{
-        .cont{margin-top:70px;
+        .content {margin-top:70px;
             .logo_box{padding:48px 0px;
                 img{margin-right:auto !important;display: block;margin:0 auto 16px;}
                 img:last-child{margin-bottom:0px;}
@@ -142,6 +142,15 @@ $mob-s-width		: 375px;
             li{width:50%;}
         }
     }
+    // 투자한도조회
+    .invest_check{
+        .content {
+            .loading_box{
+                .loading_bar{width:calc(100% - 38px);}
+            }
+        }
+        
+    }
 
     //약관페이지
     .terms_page{
@@ -152,11 +161,14 @@ $mob-s-width		: 375px;
         .table_li{overflow-x: auto;}
     }
     // 팝업----------------------------------------------------------
-    .pop_cont{width: calc(100% - 38px) !important;
+    .pop_cont{
+        .pop_img{
+            img{max-width: 104px;}
+        }
         .txt_box{width: 100%;}
     }
 
-    
+
     // 회원가입 토스트팝업
     .toast_pop{top:unset;bottom:32px;}
 
@@ -211,9 +223,12 @@ $mob-s-width		: 375px;
         }
         img{width:100%;right:unset;top:0;left:50%;transform: translateX(-50%);}
     }
+
+    // 팝업----------------------------------------------------------
+    .pop_cont{width: calc(100% - 38px) !important;}
+
+    // 투자하기상세 - 공유하기팝업
+    .share_pop{
+        .copy_txt{top:unset;bottom:32px;}
+    }
 }
-
-
-
-
-
