@@ -3,21 +3,21 @@ import { Link } from 'react-router-dom';
 import * as js from '../js/style'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.scss";
 import $ from 'jquery'
+import SwiperCore, { Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+
+SwiperCore.use([Navigation, Pagination]);
 
 export default class Invest_detail4 extends React.Component {
 
      constructor(props) {
           super(props);
 
-          this.state = {
-               width : $(window).width(),
-               focus : 0
-             }        
-
-          this.sliderEvent = this.sliderEvent.bind(this)
+    
      }
 
      componentDidMount(){        
@@ -40,53 +40,39 @@ export default class Invest_detail4 extends React.Component {
       
         }//최종괄호
 
-        sliderEvent ( currentSlide, nextSlide ) {
-               this.setState( { 
-               focus : nextSlide
-               } )
-          }
-
-          onClickPrev = () => {
-               this.ref.slickPrev()
-          }
-
-          onClickNext = () => {
-               this.ref.slickNext()
-          }
 
     render() {
         return (
             <>
                <Header />
 
-               <section className="invest_index">
+               <section className="invest_detail">
                     {/* 상세 탑 부분 */}
                     <div className="top">
-                         <div className="title_area clearfix2 container">                           
+                         <div className="title_area clearfix2 container">
                               <div className="img_slider_wrap">
                                    <ul className="img_box slider">
-                                        <Slider ref={sliderRef => this.ref = sliderRef}  slidesToShow={1} slidesToScroll={1} speed={500} dots={false}  beforeChange={this.sliderEvent} >
+                                   <Swiper spaceBetween={24} slidesPerView={1}  navigation={{ nextEl:'.img_slider_wrap .next1' , prevEl:'.img_slider_wrap .prev1'}} pagination={{ clickable: true }} onSwiper={(swiper) => console.log(swiper)}  onSlideChange={() => console.log('slide change')} >
+                                        <SwiperSlide>
                                              <li>
                                                   <img src={ require('../images/detail_sample.png') } alt="투자상세이미지"/>
                                              </li>
+                                             </SwiperSlide>
+                                             <SwiperSlide>
                                              <li>
                                                   <img src={ require('../images/detail_sample.png') } alt="투자상세이미지"/>
                                              </li>
+                                             </SwiperSlide>
+                                             <SwiperSlide>
                                              <li>
                                                   <img src={ require('../images/detail_sample.png') } alt="투자상세이미지"/>
                                              </li>
-                                        </Slider>
+                                             </SwiperSlide>
+                                       </Swiper>
                                    </ul>
-                                   <ul className="slider_arrow mo_none">
-                                        <li className="prev_arrow" onClick={this.onClickPrev}></li>
-                                        <li className="next_arrow" onClick={this.onClickNext}></li>
-                                   </ul>
-                                   <ul className="dot_wrap clearfix">
-                                        <li className={ this.state.focus === 0 ? "active" : ""  } ></li>
-                                        <li className={ this.state.focus === 1 ? "active" : ""  } ></li>
-                                        <li className={ this.state.focus === 2 ? "active" : ""  } ></li>
-                                   </ul>   
-                              </div>                              
+                                   <div className="swiper-button-prev prev1 mo_none"></div>
+                                    <div className="swiper-button-next next1 mo_none"></div>
+                              </div>     
                               <div className="text_box">                                   
                                    <ul className="label_wrap clearfix">
                                         <li>태양광/소형</li>
