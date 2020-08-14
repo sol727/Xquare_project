@@ -277,7 +277,7 @@ export default class Signup2 extends React.Component {
                                 <img src={ require('../images/alert_img.png') } alt="느낌표 이미지"/>
                             </div>
                             <div className="txt_box">
-                                <p>홍길동 님은 가입한 이력이 있습니다. <br/>아래의 아이디로 로그인을 진행해주세요.</p>
+                                <p>이전으로 돌아가시면 현재 입력하신 정보는<br/>삭제됩니다. 이전으로 돌아가시겠습니까?</p>
                                 <div className="btn_wrap">
                                     <button type="button" className="back_line_btn mb16" onClick={() => window.history.back()}>돌아가겠습니다</button>
                                     <button type="button" className="form_btn orange_btn">아니오 돌아가지 않겠습니다</button>

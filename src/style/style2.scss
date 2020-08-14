@@ -272,11 +272,13 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
 
 .blue_color{color:#5a7cfa;}
 
-.share_pop{display: block;
+// 투자하기상세 - 공유하기팝업
+.share_pop{
+    .copy_txt{font-size:13px;color:#fff;padding:6px 28px;background:#292f40;border-radius:100px;width:max-content;position: absolute;top:106px;left:50%;transform: translateX(-50%);}
     .pop_cont{width:384px;padding:40px 16px 32px;}
     .input_box{
-        input{width:calc(100% - 100px);}
-        button{width: 90px;height: 40px;}
+        input{width:calc(100% - 90px);border-radius: unset;border:2px solid #ff8e40;}
+        button{width: 90px;height: 40px;border-radius: unset;}
     }
     ul{width:224px;margin:28px auto 0px;
         li{width: 33.333%;text-align: center;}
@@ -284,6 +286,7 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     }
 }
 
+// 투자하기상세 - 비로그인유저가 핵심정보탭 외에 탭클릭했을때 보이는팝업
 .member_pop{
     .pop_cont{padding:40px 23px 16px;}
     p{line-height: 1.5;font-weight: 600;}
@@ -292,8 +295,19 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     }
 }
 
+// 투자하기상세 - 알림클릭시 팝업
+.alarm_pop{
+    .pop_cont{width:384px;
+        h3{line-height: 1.4;}
+        .link_box a{font-size: 14px;color:#282d40;margin-left: 8px;}
+    }
+    .agree_box{margin-bottom:12px;
+        p{font-size: 13px;color:#6e6e6d;line-height: 1.4;padding:4px 8px;background:#f8f9fb;margin-bottom:12px;}
+    }
+}
+
 // 회원가입 토스트팝업
-.toast_pop{position: absolute;top:106px;left:50%;transform: translate(-50%,-50%);width: 297px;height: 32px;;background-color:#292f40;border-radius:100px;background-image: url(../images/icons/toast_check_icon.png);background-repeat: no-repeat;background-position-x:4px;padding:0 4px 0px 44px;background-position-y: center;box-shadow:0px 3px 5px rgba(0,0,0,0.4);transition:all .8s;
+.toast_pop{display: none;position: absolute;top:106px;left:50%;transform: translate(-50%,-50%);width: 297px;height: 32px;;background-color:#292f40;border-radius:100px;background-image: url(../images/icons/toast_check_icon.png);background-repeat: no-repeat;background-position-x:4px;padding:0 4px 0px 44px;background-position-y: center;box-shadow:0px 3px 5px rgba(0,0,0,0.4);transition:all .8s;
     p{line-height: 32px;}
     button{color:#fe8d40;font-size: 13px;width: 40px;height: 100%;}
 }
@@ -306,7 +320,6 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     }
 }
 
-.find_password_pop{display: block;}
 
 // 회원가입진행중 이전으로 돌아갈때 보이는팝업
 .back_pop{
