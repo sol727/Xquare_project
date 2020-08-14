@@ -87,7 +87,7 @@ $mob-s-width		: 375px;
 
     // 투자한도조회
     .invest_check{
-        .cont{margin-top:70px;
+        .content {margin-top:70px;
             .logo_box{padding:48px 0px;
                 img{margin-right:auto !important;display: block;margin:0 auto 16px;}
                 img:last-child{margin-bottom:0px;}
@@ -141,6 +141,15 @@ $mob-s-width		: 375px;
         .invest_top_box{
             li{width:50%;}
         }
+    }
+    // 투자한도조회
+    .invest_check{
+        .content {
+            .loading_box{
+                .loading_bar{width:calc(100% - 38px);}
+            }
+        }
+        
     }
 
     //약관페이지

@@ -99,7 +99,7 @@ export default class Invest_prepare extends React.Component {
                     <div className="invest_top_box mo_none">
                         <ul className="clearfix">
                             <li>
-                                <Link>
+                                <Link to="/">
                                     <img src={ require('../images/icons/home_icon.png') } alt="홈아이콘"/>
                                 </Link>
                             </li>
