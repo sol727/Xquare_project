@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import * as js from '../js/style'
 import Header from '../components/header'
 import Footer from '../components/footer'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.scss";
 import $ from 'jquery'
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,11 +14,17 @@ import 'swiper/components/pagination/pagination.scss';
 
 SwiperCore.use([Navigation, Pagination]);
 
-export default class Invest_detail extends React.Component {
+export default class Test extends React.Component {
 
      constructor(props) {
           super(props);
-         
+
+          this.state = {
+               width : $(window).width(),
+               focus : 0
+             }        
+
+          this.sliderEvent = this.sliderEvent.bind(this)
      }
 
      componentDidMount(){
@@ -46,7 +54,19 @@ export default class Invest_detail extends React.Component {
       
      }//최종괄호
 
-       
+        sliderEvent ( currentSlide, nextSlide ) {
+               this.setState( { 
+               focus : nextSlide
+               } )
+          }         
+
+          onClickPrev = () => {
+               this.ref.slickPrev()
+          }
+
+          onClickNext = () => {
+               this.ref.slickNext()
+          }
 
     render() {
         return (
@@ -163,7 +183,6 @@ export default class Invest_detail extends React.Component {
                                              <button type="button" className="submit" onClick={() => window.location.pathname = "/invest_prepare"}>지금 투자하기</button>
                                              <ul className="clearfix2">
                                                   <li><button type="button" className="like_btn">nnn</button></li>
-                                                  {/* share_pop_show 를 누르면 공유하기 팝업이 뜹니다. */}
                                                   <li><button type="button" className="share_btn share_pop_show"> nnn</button></li>
                                              </ul>
                                         </div>

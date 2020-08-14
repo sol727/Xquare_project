@@ -106,10 +106,18 @@ export default class Invest_step1 extends React.Component {
                                     </div>
                                     <div className="slide_area">
                                         <ul>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
+                                            <li>
+                                                <div class="account_box"><h4 class="mb12">KB 증권</h4><p class="font_14">123-9999-9999-9999</p></div>
+                                            </li>
+                                            <li>
+                                                 <div class="account_box"><h4 class="mb12">KB 증권</h4><p class="font_14">123-9999-9999-9999</p></div>
+                                            </li>
+                                            <li>
+                                                <div class="account_box"><h4 class="mb12">KB 증권</h4><p class="font_14">123-9999-9999-9999</p></div>
+                                            </li>
+                                            <li>
+                                                <div class="account_box"><h4 class="mb12">KB 증권</h4><p class="font_14">123-9999-9999-9999</p></div>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
