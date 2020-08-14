@@ -127,7 +127,7 @@ export default class Invest_step1 extends React.Component {
                                             </SwiperSlide>
                                             <SwiperSlide>
                                             <li>
-                                                <div class="account_box"><h4 className="mb12">KB 증권</h4><p className="font_14">123-9999-9999-9999</p></div>
+                                                <div className="account_box"><h4 className="mb12">KB 증권</h4><p className="font_14">123-9999-9999-9999</p></div>
                                             </li>
                                             </SwiperSlide>
                                             <SwiperSlide>

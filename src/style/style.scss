@@ -44,86 +44,7 @@ code {
   &:last-child {margin-right: 0 !important;}
   }
 }
-
-////////////////////////////////////////////////////SWIPER/////////////////////////////////////////////////////////////////
-
-.swiper-pagination-bullet {background: #343332 !important; }
-.swiper-pagination-bullet-active {background: #ff8e40 !important;}
-.swiper-button-prev.prev1  {
-  width: 32px;
-  height: 48px;  
-  background-image: url(../images/icons/btn_prev.png);
-  background-position: center;
-}
-.swiper-button-next.next1  {
-  width: 32px;
-  height: 48px;  
-  background-image: url(../images/icons/btn_next.png);
-  background-position: center;
-}
-.swiper-button-prev:after, .swiper-button-next:after{display: none;}
-
-.list_wrap.slide_wrap{   
-  margin-top: 0px;
-  .swiper-container {width: 100%;}
-  .swiper-wrapper {padding: 0 0 26px ;}
-  .swiper-pagination {bottom: 0;}
-  .swiper-slide>li{
-    width: 100%;
-    height: 376px;
-    border-radius: 4px;
-    margin-right: 24px;    
-    box-shadow:3px 3px 3px rgba(0,0,0,0.3);
-    transition: all 0.3s;    
-      &:last-child {margin-right: 0;}
-      .img_box {
-        width: 100%; height: 57%; position: relative; overflow: hidden;
-        img {
-          @include position_img;
-        }
-        .label {
-          width: max-content;
-          position: absolute;
-          left: 16px;
-          top: 12px; 
-          padding: 5px 10px;
-          border-radius: 2px;
-          font-size: 13px;
-        }
-        &:hover {margin-top: 0;}
-      }
-      .text{
-        height: 43%;
-        padding: 16px 12px;
-        background: #ffffff;
-        h2 {
-          font-size: 18px; 
-          margin-bottom: 8px;
-          line-height: 28px;
-        }       
-        .total {
-          p:first-child{
-            font-size: 16px;
-          }
-          p:last-child{
-            font-size: 14px;
-            color: #b8c4d2;
-          }
-        }
-      }
-  }
-}
 //default css-----------------------------------------------------------------------
-
-.date {font-size: 13px; color: #b8c4d2;  }
-.label2 {display:inline-block; border:1px solid #e9edf1; color: #8d9daf; font-size: 13px; margin-right: 12px; padding: 2px 10px; } 
-
-.error_msg{
-  font-size: 13px;color:#ff513e;margin-top:4px;}
-.input_box{position: relative;
-  .input_delt_btn{
-      position: absolute;top:50%;right:20px;transform: translateY(-50%);display: none;}
-}
 //더보기 버튼
 .more_btn {
   width: 180px;
@@ -175,159 +96,7 @@ code {
 .label.open {background: #3b59c8; color: #ffffff; }
 .label.end {background: #dfe5ec; color: #343332; }
 
-//탭 --------------------
-.overflow-div {width: 100%; margin: auto; border-bottom: 1px solid #eaedf1;}
-.tab_wrap {
-  text-align: center;
-  margin-top: 24px;  
-  li {
-    display: inline-block;
-    width: 180px;
-    margin-right: 24px;
-    font-weight: 600;
-    a{
-      padding: 10px 0;
-    }
-    &:last-child {
-      margin-right: 0;    
-    } 
-  }
-  li.active a span{color: #ff8e40;}
-  li.active {border-bottom: 4px solid #ff8e40;}  
-}
-
-//에러페이지-------------------------------------------------------------------------------------------
-.error_page{min-height: calc(100vh - 446px);
-  .container{position: relative;padding-bottom:220px;}
-  .text_box{
-      p{font-size: 30px;margin:40px 0 24px;}
-      h1{font-size: 50px;margin-bottom:24px;}
-      .txt{font-size: 15px;line-height: 1.5;}
-  }
-  .btn_wrap{width: 588px;margin-top:80px;
-      button{width:calc(50% - 12px);height: 38px;font-size: 15px;border-radius:4px;border: 1px solid #eaedf1;}
-      button:last-child{border: 1px solid #ff8e40;background:#ff8e40;color:#fff;}
-  }
-  img{position: absolute;right:0;bottom:19px;}
-}
-
-///form page------------------------------------------------------------------------------------------
-
-// 로그인페이지
-.login {
-  .form_btn{color:#fff;}
-}
-
-// 회원가입페이지
-.signup {
-  .right{padding:40px 122px 0px;}
-  .right .sns_wrap{width: auto;padding:0px;margin:24px auto 80px;
-      button{width:100%;height:56px;border:1px solid #eaedf1;border-radius: 4px;position: relative;margin-bottom:16px;
-          img{position: absolute;top:50%;transform:translateY(-50%);width: 32px;left: 16px;}
-      }
-  }
-  .email_signup_btn{width:100%;height:56px;border:1px solid #eaedf1;border-radius: 4px;position: relative;font-size:18px;color:#fe8d40;font-weight:600;
-      img{position: absolute;top:50%;transform:translateY(-50%);width: 32px;left: 16px;}
-  }
-  .signup_txt p{font-size:15px;color:#9a9a99;margin-bottom:4px;}
-}
-.signup.signup2{
-  .right{padding:0px 102px 0px;
-      .title{font-size:18px;font-weight:600;height: 52px;line-height: 52px;}
-      .sub_title{font-size:13px;line-height:20px;}
-  }
-  .confirm_wrap{
-      button{margin-bottom:16px;margin-top:16px;}
-      input{height:40px;border-color: #eaedf1;background:#eaedf1;border-radius:2px;text-align: center;font-size: 15px;margin-bottom:16px;}
-      input::placeholder{color:#bfbfbf;font-size: 15px;font-weight: 600;}
-  }
-  .info_wrap{
-      select{margin-bottom:16px;}
-      .email_select{
-          ul{padding:0 20px;margin-top:0px;}
-          ul li:first-child{width:45%;margin-bottom:16px;}
-          ul li:last-child{width:50%;margin-bottom:16px;}
-          ul li:last-child input{width:calc(100% - 22px);}
-          ul li:last-child span{line-height: 40px;}
-      }
-
-  }
-  .add_wrap{
-      li input{width:calc(100% - 104px);}
-      li .delt_btn{width:78px;height:38px;border-radius: 4px;font-size:15px;color:#bfbfbf;background:#eaedf1;}
-      li .delt_btn.on{background:#282d40;color:#fff;}
-      button img{margin:-2px 8px 0 0px}
-  }
-  .terms_wrap{
-      .agree_box{border-top:2px solid #ff8e40; 
-          .check_wrap{padding:10px 16px;}
-          .txt_box{padding:15px 8px;background:#f8f9fb;font-size: 13px;line-height: 20px;}
-          input[type="checkbox"].all_agree.on + label:after{display:block;}
-          input[type="checkbox"].all_agree + label{position: relative;}
-          input[type="checkbox"].all_agree + label:after{position: absolute;content:'';width:24px;height: 24px;background-image:url(../images/icons/all_check_img.png);left:-2px;top:-2px;display: none;}
-          .agree_wrap{display:none;
-              .oc-scrollbar-container { height: 240px;display: none;margin-top:20px;}
-              .ps__rail-y{opacity: 1;width:4px;right:6px;}
-              .ps__rail-y:hover{background-color:transparent;}
-              .ps__thumb-y { background-color:#000;width:4px;}
-          }
-          .check_wrap2{background:#f8f9fb;}
-          .down_btn.on img{transform: rotate(180deg);}
-          .txt_box2{padding:0px 34px;font-size: 13px;color:#343332;line-height: 20px;display: block;}
-      }
-  }
-  .corpor_wrap{
-      li{margin-bottom:16px;}
-
-  }
-  .btn_wrap{padding-bottom:173px;
-      .unable_btn{width:calc(100% - 102px);}
-  }
-}
-.date_txt{font-size:14px;margin-bottom:24px;
-  span{font-size: 13px;color:#fff;background:#ff8e40;padding:2px 13px;border-radius:2px;margin-right:12px;}
-}
-
-// 아이디,비밀번호찾기페이지
-.search_page{min-height: calc(100vh - 446px);
-  .container{width:588px;}
-  .title_wrap{padding:32px 0px 16px;border-bottom:1px solid #eaedf1;text-align:center;
-      h1{font-size:50px;line-height:1.5;}
-      p{font-size:20px;margin-top:20px;}
-  }
-  
-  .form_box{max-width: 384px;margin:30px auto 0;
-      .certify_btn_wrap{padding:24px 0;}
-      .corporation_find_wrap{text-align: center;
-          a{font-size:14px;text-decoration: underline;font-weight: 600;}
-      }
-      .certify_after{
-          
-          .email_box{background:#f8f9fb;padding:24px 0px;text-align: center;
-              h3{line-height: 20px;}
-              h4{margin-top:10px;}
-          }
-          .btn_wrap{margin:32px auto 117px;
-              button{width:calc(50% - 12px);}
-          }
-      }
-      .certify_after2{
-          .date_txt{margin-top:24px;
-              span{background:#282d40;}
-          }
-          .email_box{
-              h4{margin-top:0px;}
-          }
-      }
-      .txt_box{text-align: center;margin:24px auto 76px;
-          p{font-size:14px;color:#6e6e6d;line-height: 22px;}
-          a{font-size:14px;color:#000000;text-decoration: underline;font-weight: 600;}
-      }
-  }
-  button{font-size:15px;}
-}
-
-//INDEX----------------------------------------------------------------------------------
+//INDEX------------------------------------------------------------------------
 .index.main{
   .main_banner_wrap {position: relative;}
   .main_banner_wrap .dot_wrap {
@@ -662,57 +431,9 @@ code {
 }
 .list_wrap li.slick-item:hover {  margin-top: -20px;}
 
-// 투자하기페이지------------------------------------------------------------------------------------
-
-//투자 준비하기 페이지
-.invest_page{
-  .top_banner{background-image: url(../images/top_banner_img.png);height:252px;text-align:center;
-      h1{font-size: 50px;color:#fff;line-height: 252px;}
-  }
-  .invest_top_box{border-bottom:1px solid #eaedf1;
-      ul{width:1200px;margin:0 auto;}
-      li:nth-child(1){width:56px;text-align: center;padding:0;}
-      li:nth-child(1) a{width: 100%;height: 100%;padding-top:18px;}
-      li{width: 204px;height:56px;padding:18px 0 0 24px;border-right:1px solid #eaedf1;font-weight: 600;}
-      li.on{color:#fe8d40;}
-  }
-  .big_title{font-size: 50px;width:588px;padding:30px 0px;text-align: center;margin:0 auto;border-bottom:1px solid #eaedf1;}
-  .prepare_ul{width:996px;margin:60px auto 0;
-      li{width:100%;padding:16px;border:1px solid #eaedf1;border-radius:4px;overflow: hidden;margin-bottom:24px;}
-      li .txt{width:572px;position: relative;
-          h3{font-size: 18px;font-weight: 600;padding-top:12px;}
-          p{font-size:13px;line-height: 1.4;padding:12px 0 10px;}
-      }
-      li .txt::after{position: absolute;content:'';width:8px;height:100%;background:#ff8e40;left:-20px;top:0;border-radius:4px;}
-      li button{width:calc(100% - 612px);margin-top:20px;}
-  }
-  .btn_wrap{width:384px;margin:0 auto 40px;
-      .unable_btn{width:calc(100% - 102px);}
-  }
-  .account_box{padding:32px 42px;background:#f9f9f9;border-radius:8px;width:max-content;margin:35px auto 16px;box-shadow:0px 5px 7px 0px rgba(0,0,0,0.4);text-align: center;}
-}
-
-// 투자한도조회페이지
-.invest_check{
-  .content{margin-top:70px;
-      ul{border:1px solid #eaedf1;border-radius: 4px;}
-      .top{padding:16px;overflow: hidden;}
-      .top p{position: relative;padding:10px 0;}
-      .top p::after{position: absolute;content:'';width:8px;height:100%;background:#ff8e40;left:-20px;top:0;border-radius:4px;}
-      .logo_box{text-align: center;padding:48px 0px;border-top:1px solid #eaedf1;border-bottom:1px solid #eaedf1;
-          img{margin-right:48px;vertical-align:bottom;}
-          img:last-child{margin-right:0px;}
-      }
-      .loading_box{padding:24px 0 32px;text-align:center;background: #f8f9fb;
-          h3{padding:8px 12px;font-size:14px;color:#fff;width:max-content;background:#292f40;border-radius: 100px;margin:0 auto;}
-          .loading_bar{width:588px;height:4px;background: #eeeff5;margin:16px auto 0px;position: relative;}
-          .loading_bar::after{position: absolute;content: '';width:80%;height:100%;background:#ff8e40;left:0;top:0;}
-      }
-      .api_box{height: 512px;background: #f8f9fb;border-radius: 4px;margin-bottom:40px;}
-  }    
-}
-
 //투자하기 상세---------------------------------------------------------------------------------
+
+
 .invest_detail {
   padding-top: 24px;
   .title_area {
@@ -862,6 +583,7 @@ code {
       background-position: 43px center;    
     }
 }
+
 .goal_box {
   margin-bottom: 24px;
   height: 112px;
@@ -885,6 +607,29 @@ code {
     }
   }
 }
+
+//탭 --------------------
+.overflow-div {width: 100%; margin: auto; border-bottom: 1px solid #eaedf1;}
+.tab_wrap {
+  text-align: center;
+  margin-top: 24px;  
+  li {
+    display: inline-block;
+    width: 180px;
+    margin-right: 24px;
+    font-weight: 600;
+    a{
+      padding: 10px 0;
+    }
+    &:last-child {
+      margin-right: 0;    
+    } 
+  }
+  li.active a span{color: #ff8e40;}
+  li.active {border-bottom: 4px solid #ff8e40;}  
+}
+//----------------------------------------------------
+
 //투자하기 상세 탭------------------------------------
 .detail_container {width: 996px; margin: 24px auto 0;}
 .detail_container.tab1 {margin: 24px auto 55px;}
@@ -893,7 +638,11 @@ code {
   &:after {position: absolute; content:''; width: 20px; height: 20px; }
 }
 
-//핵심정보탭
+//공통
+.date {font-size: 13px; color: #b8c4d2;  }
+.label2 {display:inline-block; border:1px solid #e9edf1; color: #8d9daf; font-size: 13px; margin-right: 12px; padding: 2px 10px; } 
+
+//핵심정보
 .detail_cont .total_box{
   margin: 0 51px 24px;
   li {
@@ -948,7 +697,7 @@ code {
   .body {font-size: 14px;}
   .caption {font-size: 13px; color: #6e6e6d;}
 }
-//새소식탭
+//새소식
 .detail_container.tab2 {margin: 24px auto 100px;}
 .alert_box {  
   .alert {    
@@ -983,7 +732,7 @@ code {
 .list_table li p:first-child { width: 80%; border-right: 1px solid #eaedf1; padding: 8px 16px; font-size: 14px; font-weight: 600; line-height: 1.57; display: table-cell; vertical-align: middle; }
 .list_table li p:last-child {width: 20%; vertical-align: middle; padding: 8px 16px; font-size: 14px; font-weight: 600; line-height: 1.57; display: table-cell;  text-align: center;}
 
-//새소식탭 상세
+//새소식 상세
 .detail_table_title {border-bottom: 2px solid #ff8e40;}
 .detail_table2 {  
  .top {
@@ -1181,7 +930,8 @@ code {
 
 
 
-//투자하기 검색페이지
+
+//투자하기 ----------------------------------------------------------------------
 //노데이터
 .no_data {
   background: #f8f9fb; padding: 48px 0 40px;
@@ -1273,9 +1023,12 @@ code {
     }
   }
 }
+
 .invest_page.index .section.section1 .list_wrap li:hover {margin-top: 0;}
 
+
 //투자하기 - 지금 투자하기
+
 //스텝진행도
 .step_progress {
   margin: 40px 0;
@@ -1444,6 +1197,9 @@ code {
     padding: 16px 24px; 
   }
 }
+
+
+
 ////step2 이용약관 드롭다운
 .step2 .cont .terms {border: none !important;}
 .step2 .terms_wrap{
@@ -1469,12 +1225,16 @@ code {
         }
         .agree_btn{font-size: 15px; line-height: 22px; height: 38px;  border-radius: 0;}
       }
+
     }
+
   }
 }
 //step3
 /* api연동후 삭제 ▼ */
 .step3 .gray_bg {height: 512px;}
+
+
 
 //투자신청완료 page-----------------------------------------------------
 .invest_page.complete {
@@ -1493,174 +1253,73 @@ code {
   }
 }
 
-//약관페이지
-.terms_page{
-  .title_wrap{padding:32px 0px 16px;text-align:center;
-      h1{font-size:50px;line-height:1.5;}
-      p{font-size:20px;margin-top:20px;line-height: 1.5;}
-  }
-  .tab_ul_wrap ul{margin-top:24px;border-bottom:1px solid #eaedf1;
-      li{width: 33.333%;}
-      li.on a{color:#fe8d40;border-bottom:4px solid #fe8d40;}
-      a{text-align: center;font-size: 14px;width:100%;padding:8px 0;color:#000;font-weight: 600;}
-  }
-  .top_box{margin-top:56px;
-      button{width: 166px;height:38px;font-size:15px;margin-bottom:16px;}
-      h1{font-size: 24px;font-weight: 600;margin-bottom: 16px;}
-      p{font-size: 13px;color:#6e6e6d;text-align: right;}
-  }
-  .terms_ul{padding:16px 0 25px;
-      li{margin-bottom:16px;}
-      .line_title{font-size:16px;padding-bottom: 4px;border-bottom:1px solid #eaedf1;}
-      .line_title span{margin-right: 8px;}
-      .li_title{font-size:14px;font-weight: 600;}
-      .li_txt{font-size: 14px;line-height: 1.5;}
-      .terms_table{border-top:2px solid #ff8e40;border-bottom:2px solid #ff8e40;border-left:1px solid #eaedf1;text-align: center;
-          th{font-size: 13px;font-weight: 600;padding:10px 0;background:#f9f9f9;border-right:1px solid #eaedf1;border-bottom:1px solid #eaedf1;}
-          td{font-size: 13px;padding:10px 0;border-right:1px solid #eaedf1;border-bottom:1px solid #eaedf1;line-height: 1.4;}
+
+
+/////////////////SWIPER/////////////////
+
+.swiper-pagination-bullet {background: #343332 !important; }
+.swiper-pagination-bullet-active {background: #ff8e40 !important;}
+.swiper-button-prev.prev1  {
+  width: 32px;
+  height: 48px;  
+  background-image: url(../images/icons/btn_prev.png);
+  background-position: center;
+}
+.swiper-button-next.next1  {
+  width: 32px;
+  height: 48px;  
+  background-image: url(../images/icons/btn_next.png);
+  background-position: center;
+}
+.swiper-button-prev:after, .swiper-button-next:after{display: none;}
+
+.list_wrap.slide_wrap{   
+  margin-top: 0px;
+  .swiper-container {width: 100%;}
+  .swiper-wrapper {padding: 0 0 26px ;}
+  .swiper-pagination {bottom: 0;}
+  .swiper-slide>li{
+    width: 100%;
+    height: 376px;
+    border-radius: 4px;
+    margin-right: 24px;    
+    box-shadow:3px 3px 3px rgba(0,0,0,0.3);
+    transition: all 0.3s;    
+      &:last-child {margin-right: 0;}
+      .img_box {
+        width: 100%; height: 57%; position: relative; overflow: hidden;
+        img {
+          @include position_img;
+        }
+        .label {
+          width: max-content;
+          position: absolute;
+          left: 16px;
+          top: 12px; 
+          padding: 5px 10px;
+          border-radius: 2px;
+          font-size: 13px;
+        }
+        &:hover {margin-top: 0;}
       }
-      .terms_table.table1{width:588px;}
-      .terms_table.table2{width:1200px;
-          td{padding: 8px;text-align: left !important;}
+      .text{
+        height: 43%;
+        padding: 16px 12px;
+        background: #ffffff;
+        h2 {
+          font-size: 18px; 
+          margin-bottom: 8px;
+          line-height: 28px;
+        }       
+        .total {
+          p:first-child{
+            font-size: 16px;
+          }
+          p:last-child{
+            font-size: 14px;
+            color: #b8c4d2;
+          }
+        }
       }
-      .terms_table.table3{width:893px;
-          td{padding: 8px 16px;}
-      }
   }
 }
-
-// 팝업--------------------------------------------------------------------------------------------------------------------------------
-.pop_wrap{position: fixed;width:100%;height: 100%;top:0;left: 0;display:none;z-index:100;
-  .dim{position: fixed;width:100%;height: 100%;top:0;left: 0;background: rgba(0, 0, 0, 0.61);}
-  .pop_cont{background: #fff;border-radius: 8px;position: fixed;top:50%;left: 50%;transform: translate(-50%,-50%);padding:16px;}
-  .pop_close{width:40px;height:40px;position: absolute;right:0;top:0;padding:16px 16px 0 0;}
-}
-
-.blue_color{color:#5a7cfa;}
-
-// 투자하기상세 - 공유하기팝업
-.share_pop{
-  .copy_txt{font-size:13px;color:#fff;padding:6px 28px;background:#292f40;border-radius:100px;width:max-content;position: absolute;top:106px;left:50%;transform: translateX(-50%);}
-  .pop_cont{width:384px;padding:40px 16px 32px;}
-  .input_box{
-      input{width:calc(100% - 90px);border-radius: unset;border:2px solid #ff8e40;}
-      button{width: 90px;height: 40px;border-radius: unset;}
-  }
-  ul{width:224px;margin:28px auto 0px;
-      li{width: 33.333%;text-align: center;}
-      button img{display: block;}
-  }
-}
-
-// 투자하기상세 - 비로그인유저가 핵심정보탭 외에 탭클릭했을때 보이는팝업
-.member_pop{
-  .pop_cont{padding:40px 23px 16px;}
-  p{line-height: 1.5;font-weight: 600;}
-  .btn_wrap{margin-top:16px;
-      button{width:calc(50% - 10px)};
-  }
-}
-
-// 투자하기상세 - 알림클릭시 팝업
-.alarm_pop{
-  .pop_cont{width:384px;
-      h3{line-height: 1.4;}
-      .link_box a{font-size: 14px;color:#282d40;margin-left: 8px;}
-  }
-  .agree_box{margin-bottom:12px;
-      p{font-size: 13px;color:#6e6e6d;line-height: 1.4;padding:4px 8px;background:#f8f9fb;margin-bottom:12px;}
-  }
-}
-
-// 회원가입 토스트팝업
-.toast_pop{display: none;position: absolute;top:106px;left:50%;transform: translate(-50%,-50%);width: 297px;height: 32px;;background-color:#292f40;border-radius:100px;background-image: url(../images/icons/toast_check_icon.png);background-repeat: no-repeat;background-position-x:4px;padding:0 4px 0px 44px;background-position-y: center;box-shadow:0px 3px 5px rgba(0,0,0,0.4);transition:all .8s;
-  p{line-height: 32px;}
-  button{color:#fe8d40;font-size: 13px;width: 40px;height: 100%;}
-}
-
-// 회원가입 가입되어있을때 팝업
-.signup_pop{
-  .pop_cont{border-radius: 24px;padding:82px 16px 40px 64px;}
-  .txt_box{width:296px;margin-left:64px;
-      p{text-align: center;margin-bottom:25px;line-height: 1.5;}
-  }
-}
-
-
-// 회원가입진행중 이전으로 돌아갈때 보이는팝업
-.back_pop{
-  .back_line_btn{border-radius:4px;width:100%;height: 44px;border:1px solid #eaedf1;background: #fff;}
-}
-
-// 재투자팝업
-.reinvest_pop{
-  .pop_cont{width:384px;
-      h2{padding:40px 0 10px;line-height: 1.5;}
-      p{padding:5px 8px;background:#f8f9fb;line-height: 1.5;margin-bottom:10px;}
-      .btn_wrap button:first-child{background:#fff !important;border:1px solid #eaedf1;margin-bottom:10px;}
-  }
-}
-
-// 투자적합성테스트 성공시팝업
-.test_pass_pop{
-  .pop_cont{border-radius: 24px;padding:88px 64px;}
-  .txt_box{width:269px;text-align:center;margin-left:64px;
-      h2{font-size: 24px;margin-bottom:30px;}
-      p{line-height: 1.5;}
-      .loading_bar{width:100%;height:4px;background: #eeeff5;margin-top:30px;position: relative;}
-      .loading_bar::after{position: absolute;content: '';width:80%;height:100%;background:#ff8e40;left:0;top:0;}
-  }
-  
-}
-
-// 실명인증팝업, 증권계좌추가팝업,투자적합성테스트팝업
-.invest_prepare_pop,.invest_account_pop,.invest_test_pop{display: block;left: 100%;
-  .dim{display: none;}
-  .pop_cont{width:486px;position: absolute;right: -100%;top:0;height: 100%;padding: 0;border-radius:0;left:unset;transform:unset;background: unset;}
-  .left{width: 52px;height: 100%;background-image: linear-gradient(to top,#ffa740, #ffb27c );border-radius:15px 0 0 0;}
-  .left>img{position: absolute;bottom: 0;left: 0;}
-  .left .pop_close{width:100%;padding:14px 0;position: unset;height: auto;}
-  .right{width:calc(100% - 52px);height:100%;background: #fff;padding-top:60px;}
-  .content{border-top:2px solid #ff8e40;padding:24px 16px 0;}
-  .top_txt{font-size: 13px;color:#6e6e6d;background:#f8f9fb;padding:4px 8px;line-height: 1.5;}
-  .top_txt h5{padding:10px 0px 20px;}
-  .top_txt h5 img{margin-right:8px;}
-  .input_li{line-height: 40px;text-align: center;}
-  .input_li input{width:calc(50% - 4px);}
-  .radio_wrap{width:100%;}
-  .radio_wrap li{width:50%;}
-  .date_input{position: relative;
-      span{position: absolute;right:16px;top:50%;transform: translateY(-50%);color:#bfbfbf;font-size: 13px;}
-  }
-  .file_wrap .file_name{width:calc(100% - 112px);}
-  .file_wrap .file_up_btn{width:104px;}
-  .alert_p{font-size:13px;color:#fff;background: #ff513e;width: 100%;padding: 2px 8px;line-height: 28px;margin-bottom:16px;}
-  .alert_p img{margin-right: 8px;margin-top:-3px;}
-  .back_btn{width:129px;}
-  .unable_btn{width:calc(100% - 137px);}
-}
-//투자적합성테스트팝업
-.invest_test_pop{
-  .pop_cont{overflow-y: auto;}
-  .right{height:max-content !important;padding-bottom:24px;}
-}
-.test_radio_wrap{
-  input[type="radio"] + label{display: block;width:100%;padding:9px 16px 9px 56px;font-size: 15px;border:1px solid #eaedf1;border-radius:20px;background-image: url(../images/radio_img.png);background-repeat: no-repeat;background-position-y: center;background-position-x:16px;cursor: pointer;line-height: 1.4;}
-  input[type="radio"]:checked + label{background-color: #ff8e40;color:#fff;background-image: url(../images/radio_img_on.png);}
-
-}
-
-// 모바일일때 실명인증팝업, 증권계좌추가팝업,투자적합성테스트팝업 페이지
-.invest_prepare_pop.mo_invest,.invest_account_pop.mo_invest,.invest_test_pop.mo_invest{
-  position: unset;padding:12px 0 24px;
-}
-.invest_account_pop.mo_invest{
-  .info_p{font-size: 13px;background-image:url(../images/icons/info_icon.png);background-repeat: no-repeat;background-position-x: left;background-position-y: 10px;padding:10px 0 10px 34px;line-height: 1.5;margin-bottom: 20px;}
-}
-
-
-
-
-
-
-

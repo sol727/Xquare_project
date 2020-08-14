@@ -27,7 +27,7 @@ $mob-s-width		: 375px;
 		@content;
 	}
 }
-// 태블릿 middle
+// 태블릿
 @mixin tab-middle {
 	@media screen and (max-width: #{$tablet-m-width}) {
 		@content;
@@ -60,33 +60,19 @@ $mob-s-width		: 375px;
   .mo_only {display: none;}
 }
 @include tab{
-	// 공통
 	.mo_only {display: none;}
 	.overflow-div {overflow-y: auto; margin: auto;
 		.tab_wrap {
 			white-space: nowrap;
 			li {width: 100px;}
 		}
-	}
-	.container{width:calc(100% - 38px);}
+	}  
 
-	// header
+	.invest_page.index .section .container {width: calc(100% - 38px); margin: 0 auto;}
+
 	header .pc_header.container .left_box .center {min-width: 500px;}
 	header .pc_header.container .left_box .center li {width: 130px;}
 
-	//footer
-    footer .container{width:calc(100% - 38px);}
-
-	//form_page
-    .form_page{width:100%;min-height:calc(100vh - 446px);
-        .bg_gradient{width: 50%;}
-        .right{width:50%;padding:56px 70px 0;}
-	}
-	
-	//회원가입
-    .signup.signup2 .right{padding:0px 30px 0px;}
-
-	
 	//index------------------------------------------
 	.index.main{
 		.section3{
@@ -119,11 +105,8 @@ $mob-s-width		: 375px;
 		background-repeat: no-repeat;
 		padding-top: 155px;  
 	}	
-	
-
-	// 투자하기목록페이지
-	.invest_page.index .section .container {width: calc(100% - 38px); margin: 0 auto;}
 	.invest_index .btn_wrap button.submit {width: 100%;}
+
 
 	///투자하기 상세
 	.invest_detail .title_area .text_box {width: 100%; float: none; }
@@ -138,111 +121,38 @@ $mob-s-width		: 375px;
 	}
 	.invest_detail .title_area {display: block;}
 
-	// 투자준비하기페이지
-    .invest_page{
-        .top_banner{height: 132px;
-            h1{font-size: 28px;line-height: 132px;}
-        }
-        .invest_top_box{
-            ul{width:100%;}
-        }
-        .big_title{font-size: 28px;width: 100%;}
-        .prepare_ul{width:100%;margin:60px auto 0;
-            li .txt{width:100%;float: none;}
-            li button{width:100%;float: none;}
-        }
-        .btn_wrap{width:100%;
-        }
-	}
-	
-	// 투자한도조회페이지
-    .invest_check{
-        .content {margin-top:70px;
-            .logo_box{padding:48px 0px;
-                img{margin-right:auto !important;display: block;margin:0 auto 16px;}
-                img:last-child{margin-bottom:0px;}
-            }
-            .loading_box{padding:24px 16px 32px;
-                .loading_bar{width:100%;}
-            }
-        }
-        
-    }
-
-	//투자하기-정보입력1페이지
+	//투자하기 step1 
 	.step1 .slide_area {margin: 40px 0 85px;}
 	.step1 .swiper-container {width: 90%;}
 
-	// 팝업----------------------------------------------------------
-    .pop_cont{width: 60%;padding:16px !important;
-        .pop_img{float: none;text-align: center;margin-bottom:20px;}
-        .txt_box{float: none;margin:0 auto;}
-    }
-    // 투자준비하기 적합성테스트완료팝업
-    .test_pass_pop .pop_cont{padding:40px 16px !important;}
-
-
 }
-
 @include tab-middle(){
-
-	// header
-	header .pc_header.container .left_box .center {min-width: 230px;}
-	header .pc_header.container .left_box .center li {width: 80px;}
-	header .pc_header.container .left_box .center li .menu {font-size: 14px;}
+	.detail_container {width: calc(100% - 38px); margin: 0 auto;}
 	header .pc_header.container .left_box .logo {width: 100px;
 		img {width: 100%;}
 	}
+	header .pc_header.container .left_box .center {min-width: 230px;}
+	header .pc_header.container .left_box .center li {width: 80px;}
+	header .pc_header.container .left_box .center li .menu {font-size: 14px;}
 
-	// 투자하기목록페이지
-	.detail_container {width: calc(100% - 38px); margin: 0 auto;}
 }
 
 @include tab-small(){
-	// 공통
-	.pc_none {display: block;}
-	.mo_none {display: none !important;}
-	.mo_only {display: none;}
-	.container {width: calc(100% - 38px);margin: 0 auto;}
-	
-	//footer
-    footer {padding-top:42px;
-        .top{
-            >div{float: none !important;}
-
-            >div:first-child a{float: none !important;text-align: center;width: 100%;}
-            >div:first-child .terms_ul{float: none !important;width: max-content;margin:5px auto 0px;}
-            .service_box{margin-top:12px;}
-        }
-        .bottom{padding:30px 0 12px;
-            >div{float: none !important;}
-            .link_wrap{width: max-content;margin:12px auto 0;}
-        }
-	}
-	
-	//form_page
-    .form_page{width:calc(100% - 38px);
-        .right{width:100%;padding:0px 0px 40px;margin-top:10px;}
-    }
-
-    //회원가입
-    .signup.signup2 .right{padding:0px;}
-
-    // 아이디,비번찾기페이지
-    .search_page{
-        .container{width:calc(100% - 80px);}
-        .title_wrap{
-            h1{font-size:28px;}
-            p{font-size: 14px;}
-        }
-        .form_box{margin:24px auto 0;
-            .certify_after{
-                .btn_wrap{margin:32px auto 84px;}
-            }
-        }
-    }
+  .pc_none {display: block;}
+  .mo_none {display: none !important;}
+  .mo_only {display: none;}
  
-  ///index------------------------------
+
+
+//default css--------------------------------------------------------------------------
+ 
+  .container {
+	width: calc(100% - 38px);
+	margin: 0 auto;
+  }
+
+  ///INDEX-------------------------------------------------------------------
+
   .index.main{
 	.title {font-size: 30px;	}
 	.sub_title {font-size: 14px;}
@@ -300,13 +210,13 @@ $mob-s-width		: 375px;
 		.hashtag {
 			display: block;
 			li{
-				width: calc(25% - 6px);
+				width: calc(25% - 6px);		
 				margin-right: 8px;
 				font-size: 13px;
 				padding: 6px 16px;
 			}
 		}
-		.box_list li {
+		.box_list li {			
 			height: 308px;
 			padding-top: 32px;
 			border-top: 4px solid #ff8e40;
@@ -384,6 +294,7 @@ $mob-s-width		: 375px;
 		padding-top: 120px;  
 	}	
 
+	
 //-------------------------------------------------------------index끝
 
 
@@ -391,6 +302,8 @@ $mob-s-width		: 375px;
 	//공통
 	.count {font-size: 15px;}
 
+ 
+	
 	.invest_detail .title_box {padding: 16px 0; margin: 8px 0;}	
 	.invest_detail .btn_wrap button.submit {width: 100%;}
 	.invest_detail .btn_wrap ul {width: 100%;}
@@ -408,12 +321,13 @@ $mob-s-width		: 375px;
 	.detail_table.detail_table2 > li .th {width: 100%; display: block;}
 	.detail_table > li .td {padding: 8px 16px;}
 
-	//새소식탭
-	.detail_container.tab2 {margin: 24px auto;}
+	//투자하기 상세 새소식탭
+	
+	.detail_container.tab2 {margin: 24px auto;}	
 	.list_table li p:first-child {width: 65%;}
 	.list_table li p:last-child {width: 35%;}
 
-	//새소식탭 - 상세
+	//새소식탭 상세
 	.invest_detail.detail {padding-top: 0;}
 	.invest_detail.detail .detail_container.tab2 {width: 100%; margin-bottom: 0;}
 	.feeling_box {padding: 7px 11px;}
@@ -429,7 +343,7 @@ $mob-s-width		: 375px;
 		margin-top: 8px;		
 	}
 	.invest_detail.detail .detail_container.tab3 .title {font-size: 14px;}
-	//커뮤니티탭 - 상세
+	//커뮤니티탭 상세
 	.invest_detail.detail .detail_container.tab3 .table_title {padding: 12px 16px;}
 	.invest_detail.detail .detail_container.tab3 {width: 100%; margin-bottom: 0;}
 	//커뮤니티탭 글쓰기
@@ -440,6 +354,8 @@ $mob-s-width		: 375px;
 	.detail_cont.add .radio_wrap {width: 100%;}
 	.info_text {width: 100%; text-align: left ;}
 	
+
+
 	//부가정보탭
 	.detail_container.tab4 {margin: 30px auto 58px;} 
 	.detail_container.tab4 .detail_table_title:last-of-type {margin-top: 30px;}
@@ -456,13 +372,14 @@ $mob-s-width		: 375px;
 		  }    
 		} 
 	   }
-	//투자현황 탭
+	//투자 현황 탭
 	.container.tab5 {margin: 0 auto 24px;} 
 	.container.tab5 .table_title{padding-left: 0;}
 	.container.tab5 .table_wrap:first-of-type {width: 100%;}
 	.container.tab5 .table_wrap:last-of-type {width: 100%;}
 
-	//투자하기페이지----------------------------------------------------------
+	//////////////////////////////////투자하기
+
 	.invest_page.index .section2 .slide_wrap2 li {padding: 0;}
 	
 	.invest_page .title_wrap {
@@ -484,7 +401,7 @@ $mob-s-width		: 375px;
 	}
 	.invest_page .list_wrap{margin-top: 0;}
 
-	//투자하기-정보입력페이지
+	//투자하기 스탭
 	.step_progress ul {width: 100%;}
 	.step .title_box h1 {font-size: 28px; line-height: 42px;}
 	.invest_page.step .top_table {border-left: 1px solid #eaedf1;}
@@ -497,61 +414,14 @@ $mob-s-width		: 375px;
 	.cont.radio > div > ul > li {width: 100%; 
 	 &:last-of-type {margin-top: 16px;}
 	}
-
-	// 투자준비하기페이지
-    .invest_page{
-        .invest_top_box{
-            li{width:50%;}
-        }
-    }
-    // 투자한도조회페이지
-    .invest_check{
-        .content {
-            .loading_box{
-                .loading_bar{width:calc(100% - 38px);}
-            }
-        }
-        
-    }
-
-    //약관페이지
-    .terms_page{
-        .title_wrap{
-            h1{font-size:28px;}
-            p{font-size:14px;}
-        }
-        .table_li{overflow-x: auto;}
-	}
-	
-	// 팝업----------------------------------------------------------
-    .pop_cont{
-        .pop_img{
-            img{max-width: 104px;}
-        }
-        .txt_box{width: 100%;}
-    }
-
-    // 회원가입 토스트팝업
-    .toast_pop{top:unset;bottom:32px;}
-
-    // 실명인증팝업, 증권계좌추가팝업,투자적합성테스트팝업
-    .invest_prepare_pop,.invest_account_pop,.invest_test_pop{display: none;}
-    .invest_prepare_pop.mo_invest,.invest_account_pop.mo_invest,.invest_test_pop.mo_invest{display: block;}
-
 	
 }
 
 @include mob {
-	// 공통
 	.mo_only {display: block;}
 
-	// 아이디,비번찾기페이지
-	.search_page{
-        .container{width:calc(100% - 38px);}
-        .form_box{max-width:100%;}
-    }
-
 	//index------------------------------------------------
+
 	.list_wrap{
 		li.slick-item {
 			width: 100%;
@@ -567,6 +437,8 @@ $mob-s-width		: 375px;
 		}
 
 	}
+
+
 	.index.main .main_banner {height: 550px;}
 	.index.main .main_banner li {
 		background-image: url(../images/main_banner_bg_mo.png);
@@ -574,6 +446,9 @@ $mob-s-width		: 375px;
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
+
+
+
 	.index.main .section3 .box_list .slick-slide:first-child li {
 		background-image: url(../images/icons/about_icon1_on.png);
 		background-position: center 32px;
@@ -607,7 +482,7 @@ $mob-s-width		: 375px;
 	.invest_page.index .point_btn.big {width: 100%;}
 	.invest_page.index .section3 .slide3_container {padding: 0;}
 
-	//투자신청완료 페이지-----------------------------------------------------
+	//투자신청완료 page-----------------------------------------------------
 	.invest_page.complete {
 		.complete_box {
 			padding: 16px 0 40px;
@@ -627,48 +502,10 @@ $mob-s-width		: 375px;
 		}
 	}
 
-	//투자하기-정보입력페이지
+	//투자 step
 	.step1 .swiper-container {width: 80%;}
 	.step .page_btn button:first-child {width: 102px;}
 	.step .page_btn button:last-child {width: calc(100% - 126px);}
 
-	//약관페이지
-    .terms_page{
-        .tab_ul_wrap{overflow-x:auto;
-            ul{width: max-content;
-                li{width: auto;}
-                a{padding:8px 24px;}
-            }
-            
-        }
-    }
-
-    //에러페이지
-    .error_page{
-        .container{padding-bottom:0px;padding-top:160px;}
-        .text_box{
-            p{font-size: 14px;margin:40px 0 12px;}
-            h1{font-size: 20px;margin-bottom:12px;}
-            .txt{font-size: 13px;line-height: 1.5;}
-        }
-        .btn_wrap{width:100%;
-            button{width:100%;float: none;margin-bottom:24px;}
-        }
-        img{width:100%;right:unset;top:0;left:50%;transform: translateX(-50%);}
-    }
-
-    // 팝업----------------------------------------------------------
-    .pop_cont{width: calc(100% - 38px) !important;}
-
-    // 투자하기상세 - 공유하기팝업
-    .share_pop{
-        .copy_txt{top:unset;bottom:32px;}
-    }
-
 
 }
-
-
-
-
-
