@@ -222,7 +222,7 @@ export default class Invest_detail3 extends React.Component {
                                                   <p className="font_15 bold count">댓글 1</p>
                                              </div>
                                              <div className="user_type mb8 clearfix">
-                                                  <p className="user feel_a black_color ">username</p>
+                                                  <p className="user feel_b black_color ">username</p>
                                                   <p className="user_label">개인회원(일반투자자)</p>
                                              </div>
                                              <p className=" black_color title bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -238,7 +238,7 @@ export default class Invest_detail3 extends React.Component {
                                                   <p className="font_15 bold count">댓글 99</p>
                                              </div>
                                              <div className="user_type mb8 clearfix">
-                                                  <p className="user feel_a black_color ">username</p>
+                                                  <p className="user feel_c black_color ">username</p>
                                                   <p className="user_label">개인회원(일반투자자)</p>
                                              </div>
                                              <p className=" black_color title bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis malesuada egestas nulla euismod non cursus diam.</p>

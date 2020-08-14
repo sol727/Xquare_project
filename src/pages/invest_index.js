@@ -42,8 +42,7 @@ export default class invest_index extends React.Component {
                                     <img src={ require('../images/icons/home_icon.png') } alt="홈아이콘"/>
                                 </Link>
                             </li>
-                            <li>투자하기</li>
-                            <li className="on">전체 프로젝트</li>
+                            <li className="on">투자하기</li>
                         </ul>
                     </div>
                     <div className="container">

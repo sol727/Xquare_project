@@ -171,13 +171,13 @@ export default class Invest_detail4 extends React.Component {
                                    <li className="active"><Link to="/Invest_detail4"><span>부가정보</span></Link></li>
                                    <li><Link to="/Invest_detail5"><span>투자 현황</span></Link></li>
                               </ul>
-                         </div>                        
+                         </div>
                     </div>
                     {/* 탭컨텐츠영역 - 부가정보*/}
                     <div className="detail_cont">
                          <div className="detail_container tab4"> 
                                <div className="clearfix2 detail_table_title">
-                                   <h2 className="table_title">투자설명서</h2>                                   
+                                   <h2 className="table_title">투자설명서</h2>
                               </div>               
                               <ul className="down_list">
                                    <li className="clearfix2">
@@ -187,9 +187,9 @@ export default class Invest_detail4 extends React.Component {
                               </ul>      
 
                               <div className="clearfix2 detail_table_title">
-                                   <h2 className="table_title">참고자료</h2>                                   
+                                   <h2 className="table_title">참고자료</h2>
                               </div>               
-                              <ul class="down_list">
+                              <ul className="down_list">
                                    <li className="clearfix2">
                                         <p>사업자등록증</p>
                                         <button type="button" className="download_btn">다운로드<img src={ require('../images/icons/down_icon.png') } alt="다운로드아이콘"/></button>
