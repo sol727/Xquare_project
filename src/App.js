@@ -8,7 +8,7 @@ import { BrowserRouter , Route } from 'react-router-dom';
 
 /* 페이지 */
 
-import index from './pages/index'
+import Index from './pages/index'
 import page from './pages/page'
 import Login from './pages/login';
 import Signup from './pages/signup';
@@ -40,6 +40,7 @@ import Mo_invest_prepare from './pages/mo_invest_prepare';
 import Mo_invest_account from './pages/mo_invest_account';
 import Mo_invest_test from './pages/mo_invest_test';
 import Invest_complete from './pages/invest_complete';
+import Index2 from './pages/index2';
 
 
 
@@ -48,7 +49,8 @@ import Invest_complete from './pages/invest_complete';
 function App() {
   return (
     <BrowserRouter>
-        <Route exact path="/" component={index}/>
+        <Route exact path="/" component={Index}/>
+        <Route path="/index2" component={Index2}/>
         <Route path="/invest_detail" component={Invest_detail}/>
         <Route path="/invest_detail2" component={Invest_detail2}/>
         <Route path="/invest_detail2_detail" component={Invest_detail2_detail}/>
@@ -80,6 +82,7 @@ function App() {
         <Route path="/invest_step2" component={Invest_step2}/>
         <Route path="/invest_step3" component={Invest_step3}/>
         <Route path="/invest_complete" component={Invest_complete}/>
+        
     </BrowserRouter>
   );
 }

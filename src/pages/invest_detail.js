@@ -20,12 +20,10 @@ export default class Invest_detail extends React.Component {
           this.sliderEvent = this.sliderEvent.bind(this)
      }
 
-     componentDidMount(){        
-
+     componentDidMount(){
           
-    
           $('.like_btn').click(function(){
-               $(this).toggleClass('on');              
+               $(this).toggleClass('on');
           });
 
           $('.goal_box').each(function(){
@@ -53,7 +51,7 @@ export default class Invest_detail extends React.Component {
                this.setState( { 
                focus : nextSlide
                } )
-          }
+          }         
 
           onClickPrev = () => {
                this.ref.slickPrev()
@@ -68,7 +66,7 @@ export default class Invest_detail extends React.Component {
             <>
                <Header />
 
-               <section className="invest_index">
+               <section className="invest_detail">
                     {/* 상세 탑 부분 */}
                     <div className="top">
                          <div className="title_area clearfix2 container">                           

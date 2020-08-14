@@ -54,6 +54,7 @@ $mob-s-width		: 375px;
 }
 @include tab{
 	.mo_only {display: none;}
+	header .pc_header.container .left_box .center {min-width: 600px;}
 
 	//index------------------------------------------
 	.index.main{
@@ -61,11 +62,11 @@ $mob-s-width		: 375px;
 			.box_list li {
 				height: 335px;
 				margin-bottom: 10px;
+				p {font-size: 16px;}
 			}
 		}
 		.section4 {
 			.container {margin-top: 100px;}
-
 		}
 	}
 	  ///.index.main .section3 .box_list
@@ -88,6 +89,10 @@ $mob-s-width		: 375px;
 		padding-top: 155px;  
 	}	
 	.invest_index .btn_wrap button.submit {width: 100%;}
+
+
+
+
 }
 
 @include tab-small(){
@@ -109,7 +114,6 @@ $mob-s-width		: 375px;
   .index.main{
 	.title {font-size: 30px;	}
 	.sub_title {font-size: 14px;}
-
 	.main_banner_wrap{
 		.main_banner{
 			li{
@@ -388,6 +392,17 @@ $mob-s-width		: 375px;
 	.mo_only {display: block;}
 
 	//index------------------------------------------------
+
+	.index.main .main_banner {height: 550px;}
+	.index.main .main_banner li {
+		background-image: url(../images/main_banner_bg_mo.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+
+
 	.index.main .section3 .box_list .slick-slide:first-child li {
 		background-image: url(../images/icons/about_icon1_on.png);
 		background-position: center 32px;
