@@ -1,8 +1,16 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import * as js from '../js/style'
 import Header from '../components/header'
-import Footer from '../components/footer';
+import Footer from '../components/footer'
 import $ from 'jquery'
+import SwiperCore, { Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+
+SwiperCore.use([Navigation , Pagination]);
 
 export default class Invest_step1 extends React.Component {
 
@@ -26,7 +34,7 @@ export default class Invest_step1 extends React.Component {
                     <div className="invest_top_box">
                         <ul className="clearfix">
                             <li className="mo_none">
-                                <Link to="/index">
+                                <Link to="/">
                                     <img src={ require('../images/icons/home_icon.png') } alt="홈아이콘"/>
                                 </Link>
                             </li>
@@ -106,19 +114,34 @@ export default class Invest_step1 extends React.Component {
                                     </div>
                                     <div className="slide_area">
                                         <ul>
+                                        <Swiper breakpoints={{480:{slidesPerView:1 }, 500:{slidesPerView:3 , spaceBetween:24},1400:{slidesPerView:4, spaceBetween:24}}} spaceBetween={30} slidesPerView={1}  navigation={{ nextEl:'.slide_area .next1' , prevEl:'.slide_area .prev1'}} pagination={{el:'.slide_area .pagination1' ,  type: 'fraction'}} onSwiper={(swiper) => console.log(swiper)}  onSlideChange={() => console.log('slide change')} >
+                                            <SwiperSlide>
                                             <li>
-                                                <div class="account_box"><h4 class="mb12">KB 증권</h4><p class="font_14">123-9999-9999-9999</p></div>
+                                                <div className="account_box"><h4 className="mb12">KB 증권</h4><p className="font_14">123-9999-9999-9999</p></div>
                                             </li>
+                                            </SwiperSlide>
+                                            <SwiperSlide>
                                             <li>
-                                                 <div class="account_box"><h4 class="mb12">KB 증권</h4><p class="font_14">123-9999-9999-9999</p></div>
+                                                 <div className="account_box"><h4 className="mb12">KB 증권</h4><p className="font_14">123-9999-9999-9999</p></div>
                                             </li>
+                                            </SwiperSlide>
+                                            <SwiperSlide>
                                             <li>
-                                                <div class="account_box"><h4 class="mb12">KB 증권</h4><p class="font_14">123-9999-9999-9999</p></div>
+                                                <div class="account_box"><h4 className="mb12">KB 증권</h4><p className="font_14">123-9999-9999-9999</p></div>
                                             </li>
+                                            </SwiperSlide>
+                                            <SwiperSlide>
                                             <li>
-                                                <div class="account_box"><h4 class="mb12">KB 증권</h4><p class="font_14">123-9999-9999-9999</p></div>
+                                                <div className="account_box add_box" onClick={() => window.location.pathname = "/invest_prepare"}>
+                                                    <img src={ require('../images/icons/add_icon_gray.png') } alt="추가 아이콘"className="add_icon mb12" />
+                                                    <h4 >KB 증권</h4></div>
                                             </li>
+                                            </SwiperSlide>
+                                            </Swiper>
                                         </ul>
+                                        <div className="swiper-pagination swiper-pagination-fraction pagination1 mo_only"></div>
+                                        <div className="swiper-button-prev prev1 "></div>
+                                        <div className="swiper-button-next next1 "></div>
                                     </div>
                                 </div>
                             </div>
@@ -147,8 +170,8 @@ export default class Invest_step1 extends React.Component {
                             </div>
                         </div>
                         <div className="page_btn centerT">
-                            <button className="point_color font_15 mr24 d_ib">이전</button>
-                            <button className="unable_btn d_ib" >다음</button>
+                            <button className="point_color font_15 mr24 d_ib" onClick={() => window.history.back()}>이전</button>
+                            <button className="unable_btn d_ib" onClick={() => window.location.pathname = "/invest_step2"} >다음</button>
                         </div>
                     </div>
                 </section>

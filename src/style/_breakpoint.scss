@@ -67,7 +67,8 @@ $mob-s-width		: 375px;
 			li {width: 100px;}
 		}
 	}  
-	
+
+	.invest_page.index .section .container {width: calc(100% - 38px); margin: 0 auto;}
 
 	header .pc_header.container .left_box .center {min-width: 500px;}
 	header .pc_header.container .left_box .center li {width: 130px;}
@@ -106,8 +107,8 @@ $mob-s-width		: 375px;
 	}	
 	.invest_index .btn_wrap button.submit {width: 100%;}
 
-	///투자하기 상세
 
+	///투자하기 상세
 	.invest_detail .title_area .text_box {width: 100%; float: none; }
 	.invest_detail .img_slider_wrap {width: 100%; height: 218px; float: none !important ; margin-bottom: 16px;}
 	.invest_detail .title_area .img_box {
@@ -119,6 +120,10 @@ $mob-s-width		: 375px;
 		}
 	}
 	.invest_detail .title_area {display: block;}
+
+	//투자하기 step1 
+	.step1 .slide_area {margin: 40px 0 85px;}
+	.step1 .swiper-container {width: 90%;}
 
 }
 @include tab-middle(){
@@ -405,13 +410,13 @@ $mob-s-width		: 375px;
 	//투자하기 스탭
 	.step_progress ul {width: 100%;}
 	.step .title_box h1 {font-size: 28px; line-height: 42px;}
-	.top_table {border-left: 1px solid #eaedf1;}
-	.top_table li {width: 50%; border-top: 1px solid #eaedf1;
+	.invest_page.step .top_table {border-left: 1px solid #eaedf1;}
+	.invest_page.step .top_table li {width: 50%; border-top: 1px solid #eaedf1;
 		&:nth-child(2n) {border-right: 1px solid #eaedf1; border-left: 1px solid #eaedf1;}
 	}
-	.step .cont > div.w50 {width: 100%; margin-bottom: 24px;}
-	.step .cont .item_wrap {box-shadow: 0 4px 4px rgba(0,0,0,0.2);}
-	.step .cont .radio_wrap {width: 100%; }
+	.invest_page.step .cont > div.w50 {width: 100%; margin-bottom: 24px;}
+	.invest_page.step .cont .item_wrap {box-shadow: 0 4px 4px rgba(0,0,0,0.2);}
+	.invest_page.step .cont .radio_wrap {width: 100%; }
 	.cont.radio > div > ul > li {width: 100%; 
 	 &:last-of-type {margin-top: 16px;}
 	}
@@ -485,6 +490,9 @@ $mob-s-width		: 375px;
 			}
 		}
 	}
+
+	//투자 step
+	.step1 .swiper-container {width: 80%;}
 
 
 }
