@@ -250,10 +250,82 @@ code {
     }
   }
   .section4 {
-
-
+    .container{margin-top: 196px;}
+    .list {
+      padding: 56px 0 48px;
+      li {
+        width: calc(25% - 18px);
+        margin-right: 24px;
+        overflow: hidden;
+        &:last-child {
+          margin-right: 0;
+        }
+        a{
+          position: relative;
+          width: 100%;
+          height: 172px;    
+          transition: all 0.5s;     
+          box-shadow: 0 2px 2px rgba(0,0,0,0.4);
+          overflow: hidden;
+          &:hover .hidden_box{
+            display: block;
+          }
+          img {            
+            @include position_img
+          }
+        }
+        .hidden_box {
+          width: 100%;
+          height: 100%; 
+          position: absolute; 
+          left: 0; 
+          top:0; 
+          background:rgba(255,142,64,0.8);
+          display: none;
+          padding: 65px 79px;  
+          p{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            color: #ffffff;
+            font-size: 16px;     
+            img{margin-left: 17px;}
+          }
+        }
+        .bottom_box {
+          padding: 8px;
+          h3 {
+            font-size: 18px;
+            line-height: 1.5;        
+            margin-bottom: 8px;
+          }     
+          p {font-size: 16px;}
+        }
+      }
+    }
   }
-
+  .section5 {
+    height: 240px;
+    background-image: url(../images/img_img_thumnail_default.png) ;   
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 48px;
+    div{
+      background: rgba(0,0,0,0.5);
+      width: 100%; 
+      height: 100%;   
+      padding: 64px;
+      h2 {font-size: 50px;color: #ffffff;}
+      p {
+        font-size: 20px;
+        margin-top: 8px;
+        color: #ffffff;
+        line-height: 1.5;
+        br {display: none;}
+      }
+    }
+  }
 } //index.main 최종괄호
 
 //Xquare Contribution 박스 background
@@ -291,7 +363,7 @@ code {
   background-repeat: no-repeat;    
 }
 
-
+//--------------------------------------------------------index끝
 
 ///LIST_WRAP------------------------------------------------------------------
 .list_wrap{   
@@ -346,106 +418,8 @@ code {
 }
 .list_wrap li.slick-item:hover {  margin-top: -20px;}
 
-
-
-
-
-.main.index .section4 {
-  .container{
-    margin-top: 196px;
-  }
-  .list {
-    padding: 56px 0 48px;
-    li {
-      width: calc(25% - 18px);
-      margin-right: 24px;
-      overflow: hidden;
-      &:last-child {
-        margin-right: 0;
-      }
-      a{
-        position: relative;
-        width: 100%;
-        height: 172px;    
-        transition: all 0.5s;     
-        box-shadow: 0 2px 2px rgba(0,0,0,0.4);
-        overflow: hidden;
-        &:hover .hidden_box{
-          display: block;
-        }   
-        >img {
-          width: 100%;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%,-50%);
-        }
-      }     
-    }
-  }
-}
-.hidden_box {
-  width: 100%;
-  height: 100%; 
-  position: absolute; 
-  left: 0; 
-  top:0; 
-  background:rgba(255,142,64,0.8);
-  display: none;
-  padding: 65px 79px;  
-  p{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    color: #ffffff;
-    font-size: 16px;     
-    img{
-      margin-left: 17px;
-    }
-  }
-}
-.bottom_box {
-  padding: 8px;
-  h3 {
-    font-size: 18px;
-    line-height: 1.5;        
-    margin-bottom: 8px;
-  }     
-  p {
-    font-size: 16px; 
-  }
-}
-
-.section5 {
-  height: 240px;
-  background-image: url(../images/img_img_thumnail_default.png) ;   
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-top: 48px;
-  >div{
-    background: rgba(0,0,0,0.5);
-    width: 100%; 
-    height: 100%;   
-    padding: 64px;
-    h2 {
-      font-size: 50px;
-      color: #ffffff;       
-    }
-    p {
-      font-size: 20px;
-      margin-top: 8px;
-      color: #ffffff;
-      line-height: 1.5;
-      &br {
-        display: none;
-      }
-    }
-  }
-}
-
 //투자하기 상세---------------------------------------------------------------------------------
-.invest_index {
+.invest_detail {
   padding-top: 24px;
  /*  >.top {
     border-bottom: 1px solid #eaedf1;

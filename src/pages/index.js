@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.scss";
 import $ from 'jquery'
 
-export default class index extends React.Component {
+export default class Index extends React.Component {
 
   constructor(props) {
     super(props);
