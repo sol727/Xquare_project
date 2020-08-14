@@ -2,8 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import Header from '../components/header'
 import Footer from '../components/footer';
-// import Parser from 'html-react-parser';
-// import ReactDOM from 'react-dom';
+import Parser from 'html-react-parser';
+import ReactDOM from 'react-dom';
 import $ from 'jquery'
 
 export default class Terms1 extends React.Component {
@@ -15,15 +15,19 @@ export default class Terms1 extends React.Component {
     
 
     componentDidMount(){
-        // const textExam = ({ apiText }) => {
-        //     <li  className="li_txt pre">
-        //         {Parser(apiText)}
-        //     </li>
-        // }
+        
     }
     
+    // createMarkup() {
+    //     return {__html:'First · Second'};
+    // };
+    // MyComponent() {
+    //     return <li className="li_txt pre" dangerouslySetInnerHTML={createMarkup()}></li>;
+    // }
 
     render() {
+
+         
         
         return (
             

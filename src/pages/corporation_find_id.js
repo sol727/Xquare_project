@@ -57,11 +57,15 @@ export default class Corporation_find_id extends React.Component {
                                     <li className="on">아이디 찾기</li>
                                     <li>비밀번호 찾기</li>
                                 </ul>
+
+                                {/* 아이디찾기 */}
                                 <div className="tab_cont_wrap">
                                     <div className="tab_cont">
                                         <h3 className="input_title">사업자 등록번호</h3>
-                                        <p className="error_msg">사업자등록번호를 다시 확인해주세요.</p>
-                                        <input type="text" placeholder="10자리 숫자를 입력하세요" className="mt16"/>
+
+                                        {/* 유효성검사미통과시에 노출되는 문구↓ */}
+                                        {/* <p className="error_msg">사업자등록번호를 다시 확인해주세요.</p> */}
+                                        <input type="text" placeholder="10자리 숫자를 입력하세요" className="mt16" maxLength="10"/>
 
                                         {/* 아이디찾기후 노출↓ */}
                                         <div className="certify_after certify_after2">
@@ -76,22 +80,28 @@ export default class Corporation_find_id extends React.Component {
 
                                         {/*  활성화 버튼↓ */}
                                         {/* <button type="button" className="navy_btn mt24">아이디 찾기</button> */}
+
                                         <div className="txt_box">
                                             <p>아이디가 기억나지 않으시나요?<br/><Link>1:1문의하기</Link>를 남겨주세요.</p>
                                         </div>
                                     </div>
-
+                                    
+                                    {/* 비밀번호찾기 */}
                                     <div className="tab_cont">
                                         <ul>
                                             <li>
                                                 <h3 className="input_title">아이디</h3>
-                                                <p className="error_msg">아이디를 다시확인해주세요.</p>
+
+                                                {/* 유효성검사미통과시에 노출되는 문구↓ */}
+                                                {/* <p className="error_msg">아이디를 다시확인해주세요.</p> */}
                                                 <input type="text" placeholder="이메일 주소를 입력하세요" className="mt16"/>
                                             </li>
                                             <li className="mt24">
                                                 <h3 className="input_title">사업자 등록번호</h3>
-                                                <p className="error_msg">사업자등록번호를 다시 확인해주세요.</p>
-                                                <input type="text" placeholder="10자리 숫자를 입력하세요" className="mt16"/>
+
+                                                 {/* 유효성검사미통과시에 노출되는 문구↓ */}
+                                                {/* <p className="error_msg">사업자등록번호를 다시 확인해주세요.</p> */}
+                                                <input type="text" placeholder="10자리 숫자를 입력하세요" className="mt16" maxLength="10"/>
                                             </li>
                                         </ul>
 

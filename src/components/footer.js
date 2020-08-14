@@ -18,9 +18,9 @@ export default class Footer extends React.Component {
                             <div className="clearfix">
                                 <Link to="/"><img src={ require('../images/img_logo_xquare.png') } alt="로고"/></Link>
                                 <ul className="clearfix terms_ul">
-                                    <li><Link to="/"><span>가입약관</span></Link></li>
-                                    <li><Link to="/"><span>개인정보처리방침</span></Link></li>
-                                    <li><Link to="/"><span>서비스 이용약관</span></Link></li>
+                                    <li><Link to="/terms1"><span>가입약관</span></Link></li>
+                                    <li><Link to="/terms2"><span>개인정보처리방침</span></Link></li>
+                                    <li><Link to="/terms3"><span>서비스 이용약관</span></Link></li>
                                 </ul>
                             </div>
                             <div className="address">

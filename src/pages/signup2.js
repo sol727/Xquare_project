@@ -64,10 +64,6 @@ export default class Signup2 extends React.Component {
             $('.back_pop').hide();
         });
 
-        // $('.title').click(function(){
-        //     $('.toast_pop').css('top','106px');
-        // })
-
         $('.toast_pop button').click(function(){
             $('.toast_pop').hide();
             $('.toast_pop').css('top','-100%');
@@ -102,8 +98,8 @@ export default class Signup2 extends React.Component {
                                     {/* 본인인증 완료후 노출되는 버튼↓ */}
                                     {/* <button type="button" className="form_btn green_btn">인증완료</button> */}
 
-                                    <input type="text" placeholder="성함"/>
-                                    <input type="text" placeholder="휴대전화 연락처"/>
+                                    <input type="text" placeholder="성함" readOnly disabled/>
+                                    <input type="text" placeholder="휴대전화 연락처" readOnly disabled/>
                                 </div>
                             </div>
 
@@ -120,6 +116,12 @@ export default class Signup2 extends React.Component {
                                         <select name="" id="" className="mt16">
                                             <option value="" >이메일 선택</option>
                                             <option value="" >직접입력</option>
+                                            <option value="" >naver.com</option>
+                                            <option value="" >gmail.com</option>
+                                            <option value="" >daum.net</option>
+                                            <option value="" >nate.com</option>
+                                            <option value="" >hotmail.com</option>
+                                            <option value="" >kakao.com</option>
                                         </select>
 
                                         {/* select 선택하면 나오는 input box */}
