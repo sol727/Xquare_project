@@ -1,43 +1,27 @@
 
 //공통
-
-input[type="file"]{display: none;}
-.file_wrap{
-    .file_name{width:calc(100% - 104px);float: left;}
-    .file_name:disabled,.file_name:read-only{background:#fff;border-color:#E8E8E8;}
-    .file_up_btn{display: block;width:78px;height:38px;border-radius: 4px;font-size:15px;color:#bfbfbf;background:#eaedf1;text-align: center;line-height:38px;float: right;cursor: pointer;}
-    .file_up_btn.on{background:#282d40;color:#fff;}
-}
-.red_color{color:#ff513e !important;}
-.green_color{color:#5dcf17 !important;}
-.gray2_color{color:#6e6e6d;}
-.gray3_color{color:#535352;}
-.mb12{margin-bottom: 12px;}
-.mb16{margin-bottom:16px;}
-.mt16{margin-top:16px;}
-.mt24{margin-top: 24px;}
-.mb24{margin-bottom: 24px;}
-.mb40{margin-bottom:40px;}
-.font_13{font-size: 13px;}
-.font_14{font-size: 14px;}
-.pc_none {display: none;}
-select{width:100%;height: 40px;border: 1px solid #d6d6d6;border-radius:2px;padding:0 16px;background-image:url(../images/icons/select_icon.png);background-repeat: no-repeat;background-position-x: calc(100% - 16px);background-position-y:center;font-size:15px;}
-input:read-only{background: #f8f9fb;border-color:#f8f9fb;}
+.mb16{margin-bottom: 16px;}
+.pre{white-space: pre-line;line-height: 1.5;}
 .error_msg{
     font-size: 13px;color:#ff513e;margin-top:4px;}
 .input_box{position: relative;
     .input_delt_btn{
         position: absolute;top:50%;right:20px;transform: translateY(-50%);display: none;}
 }
-input.error + .input_delt_btn{
-    display: block;}
-
-//btn
-.navy_btn{width: 100%;height: 44px;background:#282d40;border-radius:4px;color:#fff;font-size: 18px;}
-.green_btn{color:#fff;background:#5dcf17;}
-.unable_btn{width:100%;height:44px;border-radius:4px;font-size:18px;color:#bfbfbf;background: #eaedf1;}
-.orange_btn{background:#ff8e40;color:#fff;}
-.back_btn{width:78px;height:44px;color:#fe8d40;font-size:15px;}
+input.error + .input_delt_btn{display: block;}
+.input_title{font-size:15px;color:#000000;}
+.input_sub_title{font-size:13px;color:#6e6e6d;line-height: 20px;}
+.input_title + .input_sub_title{margin-top:4px;}
+.tab_btn_box{border-radius:6px;border:1px solid #d0d0cf;overflow: hidden;margin-bottom:24px;
+    li{width:50%;padding:9px 0;text-align: center;cursor: pointer;font-size: 14px;}
+    li.on{background:#fe8d40;color:#fff;}
+}
+.check_input{position: relative;
+    &:after{position: absolute;content:'';width:24px;height: 24px;right:16px;top:50%;transform: translateY(-50%);background-image: url(../images/icons/check_input_alert.png);display:none;}
+}
+.check_input.alert{
+    &:after{display:block;}
+}
 
 
 //footer
@@ -172,15 +156,6 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     }
 }
 
-.input_title{font-size:15px;color:#000000;}
-.input_sub_title{font-size:13px;color:#6e6e6d;line-height: 20px;}
-.input_title + .input_sub_title{margin-top:4px;}
-
-
-.tab_btn_box{border-radius:6px;border:1px solid #d0d0cf;overflow: hidden;margin-bottom:24px;
-    li{width:50%;padding:9px 0;text-align: center;cursor: pointer;font-size: 14px;}
-    li.on{background:#fe8d40;color:#fff;}
-}
 
 // 아이디,비번찾기페이지
 .search_page{min-height: calc(100vh - 446px);
@@ -223,7 +198,6 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     button{font-size:15px;}
 }
 
-.pre{white-space: pre-line;line-height: 1.5;}
 
 //약관페이지
 .terms_page{
@@ -289,9 +263,123 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     }
 }
 
+// 팝업-----------------------------------------------------------------------
+.pop_wrap{position: fixed;width:100%;height: 100%;top:0;left: 0;display:none;
+    .dim{position: fixed;width:100%;height: 100%;top:0;left: 0;background: rgba(0, 0, 0, 0.61);}
+    .pop_cont{background: #fff;border-radius: 8px;position: fixed;top:50%;left: 50%;transform: translate(-50%,-50%);padding:16px;}
+    .pop_close{width:40px;height:40px;position: absolute;right:0;top:0;padding:16px 16px 0 0;}
+}
+
+.blue_color{color:#5a7cfa;}
+
+.share_pop{display: block;
+    .pop_cont{width:384px;padding:40px 16px 32px;}
+    .input_box{
+        input{width:calc(100% - 100px);}
+        button{width: 90px;height: 40px;}
+    }
+    ul{width:224px;margin:28px auto 0px;
+        li{width: 33.333%;text-align: center;}
+        button img{display: block;}
+    }
+}
+
+.member_pop{
+    .pop_cont{padding:40px 23px 16px;}
+    p{line-height: 1.5;font-weight: 600;}
+    .btn_wrap{margin-top:16px;
+        button{width:calc(50% - 10px)};
+    }
+}
+
+// 회원가입 토스트팝업
+.toast_pop{position: absolute;top:106px;left:50%;transform: translate(-50%,-50%);width: 297px;height: 32px;;background-color:#292f40;border-radius:100px;background-image: url(../images/icons/toast_check_icon.png);background-repeat: no-repeat;background-position-x:4px;padding:0 4px 0px 44px;background-position-y: center;box-shadow:0px 3px 5px rgba(0,0,0,0.4);transition:all .8s;
+    p{line-height: 32px;}
+    button{color:#fe8d40;font-size: 13px;width: 40px;height: 100%;}
+}
+
+// 회원가입 가입되어있을때 팝업
+.signup_pop{
+    .pop_cont{border-radius: 24px;padding:82px 16px 40px 64px;}
+    .txt_box{width:296px;margin-left:64px;
+        p{text-align: center;margin-bottom:25px;line-height: 1.5;}
+    }
+}
+
+.find_password_pop{display: block;}
+
+// 회원가입진행중 이전으로 돌아갈때 보이는팝업
+.back_pop{
+    .back_line_btn{border-radius:4px;width:100%;height: 44px;border:1px solid #eaedf1;background: #fff;}
+}
+
+// 재투자팝업
+.reinvest_pop{
+    .pop_cont{width:384px;
+        h2{padding:40px 0 10px;line-height: 1.5;}
+        p{padding:5px 8px;background:#f8f9fb;line-height: 1.5;margin-bottom:10px;}
+        .btn_wrap button:first-child{background:#fff !important;border:1px solid #eaedf1;margin-bottom:10px;}
+    }
+}
+
+// 투자적합성테스트 성공시팝업
+.test_pass_pop{
+    .pop_cont{border-radius: 24px;padding:88px 64px;}
+    .txt_box{width:269px;text-align:center;margin-left:64px;
+        h2{font-size: 24px;margin-bottom:30px;}
+        p{line-height: 1.5;}
+        .loading_bar{width:100%;height:4px;background: #eeeff5;margin-top:30px;position: relative;}
+        .loading_bar::after{position: absolute;content: '';width:80%;height:100%;background:#ff8e40;left:0;top:0;}
+    }
+    
+}
+
+// 실명인증팝업, 증권계좌추가팝업,투자적합성테스트팝업
+.invest_prepare_pop,.invest_account_pop,.invest_test_pop{display: block;left: 100%;
+    .dim{display: none;}
+    .pop_cont{width:486px;position: absolute;right: -100%;top:0;height: 100%;padding: 0;border-radius:0;left:unset;transform:unset;background: unset;}
+    .left{width: 52px;height: 100%;background-image: linear-gradient(to top,#ffa740, #ffb27c );border-radius:15px 0 0 0;}
+    .left>img{position: absolute;bottom: 0;left: 0;}
+    .left .pop_close{width:100%;padding:14px 0;position: unset;height: auto;}
+    .right{width:calc(100% - 52px);height:100%;background: #fff;padding-top:60px;}
+    .content{border-top:2px solid #ff8e40;padding:24px 16px 0;}
+    .top_txt{font-size: 13px;color:#6e6e6d;background:#f8f9fb;padding:4px 8px;line-height: 1.5;}
+    .top_txt h5{padding:10px 0px 20px;}
+    .top_txt h5 img{margin-right:8px;}
+    .input_li{line-height: 40px;text-align: center;}
+    .input_li input{width:calc(50% - 4px);}
+    .radio_wrap{width:100%;}
+    .radio_wrap li{width:50%;}
+    .date_input{position: relative;
+        span{position: absolute;right:16px;top:50%;transform: translateY(-50%);color:#bfbfbf;font-size: 13px;}
+    }
+    .file_wrap .file_name{width:calc(100% - 112px);}
+    .file_wrap .file_up_btn{width:104px;}
+    .alert_p{font-size:13px;color:#fff;background: #ff513e;width: 100%;padding: 2px 8px;line-height: 28px;margin-bottom:16px;}
+    .alert_p img{margin-right: 8px;margin-top:-3px;}
+    .back_btn{width:129px;}
+    .unable_btn{width:calc(100% - 137px);}
+}
+//투자적합성테스트팝업
+.invest_test_pop{
+    .pop_cont{overflow-y: auto;}
+    .right{height:max-content !important;padding-bottom:24px;}
+}
+.test_radio_wrap{
+    input[type="radio"] + label{display: block;width:100%;padding:9px 16px 9px 56px;font-size: 15px;border:1px solid #eaedf1;border-radius:20px;background-image: url(../images/radio_img.png);background-repeat: no-repeat;background-position-y: center;background-position-x:16px;cursor: pointer;line-height: 1.4;}
+    input[type="radio"]:checked + label{background-color: #ff8e40;color:#fff;background-image: url(../images/radio_img_on.png);}
+
+}
+
+// 모바일일때 실명인증팝업, 증권계좌추가팝업,투자적합성테스트팝업 페이지
+.invest_prepare_pop.mo_invest,.invest_account_pop.mo_invest,.invest_test_pop.mo_invest{
+    position: unset;padding:12px 0 24px;
+}
+
+
 // 투자한도조회
 .invest_check{
-    .cont{margin-top:70px;
+    .content{margin-top:70px;
         ul{border:1px solid #eaedf1;border-radius: 4px;}
         .top{padding:16px;overflow: hidden;}
         .top p{position: relative;padding:10px 0;}
@@ -301,7 +389,7 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
             img:last-child{margin-right:0px;}
         }
         .loading_box{padding:24px 0 32px;text-align:center;background: #f8f9fb;
-            button{padding:8px 12px;font-size:14px;color:#fff;font-weight: 600;background:#292f40;border-radius: 100px;}
+            h3{padding:8px 12px;font-size:14px;color:#fff;width:max-content;background:#292f40;border-radius: 100px;margin:0 auto;}
             .loading_bar{width:588px;height:4px;background: #eeeff5;margin:16px auto 0px;position: relative;}
             .loading_bar::after{position: absolute;content: '';width:80%;height:100%;background:#ff8e40;left:0;top:0;}
         }
@@ -327,12 +415,8 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
 }
 
 
-.check_input{position: relative;
-    &:after{position: absolute;content:'';width:24px;height: 24px;right:16px;top:50%;transform: translateY(-50%);background-image: url(../images/icons/check_input_alert.png);display:none;}
-}
-.check_input.alert{
-    &:after{display:block;}
-}
+
+
 
 
 

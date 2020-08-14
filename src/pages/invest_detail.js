@@ -36,9 +36,14 @@ export default class Invest_detail extends React.Component {
 
           $('.btn_wrap2 .alarm_btn').click(function(){
                $(this).toggleClass('on');              
-          });          
+          });    
+          
+          // 팝업
+          $('.pop_close').on('click',function(){
+               $(this).parents('.pop_wrap').hide();
+          });
       
-        }//최종괄호
+     }//최종괄호
 
         sliderEvent ( currentSlide, nextSlide ) {
                this.setState( { 
@@ -167,7 +172,7 @@ export default class Invest_detail extends React.Component {
                                              <div className="bar"></div>
                                         </div>                                  
                                         <div className="btn_wrap">
-                                             <button type="button" className="submit">지금 투자하기</button>
+                                             <button type="button" className="submit" onClick={() => window.location.pathname = "/invest_prepare"}>지금 투자하기</button>
                                              <ul className="clearfix2">
                                                   <li><button type="button" className="like_btn">nnn</button></li>
                                                   <li><button type="button" className="share_btn"> nnn</button></li>
@@ -283,6 +288,93 @@ export default class Invest_detail extends React.Component {
                     </div>
                </section>
                <Footer />
+
+               {/* 재투자팝업 */}
+               <div className="pop_wrap reinvest_pop">
+                    <div className="dim"></div>
+                    <div className="pop_cont">
+                         <button type="button" className="pop_close">
+                              <img src={ require('../images/icons/close_btn.png') } alt="닫기버튼 아이콘"/>
+                         </button>
+                         <div>
+                              <h2 className="font_18 centerT">재투자를 원하시나요?<br/>기존 투자를 취소하고 다시 진행합니다</h2>
+                              <p className="font_13 gray2_color">증액을 위한 재투자 시, 기존 투자 취소후 진행해야 하기 때문에, 청약율이 100%가 넘은 경우 배정 순위에서 불이익을 받을 수 있다는 점 참고 바랍니다.<br/>
+                              <span className="font_13 red_color">한 번 취소한 투자는 복구되지 않으니 신중히 결정해주시기 바랍니다.</span>
+                              </p>
+                              <div className="btn_wrap">
+                                   <button type="button" className="form_btn">재투자 진행</button>
+                                   <button type="button" className="form_btn orange_btn">기존투자 유지</button>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               {/* 비로그인유저가 핵심정보탭 외에 탭클릭했을때 보이는팝업 */}
+               <div className="pop_wrap member_pop">
+                    <div className="dim"></div>
+                    <div className="pop_cont">
+                         <button type="button" className="pop_close">
+                              <img src={ require('../images/icons/close_btn.png') } alt="닫기버튼 아이콘"/>
+                         </button>
+                         <p className="centerT font_18">엑스퀘어 회원에게만<br/>제공되는 서비스입니다<br/>로그인 또는 회원가입을 진행해주세요</p>
+                         <div className="btn_wrap clearfix2">
+                              <button type="button" className="navy_btn">회원가입</button>
+                              <button type="button" className="navy_btn">로그인</button>
+                         </div>
+                    </div>
+               </div>
+
+               {/* 공유하기 팝업 */}
+               <div className="pop_wrap share_pop">
+                    <div className="dim"></div>
+                    <div className="pop_cont">
+                         <button type="button" className="pop_close">
+                              <img src={ require('../images/icons/close_btn.png') } alt="닫기버튼 아이콘"/>
+                         </button>
+                         <p className="centerT font_18 bold mb16">공유하기</p>
+                         <p className="centerT font_14 gray3_color mb16">공유할 방법을 선택하세요</p>
+                         <div className="input_box clearfix2">
+                              <input type="text"/>
+                              <button type="button" className="navy_btn">복사</button>
+                         </div>
+                         <ul className="clearfix">
+                              <li>
+                                   <button type="button" className="centerT font_13 gray2_color">
+                                        <img src={ require('../images/icons/share_kakao.png') } alt="카카오톡 아이콘"/>
+                                        카카오톡
+                                   </button>
+                              </li>
+                              <li>
+                                   <button type="button" className="centerT font_13 gray2_color">
+                                        <img src={ require('../images/icons/share_face.png') } alt="페이스북 아이콘"/>
+                                        페이스북
+                                   </button>
+                              </li>
+                              <li>
+                                   <button type="button" className="centerT font_13 gray2_color">
+                                        <img src={ require('../images/icons/share_twitter.png') } alt="트위터 아이콘"/>
+                                        트위터
+                                   </button>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+
+               {/* 오픈예정일때 알림클릭시 보이는팝업 */}
+               <div className="pop_wrap alarm_pop">
+                    <div className="dim"></div>
+                    <div className="pop_cont">
+                         <button type="button" className="pop_close">
+                              <img src={ require('../images/icons/close_btn.png') } alt="닫기버튼 아이콘"/>
+                         </button>
+                         <p className="centerT font_18">엑스퀘어 회원에게만<br/>제공되는 서비스입니다<br/>로그인 또는 회원가입을 진행해주세요</p>
+                         <div className="btn_wrap clearfix2">
+                              <button type="button" className="navy_btn">회원가입</button>
+                              <button type="button" className="navy_btn">로그인</button>
+                         </div>
+                    </div>
+               </div>
+               
 
 
 

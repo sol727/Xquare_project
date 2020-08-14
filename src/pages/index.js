@@ -49,12 +49,13 @@ export default class index extends React.Component {
     return (
       <>
         <Header />
-        <section className="index">           
+        <section className="index main">
+          {/* 메인배너슬라이드 ------------------- */}
           <div className="main_banner_wrap">
             <ul className="main_banner" >
               <Slider slidesToShow={1} slidesToScroll={1} speed={500} dots={false} infinite={false} beforeChange={this.sliderEvent}>
                 <li>
-                    <div className="text" onClick={() => this.onClickLink("/signUp")}>
+                    <div className="text" onClick={() => this.onClickLink("/Invest_index")}>
                         <h1 className="white_color">누구나 쉽게 투자하는</h1>
                         <h1>에너지 금융</h1>
                         <p className="white_color">지구를 깨끗하게 하는 신재생 에너지 발전<br/>안정적인 금융상품에 직접 투자하세요.</p>
@@ -62,7 +63,7 @@ export default class index extends React.Component {
                     </div>
                 </li>
                 <li>
-                    <div className="text" onClick={() => this.onClickLink("/")}>
+                    <div className="text" onClick={() => this.onClickLink("/Invest_index")}>
                         <h1 className="white_color">누구나 쉽게 투자하는</h1>
                         <h1>에너지 금융2</h1>
                         <p className="white_color">지구를 깨끗하게 하는 신재생 에너지 발전<br/>안정적인 금융상품에 직접 투자하세요.</p>
@@ -70,32 +71,34 @@ export default class index extends React.Component {
                     </div>
                 </li>
                 <li>
-                  <div className="text" onClick={() => this.onClickLink("/")}>
+                  <div className="text" onClick={() => this.onClickLink("/Invest_index")}>
                       <h1 className="white_color">누구나 쉽게 투자하는</h1>
                       <h1>에너지 금융3</h1>
                       <p className="white_color">지구를 깨끗하게 하는 신재생 에너지 발전<br/>안정적인 금융상품에 직접 투자하세요.</p>
                       <button type="button" className="white_color">투자하러가기 <img src={ require('../images/icons/w_arrow.png') } alt="화살표아이콘"/></button>
                   </div>
                 </li>     
-              </Slider>               
+              </Slider>
             </ul>
             <ul className="dot_wrap clearfix">
               <li className={ this.state.focus === 0 ? "active" : ""  } ></li>
               <li className={ this.state.focus === 1 ? "active" : ""  } ></li>
               <li className={ this.state.focus === 2 ? "active" : ""  } ></li>
-            </ul>      
-          </div>        
+            </ul>
+          </div>
+          {/* -------------------메인배너슬라이드  */}
+          {/*Xquare List ---------------------------*/}
           <div className="section1">
             <div className="container">
               <h1 className="title centerT playF">Xquare List</h1>
               <p className="sub_title centerT">엑스퀘어의 친환경 투자상품을 소개합니다.</p>
               <ul className="list_wrap clearfix">
                 {
-                  this.state.width > 480 ?
+                  this.state.width > 767 ?
                   <>
 
                     <li className="slick-item">
-                      <Link to="/">
+                      <Link to="/Invest_detail">
                         <div className="img_box">
                           <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                           <p className="label  funding">펀딩중 &middot; D-17</p>
@@ -115,7 +118,7 @@ export default class index extends React.Component {
                       </Link>
                   </li>
                   <li className="slick-item">
-                    <Link to="/">
+                    <Link to="/Invest_detail">
                         <div className="img_box">
                           <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                           <p className="label  open">오픈예정 &middot; D-17</p>
@@ -135,7 +138,7 @@ export default class index extends React.Component {
                       </Link>
                   </li>
                   <li className="slick-item">
-                    <Link to="/">
+                    <Link to="/Invest_detail">
                         <div className="img_box">
                           <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                           <p className="label end">펀딩종료</p>
@@ -154,12 +157,11 @@ export default class index extends React.Component {
                         </div>
                       </Link>
                   </li>
-
                   </>
                   :
                   <Slider slidesToShow={1} slidesToScroll={1} speed={500} dots={false} infinite={false} beforeChange={this.sliderEvent}  >
                   <li className="slick-item">
-                      <Link to="/">
+                      <Link to="/Invest_detail">
                         <div className="img_box">
                           <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                           <p className="label  funding">펀딩중 &middot; D-17</p>
@@ -179,7 +181,7 @@ export default class index extends React.Component {
                       </Link>
                   </li>
                   <li className="slick-item">
-                    <Link to="/">
+                    <Link to="/Invest_detail">
                         <div className="img_box">
                           <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                           <p className="label  open">오픈예정 &middot; D-17</p>
@@ -199,7 +201,7 @@ export default class index extends React.Component {
                       </Link>
                   </li>
                   <li className="slick-item">
-                    <Link to="/">
+                    <Link to="/Invest_detail">
                         <div className="img_box">
                           <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                           <p className="label end">펀딩종료</p>
@@ -231,6 +233,8 @@ export default class index extends React.Component {
               </div>            
             </div>          
           </div>
+          {/*--------------------------- Xquare List */}
+          {/* Xquare Contribution --------------------------- */}
           <div className="section2">
             <div className="gray_bg">
                 <div className="container">
@@ -255,6 +259,8 @@ export default class index extends React.Component {
                 </div>
             </div>
           </div>
+           {/* ---------------------------Xquare Contribution  */}
+           {/*About Xquare -------------------------------  */}
           <div className="section3">
             <div className="container">
              <h1 className="title centerT playF">About Xquare</h1>
@@ -268,38 +274,33 @@ export default class index extends React.Component {
              </ul>
              <ul className="box_list clearfix">
              {
-                  this.state.width > 480 ?
+                  this.state.width > 767 ?
                   <>                
                     <li>
-                        <img src={ require('../images/icons/about_icon1_on.png') } alt="About이미지" className="pc_none"/>
                         <h3>환경</h3>
                         <p>석탄 화력 발전소에서 나오는<br/>매연,미세먼지 억제<br/>친환경 에너지를 환경 개선하고<br/> 기후변화문제해결</p>
                     </li>
                     <li>
-                        <img src={ require('../images/icons/about_icon2_on.png') } alt="About이미지2" className="pc_none"/>
                         <h3>안정성</h3>
                         <p>담보,보험으로 안정성 확보<br/>안정적인 신재생에너지<br/>발전사업 엄선</p>
                     </li>
                     <li>
-                        <img src={ require('../images/icons/about_icon3_on.png') } alt="About이미지3" className="pc_none"/>
                         <h3>수익성</h3>
                         <p>기술발전으로 인한<br/>모듈가격의 하락 →<br/>수익성의 증대<br/>중간마진없이 직접투자</p>
                     </li>                 
                    </>
                   :              
                <Slider slidesToShow={1} slidesToScroll={1} speed={500} dots={false} infinite={false} beforeChange={this.sliderEvent}>
-                <li className="">
-                    <img src={ require('../images/icons/about_icon.png') } alt="About이미지1"/>
+                <li>
                     <h3>환경</h3>
                     <p>석탄 화력 발전소에서 나오는<br/>매연,미세먼지 억제<br/>친환경 에너지를 환경 개선하고<br/> 기후변화문제해결</p>
                 </li>
                 <li>
-                    <img src={ require('../images/icons/about_icon2.png') } alt="About이미지2"/>
+                    
                     <h3>안정성</h3>
                     <p>담보,보험으로 안정성 확보<br/>안정적인 신재생에너지<br/>발전사업 엄선</p>
                 </li>
                 <li>
-                    <img src={ require('../images/icons/about_icon3.png') } alt="About이미지3"/>
                     <h3>수익성</h3>
                     <p>기술발전으로 인한<br/>모듈가격의 하락 →<br/>수익성의 증대<br/>중간마진없이 직접투자</p>
                 </li>
@@ -313,6 +314,8 @@ export default class index extends React.Component {
               </ul>
             </div>
           </div>
+          {/* -------------------------------About Xquare   */}
+          {/*Xquare News -------------------------------  */}
           <div className="section4">
             <div className="container">
               <h1 className="title centerT playF">Xquare News</h1>
@@ -384,12 +387,15 @@ export default class index extends React.Component {
               </div>            
             </div>
           </div>
+           {/*------------------------------- Xquare News   */}
+           {/* 가이드 --------------------------------------- */}
           <div className="section5 "> 
             <div className="centerT">
               <h2>플랫폼 이용 가이드</h2>
               <p>엑스퀘어에서는 누구나 쉽게<br/>에너지 사업을 시작할 수 있습니다.</p>
              </div>            
           </div>
+          {/* --------------------------------------- 가이드  */}
         </section>
         <Footer />
 

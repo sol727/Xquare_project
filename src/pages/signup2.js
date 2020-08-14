@@ -50,6 +50,28 @@ export default class Signup2 extends React.Component {
                 $(this).parents('.agree_box').find('input#all_check').removeClass('on');
             }
         });
+
+        // 팝업
+        $('.pop_close').on('click',function(){
+            $(this).parents('.pop_wrap').hide();
+        });
+
+        $('.back_pop_show').click(function(){
+            $('.back_pop').show();
+        });
+
+        $('.back_pop .orange_btn').click(function(){
+            $('.back_pop').hide();
+        });
+
+        // $('.title').click(function(){
+        //     $('.toast_pop').css('top','106px');
+        // })
+
+        $('.toast_pop button').click(function(){
+            $('.toast_pop').hide();
+            $('.toast_pop').css('top','-100%');
+        });
     
     }
 
@@ -208,7 +230,7 @@ export default class Signup2 extends React.Component {
                             </div> 
 
                             <div className="btn_wrap clearfix2">
-                                <button type="button" className="back_btn" onClick={() => window.history.back()}>이전</button>
+                                <button type="button" className="back_btn back_pop_show">이전</button>
 
                                 {/* 가입완료활성화될때 class에 orange_btn 추가↓ */}
                                 <button type="button" className="unable_btn">가입완료</button>
@@ -218,6 +240,59 @@ export default class Signup2 extends React.Component {
                 </section>
                 
                 <Footer/>
+
+                {/* 이미가입되어있는 유저일때 보이는팝업 */}
+                <div className="pop_wrap signup_pop">
+                    <div className="dim"></div>
+                    <div className="pop_cont">
+                        <button type="button" className="pop_close">
+                            <img src={ require('../images/icons/close_btn.png') } alt="닫기버튼 아이콘"/>
+                        </button>
+                        <div className="clearfix2">
+                            <div className="pop_img">
+                                <img src={ require('../images/alert_img.png') } alt="느낌표 이미지"/>
+                            </div>
+                            <div className="txt_box">
+                                <p>홍길동 님은 가입한 이력이 있습니다. <br/>아래의 아이디로 로그인을 진행해주세요.</p>
+                                <p className="blue_color">aaa***@mail.com</p>
+                                <p>만약 로그인 정보가 기억나지 않으신다면<br/>아이디∙비밀번호 찾기를 진행해주세요.</p>
+                                <div className="btn_wrap">
+                                    <button type="button" className="navy_btn mb16" onClick={() => window.location.pathname = "/login"}>로그인</button>
+                                    <button type="button" className="navy_btn" onClick={() => window.location.pathname = "/find_id"}>아이디∙비밀번호 찾기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* 진행중 이전으로돌아갈때 보이는팝업 */}
+                <div className="pop_wrap signup_pop back_pop">
+                    <div className="dim"></div>
+                    <div className="pop_cont">
+                        <button type="button" className="pop_close">
+                            <img src={ require('../images/icons/close_btn.png') } alt="닫기버튼 아이콘"/>
+                        </button>
+                        <div className="clearfix2">
+                            <div className="pop_img">
+                                <img src={ require('../images/alert_img.png') } alt="느낌표 이미지"/>
+                            </div>
+                            <div className="txt_box">
+                                <p>홍길동 님은 가입한 이력이 있습니다. <br/>아래의 아이디로 로그인을 진행해주세요.</p>
+                                <div className="btn_wrap">
+                                    <button type="button" className="back_line_btn mb16" onClick={() => window.history.back()}>돌아가겠습니다</button>
+                                    <button type="button" className="form_btn orange_btn">아니오 돌아가지 않겠습니다</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                {/* sns가입이력이있는회원일때 보이는팝업 */}
+                <div className="toast_pop clearfix2">
+                    <p className="font_13 white_color">가입이력이 있습니다. 로그인합니다.</p>
+                    <button type="button">확인</button>
+                </div>
             </>
         )
     }

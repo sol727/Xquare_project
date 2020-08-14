@@ -32,6 +32,15 @@ import Error_page from './pages/error_page';
 import Invest_prepare from './pages/invest_prepare';
 import Invest_check from './pages/invest_check';
 import Invest_search from './pages/invest_search';
+import Invest_index from './pages/invest_index';
+import Invest_step1 from './pages/invest_step1';
+import Invest_step2 from './pages/invest_step2';
+import Invest_step3 from './pages/invest_step3';
+import Mo_invest_prepare from './pages/mo_invest_prepare';
+import Mo_invest_account from './pages/mo_invest_account';
+import Mo_invest_test from './pages/mo_invest_test';
+import Invest_complete from './pages/invest_complete';
+
 
 
 /* 페이지 */
@@ -62,7 +71,15 @@ function App() {
         <Route path="/error_page" component={Error_page}/>
         <Route path="/invest_prepare" component={Invest_prepare}/>
         <Route path="/invest_check" component={Invest_check}/>
+        <Route path="/mo_invest_prepare" component={Mo_invest_prepare}/>
+        <Route path="/mo_invest_account" component={Mo_invest_account}/>
+        <Route path="/mo_invest_test" component={Mo_invest_test}/>
         <Route path="/invest_search" component={Invest_search}/>
+        <Route path="/invest_index" component={Invest_index}/>
+        <Route path="/invest_step1" component={Invest_step1}/>
+        <Route path="/invest_step2" component={Invest_step2}/>
+        <Route path="/invest_step3" component={Invest_step3}/>
+        <Route path="/invest_complete" component={Invest_complete}/>
     </BrowserRouter>
   );
 }
