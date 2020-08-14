@@ -306,11 +306,24 @@ code {
     }
   }
   .section5 {
-    height: 240px;
-    background-image: url(../images/img_img_thumnail_default.png) ;   
-    background-position: center;
-    background-repeat: no-repeat;
+    height: 240px;    
     margin-top: 48px;
+    position: relative;
+    &:after {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      content: '';
+      background-image: url(../images/icons/logo_simbol.png) ;   
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100px;
+      opacity: 0.2;
+      z-index: -1;
+    }
     div{
       background: rgba(0,0,0,0.5);
       width: 100%; 
@@ -1175,7 +1188,7 @@ code {
       .swiper-pagination-total {font-size: 18px; font-weight: bold; color: #b8c4d2;}
     }  
   }
-  .account_box {width: 100%;  height: 121px; margin: 0;
+  .account_box {width: 100% !important;  height: 121px; margin: 0;
     &.add_box {padding: 25px 42px; } 
     .add_icon {width: 35px;}
   }
