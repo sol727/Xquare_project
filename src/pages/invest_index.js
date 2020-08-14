@@ -23,6 +23,9 @@ export default class invest_index extends React.Component {
      componentDidMount(){
       
      }
+     onClickLink (link) {
+          window.location.pathname = link
+        }
 
     render() {
         return (
@@ -45,7 +48,7 @@ export default class invest_index extends React.Component {
                     </div>
                     <div className="container">
                          <div className="rightT btn_wrap">
-                              <button type="button" className="point_btn big">전체펀딩 모두보기</button>
+                              <button type="button" className="point_btn big" onClick={() => window.location.pathname = "/Invest_search"} >전체펀딩 모두보기</button>
                          </div>
                          <div className="section section1">
                               <div className="title_wrap centerT mb24">
@@ -53,7 +56,7 @@ export default class invest_index extends React.Component {
                                    <h3>엑스퀘어에서 진행중인 프로젝트를 소개합니다.</h3>
                               </div>
                               <ul className="list_wrap slide_wrap clearfix mb24">
-                                    <Swiper      spaceBetween={24}      slidesPerView={3}  pagination={{ clickable: true }} onSwiper={(swiper) => console.log(swiper)}  onSlideChange={() => console.log('slide change')} >
+                                    <Swiper breakpoints={{480:{slidesPerView:2},1400:{slidesPerView:3}}} spaceBetween={24}      slidesPerView={1}  pagination={{ clickable: true }} onSwiper={(swiper) => console.log(swiper)}  onSlideChange={() => console.log('slide change')} >
                                         <SwiperSlide>
                                         <li onClick={() => window.location.pathname = "/Invest_detail"}>
                                              <div className="img_box">
@@ -188,7 +191,7 @@ export default class invest_index extends React.Component {
                                    <h3>엑스퀘어 투자자분들께 소개드리는 오픈 예정 프로젝트</h3>
                               </div>
                               <ul className="list_wrap slide_wrap slide_wrap2 clearfix mb24">
-                                   <Swiper      spaceBetween={24}      slidesPerView={4} pagination={{ clickable: true }} onSwiper={(swiper) => console.log(swiper)}  onSlideChange={() => console.log('slide change')} >
+                                   <Swiper   breakpoints={{480:{slidesPerView:2},1400:{slidesPerView:4}}}    spaceBetween={24}      slidesPerView={1} pagination={{ clickable: true }} onSwiper={(swiper) => console.log(swiper)}  onSlideChange={() => console.log('slide change')} >
                                    <SwiperSlide>
                                    <li onClick={() => window.location.pathname = "/Invest_detail"}>
                                         <div className="img_box">
@@ -237,7 +240,7 @@ export default class invest_index extends React.Component {
                               </ul>
                          </div>
                          <div className="btn_wrap centerT">
-                              <button type="button" className="more_btn small">더보기<img src={ require('../images/icons/more_arrow.png') } alt="더보기아이콘"/></button>
+                              <button type="button" className="more_btn small white_bg">더보기<img src={ require('../images/icons/more_arrow.png') } alt="더보기아이콘"/></button>
                          </div>
                     </div>
                     <div className="container">
@@ -247,7 +250,7 @@ export default class invest_index extends React.Component {
                               </div>
                              <div className="slide3_container">
                              <ul className="list_wrap slide_wrap slide_wrap2 clearfix mb24">
-                                   <Swiper      spaceBetween={24}      slidesPerView={5} navigation={{ nextEl:'.slide3_container .next1' , prevEl:'.slide3_container .prev1'}} pagination={{ clickable: true }} onSwiper={(swiper) => console.log(swiper)}  onSlideChange={() => console.log('slide change')} >
+                                   <Swiper     breakpoints={{480:{slidesPerView:3},1400:{slidesPerView:5}}} spaceBetween={24}  slidesPerView={2} navigation={{ nextEl:'.slide3_container .next1' , prevEl:'.slide3_container .prev1'}} pagination={{ clickable: true }} onSwiper={(swiper) => console.log(swiper)}  onSlideChange={() => console.log('slide change')} >
                                    <SwiperSlide>
                                    <li onClick={() => window.location.pathname = "/Invest_detail"}>
                                         <div className="img_box">
@@ -316,12 +319,13 @@ export default class invest_index extends React.Component {
                                    </SwiperSlide>
                                    </Swiper>
                               </ul>
-                              <div className="swiper-button-prev prev1"></div>
-                              <div className="swiper-button-next next1"></div>
+                              <div className="swiper-button-prev prev1 mo_none"></div>
+                              <div className="swiper-button-next next1 mo_none"></div>
                              </div>
-                              
-                              
-                         </div>                         
+                             <div className="btn_wrap centerT">
+                                   <button type="button" className="more_btn small">더보기<img src={ require('../images/icons/more_arrow.png') } alt="더보기아이콘"/></button>
+                              </div>
+                         </div>
                     </div>
                 </section>
                 <Footer/>

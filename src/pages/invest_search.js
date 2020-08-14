@@ -35,8 +35,8 @@ export default class Invest_search extends React.Component {
                             <li className="on">전체 프로젝트</li>
                         </ul>
                     </div>
-                    <div className="container">
-                         <div className="title_wrap centerT mb16">
+                    <div className="container mt16">
+                         <div className="title_wrap centerT ">
                               <h1 className="mb16">전체 프로젝트</h1>
                               <h3>엑스퀘어의 친환경 투자 상품을 소개합니다.</h3>
                          </div>
@@ -73,7 +73,7 @@ export default class Invest_search extends React.Component {
                     <div className="cont">
                          <div className="container">
                               <ul className="list_wrap clearfix">
-                                   <li className="">
+                                   <li>
                                         <Link to="/invest_detail">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
@@ -93,7 +93,7 @@ export default class Invest_search extends React.Component {
                                              </div>
                                         </Link>
                                    </li>
-                                   <li className="">
+                                   <li>
                                         <Link to="/invest_detail">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
@@ -113,7 +113,7 @@ export default class Invest_search extends React.Component {
                                              </div>
                                         </Link>
                                    </li>
-                                   <li className="">
+                                   <li>
                                         <Link to="/invest_detail">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
@@ -133,7 +133,7 @@ export default class Invest_search extends React.Component {
                                              </div>
                                         </Link>
                                    </li>
-                                   <li className="">
+                                   <li>
                                         <Link to="/invest_detail">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
@@ -153,7 +153,7 @@ export default class Invest_search extends React.Component {
                                              </div>
                                         </Link>
                                    </li>
-                                   <li className="">
+                                   <li>
                                         <Link to="/invest_detail">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
@@ -173,7 +173,7 @@ export default class Invest_search extends React.Component {
                                              </div>
                                         </Link>
                                    </li>
-                                   <li className="">
+                                   <li>
                                         <Link to="/invest_detail">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
@@ -193,7 +193,7 @@ export default class Invest_search extends React.Component {
                                              </div>
                                         </Link>
                                    </li>
-                                   <li className="">
+                                   <li>
                                         <Link to="/invest_detail">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
@@ -213,7 +213,7 @@ export default class Invest_search extends React.Component {
                                              </div>
                                         </Link>
                                    </li>
-                                   <li className="">
+                                   <li>
                                         <Link to="/invest_detail">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
@@ -233,7 +233,7 @@ export default class Invest_search extends React.Component {
                                              </div>
                                         </Link>
                                    </li>
-                                   <li className="">
+                                   <li>
                                         <Link to="/invest_detail">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>

@@ -54,173 +54,211 @@ $mob-s-width		: 375px;
 }
 @include tab{
 	.mo_only {display: none;}
-	.section3{
-		.box_list li {margin-bottom: 10px;}
+
+	//index------------------------------------------
+	.index.main{
+		.section3{
+			.box_list li {
+				height: 335px;
+				margin-bottom: 10px;
+			}
+		}
+		.section4 {
+			.container {margin-top: 100px;}
+
+		}
 	}
+	  ///.index.main .section3 .box_list
+	  .index.main .section3 .box_list li:first-child {
+		background-image: url(../images/icons/about_icon1_on.png);
+		background-position: center 50px;
+		background-repeat: no-repeat;
+		padding-top: 155px;  
+	}
+	.index.main .section3 .box_list li:nth-child(2){
+		background-image: url(../images/icons/about_icon2_on.png);
+		background-position: center 50px;
+		background-repeat: no-repeat;
+		padding-top: 155px;  
+	}
+	.index.main .section3 .box_list li:nth-child(3) {
+		background-image: url(../images/icons/about_icon3_on.png);
+		background-position: center 50px;
+		background-repeat: no-repeat;
+		padding-top: 155px;  
+	}	
 	.invest_index .btn_wrap button.submit {width: 100%;}
 }
 
 @include tab-small(){
   .pc_none {display: block;}
-  .mo_none {display: none;}
-  .overflow-div {width: 100%; overflow-y: auto; margin: auto;}
-  
-  //slide
-  .main_banner_wrap .dot_wrap {width: calc(100% - 38px);}
-  .main_banner_wrap .dot_wrap li{width: calc(33.333% - 8px);}
+  .mo_none {display: none !important;}
+  .mo_only {display: none;}
+  .overflow-div {width: 100%; overflow-y: auto; margin: auto;}  
 
-//--------------------------------------------------------------------------
+
+//default css--------------------------------------------------------------------------
  
   .container {
 	width: calc(100% - 38px);
 	margin: 0 auto;
   }
-  .index{
-	.title {
-		font-size: 30px;
-	}
-	.sub_title {
-		font-size: 14px;
-	}
-	.main_banner{
-		.text{
-			left: 16px; 
-			top: 40px; 
-			transform: unset;
-			h1 {font-size: 30px;}
-			p {font-size: 15px;}
-			button {padding: 8px 16px; font-size: 14px; }
 
-		}		
-		img {
-			width: auto;
-			height: 100%;
+  ///INDEX-------------------------------------------------------------------
+
+  .index.main{
+	.title {font-size: 30px;	}
+	.sub_title {font-size: 14px;}
+
+	.main_banner_wrap{
+		.main_banner{
+			li{
+				.text{
+					left: 16px; 
+					top: 40px; 
+					transform: unset;
+					h1 {font-size: 30px;}
+					p {font-size: 15px;}
+					button {padding: 8px 16px; font-size: 14px; }
+				}
+				img {
+					width: auto;
+					height: 100%;
+				}
+			}
+		}
+		.dot_wrap {
+			width: calc(100% - 38px);
+			li{width: calc(33.333% - 8px);}
 		}
 	}
-  }
-  .list_wrap{
-	li.slick-item {
-		width: 100%;
-		 
-		box-shadow: none;		
-		&:hover {margin-top: 0;}
+	.section2 {
+		.gray_bg {padding: 40px 0;}
+		ul {
+			li{
+				width: 100%;
+				display: block;
+				&:first-child {padding: 42px 0 24px;}
+				&:last-child {padding: 0 0 24px;}
+				.icon_box {
+					margin-right: 0;
+					float: none;
+					p {font-size: 18px;}
+				}
+				p {
+					float: none;
+					font-size: 30px;
+					line-height: 40px;
+					span {
+						font-size: 22px;
+					}
+				}
+			}
+		}
 	}
-  }
-  .section2 {
-	  .gray_bg {padding: 40px 0;}
-	  ul {
-		  li{
-			width: 100%;
+	.section3 {
+		.sub_title {
+			font-weight: bold;
+			br {display: none;}
+		}
+		.hashtag {
 			display: block;
-			&:first-child {padding: 42px 0 24px;}
-			&:last-child {padding: 0 0 24px;}
-		  }
-		  li .icon_box {
-			  margin-right: 0;
-			  float: none;
-			  p {
-				  font-size: 18px;				  
-			  }
-		  }
-		  li>p {
-			  float: none;
-			  font-size: 30px;
-			  line-height: 40px;
-			  span {
-				  font-size: 22px;
-			  }
-		  }
-	  }
-  }
-  .section3 {
-	.sub_title {
-		font-weight: bold;
-	}
-	  .sub_title br {
-		display: none;
-	  }
-	  .hashtag {display: block;}
-	  .hashtag li{
-		width: calc(25% - 6px);
-		
-		margin-right: 8px;
-		font-size: 13px;
-		padding: 6px 16px;
-	  }
-	  .box_list li {
-		  width: 100%;
-		  height: 308px;
-		  padding-top: 32px;
-		  border-top: 4px solid #ff8e40;
-		  background: #fff;
-		  h3 {
-			  font-size: 25px; 
-			  color: #ff8e40;
-			  margin-top: 25px;
-		  }
-		  p {
-			  font-size: 14px;
-			  font-weight: bold;
-			  margin-top: 12px;
-		  }
-		 &:hover {
-			border-top: 4px solid #ff8e40;
-			margin-top: 0;
-			box-shadow:none;
-		 }
-	  }
-  }
-
-  .box_list .slick-slide:first-child li {
-	background-image: url(../images/icons/about_icon1_on.png);
-	background-position: center 32px;
-	background-repeat: no-repeat;
-	padding-top: 120px;  
-   }
-   .box_list .slick-slide:nth-of-type(2) li{
-	background-image: url(../images/icons/about_icon2_on.png);
-	background-position: center 32px;
-	background-repeat: no-repeat;
-	padding-top: 126px;  
-   }
-   .box_list .slick-slide:nth-of-type(3) li {
-	background-image: url(../images/icons/about_icon3_on.png);
-	background-position: center 32px;
-	background-repeat: no-repeat;
-	padding-top: 125px;  
-   }
-
-
-  .section4{
-	  .container {margin-top: 40px;}
-	.list li {
-		width: calc(50% - 4px);
-		height: 182px;
-		margin-right: 8px;
-		margin-bottom: 6px;
-		&:nth-child(2n){margin-right: 0;}	
-		a {
-			height: 98px; 
-			box-shadow: none;
-			&:hover .hidden_box{
-				display: none;
-			   }  
+			li{
+				width: calc(25% - 6px);		
+				margin-right: 8px;
+				font-size: 13px;
+				padding: 6px 16px;
+			}
 		}
-		.bottom_box {height: calc(100% - 98px);}
-		 
-	}	
-  }
-  .bottom_box h3 {font-size: 13px;}
-  .bottom_box p{font-size: 13px;}
-  .section5  {height: 172px;}
-  .section5 > div {padding: 36px;}
-  .section5 > div h2{  font-size: 28px; }
-  .section5 > div p{  
-	  font-size: 14px;
-		&br {display: block;}
+		.box_list li {
+			width: 100%;
+			height: 308px;
+			padding-top: 32px;
+			border-top: 4px solid #ff8e40;
+			background: #fff;
+			&:hover {
+				border-top: 4px solid #ff8e40;
+				margin-top: 0;
+				box-shadow:none;
+			 }
+			h3 {
+				font-size: 25px; 
+				color: #ff8e40;
+				margin-top: 25px;
+			}
+			p {
+				font-size: 14px;
+				font-weight: bold;
+				margin-top: 12px;
+			}
+		}
 	}
+	.section4 {
+		.container {margin-top: 40px;}
+		.list li {
+			width: calc(50% - 4px);
+			height: 182px;
+			margin-right: 8px;
+			margin-bottom: 6px;
+			&:nth-child(2n){margin-right: 0;}	
+			a {
+				height: 98px; 
+				box-shadow: none;
+				&:hover .hidden_box{
+					display: none;
+				   }  
+			}
+			.bottom_box {
+				height: calc(100% - 98px);
+				h3 {font-size: 13px;}
+				p{font-size: 13px;}
+			}
+		}	
+	}
+	.section5 {
+		height: 172px;
+		div {
+			padding: 46px;
+			h2 {font-size: 28px;}
+			p {
+				font-size: 14px;
+				br {display: block;}
+			}
+		}
+	}
+  }//index 최종괄호
 
-	//투자 상세정보-------------------------------------------
+ ///.index.main .section3 .box_list
+	    .index.main .section3 .box_list li:first-child {
+		background-image: url(../images/icons/about_icon1_on.png);
+		background-position: center 32px;
+		background-repeat: no-repeat;
+		padding-top: 122px;  
+	}
+	.index.main .section3 .box_list li:nth-child(2){
+		background-image: url(../images/icons/about_icon2_on.png);
+		background-position: center 32px;
+		background-repeat: no-repeat;
+		padding-top: 133px;  
+	}
+	.index.main .section3 .box_list li:nth-child(3) {
+		background-image: url(../images/icons/about_icon3_on.png);
+		background-position: center 32px;
+		background-repeat: no-repeat;
+		padding-top: 120px;  
+	}	
+
+	.list_wrap{
+		li.slick-item {
+			width: 100%;
+			box-shadow: none;
+			&:hover {margin-top: 0;}
+		}
+	}
+//-------------------------------------------------------------index끝
+
+
+//투자하기상세----------------------------------------------------------
 	//공통
 	.count {font-size: 15px;}
 	
@@ -308,6 +346,8 @@ $mob-s-width		: 375px;
 	.container.tab5 .table_wrap:last-of-type {width: 100%;}
 
 	//////////////////////////////////투자하기
+
+	.invest_page.index .section2 .slide_wrap2 li {padding: 0;}
 	
 	.invest_page .title_wrap {
 		width: 100%;
@@ -346,7 +386,62 @@ $mob-s-width		: 375px;
 
 @include mob {
 	.mo_only {display: block;}
+
+	//index------------------------------------------------
+	.index.main .section3 .box_list .slick-slide:first-child li {
+		background-image: url(../images/icons/about_icon1_on.png);
+		background-position: center 32px;
+		background-repeat: no-repeat;
+		padding-top: 120px;  
+	}
+	.index.main .section3 .box_list .slick-slide:nth-of-type(2) li{
+		background-image: url(../images/icons/about_icon2_on.png);
+		background-position: center 32px;
+		background-repeat: no-repeat;
+		padding-top: 126px;  
+	}
+	.index.main .section3 .box_list .slick-slide:nth-of-type(3) li {
+		background-image: url(../images/icons/about_icon3_on.png);
+		background-position: center 32px;
+		background-repeat: no-repeat;
+		padding-top: 125px;  
+	}
+
+
+	//////투자하기 메인페이지
+	.invest_page.index .section {margin: 0;}
+	.invest_page.index .section1 {padding: 0;}
+	.invest_page.index .section2 {padding: 16px 0;
+		.btn_wrap {margin-bottom: 0;}	
+	}
+	.invest_page.index .section3 {margin: 40px 0 16px; 
+		.btn_wrap {margin-bottom: 0;}	
+	}
 	.invest_page .cont .list_wrap > li {width: 100%; margin-right: 0;}
+	.invest_page.index .point_btn.big {width: 100%;}
+	.invest_page.index .section3 .slide3_container {padding: 0;}
+
+	//투자신청완료 page-----------------------------------------------------
+	.invest_page.complete {
+		.complete_box {
+			padding: 16px 0 40px;
+			h2 {font-size: 20px; line-height: 30px;}
+			h4 {font-size: 14px;}
+			.alert_text {margin-top: 56px;}
+		}
+		.gray_bg {padding: 16px 0;
+			.btn_wrap {margin: 24px auto 0;}		
+		}
+		.btn_wrap {
+			width: calc(100% - 38px);
+			margin: 24px auto 16px;
+			button {width: calc(50% - 4px); height: 38px;
+			&:first-child {margin-right: 8px;}
+			}
+		}
+	}
+
+
 }
 
 

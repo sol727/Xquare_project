@@ -18,10 +18,10 @@ export default class Index2 extends React.Component {
                 <Link to="/find_id"><span>개인아이디 비밀번호 찾기</span></Link>
                 <Link to="/corporation_find_id"><span>법인아이디 비밀번호 찾기</span></Link>
                 <Link to="/set_password"><span>비밀번호 재설정</span></Link>
-
+                <Link to="/invest_index"><span>투자하기 목록</span></Link>
                 <Link to="/invest_prepare"><span>투자하기 - 투자준비하기</span></Link>
                 <Link to="/invest_check"><span>투자하기 - 투자한도조회하기</span></Link>
-
+                <Link to="/invest_complete"><span>투자하기 - 투자신청완료</span></Link>
                 <Link to="/invest_detail"><span>투자하기 상세 - 핵심정보탭</span></Link>
                 <Link to="/invest_detail2"><span>투자하기 상세 - 새소식탭</span></Link>
                 <Link to="/invest_detail2_detail"><span>투자하기 상세 - 새소식탭 상세</span></Link>
