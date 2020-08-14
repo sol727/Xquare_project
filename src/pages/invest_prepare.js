@@ -43,7 +43,7 @@ export default class Invest_prepare extends React.Component {
 
         // 투자적합성테스트팝업 높이맞추기
         const r_height = $('.invest_test_pop .pop_cont .right').innerHeight();
-        console.log(r_height)
+        // console.log(r_height)
         $('.invest_test_pop .pop_cont .left').height(r_height);
         
        
