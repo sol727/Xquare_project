@@ -182,7 +182,7 @@ export default class Invest_detail3_add extends React.Component {
                          <div className="detail_container tab3"> 
                               <div className="clearfix2 detail_table_title">
                                    <h2 className="table_title">커뮤니티</h2>
-                                   <button type="button"  className="title_btn">목록으로</button>
+                                   <button type="button"  className="title_btn" onClick={() => window.location.pathname = "/Invest_detail3"} >목록으로</button>
                               </div> 
                               <div className="add_area">
                                    <form action="">

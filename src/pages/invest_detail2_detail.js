@@ -182,7 +182,7 @@ export default class Invest_detail2_detail extends React.Component {
                         <div className="detail_container tab2"> 
                               <div className="clearfix2 detail_table_title">
                                    <h2 className="table_title">새소식</h2>
-                                   <button type="button"  className="title_btn">목록으로</button>
+                                   <button type="button"  className="title_btn" onClick={() => window.location.pathname = "/Invest_detail2"}>목록으로</button>
                               </div>                             
                               <div className="list_table_wrap">
                                    <div className="detail_table2">

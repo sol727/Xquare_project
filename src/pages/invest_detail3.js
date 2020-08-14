@@ -193,7 +193,7 @@ export default class Invest_detail3 extends React.Component {
                               <div className="clearfix2 detail_table_title">
                                    <h2 className="table_title">커뮤니티 <span>06</span></h2>
                                    {/*개설자 뷰에서는 hidden*/}
-                                   <button type="button"  className="title_btn write_btn">글쓰기</button>
+                                   <button type="button"  className="title_btn write_btn" onClick={() => window.location.pathname = "/Invest_detail3_add"} >글쓰기</button>
                               </div>    
                               <ul className="community_wrap">
                                    <li>

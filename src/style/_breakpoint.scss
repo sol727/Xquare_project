@@ -216,8 +216,7 @@ $mob-s-width		: 375px;
 				padding: 6px 16px;
 			}
 		}
-		.box_list li {
-			width: 100%;
+		.box_list li {			
 			height: 308px;
 			padding-top: 32px;
 			border-top: 4px solid #ff8e40;
@@ -236,6 +235,7 @@ $mob-s-width		: 375px;
 				font-size: 14px;
 				font-weight: bold;
 				margin-top: 12px;
+				br {display: none;}
 			}
 		}
 	}
@@ -294,13 +294,7 @@ $mob-s-width		: 375px;
 		padding-top: 120px;  
 	}	
 
-	.list_wrap{
-		li.slick-item {
-			width: 100%;
-			box-shadow: none;
-			&:hover {margin-top: 0;}
-		}
-	}
+	
 //-------------------------------------------------------------index끝
 
 
@@ -428,6 +422,23 @@ $mob-s-width		: 375px;
 
 	//index------------------------------------------------
 
+	.list_wrap{
+		li.slick-item {
+			width: 100%;
+			box-shadow: none;
+			&:hover {margin-top: 0;}
+		}
+	}
+	.index.main .section3 {
+		.box_list li {width: 100%;
+			p {
+				br {display: block;}
+			}
+		}
+
+	}
+
+
 	.index.main .main_banner {height: 550px;}
 	.index.main .main_banner li {
 		background-image: url(../images/main_banner_bg_mo.png);
@@ -465,7 +476,7 @@ $mob-s-width		: 375px;
 		.btn_wrap {margin-bottom: 0;}	
 	}
 	.invest_page.index .section3 {margin: 40px 0 16px; 
-		.btn_wrap {margin-bottom: 0;}	
+		.btn_wrap {margin-bottom: 0;}			
 	}
 	.invest_page .cont .list_wrap > li {width: 100%; margin-right: 0;}
 	.invest_page.index .point_btn.big {width: 100%;}
@@ -493,6 +504,8 @@ $mob-s-width		: 375px;
 
 	//투자 step
 	.step1 .swiper-container {width: 80%;}
+	.step .page_btn button:first-child {width: 102px;}
+	.step .page_btn button:last-child {width: calc(100% - 126px);}
 
 
 }

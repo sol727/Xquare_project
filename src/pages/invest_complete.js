@@ -195,7 +195,7 @@ export default class Invest_complete extends React.Component {
                     </div>
                     <div className="btn_wrap centerT">
                          <button type="button" className="btn_line mr24 font_15" onClick={() => window.location.pathname = "/Invest_index"}>나의 투자내역 확인</button>
-                         <button type="button" className="orange btn font_15" onClick={() => window.location.pathname = "/index"}>메인 화면으로 이동</button>
+                         <button type="button" className="orange btn font_15" onClick={() => window.location.pathname = "/"}>메인 화면으로 이동</button>
                     </div>
                 </section>
                 <Footer/>
