@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import Header from '../components/header'
 import Footer from '../components/footer';
-import SwiperCore, { Pagination } from 'swiper';
+import SwiperCore, {Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
@@ -11,7 +11,7 @@ import $ from 'jquery'
 
 SwiperCore.use([Pagination]);
 
-export default class Test extends React.Component {
+export default class Invest_complete extends React.Component {
     
      constructor(props) {
           super(props);          
@@ -20,14 +20,17 @@ export default class Test extends React.Component {
       
      // $(document).ready({ ... })sta
      componentDidMount(){
-        const target = this;    
+      
      }
+     onClickLink (link) {
+          window.location.pathname = link
+        }
 
     render() {
         return (
             <>
                 <Header />
-                <section className="invest_page index">
+                <section className="invest_page complete">
                     <div className="top_banner">
                         <h1>투자하기</h1>
                     </div>
@@ -39,20 +42,30 @@ export default class Test extends React.Component {
                                 </Link>
                             </li>
                             <li>투자하기</li>
-                            <li className="on">전체 프로젝트</li>
+                            <li className="on">투자신청 완료</li>
                         </ul>
                     </div>
                     <div className="container">
-                         <div className="rightT btn_wrap">
-                              <button type="button" className="point_btn big">전체펀딩 모두보기</button>
+                         <div className="title_wrap centerT mb24">
+                              <h1 className="mb16">투자신청 완료</h1>
                          </div>
-                         <div className="section section1">
-                              <div className="title_wrap centerT mb24">
-                                   <h1 className="mb16">진행중 프로젝트</h1>
+                         <div className="complete_box centerT">
+                              <h2 className="mb24 black_color">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                              <h4 className="black_color">nn번째 투자자로 투자 신청이 완료되었습니다.</h4>
+                              <p className="alert_text black_color mb24">펀딩마감일은<br/><span>yyyy.mm.dd일</span>입니다.</p>
+                              <p className="black_color font_13 fw600">펀딩이 성공할 경우에만 배정이 진행되며 배정예정일은 yyyy.mm.dd일입니다.<br/>
+                              기간 연장 및 증액으로 인해 변동이 있을 수 있습니다.<br/>
+                              펀딩 실패시 투자금액은 나의 증권계좌로 전액 환불됩니다.</p>
+                         </div>
+                    </div>
+                    <div className="gray_bg">
+                         <div className="container">
+                               <div className="title_wrap centerT mb24">
+                                   <h1 className="mb16">진행중 펀딩</h1>
                                    <h3>엑스퀘어에서 진행중인 프로젝트를 소개합니다.</h3>
                               </div>
                               <ul className="list_wrap slide_wrap clearfix mb24">
-                                    <Swiper      spaceBetween={24}      slidesPerView={3} pagination={{ clickable: true }} onSwiper={(swiper) => console.log(swiper)}  onSlideChange={() => console.log('slide change')} >
+                                    <Swiper breakpoints={{480:{slidesPerView:2},1400:{slidesPerView:3}}} spaceBetween={24}      slidesPerView={1}  pagination={{ clickable: true }} onSwiper={(swiper) => console.log(swiper)}  onSlideChange={() => console.log('slide change')} >
                                         <SwiperSlide>
                                         <li onClick={() => window.location.pathname = "/Invest_detail"}>
                                              <div className="img_box">
@@ -74,7 +87,7 @@ export default class Test extends React.Component {
                                         </li>
                                        </SwiperSlide>
                                        <SwiperSlide>
-                                        <li className="slick-item" onClick={() => window.location.pathname = "/Invest_detail"}>
+                                        <li onClick={() => window.location.pathname = "/Invest_detail"}>
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                                                   <p className="label  open">오픈예정 &middot; D-17</p>
@@ -94,7 +107,7 @@ export default class Test extends React.Component {
                                         </li>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                        <li className="slick-item" onClick={() => window.location.pathname = "/Invest_detail"}>
+                                        <li onClick={() => window.location.pathname = "/Invest_detail"}>
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                                                   <p className="label end">펀딩종료</p>
@@ -134,7 +147,7 @@ export default class Test extends React.Component {
                                         </li>
                                        </SwiperSlide>
                                        <SwiperSlide>
-                                        <li className="slick-item" onClick={() => window.location.pathname = "/Invest_detail"}>
+                                        <li onClick={() => window.location.pathname = "/Invest_detail"}>
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                                                   <p className="label  open">오픈예정 &middot; D-17</p>
@@ -154,7 +167,7 @@ export default class Test extends React.Component {
                                         </li>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                        <li className="slick-item" onClick={() => window.location.pathname = "/Invest_detail"}>
+                                        <li onClick={() => window.location.pathname = "/Invest_detail"}>
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                                                   <p className="label end">펀딩종료</p>
@@ -176,9 +189,13 @@ export default class Test extends React.Component {
                                    </Swiper>
                               </ul>
                                <div className="btn_wrap centerT">
-                                   <button type="button" className="more_btn small">더보기<img src={ require('../images/icons/more_arrow.png') } alt="더보기아이콘"/></button>
+                                   <button type="button" className="more_btn">전체 펀딩보기<img src={ require('../images/icons/more_arrow.png') } alt="더보기아이콘" onClick={() => window.location.pathname = "/Invest_search"}/></button>
                               </div>
                          </div>
+                    </div>
+                    <div className="btn_wrap centerT">
+                         <button type="button" className="btn_line mr24 font_15" onClick={() => window.location.pathname = "/Invest_index"}>나의 투자내역 확인</button>
+                         <button type="button" className="orange btn font_15" onClick={() => window.location.pathname = "/index"}>메인 화면으로 이동</button>
                     </div>
                 </section>
                 <Footer/>

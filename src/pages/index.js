@@ -49,7 +49,8 @@ export default class index extends React.Component {
     return (
       <>
         <Header />
-        <section className="index main">           
+        <section className="index main">
+          {/* 메인배너슬라이드 ------------------- */}
           <div className="main_banner_wrap">
             <ul className="main_banner" >
               <Slider slidesToShow={1} slidesToScroll={1} speed={500} dots={false} infinite={false} beforeChange={this.sliderEvent}>
@@ -77,19 +78,21 @@ export default class index extends React.Component {
                       <button type="button" className="white_color">투자하러가기 <img src={ require('../images/icons/w_arrow.png') } alt="화살표아이콘"/></button>
                   </div>
                 </li>     
-              </Slider>               
+              </Slider>
             </ul>
             <ul className="dot_wrap clearfix">
               <li className={ this.state.focus === 0 ? "active" : ""  } ></li>
               <li className={ this.state.focus === 1 ? "active" : ""  } ></li>
               <li className={ this.state.focus === 2 ? "active" : ""  } ></li>
-            </ul>      
-          </div>        
+            </ul>
+          </div>
+          {/* -------------------메인배너슬라이드  */}
+          {/*Xquare List ---------------------------*/}
           <div className="section1">
             <div className="container">
               <h1 className="title centerT playF">Xquare List</h1>
               <p className="sub_title centerT">엑스퀘어의 친환경 투자상품을 소개합니다.</p>
-              <ul className="list_wrap  clearfix">
+              <ul className="list_wrap clearfix">
                 {
                   this.state.width > 767 ?
                   <>
@@ -154,7 +157,6 @@ export default class index extends React.Component {
                         </div>
                       </Link>
                   </li>
-
                   </>
                   :
                   <Slider slidesToShow={1} slidesToScroll={1} speed={500} dots={false} infinite={false} beforeChange={this.sliderEvent}  >
@@ -221,7 +223,7 @@ export default class index extends React.Component {
                 </Slider>
                 }              
               </ul>
-              <ul className="dot_wrap clearfix pc_none">
+              <ul className="dot_wrap clearfix mo_only">
                 <li className={ this.state.focus === 0 ? "active" : ""  } ></li>
                 <li className={ this.state.focus === 1 ? "active" : ""  } ></li>
                 <li className={ this.state.focus === 2 ? "active" : ""  } ></li>
@@ -231,6 +233,8 @@ export default class index extends React.Component {
               </div>            
             </div>          
           </div>
+          {/*--------------------------- Xquare List */}
+          {/* Xquare Contribution --------------------------- */}
           <div className="section2">
             <div className="gray_bg">
                 <div className="container">
@@ -255,6 +259,8 @@ export default class index extends React.Component {
                 </div>
             </div>
           </div>
+           {/* ---------------------------Xquare Contribution  */}
+           {/*About Xquare -------------------------------  */}
           <div className="section3">
             <div className="container">
              <h1 className="title centerT playF">About Xquare</h1>
@@ -285,7 +291,7 @@ export default class index extends React.Component {
                    </>
                   :              
                <Slider slidesToShow={1} slidesToScroll={1} speed={500} dots={false} infinite={false} beforeChange={this.sliderEvent}>
-                <li className="">
+                <li>
                     <h3>환경</h3>
                     <p>석탄 화력 발전소에서 나오는<br/>매연,미세먼지 억제<br/>친환경 에너지를 환경 개선하고<br/> 기후변화문제해결</p>
                 </li>
@@ -301,13 +307,15 @@ export default class index extends React.Component {
                </Slider> 
                 }
              </ul>
-             <ul className="dot_wrap clearfix pc_none">
+             <ul className="dot_wrap clearfix mo_only">
                 <li className={ this.state.focus === 0 ? "active" : ""  } ></li>
                 <li className={ this.state.focus === 1 ? "active" : ""  } ></li>
                 <li className={ this.state.focus === 2 ? "active" : ""  } ></li>
               </ul>
             </div>
           </div>
+          {/* -------------------------------About Xquare   */}
+          {/*Xquare News -------------------------------  */}
           <div className="section4">
             <div className="container">
               <h1 className="title centerT playF">Xquare News</h1>
@@ -379,12 +387,15 @@ export default class index extends React.Component {
               </div>            
             </div>
           </div>
+           {/*------------------------------- Xquare News   */}
+           {/* 가이드 --------------------------------------- */}
           <div className="section5 "> 
             <div className="centerT">
               <h2>플랫폼 이용 가이드</h2>
               <p>엑스퀘어에서는 누구나 쉽게<br/>에너지 사업을 시작할 수 있습니다.</p>
              </div>            
           </div>
+          {/* --------------------------------------- 가이드  */}
         </section>
         <Footer />
 
