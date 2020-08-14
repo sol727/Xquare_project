@@ -62,6 +62,20 @@ export default class Corporation_signup extends React.Component {
                 $(this).parents('.agree_box').find('input#all_check').removeClass('on');
             }
         });
+
+        // 팝업
+        $('.pop_close').on('click',function(){
+            $(this).parents('.pop_wrap').hide();
+        });
+
+        $('.back_pop_show').click(function(){
+            $('.back_pop').show();
+        });
+
+        $('.back_pop .orange_btn').click(function(){
+            $('.back_pop').hide();
+        });
+
     
     }
 
@@ -91,8 +105,8 @@ export default class Corporation_signup extends React.Component {
                                     {/* 본인인증 완료후 노출되는 버튼↓ */}
                                     {/* <button type="button" className="form_btn green_btn">인증완료</button> */}
 
-                                    <input type="text" placeholder="성함"/>
-                                    <input type="text" placeholder="휴대전화 연락처"/>
+                                    <input type="text" placeholder="성함" readOnly disabled/>
+                                    <input type="text" placeholder="휴대전화 연락처" readOnly disabled/>
                                 </div>
                             </div>
 
@@ -109,6 +123,12 @@ export default class Corporation_signup extends React.Component {
                                         <select name="" id="" className="mt16">
                                             <option value="" >이메일 선택</option>
                                             <option value="" >직접입력</option>
+                                            <option value="" >naver.com</option>
+                                            <option value="" >gmail.com</option>
+                                            <option value="" >daum.net</option>
+                                            <option value="" >nate.com</option>
+                                            <option value="" >hotmail.com</option>
+                                            <option value="" >kakao.com</option>
                                         </select>
 
                                         {/* select 선택하면 나오는 input box */}
@@ -128,7 +148,7 @@ export default class Corporation_signup extends React.Component {
                                             {/* <button type="button" className="form_btn green_btn">사용 가능</button> */}
 
                                         {/* select에서 직접입력 선택시 노출↓ */}
-                                            {/* <input type="text" value="username@mail.com" className="mb16"/> */}
+                                            {/* <input type="text" className="mb16"/> */}
                                             {/* 중복확인 비활성화 버튼↓ */}
                                             {/* <button type="button" className="unable_btn">중복확인</button> */}
 
@@ -176,7 +196,7 @@ export default class Corporation_signup extends React.Component {
                                         <h3 className="input_title">사업자 등록 번호</h3>
                                         {/* 사업자번호 유효성검사미통과시에 노출되는 문구↓ */}
                                         {/* <p className="error_msg">이미 가입된 법인입니다.</p> */}
-                                        <input type="text" placeholder="10자리 숫자 입력" className="mt16"/>
+                                        <input type="text" placeholder="10자리 숫자 입력" className="mt16" maxLength="10"/>
                                     </li>
                                     <li>
                                         {/* 중복확인 비활성화 버튼↓ */}
@@ -192,7 +212,7 @@ export default class Corporation_signup extends React.Component {
                                         <h3 className="input_title">법인 등록 번호</h3>
                                         {/* 법인등록번호 유효성검사미통과시에 노출되는 문구↓ */}
                                         {/* <p className="error_msg">숫자만 입력 가능합니다.</p> */}
-                                        <input type="text" placeholder="13자리 숫자 입력" className="mt16"/>
+                                        <input type="text" placeholder="13자리 숫자 입력" className="mt16" maxLength="13"/>
                                     </li>
                                     <li>
                                         <h3 className="input_title">법인 설립일</h3>
@@ -231,7 +251,7 @@ export default class Corporation_signup extends React.Component {
                                     </li>
                                 </ul>
                                 <button type="button" className="form_btn navy_btn">
-                                    {/* <img src={ require('../images/form_left_bg.png') } alt="plus 아이콘"/> */}
+                                    <img src={ require('../images/icons/add_icon.png') } alt="plus 아이콘"/>
                                     추가
                                 </button>
                             </div>
@@ -297,7 +317,7 @@ export default class Corporation_signup extends React.Component {
                             </div> 
 
                             <div className="btn_wrap clearfix2">
-                                <button type="button" className="back_btn" onClick={() => window.history.back()}>이전</button>
+                                <button type="button" className="back_btn back_pop_show">이전</button>
 
                                 {/* 가입완료활성화될때 class에 orange_btn 추가↓ */}
                                 <button type="button" className="unable_btn">가입완료</button>
@@ -307,6 +327,52 @@ export default class Corporation_signup extends React.Component {
                 </section>
                 
                 <Footer/>
+
+                {/* 이미가입되어있는 유저일때 보이는팝업 */}
+                <div className="pop_wrap signup_pop">
+                    <div className="dim"></div>
+                    <div className="pop_cont">
+                        <button type="button" className="pop_close">
+                            <img src={ require('../images/icons/close_btn.png') } alt="닫기버튼 아이콘"/>
+                        </button>
+                        <div className="clearfix2">
+                            <div className="pop_img">
+                                <img src={ require('../images/alert_img.png') } alt="느낌표 이미지"/>
+                            </div>
+                            <div className="txt_box">
+                                <p>홍길동 님은 가입한 이력이 있습니다. <br/>아래의 아이디로 로그인을 진행해주세요.</p>
+                                <p className="blue_color">aaa***@mail.com</p>
+                                <p>만약 로그인 정보가 기억나지 않으신다면<br/>아이디∙비밀번호 찾기를 진행해주세요.</p>
+                                <div className="btn_wrap">
+                                    <button type="button" className="navy_btn mb16" onClick={() => window.location.pathname = "/login"}>로그인</button>
+                                    <button type="button" className="navy_btn" onClick={() => window.location.pathname = "/find_id"}>아이디∙비밀번호 찾기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* 진행중 이전으로돌아갈때 보이는팝업 */}
+                <div className="pop_wrap signup_pop back_pop">
+                    <div className="dim"></div>
+                    <div className="pop_cont">
+                        <button type="button" className="pop_close">
+                            <img src={ require('../images/icons/close_btn.png') } alt="닫기버튼 아이콘"/>
+                        </button>
+                        <div className="clearfix2">
+                            <div className="pop_img">
+                                <img src={ require('../images/alert_img.png') } alt="느낌표 이미지"/>
+                            </div>
+                            <div className="txt_box">
+                                <p>이전으로 돌아가시면 현재 입력하신 정보는<br/>삭제됩니다. 이전으로 돌아가시겠습니까?</p>
+                                <div className="btn_wrap">
+                                    <button type="button" className="back_line_btn mb16" onClick={() => window.history.back()}>돌아가겠습니다</button>
+                                    <button type="button" className="form_btn orange_btn">아니오 돌아가지 않겠습니다</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </>
         )
     }

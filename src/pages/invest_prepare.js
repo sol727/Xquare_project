@@ -124,6 +124,7 @@ export default class Invest_prepare extends React.Component {
                                     {/* 인증완료 버튼↓*/}
                                     {/* <button type="button" className="navy_btn green_btn">인증완료</button> */}
                                 </div>
+
                                 <p className="font_14 centerT bold mb16">실명인증심사는 최대 2영업일 소요됩니다</p>
                             </li>
                             <li>
@@ -170,10 +171,10 @@ export default class Invest_prepare extends React.Component {
                             </li>
                         </ul>
                         <div className="btn_wrap clearfix2">
-                            <button type="button" className="back_btn">이전</button>
-                            <button type="button" className="unable_btn">투자하러 가기</button>
+                            <button type="button" className="back_btn" onClick={() => window.history.back()}>이전</button>
+                            <button type="button" className="unable_btn" onClick={() => window.location.pathname="/invest_step1"}>투자하러 가기</button>
                             {/* 활성화 버튼↓*/}
-                            {/* <button type="button" className="unable_btn orange_btn">투자하러 가기</button> */}
+                            {/* <button type="button" className="unable_btn orange_btn" onClick={() => window.location.pathname="/invest_step1"}>투자하러 가기</button> */}
                         </div>
                     </div>
                 </section>

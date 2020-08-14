@@ -51,6 +51,7 @@ export default class Find_id extends React.Component {
                                 </div>
 
                                 {/* 본인인증 후 노출↓ */}
+
                                 <div className="certify_after">
                                     <p className="date_txt"><span>개인회원</span>가입일 : yyyy.mm.dd</p>
                                     <div className="email_box">
@@ -70,8 +71,11 @@ export default class Find_id extends React.Component {
                                     <div className="btn_wrap clearfix2">
                                         <button type="button" className="navy_btn" onClick={() => window.location.pathname = "/login"}>로그인</button>
                                         <button type="button" className="navy_btn find_password_pop_show">비밀번호 재설정</button>
+                                        {/* 회원가입버튼 ↓*/}
+                                        {/* <button type="button" className="navy_btn" onClick={() => window.location.pathname = "/signup"}>회원가입</button> */}
                                     </div>
                                 </div>
+                                
                             </form>
                         </div>
                     </div>

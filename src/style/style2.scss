@@ -85,12 +85,12 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     }
 }
 
-// 로그인
+// 로그인페이지
 .login {
     .form_btn{color:#fff;}
 }
 
-// 회원가입
+// 회원가입페이지
 .signup {
     .right{padding:40px 122px 0px;}
     .right .sns_wrap{width: auto;padding:0px;margin:24px auto 80px;
@@ -128,6 +128,7 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
         li input{width:calc(100% - 104px);}
         li .delt_btn{width:78px;height:38px;border-radius: 4px;font-size:15px;color:#bfbfbf;background:#eaedf1;}
         li .delt_btn.on{background:#282d40;color:#fff;}
+        button img{margin:-2px 8px 0 0px}
     }
     .terms_wrap{
         .agree_box{border-top:2px solid #ff8e40; 
@@ -155,9 +156,11 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
         .unable_btn{width:calc(100% - 102px);}
     }
 }
+.date_txt{font-size:14px;margin-bottom:24px;
+    span{font-size: 13px;color:#fff;background:#ff8e40;padding:2px 13px;border-radius:2px;margin-right:12px;}
+}
 
-
-// 아이디,비번찾기페이지
+// 아이디,비밀번호찾기페이지
 .search_page{min-height: calc(100vh - 446px);
     .container{width:588px;}
     .title_wrap{padding:32px 0px 16px;border-bottom:1px solid #eaedf1;text-align:center;
@@ -171,9 +174,7 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
             a{font-size:14px;text-decoration: underline;font-weight: 600;}
         }
         .certify_after{
-            .date_txt{font-size:14px;margin-bottom:24px;
-                span{font-size: 13px;color:#fff;background:#ff8e40;padding:2px 13px;border-radius:2px;margin-right:12px;}
-            }
+            
             .email_box{background:#f8f9fb;padding:24px 0px;text-align: center;
                 h3{line-height: 20px;}
                 h4{margin-top:10px;}
@@ -263,7 +264,46 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
     }
 }
 
-// 팝업-----------------------------------------------------------------------
+
+// 투자한도조회페이지
+.invest_check{
+    .content{margin-top:70px;
+        ul{border:1px solid #eaedf1;border-radius: 4px;}
+        .top{padding:16px;overflow: hidden;}
+        .top p{position: relative;padding:10px 0;}
+        .top p::after{position: absolute;content:'';width:8px;height:100%;background:#ff8e40;left:-20px;top:0;border-radius:4px;}
+        .logo_box{text-align: center;padding:48px 0px;border-top:1px solid #eaedf1;border-bottom:1px solid #eaedf1;
+            img{margin-right:48px;vertical-align:bottom;}
+            img:last-child{margin-right:0px;}
+        }
+        .loading_box{padding:24px 0 32px;text-align:center;background: #f8f9fb;
+            h3{padding:8px 12px;font-size:14px;color:#fff;width:max-content;background:#292f40;border-radius: 100px;margin:0 auto;}
+            .loading_bar{width:588px;height:4px;background: #eeeff5;margin:16px auto 0px;position: relative;}
+            .loading_bar::after{position: absolute;content: '';width:80%;height:100%;background:#ff8e40;left:0;top:0;}
+        }
+        .api_box{height: 512px;background: #f8f9fb;border-radius: 4px;margin-bottom:40px;}
+    }
+    
+}
+
+
+//에러페이지
+.error_page{min-height: calc(100vh - 446px);
+    .container{position: relative;padding-bottom:220px;}
+    .text_box{
+        p{font-size: 30px;margin:40px 0 24px;}
+        h1{font-size: 50px;margin-bottom:24px;}
+        .txt{font-size: 15px;line-height: 1.5;}
+    }
+    .btn_wrap{width: 588px;margin-top:80px;
+        button{width:calc(50% - 12px);height: 38px;font-size: 15px;border-radius:4px;border: 1px solid #eaedf1;}
+        button:last-child{border: 1px solid #ff8e40;background:#ff8e40;color:#fff;}
+    }
+    img{position: absolute;right:0;bottom:19px;}
+}
+
+
+// 팝업--------------------------------------------------------------------------------------------------------------------------------
 .pop_wrap{position: fixed;width:100%;height: 100%;top:0;left: 0;display:none;
     .dim{position: fixed;width:100%;height: 100%;top:0;left: 0;background: rgba(0, 0, 0, 0.61);}
     .pop_cont{background: #fff;border-radius: 8px;position: fixed;top:50%;left: 50%;transform: translate(-50%,-50%);padding:16px;}
@@ -388,45 +428,9 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
 .invest_prepare_pop.mo_invest,.invest_account_pop.mo_invest,.invest_test_pop.mo_invest{
     position: unset;padding:12px 0 24px;
 }
-
-
-// 투자한도조회
-.invest_check{
-    .content{margin-top:70px;
-        ul{border:1px solid #eaedf1;border-radius: 4px;}
-        .top{padding:16px;overflow: hidden;}
-        .top p{position: relative;padding:10px 0;}
-        .top p::after{position: absolute;content:'';width:8px;height:100%;background:#ff8e40;left:-20px;top:0;border-radius:4px;}
-        .logo_box{text-align: center;padding:48px 0px;border-top:1px solid #eaedf1;border-bottom:1px solid #eaedf1;
-            img{margin-right:48px;vertical-align:bottom;}
-            img:last-child{margin-right:0px;}
-        }
-        .loading_box{padding:24px 0 32px;text-align:center;background: #f8f9fb;
-            h3{padding:8px 12px;font-size:14px;color:#fff;width:max-content;background:#292f40;border-radius: 100px;margin:0 auto;}
-            .loading_bar{width:588px;height:4px;background: #eeeff5;margin:16px auto 0px;position: relative;}
-            .loading_bar::after{position: absolute;content: '';width:80%;height:100%;background:#ff8e40;left:0;top:0;}
-        }
-        .api_box{height: 512px;background: #f8f9fb;border-radius: 4px;margin-bottom:40px;}
-    }
-    
+.invest_account_pop.mo_invest{
+    .info_p{font-size: 13px;padding-left:34px;background-image:url(../images/icons/info_icon.png);background-repeat: no-repeat;background-position-x: left;line-height: 1.5;margin-bottom: 32px;}
 }
-
-
-//에러페이지
-.error_page{min-height: calc(100vh - 446px);
-    .container{position: relative;padding-bottom:220px;}
-    .text_box{
-        p{font-size: 30px;margin:40px 0 24px;}
-        h1{font-size: 50px;margin-bottom:24px;}
-        .txt{font-size: 15px;line-height: 1.5;}
-    }
-    .btn_wrap{width: 588px;margin-top:80px;
-        button{width:calc(50% - 12px);height: 38px;font-size: 15px;border-radius:4px;border: 1px solid #eaedf1;}
-        button:last-child{border: 1px solid #ff8e40;background:#ff8e40;color:#fff;}
-    }
-    img{position: absolute;right:0;bottom:19px;}
-}
-
 
 
 

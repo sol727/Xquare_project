@@ -47,6 +47,7 @@ export default class Mo_invest_account extends React.Component {
                                             <input type="text" value="홍길동" disabled readOnly className="centerT"/>
                                         </li>
                                     </ul>
+                                    <p className="info_p">잘못된 계좌정보를 입력하는 경우 주식/채권이 미배정 될 수 있습니다.</p>
                                     <div className="btn_wrap clearfix2">
                                         <button type="button" className="back_btn" onClick={() => window.history.back()}>이전</button>
                                         <button type="button" className="unable_btn">추가하기</button>
