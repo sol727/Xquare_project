@@ -361,7 +361,7 @@ export default class Invest_detail extends React.Component {
                          <p className="centerT font_14 gray3_color mt8">휴대폰 번호를 확인해주세요</p>
                          <input type="text" className="mb12 mt16" disabled readOnly/>
                          <div className="link_box mb12 font_14 gray2_color">
-                              연락처 변경을 원하시나요?<Link>내정보 관리로 이동</Link>
+                              연락처 변경을 원하시나요?<Link to="">내정보 관리로 이동</Link>
                          </div>
                          <button type="button" className="form_btn orange_btn">확인</button>
                     </div>
@@ -379,7 +379,7 @@ export default class Invest_detail extends React.Component {
                          <h4 className="font_15">휴대폰 번호</h4>
                          <input type="text" className="mb12 mt16" disabled readOnly/>
                          <div className="link_box mb12 font_14 gray2_color">
-                              연락처 변경을 원하시나요?<Link>내정보 관리로 이동</Link>
+                              연락처 변경을 원하시나요?<Link to="">내정보 관리로 이동</Link>
                          </div>
                          <div className="agree_box">
                               <p>프로젝트 정보 수신을 위한 개인정보 제공과 마케팅 정보 수신에 동의하시나요?</p>

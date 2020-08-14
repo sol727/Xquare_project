@@ -1,9 +1,7 @@
 import React from 'react';
 import './style/common.scss';
 import './style/style.scss';
-import './style/style2.scss';
 import './style/_breakpoint.scss';
-import './style/_breakpoint2.scss';
 import { BrowserRouter , Route } from 'react-router-dom';
 
 /* 페이지 */
@@ -41,7 +39,7 @@ import Mo_invest_account from './pages/mo_invest_account';
 import Mo_invest_test from './pages/mo_invest_test';
 import Invest_complete from './pages/invest_complete';
 import Index2 from './pages/index2';
-import Test from './pages/test';
+
 
 
 
@@ -83,7 +81,7 @@ function App() {
         <Route path="/invest_step2" component={Invest_step2}/>
         <Route path="/invest_step3" component={Invest_step3}/>
         <Route path="/invest_complete" component={Invest_complete}/>
-        <Route path="/test" component={Test}/>
+      
         
     </BrowserRouter>
   );

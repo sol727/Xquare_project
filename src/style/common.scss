@@ -79,6 +79,7 @@ input:focus{border-color: #fe8d40;}
 .d_ib {display: inline-block;}
 .bold {font-weight: bold;}
 .playF {font-family: 'Play', sans-serif;}
+.pre{white-space: pre-line;line-height: 1.5;}
 
 //breakpoint---------------------------------------------------------------------------
 .mo_only {display: none;}
@@ -157,6 +158,52 @@ input[type="file"]{display: none;}
     .file_up_btn{display: block;width:78px;height:38px;border-radius: 4px;font-size:15px;color:#bfbfbf;background:#eaedf1;text-align: center;line-height:38px;float: right;cursor: pointer;}
     .file_up_btn.on{background:#282d40;color:#fff;}
 }
+
+.check_input{position: relative;
+  &:after{position: absolute;content:'';width:24px;height: 24px;right:16px;top:50%;transform: translateY(-50%);background-image: url(../images/icons/check_input_alert.png);display:none;}
+}
+.check_input.alert{
+  &:after{display:block;}
+}
+input.error + .input_delt_btn{display: block;}
+.input_title{font-size:15px;color:#000000;}
+.input_sub_title{font-size:13px;color:#6e6e6d;line-height: 20px;}
+.input_title + .input_sub_title{margin-top:4px;}
+.tab_btn_box{border-radius:6px;border:1px solid #d0d0cf;overflow: hidden;margin-bottom:24px;
+    li{width:50%;padding:9px 0;text-align: center;cursor: pointer;font-size: 14px;}
+    li.on{background:#fe8d40;color:#fff;}
+}
+
+//form_page-----------------------------------------------------------------------------------------
+.form_page{
+  width: 1200px;margin:0 auto;
+  .mo_title{text-align: center;border-bottom: 1px solid #bfbfbf;margin-bottom: 20px;
+      h1{font-size:28px;padding-bottom:10px;}
+      p{font-size:14px;line-height: 22px;padding-bottom:15px;}
+  }
+  .bg_gradient{
+      width: 588px;min-height:788px;background-image: linear-gradient(to top,#ffa740, #ffb27c );position: relative;padding:204px 102px 0px 102px;
+      img{
+          position: absolute;bottom: 0;width: 100%;left: 0;}
+      .title{
+          font-size: 60px;color: #fff;margin-bottom:24px;}
+      .sub_title{
+          font-size:18px;color:#fff;line-height: 28px;word-break:normal;padding-bottom:15px;border-bottom:1px solid #fff;}
+  }
+  .orange_title{font-size: 18px;color: #fe8d40;text-align: center;}
+  .right{
+      margin-top: 80px;width: 588px;padding: 56px 122px 0px;
+      .sns_wrap{padding:8px;width:max-content;margin: 10px auto 40px;}
+      .sns_wrap button{margin-right: 24px;}
+      .sns_wrap button:last-child{margin-right: 0px;}
+      ul{margin-top:24px;}
+      ul li{margin-bottom:24px;}
+      .signup_txt{font-size: 15px;color:#9a9a99;text-align: center;margin-top:24px;
+          span{font-size: 15px;color:#ff8e40;font-weight: 600;border-bottom:1px solid #ff8e40;margin-left:5px;}
+      }
+  }
+}
+
 
 //header------------------------------------------------------------------------------
 header {
@@ -336,6 +383,36 @@ header {
       }
     }
   }
+}
+
+//footer----------------------------------------------------------------------------------------
+footer{padding-top: 60px;border-top:1px solid #d0d0cf;
+  .terms_ul{margin:5px 0 0 10px;
+      li span{
+          padding:0px 10px;position: relative;font-size:14px;color: #6e6e6d;
+      }
+      li span::after{content:'';position: absolute;width: 1px ;background: #6e6e6d;height:60%;top:50%;right:0;transform: translateY(-50%);}
+      li:last-child span::after{display: none;}
+  }
+  .address{margin-top:17px;
+      p{font-size:14px;margin-bottom:5px;}
+      p:last-child{padding-top:10px;color:#858484;}
+  }
+  .service_box{background:#f8f9fb;padding:27px 32px 33px;
+      h3 b{font-size: 30px;margin-left:12px;}
+      p{font-size:14px;color:#525251;margin-top:12px;}
+  }
+  .bottom{margin-top:30px;border-top:1px solid #eaedf1;padding:30px 0 46px;
+      .alert_txt{
+          p{font-size:13px;color:#ff513e;margin-bottom:4px;}
+          ul li{font-size:13px;color:#b33b39;position: relative;padding-left:5px;margin-bottom:4px;}
+          ul li::after{position: absolute;content: '·';color:#ff513e;left:0;top:0;}
+          ul li:first-child{color:#ff513e;}
+          ul li:first-child::after{color:#ff513e;}
+      }
+      .link_wrap a:last-child{margin-left:16px;}
+  }
+
 }
 
 
