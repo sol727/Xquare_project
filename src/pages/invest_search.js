@@ -11,7 +11,15 @@ export default class Invest_search extends React.Component {
     }
 
     componentDidMount(){
-        
+        $('.search_box input').keypress(function(){
+          $('.invest_page .search_box .search_btn').hide();
+          $('.invest_page .search_box .delete_btn').show();
+        });
+        $('.invest_page .search_box .delete_btn').click(function(){
+               $('.search_box input').val('');
+               $('.invest_page .search_box .search_btn').show();
+               $(this).hide();
+        });
     
     }
 
@@ -27,7 +35,7 @@ export default class Invest_search extends React.Component {
                     <div className="invest_top_box">
                         <ul className="clearfix">
                             <li className="mo_none">
-                                <Link to="/invest_index">
+                                <Link to="/">
                                     <img src={ require('../images/icons/home_icon.png') } alt="홈아이콘"/>
                                 </Link>
                             </li>

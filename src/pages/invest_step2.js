@@ -49,7 +49,7 @@ export default class Invest_step2 extends React.Component {
                     <div className="invest_top_box">
                         <ul className="clearfix">
                             <li className="mo_none">
-                                <Link to="/index">
+                                <Link to="/">
                                     <img src={ require('../images/icons/home_icon.png') } alt="홈아이콘"/>
                                 </Link>
                             </li>
@@ -156,8 +156,8 @@ export default class Invest_step2 extends React.Component {
                             </div>
                         </div>
                         <div className="page_btn centerT">
-                            <button className="point_color font_15 mr24 d_ib">이전</button>
-                            <button className="unable_btn d_ib" >다음</button>
+                            <button className="point_color font_15 mr24 d_ib" onClick={() => window.history.back()}>이전</button>
+                            <button className="unable_btn d_ib" onClick={() => window.location.pathname = "/invest_step3"}>다음</button>
                         </div>
                     </div>
                 </section>

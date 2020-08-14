@@ -268,9 +268,9 @@ code {
           box-shadow: 0 2px 2px rgba(0,0,0,0.4);
           overflow: hidden;
           &:hover .hidden_box{
-            display: block;
+            display: block;            
           }
-          img {            
+          >img {            
             @include position_img
           }
         }
@@ -1169,8 +1169,20 @@ code {
 .step .page_btn button:last-child  {width: 282px;}
 
 .step1 {
-
-  
+  .slide_area {position: relative; margin: 24px 65px;
+    .swiper-pagination.pagination1 {font-size: 18px; font-weight: bold; color: #b8c4d2; bottom: -40px;
+      .swiper-pagination-current {font-size: 18px; font-weight: bold; color: #ff8e40;}
+      .swiper-pagination-total {font-size: 18px; font-weight: bold; color: #b8c4d2;}
+    }  
+  }
+  .account_box {width: 100%;  height: 121px; margin: 0;
+    &.add_box {padding: 25px 42px; } 
+    .add_icon {width: 35px;}
+  }
+  .swiper-container {
+    width: 984px;
+    padding: 16px 24px; 
+  }
 }
 
 
