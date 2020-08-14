@@ -69,7 +69,7 @@ export default class Find_id extends React.Component {
                                     </div>
                                     <div className="btn_wrap clearfix2">
                                         <button type="button" className="navy_btn" onClick={() => window.location.pathname = "/login"}>로그인</button>
-                                        <button type="button" className="navy_btn" onClick={() => window.location.pathname = "/set_password"}>비밀번호 재설정</button>
+                                        <button type="button" className="navy_btn find_password_pop_show">비밀번호 재설정</button>
                                     </div>
                                 </div>
                             </form>

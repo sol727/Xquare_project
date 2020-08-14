@@ -31,8 +31,8 @@ export default class Error_page extends React.Component {
                                 입력하신 페이지의 주소가 정확한지 다시 한번 확인해주시길 부탁드립니다.
                             </div>
                             <div className="btn_wrap clearfix2">
-                                <button type="button">이전페이지로</button>
-                                <button type="button">홈으로 이동</button>
+                                <button type="button" onClick={() => window.history.back()}>이전페이지로</button>
+                                <button type="button" onClick={() => window.location.pathname = "/"}>홈으로 이동</button>
                             </div>
                         </div>
                         <img src={ require('../images/error_page_bg.png') } alt="error_page 이미지"/>

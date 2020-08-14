@@ -25,6 +25,19 @@ export default class Corporation_find_id extends React.Component {
             var idx = $('.tab_btn_box li.on').index();
             $('.tab_cont_wrap .tab_cont').eq(idx).show();
         };
+
+        // 팝업
+        $('.pop_close').on('click',function(){
+            $(this).parents('.pop_wrap').hide();
+        });
+
+        $('.find_password_pop_show').click(function(){
+            $('.find_password_pop').show();
+        });
+
+        $('.find_password_pop .orange_btn').click(function(){
+            $('.find_password_pop').hide();
+        });
     
     }
 
@@ -86,7 +99,8 @@ export default class Corporation_find_id extends React.Component {
                                         <button type="button" className="unable_btn mt24">비밀번호 찾기</button>
 
                                         {/*  활성화 버튼↓ */}
-                                        {/* <button type="button" className="navy_btn mt24">비밀번호 찾기</button> */}
+                                        {/* <button type="button" className="navy_btn find_password_pop mt24">비밀번호 찾기</button> */}
+
                                         <div className="txt_box">
                                             <p>아이디가 기억나지 않으시나요?<br/><Link>1:1문의하기</Link>를 남겨주세요.</p>
                                         </div>
@@ -99,6 +113,28 @@ export default class Corporation_find_id extends React.Component {
                 </section>
                 
                 <Footer/>
+
+                {/* 비밀번호메일발송 팝업 */}
+                <div className="pop_wrap signup_pop find_password_pop">
+                    <div className="dim"></div>
+                    <div className="pop_cont">
+                        <button type="button" className="pop_close">
+                            <img src={ require('../images/icons/close_btn.png') } alt="닫기버튼 아이콘"/>
+                        </button>
+                        <div className="clearfix2">
+                            <div className="pop_img">
+                                <img src={ require('../images/mail_img.png') } alt="메일 이미지"/>
+                            </div>
+                            <div className="txt_box">
+                                <p>발송완료</p>
+                                <p>귀하의 이메일 주소로 비밀번호를 다시 등록<br/>할 수 있는 링크를 발송해 드렸습니다.<br/>메일 수신함을 확인해주세요.</p>
+                                <div className="btn_wrap">
+                                    <button type="button" className="form_btn orange_btn">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </>
         )
     }

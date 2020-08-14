@@ -42,6 +42,10 @@ export default class Invest_detail extends React.Component {
           $('.pop_close').on('click',function(){
                $(this).parents('.pop_wrap').hide();
           });
+
+          $('.share_pop_show').click(function(){
+               $('.share_pop').show();
+          });
       
      }//최종괄호
 
@@ -175,7 +179,7 @@ export default class Invest_detail extends React.Component {
                                              <button type="button" className="submit" onClick={() => window.location.pathname = "/invest_prepare"}>지금 투자하기</button>
                                              <ul className="clearfix2">
                                                   <li><button type="button" className="like_btn">nnn</button></li>
-                                                  <li><button type="button" className="share_btn"> nnn</button></li>
+                                                  <li><button type="button" className="share_btn share_pop_show"> nnn</button></li>
                                              </ul>
                                         </div>
                                    </div>
@@ -327,6 +331,7 @@ export default class Invest_detail extends React.Component {
                {/* 공유하기 팝업 */}
                <div className="pop_wrap share_pop">
                     <div className="dim"></div>
+                    <p className="copy_txt">주소가 복사되었습니다</p>
                     <div className="pop_cont">
                          <button type="button" className="pop_close">
                               <img src={ require('../images/icons/close_btn.png') } alt="닫기버튼 아이콘"/>
@@ -334,7 +339,7 @@ export default class Invest_detail extends React.Component {
                          <p className="centerT font_18 bold mb16">공유하기</p>
                          <p className="centerT font_14 gray3_color mb16">공유할 방법을 선택하세요</p>
                          <div className="input_box clearfix2">
-                              <input type="text"/>
+                              <input type="text" value="xsquare.co.kr/sjasfo13"/>
                               <button type="button" className="navy_btn">복사</button>
                          </div>
                          <ul className="clearfix">
@@ -360,17 +365,49 @@ export default class Invest_detail extends React.Component {
                     </div>
                </div>
 
-               {/* 오픈예정일때 알림클릭시 보이는팝업 */}
-               <div className="pop_wrap alarm_pop">
+               {/* 오픈예정일때 알림클릭시 보이는팝업(마케팅 동의시)*/}
+               <div className="pop_wrap alarm_pop alarm_pop1">
                     <div className="dim"></div>
                     <div className="pop_cont">
                          <button type="button" className="pop_close">
                               <img src={ require('../images/icons/close_btn.png') } alt="닫기버튼 아이콘"/>
                          </button>
-                         <p className="centerT font_18">엑스퀘어 회원에게만<br/>제공되는 서비스입니다<br/>로그인 또는 회원가입을 진행해주세요</p>
-                         <div className="btn_wrap clearfix2">
-                              <button type="button" className="navy_btn">회원가입</button>
-                              <button type="button" className="navy_btn">로그인</button>
+                         <h3 className="centerT font_18 mt24">펀딩이 시작되면{ $(window).width() <= 480 ? <br/> : "" }알림을 보내드립니다.</h3>
+                         <p className="centerT font_14 gray3_color mt8">휴대폰 번호를 확인해주세요</p>
+                         <input type="text" className="mb12 mt16" disabled readOnly/>
+                         <div className="link_box mb12 font_14 gray2_color">
+                              연락처 변경을 원하시나요?<Link>내정보 관리로 이동</Link>
+                         </div>
+                         <button type="button" className="form_btn orange_btn">확인</button>
+                    </div>
+               </div>
+
+               {/* 오픈예정일때 알림클릭시 보이는팝업(마케팅 미동의시)*/}
+               <div className="pop_wrap alarm_pop alarm_pop2">
+                    <div className="dim"></div>
+                    <div className="pop_cont">
+                         <button type="button" className="pop_close">
+                              <img src={ require('../images/icons/close_btn.png') } alt="닫기버튼 아이콘"/>
+                         </button>
+                         <h3 className="centerT font_18 mt24">펀딩이 시작되면{ $(window).width() <= 480 ? <br/> : "" }알림을 보내드립니다.</h3>
+                         <p className="centerT font_14 gray3_color mt8 mb12">휴대폰 번호를 확인해주세요</p>
+                         <h4 className="font_15">휴대폰 번호</h4>
+                         <input type="text" className="mb12 mt16" disabled readOnly/>
+                         <div className="link_box mb12 font_14 gray2_color">
+                              연락처 변경을 원하시나요?<Link>내정보 관리로 이동</Link>
+                         </div>
+                         <div className="agree_box">
+                              <p>프로젝트 정보 수신을 위한 개인정보 제공과 마케팅 정보 수신에 동의하시나요?</p>
+                              <div className="check_wrap clearfix">
+                                   <input type="checkbox" id="check"/>
+                                   <label htmlFor="check"></label>
+                                   <label htmlFor="check" className="label_txt">네, 동의합니다</label>
+                              </div>
+                         </div>
+                         <div className="btn_wrap">
+                              <button type="button" className="form_btn unable_btn">확인</button>
+                              {/* 활성화버튼↓ */}
+                              {/* <button type="button" className="form_btn orange_btn">확인</button> */}
                          </div>
                     </div>
                </div>

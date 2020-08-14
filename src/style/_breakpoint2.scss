@@ -152,11 +152,14 @@ $mob-s-width		: 375px;
         .table_li{overflow-x: auto;}
     }
     // 팝업----------------------------------------------------------
-    .pop_cont{width: calc(100% - 38px) !important;
+    .pop_cont{
+        .pop_img{
+            img{max-width: 104px;}
+        }
         .txt_box{width: 100%;}
     }
 
-    
+
     // 회원가입 토스트팝업
     .toast_pop{top:unset;bottom:32px;}
 
@@ -210,6 +213,14 @@ $mob-s-width		: 375px;
             button{width:100%;float: none;margin-bottom:24px;}
         }
         img{width:100%;right:unset;top:0;left:50%;transform: translateX(-50%);}
+    }
+
+    // 팝업----------------------------------------------------------
+    .pop_cont{width: calc(100% - 38px) !important;}
+
+    // 투자하기상세 - 공유하기팝업
+    .share_pop{
+        .copy_txt{top:unset;bottom:32px;}
     }
 }
 
