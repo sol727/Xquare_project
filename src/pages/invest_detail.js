@@ -124,20 +124,15 @@ export default class Invest_detail extends React.Component {
                                                   <p>목표금액</p>
                                                   <h3 className="playF">10,000,000<span>원</span></h3>
                                              </li>
-                                             <li>
-                                                  <p>남은기간</p>
-                                                  <h3 className="playF">D-6</h3>
-                                                  <p>yyyy.mm.dd hh:mm 마감</p>
-                                             </li>
-                                        </ul>                                  
+                                        </ul>
                                         <div className="btn_wrap2">
                                              <div className="btn_wrap clearfix2">
                                                   <button type="button" className="alarm_btn"> 998</button>
                                                   <button type="button" className="share_btn">nnn</button>
                                              </div>
                                         </div>
-                                     </div>
-                                   */}
+                                     </div>*/}
+                                   
 
                                     {/* 진행중일 때 활성화 되는 영역↓*/}
                                     <div className="project_ing bottom_box">

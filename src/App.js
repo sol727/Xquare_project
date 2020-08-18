@@ -1,7 +1,6 @@
 import React from 'react';
 import './style/common.scss';
 import './style/style.scss';
-import './style/style2.scss';
 import './style/_breakpoint.scss';
 import { BrowserRouter , Route } from 'react-router-dom';
 

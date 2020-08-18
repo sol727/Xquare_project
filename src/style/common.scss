@@ -1,5 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+
 
 // 정사각형 만들기
 @mixin square ( $width )  {
@@ -102,7 +104,8 @@ input:focus{border-color: #fe8d40;}
 .gray_bg2 {background: #f8f9fb;}
 
 
-//font---------------------------------------------------------------------------------
+//font---------------------------------------------------------------------------------\
+.fw500{font-weight:500 !important;}
 .fw600 {font-weight: 600;}
 .font_13{font-size: 13px;}
 .font_14{font-size: 14px;}
@@ -166,7 +169,10 @@ input[type="file"]{display: none;}
 .check_input.alert{
   &:after{display:block;}
 }
-
+.input_box{position: relative;
+  .input_delt_btn{
+      position: absolute;top:50%;right:20px;transform: translateY(-50%);display: none;}
+}
 input.error + .input_delt_btn{display: block;}
 .input_title{font-size:15px;color:#000000;}
 .input_sub_title{font-size:13px;color:#6e6e6d;line-height: 20px;}
@@ -215,6 +221,10 @@ input.error + .input_delt_btn{display: block;}
 
 
 //header------------------------------------------------------------------------------
+
+header .pc_header.container .menu_box>li {padding-bottom: 25px;}
+header .pc_header.container .menu_box>li:hover .sub_menu {display: block;}
+header .pc_header.container .right .menu_box>li:hover .sub_menu {display: block;}
 header {
   border-bottom: 1px solid #eaedf1;
   .pc_header.container{    
@@ -228,15 +238,14 @@ header {
       .logo {margin-right: 16px;}
       .center {
         width: max-content;
-        min-width: 625px;
-        li {
+        min-width: 570px;
+        li {          
           position: relative;
-          width: 180px;
-          height: 30px;
+          width: 180px;         
          display: inline-block;
           text-align: center;
           &:last-child{margin-right: 0;}          
-          &.project {background: #ff8e40;  border-radius: 4px;
+          &.project {background: #ff8e40;  border-radius: 4px; padding-bottom: 0;
             .menu {color: #fff;}
           }
           .menu { 
@@ -251,8 +260,7 @@ header {
     }  
     .right {
       margin-top: 4px;
-      >li {margin-right: 30px;
-          position: relative;
+      >li {margin-right: 30px; position: relative;
           &:last-child{margin-right: 0;}
           &.bell {margin-right: 0;}
       }
@@ -270,9 +278,8 @@ header {
         li a{width: 100%; text-align: center;
           span {font-size: 14px;}
         }
-
       }
-    }
+    }    
     .sub_menu {     
       display: none; 
       position: absolute;
@@ -368,7 +375,6 @@ header {
     position: relative;
     border-bottom: 1px solid #f2f2f2;
     img {position: absolute ;right: 16px; top: 13px;
-      &.off {display: none;}
     }
     a {
       width: 100%;
@@ -377,8 +383,7 @@ header {
       color: #343332;
       font-weight: bold;
     }
-    .sub_menu{
-      display: none;
+    .sub_menu{    
       background: #f8f9fb;
       li {
         border-bottom: none;

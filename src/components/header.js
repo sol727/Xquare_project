@@ -8,20 +8,13 @@ export default class Header extends React.Component {
     }
     componentDidMount(){
 
-        $('header .pc_header .menu_box li').mouseenter(function(){
+     /*    $('header .pc_header .menu_box>li').mouseenter(function(){
             $(this).children('.sub_menu').show();
         });
 
-        $('header .pc_header .menu_box .sub_menu').mouseleave(function(){
-            $(this).hide();
-        });
-
-
-
-        $('.mo_header .menu_list>li').click(function(){
-            $(this).children('.sub_menu').slideToggle();
-            $(this).children('.more').toggleClass('off');
-        });
+        $('header .pc_header .menu_box>li').mouseleave(function(){
+            $(this).children('.sub_menu').hide();
+        }); */
 
         $('.mo_header .hamburger_wrap .close_btn').click(function(){
             $('.mo_header .hamburger_wrap .menu_wrap').animate({'right':'-100%'},500,function(){
@@ -33,6 +26,7 @@ export default class Header extends React.Component {
             $('.mo_header .hamburger_wrap').show();
             $('.mo_header .hamburger_wrap .menu_wrap').animate({'right':'0'},500);
         });
+
         $('.mo_header .logout_btn').click(function(){
             $('.mo_header .hamburger_wrap').show();
             $('.mo_header .hamburger_wrap .menu_wrap').animate({'right':'0'},500);
@@ -52,7 +46,8 @@ export default class Header extends React.Component {
                         <ul className="center  menu_box clearfix">
                             <li><Link to=""><span className="menu">엑스퀘어 소개</span></Link></li>
                             <li><Link to="/invest_prepare"><span className="menu">투자하기</span></Link></li>
-                            <li><Link to=""><span className="menu">소식</span></Link>
+                            <li>
+                                <Link to=""><span className="menu">소식</span></Link>
                                 <ul className="sub_menu">
                                     <li className="title">소식</li>
                                     <li><Link to=""><span>공지사항</span></Link></li>
@@ -61,7 +56,7 @@ export default class Header extends React.Component {
                                 </ul>
                             </li>
                             {/* 로그인후 노출 ▽*/}
-                            <li className="project"><Link to="/" ><span className="menu">프로젝트 개설</span></Link></li>
+                            {/* <li className="project"><Link to="/" ><span className="menu">프로젝트 개설</span></Link></li> */}
                         </ul>
                     </div>
                      {/* 로그인전 노출영역 */}
@@ -131,7 +126,7 @@ export default class Header extends React.Component {
                                 <ul className="menu_list">
                                     <li><Link to="">엑스퀘어 소개<img src={ require('../images/icons/view_more.png') } alt="더보기아이콘"/></Link> </li>
                                     <li><Link to="/Invest_index">투자하기<img src={ require('../images/icons/view_more.png') } alt="더보기아이콘"/></Link></li>
-                                    <li><Link to="">소식</Link><img src={ require('../images/icons/view_more.png') } alt="더보기아이콘" className="more"/>
+                                    <li><Link to="">소식</Link>
                                         <ul className="sub_menu">
                                             <li><Link to="">공지사항<img src={ require('../images/icons/view_more.png') } alt="더보기아이콘"/></Link></li>
                                             <li><Link to="">언론보도<img src={ require('../images/icons/view_more.png') } alt="더보기아이콘"/></Link></li>
@@ -139,13 +134,13 @@ export default class Header extends React.Component {
                                         </ul>
                                     </li>
                                     {/* 마이페이지는 로그인시에만 노출 */}
-                                    <li><Link to="">마이페이지</Link><img src={ require('../images/icons/view_more.png') } alt="더보기아이콘" className="more"/>
+                                    <li><Link to="">마이페이지</Link>
                                         <ul className="sub_menu">
                                             <li><Link to="">나의 투자<img src={ require('../images/icons/view_more.png') } alt="더보기아이콘"/></Link></li>
                                             <li><Link to="">내정보 관리<img src={ require('../images/icons/view_more.png') } alt="더보기아이콘"/></Link></li>
                                         </ul>
                                     </li>
-                                    <li><Link to="">안내/문의</Link><img src={ require('../images/icons/view_more.png') } alt="더보기아이콘" className="more"/>
+                                    <li><Link to="">안내/문의</Link>
                                         <ul className="sub_menu">
                                             <li><Link to="">공지사항<img src={ require('../images/icons/view_more.png') } alt="더보기아이콘"/></Link></li>
                                             <li><Link to="">FAQ<img src={ require('../images/icons/view_more.png') } alt="더보기아이콘"/></Link></li>

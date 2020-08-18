@@ -6,6 +6,7 @@ import Footer from '../components/footer'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.scss";
 import $ from 'jquery'
+import Mount from '../components/mount';
 
 export default class Index extends React.Component {
 
@@ -30,7 +31,7 @@ export default class Index extends React.Component {
       target.setState(  {
         width : $(window).width()
       } )
-    })
+    });
 
   }
 
@@ -48,30 +49,31 @@ export default class Index extends React.Component {
   render() {
     return (
       <>
+        <Mount />
         <Header />
         <section className="index main">
           {/* 메인배너슬라이드 ------------------- */}
           <div className="main_banner_wrap">
             <ul className="main_banner" >
               <Slider slidesToShow={1} slidesToScroll={1} speed={500} dots={false} infinite={false} beforeChange={this.sliderEvent}>
-                <li>
-                    <div className="text" onClick={() => this.onClickLink("/Invest_index")}>
+                <li onClick={() => this.onClickLink("/Invest_index")}>
+                    <div className="text" >
                         <h1 className="white_color">누구나 쉽게 투자하는</h1>
                         <h1>에너지 금융</h1>
                         <p className="white_color">지구를 깨끗하게 하는 신재생 에너지 발전<br/>안정적인 금융상품에 직접 투자하세요.</p>
                         <button type="button" className="white_color">투자하러가기 <img src={ require('../images/icons/w_arrow.png') } alt="화살표아이콘"/></button>
                     </div>
                 </li>
-                <li>
-                    <div className="text" onClick={() => this.onClickLink("/Invest_index")}>
+                <li onClick={() => this.onClickLink("/Invest_index")}>
+                    <div className="text" >
                         <h1 className="white_color">누구나 쉽게 투자하는</h1>
                         <h1>에너지 금융2</h1>
                         <p className="white_color">지구를 깨끗하게 하는 신재생 에너지 발전<br/>안정적인 금융상품에 직접 투자하세요.</p>
                         <button type="button" className="white_color">투자하러가기 <img src={ require('../images/icons/w_arrow.png') } alt="화살표아이콘"/></button>
                     </div>
                 </li>
-                <li>
-                  <div className="text" onClick={() => this.onClickLink("/Invest_index")}>
+                <li onClick={() => this.onClickLink("/Invest_index")}>
+                  <div className="text" >
                       <h1 className="white_color">누구나 쉽게 투자하는</h1>
                       <h1>에너지 금융3</h1>
                       <p className="white_color">지구를 깨끗하게 하는 신재생 에너지 발전<br/>안정적인 금융상품에 직접 투자하세요.</p>
@@ -97,8 +99,8 @@ export default class Index extends React.Component {
                   this.state.width > 767 ?
                   <>
 
-                    <li className="slick-item">
-                      <Link to="/Invest_detail">
+                    <li className="slick-item" onClick={() => this.onClickLink("/Invest_detail")}>
+                      <Link to="" >
                         <div className="img_box">
                           <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                           <p className="label  funding">펀딩중 &middot; D-17</p>
@@ -117,8 +119,8 @@ export default class Index extends React.Component {
                         </div>
                       </Link>
                   </li>
-                  <li className="slick-item">
-                    <Link to="/Invest_detail">
+                  <li className="slick-item" onClick={() => this.onClickLink("/Invest_detail")}>
+                    <Link to="">
                         <div className="img_box">
                           <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                           <p className="label  open">오픈예정 &middot; D-17</p>
@@ -137,8 +139,8 @@ export default class Index extends React.Component {
                         </div>
                       </Link>
                   </li>
-                  <li className="slick-item">
-                    <Link to="/Invest_detail">
+                  <li className="slick-item" onClick={() => this.onClickLink("/Invest_detail")}>
+                    <Link to="">
                         <div className="img_box">
                           <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                           <p className="label end">펀딩종료</p>
@@ -160,8 +162,8 @@ export default class Index extends React.Component {
                   </>
                   :
                   <Slider slidesToShow={1} slidesToScroll={1} speed={500} dots={false} infinite={false} beforeChange={this.sliderEvent}  >
-                  <li className="slick-item">
-                      <Link to="/Invest_detail">
+                  <li className="slick-item" onClick={() => this.onClickLink("/Invest_detail")}>
+                      <Link to="">
                         <div className="img_box">
                           <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                           <p className="label  funding">펀딩중 &middot; D-17</p>
@@ -180,8 +182,8 @@ export default class Index extends React.Component {
                         </div>
                       </Link>
                   </li>
-                  <li className="slick-item">
-                    <Link to="/Invest_detail">
+                  <li className="slick-item" onClick={() => this.onClickLink("/Invest_detail")}>
+                    <Link to="">
                         <div className="img_box">
                           <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                           <p className="label  open">오픈예정 &middot; D-17</p>
@@ -200,8 +202,8 @@ export default class Index extends React.Component {
                         </div>
                       </Link>
                   </li>
-                  <li className="slick-item">
-                    <Link to="/Invest_detail">
+                  <li className="slick-item" onClick={() => this.onClickLink("/Invest_detail")}>
+                    <Link to="">
                         <div className="img_box">
                           <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                           <p className="label end">펀딩종료</p>
@@ -229,7 +231,7 @@ export default class Index extends React.Component {
                 <li className={ this.state.focus === 2 ? "active" : ""  } ></li>
               </ul>
               <div className="btn_wrap centerT">
-                <button type="button" className="more_btn">더보기<img src={ require('../images/icons/more_arrow.png') } alt="더보기아이콘"/></button>
+                <button type="button" className="more_btn" onClick={() => this.onClickLink("/Invest_search")}>더보기<img src={ require('../images/icons/more_arrow.png') } alt="더보기아이콘"/></button>
               </div>            
             </div>          
           </div>
@@ -321,8 +323,23 @@ export default class Index extends React.Component {
               <h1 className="title centerT playF">Xquare News</h1>
               <p className="sub_title centerT">엑스퀘어의 언론보도 내용을 알려드립니다.</p>
               <ul className="list clearfix">
-                <li>
-                  <Link to="/">
+                <li onClick={() => this.onClickLink("/Invest_detail")}>
+                  <Link to=""  className="img_box">
+                    <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
+                    <div className="hidden_box" >
+                      <p>상세보기 <img src={ require('../images/icons/w_arrow.png') } alt="화살표아이콘"/></p>
+                    </div>
+                  </Link>
+                  <div className="bottom_box">
+                      <h3 className="ellipsis2">13월의 월급 받자... 연말 크라우드펀딩·벤처 투자 주목</h3>
+                      <div className="clearfix2">
+                        <p className="dark_gray_color">이데일리</p>
+                        <p className="gray_color">2020.02.31</p>
+                      </div>                      
+                  </div>
+                </li>
+                <li onClick={() => this.onClickLink("/Invest_detail")}>
+                  <Link to="" className="img_box">
                     <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                     <div className="hidden_box">
                       <p>상세보기 <img src={ require('../images/icons/w_arrow.png') } alt="화살표아이콘"/></p>
@@ -336,8 +353,8 @@ export default class Index extends React.Component {
                       </div>                      
                   </div>
                 </li>
-                <li>
-                  <Link to="/">
+                <li onClick={() => this.onClickLink("/Invest_detail")}>
+                 <Link to="" className="img_box" >
                     <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                     <div className="hidden_box">
                       <p>상세보기 <img src={ require('../images/icons/w_arrow.png') } alt="화살표아이콘"/></p>
@@ -351,23 +368,8 @@ export default class Index extends React.Component {
                       </div>                      
                   </div>
                 </li>
-                <li>
-                 <Link to="/">
-                    <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
-                    <div className="hidden_box">
-                      <p>상세보기 <img src={ require('../images/icons/w_arrow.png') } alt="화살표아이콘"/></p>
-                    </div>
-                  </Link>
-                  <div className="bottom_box">
-                      <h3 className="ellipsis2">13월의 월급 받자... 연말 크라우드펀딩·벤처 투자 주목</h3>
-                      <div className="clearfix2">
-                        <p className="dark_gray_color">이데일리</p>
-                        <p className="gray_color">2020.02.31</p>
-                      </div>                      
-                  </div>
-                </li>
-                <li>
-                  <Link to="/">
+                <li onClick={() => this.onClickLink("/Invest_detail")}>
+                  <Link to="" className="img_box">
                     <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                     <div className="hidden_box">
                       <p>상세보기 <img src={ require('../images/icons/w_arrow.png') } alt="화살표아이콘"/></p>

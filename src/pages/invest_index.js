@@ -8,6 +8,7 @@ import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import $ from 'jquery'
+import Mount from '../components/mount';
 
 
 SwiperCore.use([Navigation, Pagination]);
@@ -30,6 +31,7 @@ export default class invest_index extends React.Component {
     render() {
         return (
             <>
+                <Mount />
                 <Header />
                 <section className="invest_page index">
                     <div className="top_banner">
@@ -179,7 +181,7 @@ export default class invest_index extends React.Component {
                                    </Swiper>
                               </ul>
                                <div className="btn_wrap centerT">
-                                   <button type="button" className="more_btn small">더보기<img src={ require('../images/icons/more_arrow.png') } alt="더보기아이콘"/></button>
+                                   <button type="button" className="more_btn small" onClick={() => window.location.pathname = "/Invest_search"}>더보기<img src={ require('../images/icons/more_arrow.png') } alt="더보기아이콘"/></button>
                               </div>
                          </div>
                     </div>
@@ -239,7 +241,7 @@ export default class invest_index extends React.Component {
                               </ul>
                          </div>
                          <div className="btn_wrap centerT">
-                              <button type="button" className="more_btn small white_bg">더보기<img src={ require('../images/icons/more_arrow.png') } alt="더보기아이콘"/></button>
+                              <button type="button" className="more_btn small white_bg" >더보기<img src={ require('../images/icons/more_arrow.png') } alt="더보기아이콘"/></button>
                          </div>
                     </div>
                     <div className="container">
