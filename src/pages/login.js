@@ -49,7 +49,7 @@ export default class Login extends React.Component {
                                     <div className="input_box"><input type="password" placeholder="비밀번호"/></div>
                                 </li>
                                 <li className="clearfix2 check_wrap">
-                                    <div className="clearfix"><input type="checkbox" id="check"/><label htmlFor="check"></label><label className="label_txt" htmlFor="check">아이디 저장</label>
+                                    <div className="clearfix"><input type="checkbox" id="check"/><label htmlFor="check"></label><label className="label_txt fw500" htmlFor="check">아이디 저장</label>
                                     </div>
                                     <div className="find_txt">
                                         <Link to="/find_id"><span>아이디 · 비밀번호 찾기</span></Link>

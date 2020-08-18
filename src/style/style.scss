@@ -376,6 +376,8 @@ code {
   background-repeat: no-repeat;    
 }
 
+.open_expected.bottom_box {margin-top: 32px;}
+
 //--------------------------------------------------------index끝
 
 ///LIST_WRAP------------------------------------------------------------------
@@ -570,13 +572,15 @@ code {
       background: #282d40;
       color: #ffffff;
       background-image: url(../images/icons/alarm_btn.png);
-      background-position: 140px center;
-      background-repeat: no-repeat;      
+      background-position: 150px center;
+      background-repeat: no-repeat;
+      padding-left: 15px;
       &.on {
         background: #5dcf17;
         background-image: url(../images/icons/alarm_btn_on.png);
-        background-position: 140px center;
-        background-repeat: no-repeat;      
+        background-position: 150px center;
+        background-repeat: no-repeat;     
+        padding-left: 15px; 
       }
     }
     .share_btn {      
@@ -604,6 +608,7 @@ code {
       font-size: 30px;
       color: #000000;
       margin-bottom: 0;
+      font-weight: bold;
     }
   }
 }
@@ -671,8 +676,8 @@ code {
     border-bottom: 1px solid #eaedf1;
   }
 }
-.detail_table>li .th {width: 160px; padding: 8px 16px; font-size: 13px;  color: #000; background: #f9f9f9; line-height: 20px; font-weight: 600; display: table-cell;}
-.detail_table>li .td {width: calc(100% - 160px); color: #525251; font-size: 13px; padding: 8px 24px ;  line-height: 20px; font-weight: 600; display: table-cell;}
+.detail_table>li .th {width: 160px; padding: 8px 16px; font-size: 13px;  color: #525251; background: #f9f9f9; line-height: 20px; font-weight: 600; display: table-cell;}
+.detail_table>li .td {width: calc(100% - 160px); color: #343332; font-size: 13px; padding: 8px 24px ;  line-height: 20px; font-weight: 600; display: table-cell;}
 .detail_cont .info {
   margin: 68px 0 32px;
   .info_title{
@@ -686,6 +691,7 @@ code {
       content:''; 
       left: 48%;
       top: -30px;
+      transform: translateX(-50%);
       background-image: url(../images/icons/title_deco.png);
       background-repeat: no-repeat;
       background-size: contain;

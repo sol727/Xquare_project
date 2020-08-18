@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import Header from '../components/header'
 import Footer from '../components/footer';
 import $ from 'jquery'
+import Mount from '../components/mount';
 
 export default class Invest_search extends React.Component {
     
@@ -22,10 +23,14 @@ export default class Invest_search extends React.Component {
         });
     
     }
+    onClickLink (link) {
+     window.location.pathname = link
+   }
 
     render() {
         return (
             <>
+               <Mount />
                 <Header />
 
                 <section className="invest_page">
@@ -81,8 +86,8 @@ export default class Invest_search extends React.Component {
                     <div className="cont">
                          <div className="container">
                               <ul className="list_wrap clearfix">
-                                   <li>
-                                        <Link to="/invest_detail">
+                                   <li onClick={() => this.onClickLink("/Invest_detail")}>
+                                        <Link to="">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                                                   <p className="label  funding">펀딩중 &middot; D-17</p>
@@ -101,8 +106,8 @@ export default class Invest_search extends React.Component {
                                              </div>
                                         </Link>
                                    </li>
-                                   <li>
-                                        <Link to="/invest_detail">
+                                   <li onClick={() => this.onClickLink("/Invest_detail")}>
+                                        <Link to="">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                                                   <p className="label  funding">펀딩중 &middot; D-17</p>
@@ -121,8 +126,8 @@ export default class Invest_search extends React.Component {
                                              </div>
                                         </Link>
                                    </li>
-                                   <li>
-                                        <Link to="/invest_detail">
+                                   <li onClick={() => this.onClickLink("/Invest_detail")}>
+                                        <Link to="">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                                                   <p className="label  funding">펀딩중 &middot; D-17</p>
@@ -141,8 +146,8 @@ export default class Invest_search extends React.Component {
                                              </div>
                                         </Link>
                                    </li>
-                                   <li>
-                                        <Link to="/invest_detail">
+                                   <li onClick={() => this.onClickLink("/Invest_detail")}>
+                                        <Link to="">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                                                   <p className="label  funding">펀딩중 &middot; D-17</p>
@@ -161,8 +166,8 @@ export default class Invest_search extends React.Component {
                                              </div>
                                         </Link>
                                    </li>
-                                   <li>
-                                        <Link to="/invest_detail">
+                                   <li onClick={() => this.onClickLink("/Invest_detail")}>
+                                        <Link to="">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                                                   <p className="label  funding">펀딩중 &middot; D-17</p>
@@ -181,8 +186,8 @@ export default class Invest_search extends React.Component {
                                              </div>
                                         </Link>
                                    </li>
-                                   <li>
-                                        <Link to="/invest_detail">
+                                   <li onClick={() => this.onClickLink("/Invest_detail")}>
+                                        <Link to="">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                                                   <p className="label  funding">펀딩중 &middot; D-17</p>
@@ -201,8 +206,8 @@ export default class Invest_search extends React.Component {
                                              </div>
                                         </Link>
                                    </li>
-                                   <li>
-                                        <Link to="/invest_detail">
+                                   <li onClick={() => this.onClickLink("/Invest_detail")}>
+                                        <Link to="">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                                                   <p className="label  end">펀딩종료</p>
@@ -221,8 +226,8 @@ export default class Invest_search extends React.Component {
                                              </div>
                                         </Link>
                                    </li>
-                                   <li>
-                                        <Link to="/invest_detail">
+                                   <li onClick={() => this.onClickLink("/Invest_detail")}>
+                                        <Link to="">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                                                   <p className="label  funding">펀딩중 &middot; D-17</p>
@@ -241,8 +246,8 @@ export default class Invest_search extends React.Component {
                                              </div>
                                         </Link>
                                    </li>
-                                   <li>
-                                        <Link to="/invest_detail">
+                                   <li onClick={() => this.onClickLink("/Invest_detail")}>
+                                        <Link to="">
                                              <div className="img_box">
                                                   <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                                                   <p className="label  funding">펀딩중 &middot; D-17</p>
