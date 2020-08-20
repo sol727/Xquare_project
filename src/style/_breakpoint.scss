@@ -68,7 +68,7 @@ $mob-s-width		: 375px;
 		}
 	}  
 
-	.invest_page.index .section .container {width: calc(100% - 38px); margin: 0 auto;}
+	.invest_page.index .section .container {width: calc(100% - 32px); margin: 0 auto;}
 
 	header .pc_header.container .left_box .center {min-width: 500px;}
 	header .pc_header.container .left_box .center li {width: 130px;}
@@ -126,7 +126,7 @@ $mob-s-width		: 375px;
 	//투자하기 step1 
 	.step1 .slide_area {margin: 40px 0 85px;}
 	.step1 .swiper-container {width: 90%;}
-	.container{width:calc(100% - 38px);}
+	.container{width:calc(100% - 32px);}
 
     //form_page
     .form_page{width:100%;min-height:calc(100vh - 446px);
@@ -170,7 +170,7 @@ $mob-s-width		: 375px;
     
 
     //footer
-    footer .container{width:calc(100% - 38px);}
+    footer .container{width:calc(100% - 32px);}
 
     // 팝업----------------------------------------------------------
     .pop_cont{width: 60%;padding:16px !important;
@@ -182,7 +182,7 @@ $mob-s-width		: 375px;
 
 }
 @include tab-middle(){
-	.detail_container {width: calc(100% - 38px); margin: 0 auto;}
+	.detail_container {width: calc(100% - 32px); margin: 0 auto;}
 	header .pc_header.container .left_box .logo {width: 100px;
 		img {width: 100%;}
 	}
@@ -202,7 +202,7 @@ $mob-s-width		: 375px;
 //default css--------------------------------------------------------------------------
  
   .container {
-	width: calc(100% - 38px);
+	width: calc(100% - 32px);
 	margin: 0 auto;
   }
 
@@ -356,7 +356,7 @@ $mob-s-width		: 375px;
 //투자하기상세----------------------------------------------------------
 	//공통
 	.count {font-size: 15px;}
-
+	.goal_box {margin-top:24px;}
 
 	.invest_detail .title_box {padding: 16px 0; margin: 8px 0;}	
 	.invest_detail .btn_wrap button.submit {width: 100%;}
@@ -644,7 +644,7 @@ $mob-s-width		: 375px;
 
 	// 아이디,비번찾기페이지
     .search_page{
-        .container{width:calc(100% - 38px);}
+        .container{width:calc(100% - 32px);}
         .form_box{max-width:100%;}
     }
 
