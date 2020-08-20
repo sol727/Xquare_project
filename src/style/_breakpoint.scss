@@ -202,7 +202,7 @@ $mob-s-width		: 375px;
 //default css--------------------------------------------------------------------------
  
   .container {
-	width: calc(100% - 38px);
+	width: calc(100% - 32px);
 	margin: 0 auto;
   }
 
@@ -356,7 +356,7 @@ $mob-s-width		: 375px;
 //투자하기상세----------------------------------------------------------
 	//공통
 	.count {font-size: 15px;}
-
+	.goal_box {margin-top:24px;}
 
 	.invest_detail .title_box {padding: 16px 0; margin: 8px 0;}	
 	.invest_detail .btn_wrap button.submit {width: 100%;}
