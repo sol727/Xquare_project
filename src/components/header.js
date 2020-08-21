@@ -16,7 +16,7 @@ export default class Header extends React.Component {
             $(this).children('.sub_menu').hide();
         }); */
 
-        $('.mo_header .hamburger_wrap .close_btn').click(function(){
+        /* $('.mo_header .hamburger_wrap .close_btn').click(function(){
             $('.mo_header .hamburger_wrap .menu_wrap').animate({'right':'-100%'},500,function(){
                 $('.mo_header .hamburger_wrap').hide();
             });
@@ -25,12 +25,33 @@ export default class Header extends React.Component {
         $('.mo_header .burger_btn').click(function(){
             $('.mo_header .hamburger_wrap').show();
             $('.mo_header .hamburger_wrap .menu_wrap').animate({'right':'0'},500);
-        });
+        }); */
 
         $('.mo_header .logout_btn').click(function(){
             $('.mo_header .hamburger_wrap').show();
             $('.mo_header .hamburger_wrap .menu_wrap').animate({'right':'0'},500);
         });
+        
+        var posY;
+        $('.mo_header .burger_btn').click(function(){
+            posY = $(window).scrollTop();
+            $('html, body').addClass('not_scroll');
+            $('.mo_header .hamburger_wrap').show();
+            $('.mo_header .hamburger_wrap .menu_wrap').animate({'right':'0'},500);
+            $('section').css('top',-posY);
+        });
+
+        $('.mo_header .hamburger_wrap .close_btn').click(function(){
+            $('html, body').removeClass('not_scroll');
+            $('.mo_header .hamburger_wrap .menu_wrap').animate({'right':'-100%'},500,function(){
+                $('.mo_header .hamburger_wrap').hide();
+            });
+            posY = $(window).scrollTop(posY);	
+        });
+
+
+
+
     }
 
     onClickLink (link) {
@@ -150,7 +171,7 @@ export default class Header extends React.Component {
                                 </ul>
                             </div>
                                 {/* 로그아웃버튼은 로그인시에만 노출 */}
-                            <button type="button" className="logout_btn" onClick={() => this.onClickLink("/login")}>로그아웃</button>
+                            <button type="button" className="logout_btn floatR" onClick={() => this.onClickLink("/login")}>로그아웃</button>
                         </div>
                     </div>
                 </div>

@@ -83,6 +83,8 @@ input:focus{border-color: #fe8d40;}
 .playF {font-family: 'Play', sans-serif;}
 .pre{white-space: pre-line;line-height: 1.5;}
 .error_msg{font-size: 13px;color:#ff513e;margin-top:4px;}
+.not_scroll{position: fixed;overflow: hidden;width: 100%;height: 100%}
+.not_scroll section {position: relative;top: 0;}
 
 //breakpoint---------------------------------------------------------------------------
 .mo_only {display: none;}
@@ -332,6 +334,7 @@ header {
   z-index: 99;
   .dim {width: 100vh; height: 100vh; position: absolute; left: 0; top: 0; background:rgba(0,0,0,0.61);}
   .menu_wrap {
+    overflow-y: auto;
     position: absolute;
     right: -100%; 
     top: 0; 
@@ -346,7 +349,7 @@ header {
     .menu {
       padding: 16px;
     }    
-    .logout_btn {position: absolute; right:16px; bottom: 16px; font-size: 14px;line-height: 20px;padding: 4px 8px ; border: 1px solid #d5d5d5; border-radius: 4px; background: #ffffff;}
+    .logout_btn {font-size: 14px;line-height: 20px;padding: 4px 8px ; border: 1px solid #d5d5d5; border-radius: 4px; background: #ffffff; margin-right: 16px; margin-bottom: 20px;}
   }
   .notice_bell {margin-right: 0;}
 }
