@@ -80,6 +80,7 @@ input:focus{border-color: #fe8d40;}
 .floatL {float: left;}
 .d_ib {display: inline-block;}
 .bold {font-weight: bold;}
+.medium {font-weight: medium;}
 .playF {font-family: 'Play', sans-serif;}
 .pre{white-space: pre-line;line-height: 1.5;}
 .error_msg{font-size: 13px;color:#ff513e;margin-top:4px;}
@@ -98,7 +99,7 @@ input:focus{border-color: #fe8d40;}
 .gray4_color{color:#b8c4d2;}
 .white_color {color: #ffffff;}
 .dark_gray_color {color:#525251;}
-.black_color {color: #000;}
+.black_color {color: #343332;}
 .point_bg{background:#ff8e40;}
 .red_color{color:#ff513e !important;}
 .green_color{color:#5dcf17 !important;}
@@ -431,6 +432,3 @@ footer{padding-top: 60px;border-top:1px solid #d0d0cf;
   }
 
 }
-
-
-
