@@ -188,6 +188,8 @@ $mob-s-width		: 375px;
     .inquiry.detail.write .detail_cont {margin: 0 0 42px;}
     .alert_msg {text-align: left; margin-bottom: 0;}
 
+
+
 }
 @include tab-middle(){
 	.detail_container {width: calc(100% - 32px); margin: 0 auto;}
@@ -197,6 +199,25 @@ $mob-s-width		: 375px;
 	header .pc_header.container .left_box .center {min-width: 230px;}
 	header .pc_header.container .left_box .center li {width: 80px;}
 	header .pc_header.container .left_box .center li .menu {font-size: 14px;}
+
+
+	    /* 공지사항 */
+	    .notice .title_wrap {padding: 40px 0 30px;	}
+	    .notice .title_wrap h1 {font-size: 30.5px;}
+	    .notice .title_wrap h2 {font-size: 14px;}
+	    .top_box {width: 100%;
+		.search_input {width: 100%;}
+		}	
+		.notice_list li:first-child.notice_label p {padding: 4px 11px; font-size: 13px;}
+		.notice_list li {padding: 15px 10px;}
+		.notice_list li>ul>li {padding: 0 !important;}
+		.notice_list li ul li img {width: 12px; margin-top: -9px;}
+		.notice_list li:first-child.notice_label {width: 55px; padding: 0 !important; margin: unset;}
+		.notice_list_wrap .notice_list > li > ul > li:first-child {width: max-content; margin-right: 10px; font-size: 14px;}
+		.notice_list_wrap .notice_list > li > ul > li:nth-child(2){width: calc(100% - 40px); font-size: 14px; line-height: 1.5;}
+		.notice_list_wrap .notice_list > li > ul > li:nth-child(2) p {font-size: 14px; }
+		.notice_list_wrap .notice_list > li >.notice_cont > li:nth-child(2) {width: calc(100% - 65px);}
+		.notice_list_wrap .notice_list > li > ul > li:last-child {width: 100%; text-align: left; margin-top: 10px; font-size: 13px;}
 
 }
 
