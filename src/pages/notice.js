@@ -25,9 +25,9 @@ export default class Notice extends React.Component {
                     </div>
                     <div className="notice_list_wrap">
                         <div className="top clearfix2">
-                            <p className="total">전체 <span className="point_color">128</span>건</p>
+                            <p className="tota mo_none">전체 <span className="point_color">128</span>건</p>
                             <div className="clearfix2 top_box">
-                                <select className="" id="">
+                                <select className="mo_none" id="">
                                     <option value="">전체</option>
                                 </select>
                                 <div className="search_input">
@@ -37,7 +37,7 @@ export default class Notice extends React.Component {
                             </div>
                         </div>
                         <ul className="notice_list">
-                            <li className="head">
+                            <li className="head mo_none">
                                 <ul className="clearfix">
                                     <li>번호</li>
                                     <li>제목</li>
@@ -45,20 +45,83 @@ export default class Notice extends React.Component {
                                 </ul>
                             </li>
                             <li>
-                                <ul className="clearfix">
+                                <ul className="clearfix notice_cont">
                                     <li className="notice_label"><p>공지</p></li>
                                     <li className="ellipsis">Energy 투자서비스 개편 안내</li>
                                     <li>2019.12.20</li>
                                 </ul>
                             </li>
                             <li>
-                                <ul className="clearfix">
+                                <ul className="clearfix notice_cont">
                                     <li className="notice_label"><p>공지</p></li>
-                                    <li className="ellipsis new"><p className="ellipsis">서비스 점검으로 인한 사이트 이용 중단 안내 서비스 점검서비스 점검으로 인한 사이트 이용 중단 안내 서비스 점검서비스 점검으로 인한 사이트 이용 중단 안내 서비스 점검서비스 점검으로 인한 사이트 이용 중단 안내 서비스 점검서비스 점검으로 인한 사이트 이용 중단 안내 서비스 점검</p></li>
+                                    <li className="ellipsis new"><p className="ellipsis">서비스 점검으로 인한 사이트 이용 중단 안내 서비스 점검서비스 점검으로 인한 사이트 이용 중단 안내 서비스 점검서비스 점검으로 인한 사이트 이용 중단 안내 서비스 점검서비스 점검으로 인한 사이트 이용 중단 안내 서비스 점검서비스 점검으로 인한 사이트 이용 중단 안내 서비스 점검</p><img src={ require('../images/icons/new_icon.png') } alt="뉴아이콘" className="new_icon"/><img src={ require('../images/icons/file_icon.png') } alt="파일아이콘" className="file_icon"/></li>
+                                    <li>2019.12.20</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul className="clearfix">
+                                    <li className="">126</li>
+                                    <li className="ellipsis new"><p className="ellipsis">플랫폼 운영방향 공지 </p><img src={ require('../images/icons/new_icon.png') } alt="뉴아이콘" className="new_icon"/><img src={ require('../images/icons/file_icon.png') } alt="파일아이콘" className="file_icon"/></li>
+                                    <li>2019.12.20</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul className="clearfix">
+                                    <li className="">126</li>
+                                    <li className="ellipsis"><p className="ellipsis">플랫폼 운영방향 공지</p><img src={ require('../images/icons/new_icon.png') } alt="뉴아이콘" className="new_icon"/><img src={ require('../images/icons/file_icon.png') } alt="파일아이콘" className="file_icon"/></li>
+                                    <li>2019.12.20</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul className="clearfix">
+                                    <li className="">126</li>
+                                    <li className="ellipsis"><p className="ellipsis">서비스 점검으로 인한 사이트 이용 중단 안내 서비스 점검서비스 점검으로 인한 사이트 이용 중단 안내 서비스 점검서비스 점검으로 인한 사이트 이용 중단 안내 서비스 점검서비스 점검으로 인한 사이트 이용 중단 안내 서비스 점검서비스 점검으로 인한 사이트 이용 중단 안내 서비스 점검</p><img src={ require('../images/icons/new_icon.png') } alt="뉴아이콘" className="new_icon"/><img src={ require('../images/icons/file_icon.png') } alt="파일아이콘" className="file_icon"/></li>
+                                    <li>2019.12.20</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul className="clearfix">
+                                    <li className="">126</li>
+                                    <li className="ellipsis file"><p className="ellipsis">개인정보취급방침 개정 안내</p><img src={ require('../images/icons/new_icon.png') } alt="뉴아이콘" className="new_icon"/><img src={ require('../images/icons/file_icon.png') } alt="파일아이콘" className="file_icon"/></li>
+                                    <li>2019.12.20</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul className="clearfix">
+                                    <li className="">126</li>
+                                    <li className="ellipsis"><p className="ellipsis">플랫폼 운영방향 공지</p><img src={ require('../images/icons/new_icon.png') } alt="뉴아이콘" className="new_icon"/><img src={ require('../images/icons/file_icon.png') } alt="파일아이콘" className="file_icon"/></li>
+                                    <li>2019.12.20</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul className="clearfix">
+                                    <li className="">126</li>
+                                    <li className="ellipsis"><p className="ellipsis">플랫폼 운영방향 공지</p><img src={ require('../images/icons/new_icon.png') } alt="뉴아이콘" className="new_icon"/><img src={ require('../images/icons/file_icon.png') } alt="파일아이콘" className="file_icon"/></li>
+                                    <li>2019.12.20</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul className="clearfix">
+                                    <li className="">126</li>
+                                    <li className="ellipsis"><p className="ellipsis">플랫폼 운영방향 공지</p><img src={ require('../images/icons/new_icon.png') } alt="뉴아이콘" className="new_icon"/><img src={ require('../images/icons/file_icon.png') } alt="파일아이콘" className="file_icon"/></li>
                                     <li>2019.12.20</li>
                                 </ul>
                             </li>
                         </ul>	
+                    </div>
+                    <div class="pagination mo_none">
+                        <Link to="" ><img src={ require('../images/icons/pagin_prev.png') } alt="다음페이지"/></Link>
+                        <Link to="" className="active">1</a>
+                        <Link to="">2</Link>
+                        <Link to="">3</Link>
+                        <Link to="">4</Link>
+                        <Link to="">5</Link>
+                        <Link to="">6</Link>
+                        <Link to="">7</Link>
+                        <Link to="">8</Link>
+                        <Link to="">9</Link>
+                        <Link to="">10</Link>
+                        <Link to=""><img src={ require('../images/icons/pagin_next.png') } alt="다음페이지"/></Link>
                     </div>
                 </div>
             </section>
