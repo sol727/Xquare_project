@@ -1675,3 +1675,59 @@ code {
 .invest_account_pop.mo_invest{
   .info_p{font-size: 13px;background-image:url(../images/icons/info_icon.png);background-repeat: no-repeat;background-position-x: left;background-position-y: 10px;padding:10px 0 10px 34px;line-height: 1.5;margin-bottom: 20px;}
 }
+
+
+/* 추가페이지-------------------------------------------------------------------- */
+/* 문의하기 view */
+.inquiry.detail .detail_cont {margin: 24px 0 100px;}
+.inquiry.detail.write .detail_cont {margin:66px 0 100px ;}
+.inquiry.detail .container {width: 1200px; }
+.inquiry.detail.write .container {width: 996px;}
+.inquiry.detail .name {font-size: 14px; font-weight: 600; line-height: 22px; margin-bottom: 14px;}
+.btn2 {padding: 8px 24px; font-size: 15px; font-weight: 600; color: #343332; } 
+.alert_msg {width: 100%; text-align: center; background: #f9f9f9; border-radius: 8px; font-size: 13px; line-height: 20px; color: #6e6e6d; padding: 4px 8px; margin-bottom: 24px; margin-top: 12px;} 
+.input_wrap {position: relative; margin-bottom: 8px;}
+.input_wrap input {padding: 13px 16px;}
+.input_wrap span {position: absolute; right: 16px; bottom: 10px; color: #bfbfbf; font-size: 13px; }
+.inquiry_text_box {min-height: 248px;}
+
+
+/*공지사항*/
+.notice .title_wrap h1{font-size: 50px; color: #343332; line-height: 30.5px; letter-spacing: -1.5px; margin-bottom: 20px;}
+.notice .title_wrap h2 {font-size: 19.5px; line-height: 30.5px; color: #535352; font-weight: normal;}
+.notice .title_wrap {padding: 80px 0 60px;}
+.notice_list_wrap .top {margin-bottom: 18px; }
+.notice_list_wrap .total {font-size: 16px; line-height: 22px; color: #9a9a99; margin-top: 26px;}
+.top_box  {width: 40%; }
+.top_box select {width: calc(30% - 16px); margin-right: 16px;}
+.top_box .search_input {width: 70%; position: relative; }
+.top_box .search_input input {border: 1px solid #d6d6d6;}
+.top_box .search_input button {position: absolute; width: 42px; height: 42px; right: 0; top: 0; }
+.notice_list_wrap .head {border-top: 2px solid #ff8e40;}
+.notice_list_wrap .head * {background: #f7f7f7; text-align: center; }
+.notice_list_wrap .head>ul>li {padding: 21px 0; font-size: 18px; color: #343332 !important;  font-weight: 600;}
+.notice_list_wrap .notice_list>li>ul>li:first-child , .notice_list_wrap .notice_list>li>ul>li:last-child {width: 12%; text-align: center; padding: 21px 0; color: #9a9a99;}
+.notice_list_wrap .notice_list>li>ul>li:nth-child(2) {width: 76%; padding: 21px 40px; font-size: 16px; font-weight: 600;}
+
+.notice_list {
+  li{
+    &:first-child {font-size: 16px; color:#9a9a99; 
+        &.notice_label {
+          padding: 17px 0 !important;
+          p{font-size: 14px; color: #ffffff; padding: 6px 18px; background: #ff8e40; border-radius: 2px; width: max-content; margin: auto;}
+        }
+      }
+    ul {
+      li{
+        &.new{    
+          p{position: relative; max-width: calc(100% - 40px); width: auto;
+            &:after {position: absolute; content:''; background-image: url(../images/icons/new_icon.png); background-position: center; width: 14px; height: 15px; right: -24px; top: 2px;}
+          }
+        }
+        
+      }  
+
+    }  
+  }
+}
+

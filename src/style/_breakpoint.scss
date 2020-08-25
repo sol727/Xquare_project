@@ -180,6 +180,14 @@ $mob-s-width		: 375px;
 
     .test_pass_pop .pop_cont{padding:40px 16px !important;}
 
+    /* 추가페이지------------------------------------ */
+    /* 문의하기 상세 */
+    .inquiry.detail .container {width: 100%; }
+    .inquiry.detail.write .container {width: 100%; }
+    .inquiry.detail .detail_cont {margin: 0;}
+    .inquiry.detail.write .detail_cont {margin: 0 0 42px;}
+    .alert_msg {text-align: left; margin-bottom: 0;}
+
 }
 @include tab-middle(){
 	.detail_container {width: calc(100% - 32px); margin: 0 auto;}
@@ -680,6 +688,10 @@ $mob-s-width		: 375px;
     .share_pop{
         .copy_txt{top:unset;bottom:32px;}
     }
+
+    //추가페이지-------------------------------------------------------
+	//문의하기 상세
+    .inquiry_text_box {min-height: 60vh;} 
 
 
 }
