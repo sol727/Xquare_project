@@ -3,6 +3,7 @@ import * as js from '../js/style'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import $ from 'jquery'
+import { Link } from 'react-router-dom';
 import Mount from '../components/mount';
 
 export default class Notice extends React.Component {
@@ -109,20 +110,20 @@ export default class Notice extends React.Component {
                             </li>
                         </ul>	
                     </div>
-                    <div class="pagination mo_none">
-                        <Link to="" ><img src={ require('../images/icons/pagin_prev.png') } alt="다음페이지"/></Link>
-                        <Link to="" className="active">1</a>
-                        <Link to="">2</Link>
-                        <Link to="">3</Link>
-                        <Link to="">4</Link>
-                        <Link to="">5</Link>
-                        <Link to="">6</Link>
-                        <Link to="">7</Link>
-                        <Link to="">8</Link>
-                        <Link to="">9</Link>
-                        <Link to="">10</Link>
-                        <Link to=""><img src={ require('../images/icons/pagin_next.png') } alt="다음페이지"/></Link>
-                    </div>
+                    {/* <div class="pagination mo_none">
+                        <Link to="/" ></Link>
+                        <Link to="/" className="active">1</Link>
+                        <Link to="/">2</Link>
+                        <Link to="/">3</Link>
+                        <Link to="/">4</Link>
+                        <Link to="/">5</Link>
+                        <Link to="/">6</Link>
+                        <Link to="/">7</Link>
+                        <Link to="/">8</Link>
+                        <Link to="/">9</Link>
+                        <Link to="/">10</Link>
+                        <Link to="/"></Link>
+                    </div> */}
                 </div>
             </section>
 
