@@ -1,0 +1,20 @@
+
+// 문의하기
+.inquiry{min-height: calc(100vh - 447px);
+    .prepare_ul{margin:0 auto;
+        li .txt h3 {padding-bottom:12px;}
+        li button{margin-top:0px;}
+    }
+
+}
+.inquiry_check{
+    .container{width:588px;padding-bottom:124px;}
+    .number_box{
+        input{width:calc(100% - 204px);}
+        button{width:180px;height:40px;font-size:15px;}
+        .code_box{width:calc(100% - 204px);position:relative;}
+        .code_box.time span{display:block;}
+        .code_box input{width:100%;}
+        .code_box span{position:absolute;font-size:13px;color:#bfbfbf;right:20px;top:50%;transform:translateY(-50%);display:none;}
+    }
+}
