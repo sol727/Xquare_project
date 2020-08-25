@@ -12,6 +12,7 @@ export default class Index2 extends React.Component {
                 <ul style={{padding:'50px 20px'}}>
                     <li style={{fontSize:'20px',marginBottom:'10px'}}>메인</li>
                     <li><Link to="/"><span>메인</span></Link></li>
+                    <li><Link to="/intro"><span>소개페이지</span></Link></li>
                     <li style={{fontSize:'20px',marginBottom:'10px',marginTop:'10px'}}>로그인,회원가입</li>
                     <li><Link to="/login"><span>로그인</span></Link></li>
                     <li><Link to="/signup"><span>회원가입메인</span></Link></li>
@@ -40,6 +41,19 @@ export default class Index2 extends React.Component {
                     <li><Link to="/invest_detail3_add"><span>투자하기 상세 - 커뮤니티탭 글작성</span></Link></li>
                     <li><Link to="/invest_detail4"><span>투자하기 상세 - 부가정보탭</span></Link></li>
                     <li><Link to="/invest_detail5"><span>투자하기 상세 - 투자현황탭</span></Link></li>
+                    <li style={{fontSize:'20px',marginBottom:'10px',marginTop:'10px'}}>1:1문의하기</li>
+                    <li><Link to="/inquiry"><span>1:1문의하기</span></Link></li>
+                    <li><Link to="/inquiry_check"><span>비회원 1:1문의하기</span></Link></li>
+                    <li><Link to="/inquiry_check_member"><span>회원 1:1문의하기</span></Link></li>
+                    <li><Link to="/inquiry_write"><span>1:1문의하기 - 작성</span></Link></li>
+                    <li><Link to="/inquiry_detail"><span>1:1문의하기 - 상세</span></Link></li>
+                    <li style={{fontSize:'20px',marginBottom:'10px',marginTop:'10px'}}>소식</li>
+                    <li><Link to="/notice"><span>공지사항</span></Link></li>
+                    <li><Link to="/notice_detail"><span>공지사항 - 상세</span></Link></li>
+                    <li><Link to="/news"><span>언론보도</span></Link></li>
+                    <li><Link to="/news_detail"><span>언론보도 - 상세</span></Link></li>
+                    <li><Link to="/event"><span>이벤트</span></Link></li>
+                    <li><Link to="/event_detail"><span>이벤트 - 상세</span></Link></li>
                     <li style={{fontSize:'20px',marginBottom:'10px',marginTop:'10px'}}>약관</li>
                     <li><Link to="/terms1"><span>이용약관 - 가입약관</span></Link></li>
                     <li><Link to="/terms2"><span>이용약관 - 개인정보처리방침</span></Link></li>
