@@ -18,3 +18,13 @@
         .code_box span{position:absolute;font-size:13px;color:#bfbfbf;right:20px;top:50%;transform:translateY(-50%);display:none;}
     }
 }
+
+// 소식페이지
+.news_page{
+    .top_banner{background-image: url(../images/banner_img.png);}
+    .invest_top_box>ul>li:last-child{
+        background-image:url(../images/icons/select_icon.png);background-repeat: no-repeat;background-position-x: calc(100% - 16px);background-position-y:center;background-size: 9px;cursor: pointer;position: relative;
+    }
+    .news_top_ul{position: absolute;width: 100%;}
+
+}
