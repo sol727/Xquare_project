@@ -43,7 +43,7 @@ export default class Terms3 extends React.Component {
                                 <div className="rightT">
                                     <button type="button">이전 가입약관 보기</button>
                                 </div>
-                                <h1 className="top_title">투자서비스 이용약관</h1>
+                                <h1 className="top_title">서비스 이용약관</h1>
                                 <p className="date">·시행일자: 2020년 02월 04일</p>
                             </div>
                             <ul className="terms_ul">
