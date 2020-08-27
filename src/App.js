@@ -1,9 +1,7 @@
 import React from 'react';
 import './style/common.scss';
 import './style/style.scss';
-import './style/style2.scss';
 import './style/_breakpoint.scss';
-import './style/_breakpoint2.scss';
 import { BrowserRouter , Route } from 'react-router-dom';
 
 /* 페이지 */
@@ -42,18 +40,6 @@ import Mo_invest_test from './pages/mo_invest_test';
 import Invest_complete from './pages/invest_complete';
 import Index2 from './pages/index2';
 
-import Intro from './pages/intro';
-import Inquiry from './pages/inquiry';
-import Inquiry_check from './pages/inquiry_check';
-import Inquiry_check_member from './pages/inquiry_check_member';
-import Inquiry_write from './pages/inquiry_write';
-import Inquiry_detail from './pages/inquiry_detail';
-import Notice from './pages/notice';
-import Notice_detail from './pages/notice_detail';
-import News from './pages/news';
-import News_detail from './pages/news_detail';
-import Event from './pages/event';
-import Event_detail from './pages/event_detail';
 
 
 
@@ -97,19 +83,7 @@ function App() {
         <Route path="/invest_step2" component={Invest_step2}/>
         <Route path="/invest_step3" component={Invest_step3}/>
         <Route path="/invest_complete" component={Invest_complete}/>
-        
-        <Route path="/intro" component={Intro}/>
-        <Route path="/inquiry" component={Inquiry}/>
-        <Route path="/inquiry_check" component={Inquiry_check}/>
-        <Route path="/inquiry_check_member" component={Inquiry_check_member}/>
-        <Route path="/inquiry_write" component={Inquiry_write}/>
-        <Route path="/inquiry_detail" component={Inquiry_detail}/>
-        <Route path="/notice" component={Notice}/>
-        <Route path="/notice_detail" component={Notice_detail}/>
-        <Route path="/news" component={News}/>
-        <Route path="/news_detail" component={News_detail}/>
-        <Route path="/event" component={Event}/>
-        <Route path="/event_detail" component={Event_detail}/>
+
 
         
     </BrowserRouter>
