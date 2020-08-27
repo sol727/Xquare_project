@@ -43,8 +43,6 @@ import Index2 from './pages/index2';
 
 
 
-
-
 /* 페이지 */
 
 function App() {
