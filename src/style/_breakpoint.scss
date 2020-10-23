@@ -143,7 +143,7 @@ $mob-s-width		: 375px;
             h1{font-size: 28px;line-height: 132px;}
         }
         .invest_top_box{
-            ul{width:100%;}
+            >ul{width:100%;}
         }
         .big_title{font-size: 28px;width: 100%;}
         .prepare_ul{width:100%;margin:60px auto 0;
@@ -179,6 +179,7 @@ $mob-s-width		: 375px;
     }
 
     .test_pass_pop .pop_cont{padding:40px 16px !important;}
+
 
 
 }
@@ -499,7 +500,7 @@ $mob-s-width		: 375px;
     // 투자하기페이지
     .invest_page{
         .invest_top_box{
-            li{width:50%;}
+            >ul>li{width:50%;}
         }
     }
     // 투자한도조회
@@ -684,6 +685,5 @@ $mob-s-width		: 375px;
     .share_pop{
         .copy_txt{top:unset;bottom:32px;}
     }
-
 
 }

@@ -41,8 +41,6 @@ import Invest_complete from './pages/invest_complete';
 import Index2 from './pages/index2';
 
 
-
-
 /* 페이지 */
 
 function App() {
@@ -81,8 +79,6 @@ function App() {
         <Route path="/invest_step2" component={Invest_step2}/>
         <Route path="/invest_step3" component={Invest_step3}/>
         <Route path="/invest_complete" component={Invest_complete}/>
-
-
         
     </BrowserRouter>
   );
