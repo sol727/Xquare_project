@@ -91,7 +91,7 @@ function App() {
         <Route path="/v3_project" component={V3_Project}/>
         <Route path="/v3_project2" component={V3_Project2}/>
         <Route path="/v3_project_state" component={V3_Project_state}/>
-        <Route path="/V3_account" component={V3_Account}/>
+        <Route path="/v3_account" component={V3_Account}/>
         
     </BrowserRouter>
   );
