@@ -1,0 +1,11 @@
+.v3{
+    // 공통
+    .tab_ul{width:384px;
+        li{width:calc(50% - 12px);}
+        li a{font-size:14px;width:100%;padding:8px 0;}
+    }
+    // 개설한프로젝트
+    &.project{
+        .top_box h1{font-size:40px;width:100%;}
+    }
+}
