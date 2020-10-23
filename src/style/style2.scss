@@ -1,0 +1,23 @@
+.v3{
+     //프로젝트 스튜디오 gnb
+     &.studio_gnb{
+          position: relative;
+          width: 306px;
+          height: 100vh;
+          background-color: #ffffff;
+          .gnb_btn {
+               position: absolute;
+               right: -56px;
+               top: 0;
+               padding: 16px;
+               img {width: 24px;}
+          }
+          ul {
+               width: 100%; 
+               height: 100% ;
+               background-color: #1f318d;
+               border-radius: 0 20px 20px 0;
+          }
+     }
+
+}
