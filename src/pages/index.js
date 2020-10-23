@@ -8,6 +8,9 @@ import "slick-carousel/slick/slick.scss";
 import $ from 'jquery'
 import Mount from '../components/mount';
 
+import MainBannerSlide from '../components/mainBannerSlide'
+import XquareList from '../components/XquareList'
+
 export default class Index extends React.Component {
 
   constructor(props) {
@@ -15,7 +18,6 @@ export default class Index extends React.Component {
 
     this.state = {
       width : $(window).width(),
-      focus : 0
     }
 
     this.sliderEvent = this.sliderEvent.bind(this)
@@ -53,189 +55,12 @@ export default class Index extends React.Component {
         <Header />
         <section className="index main">
           {/* 메인배너슬라이드 ------------------- */}
-          <div className="main_banner_wrap">
-            <ul className="main_banner" >
-              <Slider slidesToShow={1} slidesToScroll={1} speed={500} dots={false} infinite={false} beforeChange={this.sliderEvent}>
-                <li onClick={() => this.onClickLink("/Invest_index")}>
-                    <div className="text" >
-                        <h1 className="white_color">누구나 쉽게 투자하는</h1>
-                        <h1>에너지 금융</h1>
-                        <p className="white_color">지구를 깨끗하게 하는 신재생 에너지 발전<br/>안정적인 금융상품에 직접 투자하세요.</p>
-                        <button type="button" className="white_color">투자하러가기 <img src={ require('../images/icons/w_arrow.png') } alt="화살표아이콘"/></button>
-                    </div>
-                </li>
-                <li onClick={() => this.onClickLink("/Invest_index")}>
-                    <div className="text" >
-                        <h1 className="white_color">누구나 쉽게 투자하는</h1>
-                        <h1>에너지 금융2</h1>
-                        <p className="white_color">지구를 깨끗하게 하는 신재생 에너지 발전<br/>안정적인 금융상품에 직접 투자하세요.</p>
-                        <button type="button" className="white_color">투자하러가기 <img src={ require('../images/icons/w_arrow.png') } alt="화살표아이콘"/></button>
-                    </div>
-                </li>
-                <li onClick={() => this.onClickLink("/Invest_index")}>
-                  <div className="text" >
-                      <h1 className="white_color">누구나 쉽게 투자하는</h1>
-                      <h1>에너지 금융3</h1>
-                      <p className="white_color">지구를 깨끗하게 하는 신재생 에너지 발전<br/>안정적인 금융상품에 직접 투자하세요.</p>
-                      <button type="button" className="white_color">투자하러가기 <img src={ require('../images/icons/w_arrow.png') } alt="화살표아이콘"/></button>
-                  </div>
-                </li>     
-              </Slider>
-            </ul>
-            <ul className="dot_wrap clearfix">
-              <li className={ this.state.focus === 0 ? "active" : ""  } ></li>
-              <li className={ this.state.focus === 1 ? "active" : ""  } ></li>
-              <li className={ this.state.focus === 2 ? "active" : ""  } ></li>
-            </ul>
-          </div>
+          <MainBannerSlide />
           {/* -------------------메인배너슬라이드  */}
           {/*Xquare List ---------------------------*/}
-          <div className="section1">
-            <div className="container">
-              <h1 className="title centerT playF">Xquare List</h1>
-              <p className="sub_title centerT">엑스퀘어의 친환경 투자상품을 소개합니다.</p>
-              <ul className="list_wrap clearfix">
-                {
-                  this.state.width > 767 ?
-                  <>
-
-                    <li className="slick-item" onClick={() => this.onClickLink("/Invest_detail")}>
-                      <Link to="" >
-                        <div className="img_box">
-                          <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
-                          <p className="label  funding">펀딩중 &middot; D-17</p>
-                        </div>
-                        <div className="text"> 
-                          <ul className="label_wrap clearfix">
-                            <li>태양광/소형</li>
-                            <li>주식형(보통주)</li>
-                          </ul>
-                          <h2 className="ellipsis2">상품 제목이 나타납니다. 상품 제목이 나타납니다.상품 제목이 나타납니다.</h2>
-                          <div className="bar"></div>
-                          <div className="clearfix2 total">
-                            <p className="point_color">90%</p>
-                            <p>100,218,392,500원</p>
-                          </div>
-                        </div>
-                      </Link>
-                  </li>
-                  <li className="slick-item" onClick={() => this.onClickLink("/Invest_detail")}>
-                    <Link to="">
-                        <div className="img_box">
-                          <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
-                          <p className="label  open">오픈예정 &middot; D-17</p>
-                        </div>
-                        <div className="text"> 
-                          <ul className="label_wrap clearfix">
-                            <li>태양광/소형</li>
-                            <li>주식형(보통주)</li>
-                          </ul>
-                          <h2 className="ellipsis2">상품 제목이 나타납니다. 상품 제목이 나타납니다.상품 제목이 나타납니다.</h2>
-                          <div className="bar"></div>
-                          <div className="clearfix2 total">
-                            <p className="point_color">90%</p>
-                            <p>100,218,392,500원</p>
-                          </div>
-                        </div>
-                      </Link>
-                  </li>
-                  <li className="slick-item" onClick={() => this.onClickLink("/Invest_detail")}>
-                    <Link to="">
-                        <div className="img_box">
-                          <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
-                          <p className="label end">펀딩종료</p>
-                        </div>
-                        <div className="text"> 
-                          <ul className="label_wrap clearfix">
-                            <li>태양광/소형</li>
-                            <li>주식형(보통주)</li>
-                          </ul>
-                          <h2 className="ellipsis2">상품 제목이 나타납니다. 상품 제목이 나타납니다.상품 제목이 나타납니다.</h2>
-                          <div className="bar"></div>
-                          <div className="clearfix2 total">
-                            <p className="point_color">90%</p>
-                            <p>100,218,392,500원</p>
-                          </div>
-                        </div>
-                      </Link>
-                  </li>
-                  </>
-                  :
-                  <Slider slidesToShow={1} slidesToScroll={1} speed={500} dots={false} infinite={false} beforeChange={this.sliderEvent}  >
-                  <li className="slick-item" onClick={() => this.onClickLink("/Invest_detail")}>
-                      <Link to="">
-                        <div className="img_box">
-                          <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
-                          <p className="label  funding">펀딩중 &middot; D-17</p>
-                        </div>
-                        <div className="text"> 
-                          <ul className="label_wrap clearfix">
-                            <li>태양광/소형</li>
-                            <li>주식형(보통주)</li>
-                          </ul>
-                          <h2 className="ellipsis2">상품 제목이 나타납니다. 상품 제목이 나타납니다.상품 제목이 나타납니다.</h2>
-                          <div className="bar"></div>
-                          <div className="clearfix2 total">
-                            <p className="point_color">90%</p>
-                            <p>100,218,392,500원</p>
-                          </div>
-                        </div>
-                      </Link>
-                  </li>
-                  <li className="slick-item" onClick={() => this.onClickLink("/Invest_detail")}>
-                    <Link to="">
-                        <div className="img_box">
-                          <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
-                          <p className="label  open">오픈예정 &middot; D-17</p>
-                        </div>
-                        <div className="text"> 
-                          <ul className="label_wrap clearfix">
-                            <li>태양광/소형</li>
-                            <li>주식형(보통주)</li>
-                          </ul>
-                          <h2 className="ellipsis2">상품 제목이 나타납니다. 상품 제목이 나타납니다.상품 제목이 나타납니다.</h2>
-                          <div className="bar"></div>
-                          <div className="clearfix2 total">
-                            <p className="point_color">90%</p>
-                            <p>100,218,392,500원</p>
-                          </div>
-                        </div>
-                      </Link>
-                  </li>
-                  <li className="slick-item" onClick={() => this.onClickLink("/Invest_detail")}>
-                    <Link to="">
-                        <div className="img_box">
-                          <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
-                          <p className="label end">펀딩종료</p>
-                        </div>
-                        <div className="text"> 
-                          <ul className="label_wrap clearfix">
-                            <li>태양광/소형</li>
-                            <li>주식형(보통주)</li>
-                          </ul>
-                          <h2 className="ellipsis2">상품 제목이 나타납니다. 상품 제목이 나타납니다.상품 제목이 나타납니다.</h2>
-                          <div className="bar"></div>
-                          <div className="clearfix2 total">
-                            <p className="point_color">90%</p>
-                            <p>100,218,392,500원</p>
-                          </div>
-                        </div>
-                      </Link>
-                  </li>
-                </Slider>
-                }              
-              </ul>
-              <ul className="dot_wrap clearfix mo_only">
-                <li className={ this.state.focus === 0 ? "active" : ""  } ></li>
-                <li className={ this.state.focus === 1 ? "active" : ""  } ></li>
-                <li className={ this.state.focus === 2 ? "active" : ""  } ></li>
-              </ul>
-              <div className="btn_wrap centerT">
-                <button type="button" className="more_btn" onClick={() => this.onClickLink("/Invest_search")}>더보기<img src={ require('../images/icons/more_arrow.png') } alt="더보기아이콘"/></button>
-              </div>            
-            </div>          
-          </div>
-          {/*--------------------------- Xquare List */}
+          <XquareList title="Xquare List" />
+          {/*--------------------------- Xquar
+          e List */}
           {/* Xquare Contribution --------------------------- */}
           <div className="section2">
             <div className="gray_bg">

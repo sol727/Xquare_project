@@ -8,11 +8,15 @@ export default class Header extends React.Component {
     }
     componentDidMount(){
 
+        document.querySelector('.mo_header .logout_btn').addEventListener('click',function(){
+            document.querySelector('.mo_header .hamburger_wrap').style.display = 'block'
 
-        $('.mo_header .logout_btn').click(function(){
-            $('.mo_header .hamburger_wrap').show();
-            $('.mo_header .hamburger_wrap .menu_wrap').animate({'right':'0'},500);
-        });
+        })
+
+       $('.mo_header .logout_btn').click(function(){
+           $('.mo_header .hamburger_wrap').show();
+           $('.mo_header .hamburger_wrap .menu_wrap').animate({'right':'0'},500);
+       });
         
         var posY;
         $('.mo_header .burger_btn').click(function(){
