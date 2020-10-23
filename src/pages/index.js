@@ -58,9 +58,8 @@ export default class Index extends React.Component {
           <MainBannerSlide />
           {/* -------------------메인배너슬라이드  */}
           {/*Xquare List ---------------------------*/}
-          <XquareList title="Xquare List" />
-          {/*--------------------------- Xquar
-          e List */}
+          <XquareList title="Xquare LIst" />
+          {/*--------------------------- Xquare List */}
           {/* Xquare Contribution --------------------------- */}
           <div className="section2">
             <div className="gray_bg">
