@@ -43,6 +43,10 @@ import Mo_invest_account from './pages/mo_invest_account';
 import Mo_invest_test from './pages/mo_invest_test';
 import Invest_complete from './pages/invest_complete';
 import Index2 from './pages/index2';
+import V3_Project from './pages/v3_project';
+import V3_Project2 from './pages/v3_project2';
+import V3_Project_state from './pages/v3_project_state';
+import V3_Account from './pages/v3_account';
 
 
 /* 페이지 */
@@ -83,6 +87,11 @@ function App() {
         <Route path="/invest_step2" component={Invest_step2}/>
         <Route path="/invest_step3" component={Invest_step3}/>
         <Route path="/invest_complete" component={Invest_complete}/>
+
+        <Route path="/v3_project" component={V3_Project}/>
+        <Route path="/v3_project2" component={V3_Project2}/>
+        <Route path="/v3_project_state" component={V3_Project_state}/>
+        <Route path="/V3_account" component={V3_Account}/>
         
     </BrowserRouter>
   );
