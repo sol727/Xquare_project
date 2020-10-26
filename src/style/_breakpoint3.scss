@@ -1,8 +1,8 @@
 // Break Point (Desktop First 기준 내림차순 설정)
 $desktop-l-width	: 1440px;
-$tablet-l-width		: 1200px;
+$tablet-l-width		: 1247px;
 $tablet-m-width		: 1023px;
-$tablet-s-width		: 768px;
+$tablet-s-width		: 767px;
 $mob-m-width		: 480px;
 $mob-s-width		: 375px;
 
@@ -50,4 +50,36 @@ $mob-s-width		: 375px;
 	@media screen and (max-width: #{$mob-s-width}) {
 		@content;
 	}
+}
+
+//------------------------------------------------------------------------------
+
+// 1023px;
+@include tab-middle{
+	.v3{
+		// 개설한프로젝트
+		&.project {
+			.gray_ul{display:none;}
+			.top_box h1{margin:36px 0 68px;}
+			.pro_list>li{width:calc(50% - 12px);}
+			.pro_list>li:nth-child(2n){margin-right:0px !important;}
+			.pro_list>li:nth-child(3n){margin-right:24px;}
+		}
+		
+	}
+	
+}
+
+// 767px
+@include tab-small{
+	.v3{
+		// 개설한프로젝트
+		&.project {
+			.tab_ul{width:100%;}
+			.gray_bg{padding:24px 0 0;}
+			.pro_list>li{width:100%;min-height:164px;}
+		}
+		
+	}
+	
 }
