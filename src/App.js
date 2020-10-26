@@ -43,10 +43,14 @@ import Mo_invest_account from './pages/mo_invest_account';
 import Mo_invest_test from './pages/mo_invest_test';
 import Invest_complete from './pages/invest_complete';
 import Index2 from './pages/index2';
+
 import V3_Project from './pages/v3_project';
 import V3_Project2 from './pages/v3_project2';
 import V3_Project_state from './pages/v3_project_state';
 import V3_Account from './pages/v3_account';
+import V3_Account2 from './pages/v3_account2';
+import V3_Account3 from './pages/v3_account3';
+import V3_Account4 from './pages/v3_account4';
 import V3_Feedback from './pages/v3_feedback';
 
 
@@ -93,7 +97,11 @@ function App() {
         <Route path="/v3_project2" component={V3_Project2}/>
         <Route path="/v3_project_state" component={V3_Project_state}/>
         <Route path="/v3_account" component={V3_Account}/>
+        <Route path="/v3_account2" component={V3_Account2}/>
+        <Route path="/v3_account3" component={V3_Account3}/>
+        <Route path="/v3_account4" component={V3_Account4}/>
         <Route path="/v3_feedback" component={V3_Feedback}/>
+      
         
     </BrowserRouter>
   );
