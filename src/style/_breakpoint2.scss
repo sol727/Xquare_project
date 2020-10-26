@@ -1,10 +1,10 @@
 // Break Point (Desktop First 기준 내림차순 설정)
 $desktop-l-width	: 1440px;
-$tablet-l-width		: 1200px;
+$tablet-l-width		: 1247px;
 $tablet-m-width		: 1023px;
-$tablet-s-width		: 768px;
+$tablet-s-width		: 767px;
 $mob-m-width		: 480px;
-$mob-s-width		: 375px;
+$mob-s-width		: 360px;
 
 // only PC
 @mixin pc-only {
@@ -50,4 +50,76 @@ $mob-s-width		: 375px;
 	@media screen and (max-width: #{$mob-s-width}) {
 		@content;
 	}
+}
+
+//------------------------------------------------------------------------------
+// 1247px;
+@include tab{
+	.back_header {display: block;}
+	.v3{
+		.studio_gnb {display: none;}
+		.cont {
+			width: 100%;
+			.container {
+				padding: 0 16px;
+			}
+			.top_box {	
+				margin-top: 0;
+			}
+			
+		}
+
+	}
+	
+}
+
+// 1023px;
+@include tab-middle{
+	.v3{
+		
+		
+	}
+	
+}
+
+// 767px
+@include tab-small{
+	.v3{
+		//common
+		.ul_50 {
+			li { width: 100%;}
+		}
+		.radio_list {
+			li {margin-bottom: 24px;}
+		}
+		.bottom_btn {
+			.btn {width: calc(50% - 4px); 	}			
+
+		}
+		//cont
+		.cont {
+			.top_box {				
+				.tab_ul li {
+					width: calc(25% - 6px);
+				}
+			}
+			.gray_bg {
+				.bd_box{
+					 .left {width: 100%; margin-bottom: 16px;}
+					 .right {width: 100% ; margin-left: 0;}
+				}
+				.tag_list {
+					li {
+						float: left;
+						margin-bottom: 24px;
+						display: block;
+					}
+				}
+
+			}
+			
+		}
+		
+	}
+	
 }

@@ -14,7 +14,7 @@ export default class Title extends React.Component {
                     <p style={{ color : this.props.buttonDisabled ? '#f00' : '#000' }}>투자자 노출</p> :
                     <></>
                }
-               <h3 className="title"><span className="playF">{this.props.num}</span>{this.props.title} </h3>
+               <h3 className="title"><span className="playF">{this.props.num}</span>{this.props.title}<span className="star">{this.props.star}</span></h3>
                {this.props.text}
           </div>
           
