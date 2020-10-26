@@ -47,6 +47,7 @@ import V3_Project from './pages/v3_project';
 import V3_Project2 from './pages/v3_project2';
 import V3_Project_state from './pages/v3_project_state';
 import V3_Account from './pages/v3_account';
+import V3_Feedback from './pages/v3_feedback';
 
 
 /* 페이지 */
@@ -92,6 +93,7 @@ function App() {
         <Route path="/v3_project2" component={V3_Project2}/>
         <Route path="/v3_project_state" component={V3_Project_state}/>
         <Route path="/v3_account" component={V3_Account}/>
+        <Route path="/v3_feedback" component={V3_Feedback}/>
         
     </BrowserRouter>
   );
