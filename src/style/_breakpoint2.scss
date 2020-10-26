@@ -98,7 +98,8 @@ $mob-s-width		: 360px;
 		}
 		//cont
 		.cont {
-			.top_box {				
+			.top_box {		
+				h3 {font-size: 30px;}		
 				.tab_ul li {
 					width: calc(25% - 6px);
 				}
