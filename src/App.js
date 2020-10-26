@@ -52,6 +52,7 @@ import V3_Account2 from './pages/v3_account2';
 import V3_Account3 from './pages/v3_account3';
 import V3_Account4 from './pages/v3_account4';
 import V3_Feedback from './pages/v3_feedback';
+import V3_investor_state from './pages/v3_investor_state';
 
 
 /* 페이지 */
@@ -101,6 +102,7 @@ function App() {
         <Route path="/v3_account3" component={V3_Account3}/>
         <Route path="/v3_account4" component={V3_Account4}/>
         <Route path="/v3_feedback" component={V3_Feedback}/>
+        <Route path="/v3_investor_state" component={V3_investor_state}/>
       
         
     </BrowserRouter>
