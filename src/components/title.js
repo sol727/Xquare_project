@@ -10,8 +10,8 @@ export default class Title extends React.Component {
         return (
             <div className="box_title">
                {
-                    this.props.buttonShow ?
-                    <p style={{ color : this.props.buttonDisabled ? '#f00' : '#000' }}>투자자 노출</p> :
+                    this.props.labelShow ?
+                    <p className="label" style={{ background_color : this.props.labelDisabled ? '#ff8e40' : '#bfbfbf' }}>{this.props.label_title}</p> :
                     <></>
                }
                <h3 className="title"><span className="playF">{this.props.num}</span>{this.props.title}<span className="star">{this.props.star}</span></h3>

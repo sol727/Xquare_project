@@ -35,7 +35,10 @@
      .bottom_btn {
           padding: 24px;
      }
-     .btn {background-color: #ff8e40; color: #fff; font-size: 15px; padding: 11px; width: 160px; height: 44px; line-height: 24px;} 
+     .btn {
+          background-color: #ff8e40; color: #fff; font-size: 15px; padding: 11px; width: 160px; height: 44px; line-height: 24px;
+          &.big {width: 328px; margin-bottom: 24px;}
+     } 
      .btn + button {margin-left: 8px;}
      
    
@@ -233,6 +236,7 @@
                          }
                          p {color: #6e6e6d; font-size: 13px; margin-bottom: 4px; line-height: 20px;}
                          .error {font-size: 13px; color: #ff513e;}
+                         .label {color: #fff; font-size: 13px; padding: 2px 12px; background-color:#ff8e40; display: inline-block; margin-bottom: 16px; border-radius: 12px;}
                          
                     }
                     .left {width: 30%; margin-right: 32px;}
