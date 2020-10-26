@@ -1,5 +1,21 @@
-.v3{
+//back_header
+.back_header {
+     display: none;
+     border: none;
+     >div{
+          padding: 16px 24px;
+     }     
+     .back_btn {
+          width: 24px;
+          height: 24px;
+          img{ width: 100%;}
+     }
+     .notice_bell {margin-right: 0;}
+}
+
+.v3{     
      //common 
+     .width_100 {width: 100% !important;}
      .ul_50{
           li{
                width: calc(50% - 12px);
@@ -15,6 +31,14 @@
                p {margin-top: 5px; color: #bfbfbf; font-size: 13px;}
           }
      }
+     //btn
+     .bottom_btn {
+          padding: 24px;
+     }
+     .btn {background-color: #ff8e40; color: #fff; font-size: 15px; padding: 11px; width: 160px; height: 44px; line-height: 24px;} 
+     .btn + button {margin-left: 8px;}
+     
+   
      //프로젝트 스튜디오 gnb
      &.studio_gnb{
           position: relative;
@@ -200,17 +224,36 @@
                     border-top: 2px solid #ffa566;
                     background: #fff;
                     margin-bottom: 36px;
+                    &:last-of-type {margin-bottom: 0;}
                     .box_title {
                          h3 {
                               font-size: 16px; color:#343332; margin-bottom: 4px;
                               span {font-size: 20px; color: #ff8e40;}
+                              .star {color: #ff513e; font-size: 16px;}
                          }
                          p {color: #6e6e6d; font-size: 13px; margin-bottom: 4px; line-height: 20px;}
                          .error {font-size: 13px; color: #ff513e;}
+                         
                     }
                     .left {width: 30%; margin-right: 32px;}
                     .right {
                          width: calc(70% - 32px);
+                    }
+                    .gray_box {
+                         width: 100%;
+                         margin-top: 16px;
+                         background-color: #f9f9f9;
+                         padding: 16px;
+                         .tag_list {
+                              text-align: center;
+                              li {
+                                   padding: 8px 24px; background: #fff; font-size: 15px; color: #ff8e40; margin-right: 24px;text-align: center;
+                                   border-radius: 18px;
+                                   display: inline-block;
+                                   &:last-child {margin-right: 0;
+                                   }                                   
+                              }
+                         }
                     }
                }
           }
