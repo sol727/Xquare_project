@@ -79,6 +79,13 @@ $mob-s-width		: 375px;
 			.gray_bg{padding:24px 0 0;}
 			.pro_list>li{width:100%;min-height:164px;}
 		}
+		// 피드백
+		&.feedback{
+			.feedback_li {padding:10px 16px;}
+			.feedback_li span{font-size:13px;}
+			.feedback_li p{font-size:15px;}
+			.detail_wrap .detail{padding:24px 16px;}
+		}
 		
 	}
 	
