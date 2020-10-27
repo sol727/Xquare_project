@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Header from '../components/header'
-import Footer from '../components/footer'
 import Studio_gnb from '../components/Studio_gnb'
 import Opinion from '../components/opinion'
 import CommentBox from '../components/commentBox'
@@ -15,7 +13,6 @@ export default class V3_investor_opinion extends React.Component {
     render() {
         return (
             <>
-                <Header />
                 <section className="v3 investor_opinion">
                     <div className="clearfix">
                         <Studio_gnb/>
@@ -128,26 +125,176 @@ export default class V3_investor_opinion extends React.Component {
 
                                             ButtonShow={false}
                                         />
+                                    </div>
+                                    <div className="comment_box">
                                         <CommentBox
                                             comment_num={true}
                                             num ="3"
-
                                             radio_li={
                                                 <>
                                                 <li>
-                                                    <input type="radio" name="radio1" className="" id="radio1_1"/>
+                                                    <input type="radio" name="radio1"className="" id="radio1_1"/>
                                                     <label htmlFor="radio1_1"></label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="radio1"className="" id="radio1_2"/>
+                                                    <label htmlFor="radio1_2"></label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="radio1"className="" id="radio1_3"/>
+                                                    <label htmlFor="radio1_3"></label>
                                                 </li>
                                                 </>
                                             }
                                         />
+                                        <div className="bottom_comment mt9">
+                                            <Opinion
+                                                
+                                                NameBoxShow={true}
+                                                feel_class="a"
+                                                name ="username"
+                                                TimeShow={false}
+                                                labelShow={true}
+                                                label="개인회원(일반투자자)"
+                                                
+                                                TitleShow={false}
+
+                                                DateShow={true}
+                                                txt_date="2020.05.01 06:05:46"
+
+                                                txt="How to build a loyal community online and offline How to build a loyal community online and offlineHow to build a loyal community online and offline How to build a loyal community online and offline"
+
+                                                ButtonShow={true}
+                                                button="답글 1"
+                                            />
+                                        </div>
+                                        <div className="bottom_comment">
+                                            <Opinion
+                                                
+                                                NameBoxShow={true}
+                                                feel_class="a"
+                                                name ="username"
+                                                TimeShow={false}
+                                                labelShow={true}
+                                                label="개인회원(일반투자자)"
+                                                
+                                                TitleShow={false}
+
+                                                DateShow={true}
+                                                txt_date="2020.05.01 06:05:46"
+
+                                                txt="How to build a loyal community online and offline How to build a loyal community online and offlineHow to build a loyal community online and offline How to build a loyal community online and offline"
+
+                                                ButtonShow={true}
+                                                button="답글 1"
+                                            />
+                                            {/* 새로운의견일때 클래스에 new추가하면 주황색border생깁니다▼ */}
+                                            <div className="inner_box new">
+                                                <Opinion
+                                                    
+                                                    NameBoxShow={true}
+                                                    feel_class="a"
+                                                    name ="username"
+                                                    TimeShow={false}
+                                                    labelShow={true}
+                                                    label="개인회원(일반투자자)"
+                                                    
+                                                    TitleShow={false}
+
+                                                    DateShow={true}
+                                                    txt_date="2020.05.01 06:05:46"
+
+                                                    txt="How to build a loyal community online and offline How to build a loyal community online and offlineHow to build a loyal community online and offline How to build a loyal community online and offline"
+
+                                                    ButtonShow={false}
+                                                />
+                                                <CommentBox
+                                                    comment_num={false}
+                                                    radio_li={
+                                                        <>
+                                                        <li>
+                                                            <input type="radio" name="radio2"className="" id="radio2_1"/>
+                                                            <label htmlFor="radio2_1"></label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="radio2"className="" id="radio2_2"/>
+                                                            <label htmlFor="radio2_2"></label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="radio3"className="" id="radio2_3"/>
+                                                            <label htmlFor="radio2_3"></label>
+                                                        </li>
+                                                        </>
+                                                    }
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="bottom_comment">
+                                            <Opinion
+                                                
+                                                NameBoxShow={true}
+                                                feel_class="a"
+                                                name ="username"
+                                                TimeShow={false}
+                                                labelShow={true}
+                                                label="개인회원(일반투자자)"
+                                                
+                                                TitleShow={false}
+
+                                                DateShow={true}
+                                                txt_date="2020.05.01 06:05:46"
+
+                                                txt="How to build a loyal community online and offline How to build a loyal community online and offlineHow to build a loyal community online and offline How to build a loyal community online and offline"
+
+                                                ButtonShow={true}
+                                                button="답글 1"
+                                            />
+                                            <div className="inner_box">
+                                                <Opinion
+                                                    
+                                                    NameBoxShow={true}
+                                                    feel_class="a"
+                                                    name ="username"
+                                                    TimeShow={false}
+                                                    labelShow={true}
+                                                    label="개인회원(일반투자자)"
+                                                    
+                                                    TitleShow={false}
+
+                                                    DateShow={true}
+                                                    txt_date="2020.05.01 06:05:46"
+
+                                                    txt="How to build a loyal community online and offline How to build a loyal community online and offlineHow to build a loyal community online and offline How to build a loyal community online and offline"
+
+                                                    ButtonShow={false}
+                                                />
+                                                <CommentBox
+                                                    comment_num={false}
+                                                    radio_li={
+                                                        <>
+                                                        <li>
+                                                            <input type="radio" name="radio2"className="" id="radio2_1"/>
+                                                            <label htmlFor="radio2_1"></label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="radio2"className="" id="radio2_2"/>
+                                                            <label htmlFor="radio2_2"></label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="radio3"className="" id="radio2_3"/>
+                                                            <label htmlFor="radio2_3"></label>
+                                                        </li>
+                                                        </>
+                                                    }
+                                                />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <Footer />
             </>
         )
     }

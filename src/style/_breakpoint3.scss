@@ -92,6 +92,13 @@ $mob-s-width		: 375px;
 			.api_box{width:calc(100% + 38px);float: none;margin-left:-16px;}
 			.list_box{width:100%;float: none;margin-top:24px;}
 		}
+		// 투자자의견
+		&.investor_opinion{
+			.gray_bg{padding:16px;}
+			.opinion_list{width:100%;}
+			.detail_wrap{display:none;}
+		}
+		&.investor_opinion.mo_opinion .detail_wrap{display:block;}
 		
 	}
 	
