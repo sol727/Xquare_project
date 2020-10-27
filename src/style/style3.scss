@@ -205,4 +205,21 @@
         }
     }
 
+    // 새소식관리
+    &.news{
+        .gray_bg{padding:24px;margin-top:50px;}
+        .news_wrap{width:384px;
+            .title_box{padding:10px 16px;}
+            .title_box h3 span{color:#1f318d;margin-left:10px;}
+            .title_box .btn{width:105px;height:30px;line-height: 30px;padding:0px;}
+            .list_box{
+                .top_ul{border-top:2px solid #1f318d;background:#f9f9f9;padding:8px 0;
+                    li{text-align: center;font-size: 14px;}
+                }
+            }
+
+        }
+    }
+
+
 }
