@@ -12,7 +12,7 @@
      }
      .notice_bell {margin-right: 0;}
 }
-
+// 3차 진행 -----------------------------------------------------------------
 .v3{     
      //common 
      .width_100 {width: 100% !important;}
@@ -55,6 +55,10 @@
      .big_title {
           margin-bottom: 16px;
           h2 {font-size: 24px; line-height: 36px; color: #343332; margin-bottom: 4px;}
+     }
+     .btn_input {
+          input {width: calc(100% - 96px); margin-right: 8px;}
+          button {width: 88px; height: 40px; line-height: 18px;}
      }
      //btn
      .bottom_btn {
@@ -305,6 +309,11 @@
                                    width: 352px;
                                    p {color: #6e6e6e;}
                               }
+                              .date_ul {
+                                   li {
+                                        label {font-size: 15px;}
+                                   }
+                              }
                          }
                     }
                }
@@ -409,7 +418,7 @@
                                              background-color: #f9f9f9;
                                              border-radius: 2px;
                                              padding: 4px;
-                                             p {display: inline-block; line-height: 38px;}
+                                             p {display: inline-block; line-height: 38px ;font-size: 15px !important; color: #525251 !important;}
                                              input {width: 28%;  height: 38px; margin: 0 8px;}       
                                         }                                       
                                    }
@@ -503,5 +512,67 @@
                     img {width: 100%;}
                }
           }
+          .address {
+               div {
+                    margin-bottom: 16px;
+               }
+               .detail_address {background-color: #f8f9fb; padding: 8px 16px !important; font-size: 15px !important; color: #535352; margin-bottom: 16px; border-radius: 2px;}
+          }
      }
 }
+
+// 팝업 -----------------------------------------------------------------
+
+.project_pop {
+     .pop_cont {
+          padding: 16px;
+          .close_pop {
+               width: 24px;
+               img {width: 98%;}               
+          }
+          .cont {
+               >h3 {
+                    font-size: 18px; 
+                    color: #343332;
+                    margin-bottom: 16px;
+                    text-align: center;          
+               }
+               >p {
+                    font-size: 14px;
+                    color:#535352;
+                    margin-bottom: 16px;
+                    text-align: center;
+                    line-height: 22px;
+               }
+          }          
+          .pop_submit {
+               width: 100%; background-color: #fe8d40; height: 44px;
+               border: 1px solid #fe8d40;
+               &.line_btn {
+                    background-color: #fff; border: 1px solid #eaedf1; color: #343332;
+               }
+           }
+          button + button {margin-top: 8px;}
+     }
+}
+.audit_pop{
+    .pop_cont {
+         width: 384px;
+         ul {
+              li {
+                   background-color: #f8f9fb;
+                   padding: 8px 16px;
+                   margin-bottom: 16px;
+                   p:first-child {font-size: 14px; margin-bottom: 8px; color: #343332;}
+                   p:last-child {font-size: 14px; margin-bottom: 8px; color: #6e6e6d;}
+              }
+         }
+    }
+}
+.audit_toast {
+     width: 221px;
+     padding: 0px 28px;
+     background-image:none;     
+}
+
+

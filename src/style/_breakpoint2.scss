@@ -127,6 +127,7 @@ $mob-s-width		: 360px;
 				}				
 			}
 		}
+
 		//cont
 		.cont {
 			.top_box {		
@@ -137,11 +138,14 @@ $mob-s-width		: 360px;
 			}
 			.gray_bg {
 				.bd_box{
-					 .left {width: 100%; margin-bottom: 16px; margin-right: 0;}
+					 .left {width: 100% !important; margin-bottom: 16px; margin-right: 0;}
 					 .right {
-						 width: 100% ; margin-left: 0;
+						 width: 100%; margin-left: 0;
 						&.file_box {margin-top: 0; width: 100%;}
 						&.file_box2 {width: 100%;}
+						&.form_ul {
+							width: 100% !important;
+						}
 					}
 				}
 				.tag_list {
@@ -157,5 +161,9 @@ $mob-s-width		: 360px;
 		}
 		
 	}
-	
+	.audit_pop1{
+		.pop_cont {
+			.pop_submit {margin-top: 34px;}
+		}
+	}
 }
