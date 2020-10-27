@@ -43,7 +43,7 @@ export default class Radio extends React.Component {
     render() {
         return (
           <div className="radio_box">
-               <input type="radio" name={this.props.name} className={`q w ${this.props.class}`} 
+               <input type="radio" name={this.props.name} className={`${this.props.class}`} 
                id={this.props.id}/><label htmlFor={this.props.id}></label><label htmlFor={this.props.id}>{this.props.text}</label>
           </div>
         )
