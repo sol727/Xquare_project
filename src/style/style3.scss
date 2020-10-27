@@ -1,3 +1,7 @@
+// common
+.mb10{margin-bottom:10px;}
+.font_16{font-size: 16px;}
+
 .v3{
     // 공통
     .tab_ul{width:384px;
@@ -119,6 +123,76 @@
         }
 
     }
-    
+
+    // 투자자현황
+    &.investor_state{
+        .gray_bg{background:#eff1f7;padding:24px;}
+        .api_box{width:calc(50% - 12px);height:360px;background: #ddd;}
+        .list_box{width:calc(50% - 12px);}
+        .list_box>li{margin-bottom:24px;}
+    }
+    .investor_cont{background: #fff;border-radius: 8px;padding:10px;
+        .date{font-size: 14px;color:#bfbfbf;margin-bottom:10px;}
+        >ul li{font-size: 13px;color:#b8c4d2;border:1px solid #eaedf1;border-radius:2px;padding:3px 16px;margin-right:4px;}
+        .box{width:100%;border-radius:8px;padding:4px 0;text-align: center;}
+    }
+
+    // 투자자의견
+    &.investor_opinion{
+        .gray_bg{margin-top:50px;padding:16px 24px;}
+        .no_data{padding:15px 0;background:transparent;font-size: 14px;width:calc(40% - 12px);text-align: center;}
+        .opinion_list{width:calc(40% - 12px);}
+        .opinion_list>li{padding:8px 16px;background: #fff;border-radius:4px;margin-bottom:16px;position: relative;}
+        .opinion_list>li::after{content:'New';position: absolute;font-size:13px;color:#ff513e;right:32px;top:13px;display: none;}
+        .opinion_list>li::before{content:'';position: absolute;width:8px;height:8px;background:#ff513e;right:16px;top:16px;border-radius: 50%;display: none;}
+        .opinion_list>li.new::after{display:block;}
+        .opinion_list>li.new::before{display:block;}
+        .opinion_list>li.on{background-color:#1f318d;
+            .label_ul li{color:#eff1f7;background:#4c5aa4;}
+            .name_box .feel{color:#fff;}
+            .name_box .font_13{color:#a5add1;}
+            .txt_box .ellipsis2{color:#fff;}
+            .feel.a{background:url(../images/icons/feeling_a_on.png)no-repeat center left;}
+            .feel.b{background:url(../images/icons/feeling_b_on.png)no-repeat center left;}
+            .feel.c{background:url(../images/icons/feeling_c_on.png)no-repeat center left;}
+        }
+        .detail_wrap{width:calc(60% - 12px);
+            .title_box{padding:0 16px;background:#a5add1;border-bottom:2px solid #1f318d;height: 52px;
+                h3{line-height: 52px;}
+                button{height:100%;}
+            }
+            .text_box{background:#fff;padding:24px 16px;}
+        }
+    }
+    .opinion_cont{
+        .label_ul li{background:#fff;font-size: 13px;color:#b8c4d2;border:1px solid #eaedf1;border-radius:2px;padding:3px 16px;margin-right:12px;}
+        .name_box{margin-top:12px;margin-bottom:12px;
+            .feel{font-size:14px;padding:0px 0 4px 28px;margin-right:4px;}
+            .feel.a{background:url(../images/icons/feeling_a.png)no-repeat center left;}
+            .feel.b{background:url(../images/icons/feeling_b.png)no-repeat center left;}
+            .feel.c{background:url(../images/icons/feeling_c.png)no-repeat center left;}
+            .label{background:#fff;font-size: 13px;color:#6e6e6d
+                ;border:1px solid #eaedf1;border-radius:2px;padding:3px 16px;}
+        }
+        .txt_box{
+            .txt_title{font-size:18px;margin-bottom:12px;}
+            .txt_date{font-size:13px;color:#b8c4d2;margin-bottom:12px;}
+            .ellipsis2{line-height: 1.5;}
+        }
+
+    }
+    .comment_wrap{
+        .comment_title{font-size:18px;font-weight: bold;}
+        .comment_title span{margin-left: 10px;}
+        .input_box{
+            input[type="text"]{height:48px;margin-top:12px;}
+            .feel_box{float: right;}
+            .feel_box>div{background:#fff;border-radius:4px;padding:7px 16px;}
+            .feel_box li{width:24px;height:24px;margin-right:16px;}
+            .feel_box li:last-child{margin-right:0px;}
+            .feel_box li input[type="radio"] + label{width:24px;height:24px;display: block;}
+            .feel_box li:nth-child(1) input[type="radio"] + label{background: url(../images/icons/feeling_a.png)no-repeat center;}
+        }
+    }
 
 }

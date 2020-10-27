@@ -86,6 +86,12 @@ $mob-s-width		: 375px;
 			.feedback_li p{font-size:15px;}
 			.detail_wrap .detail{padding:24px 16px;}
 		}
+		// 투자자현황
+		&.investor_state{
+			.gray_bg{padding:0 16px;margin-top:50px;}
+			.api_box{width:calc(100% + 38px);float: none;margin-left:-16px;}
+			.list_box{width:100%;float: none;margin-top:24px;}
+		}
 		
 	}
 	
