@@ -59,8 +59,32 @@ export default class V3_Account4 extends React.Component {
                                                 <li>
                                                     <label htmlFor="">은행선택</label>
                                                     <p className="error">·error here</p>
-                                                    <select name="" id="" className="mb24">
+                                                    <select name="" id="" className="">
                                                         <option value="">선택</option>
+                                                        <option value="">국민은행</option>
+                                                        <option value="">기업은행</option>
+                                                        <option value="">농협은행</option>
+                                                        <option value="">신한은행</option>
+                                                        <option value="">산업은행</option>
+                                                        <option value="">우리은행</option>
+                                                        <option value="">한국씨티은행</option>
+                                                        <option value="">하나은행</option>
+                                                        <option value="">sc제일은행</option>
+                                                        <option value="">경남은행</option>
+                                                        <option value="">광주은행</option>
+                                                        <option value="">대구은행</option>
+                                                        <option value="">도이치은행</option>
+                                                        <option value="">뱅크오브아메리카</option>
+                                                        <option value="">부산은행</option>
+                                                        <option value="">산림조합중앙회</option>
+                                                        <option value="">저축은행</option>
+                                                        <option value="">새마을금고</option>
+                                                        <option value="">수협은행</option>
+                                                        <option value="">우체국</option>
+                                                        <option value="">전북은행</option>
+                                                        <option value="">신협중앙회</option>
+                                                        <option value="">제주은행</option>
+                                                        <option value="">카카오뱅크</option>
                                                     </select>                                                   
                                                 </li>
                                                 <li>
@@ -149,13 +173,25 @@ export default class V3_Account4 extends React.Component {
                                                 <li>
                                                     <label htmlFor="">수령받을 주소</label>
                                                     <p className="error">·error here</p>
-                                                    <input type="text" placeholder="법인명이 포함된 예금주명 입력"/>                                                   
+                                                    <div className="address">
+                                                        <div className="btn_input clearfix">
+                                                            <input type="text"/>
+                                                            <button type="button" className="btn">주소검색</button>
+                                                        </div>
+                                                        {/* 주소 입력후에 노출 ▼*/}
+                                                        <p className="detail_address">서울특별시 강남구 강남대로 102길 38</p>
+                                                        <input type="text" placeholder="상세주소 입력"/>
+                                                    </div>                                            
                                                 </li>                                                
                                             </ul>                                            
                                         </div>
                                     </div>
                                 </div>
-                                {/* container 끝 */}      
+                                <div className="bottom_btn rightT">
+                                    <button type="button" className="btn">임시저장</button>             
+                                    <button type="button" className="btn">심사 요청</button>             
+                                </div>
+                            {/* container 끝 */}      
                             </div>                        
                         {/* gray_bg 끝 */}                       
                         </div>  
@@ -163,6 +199,74 @@ export default class V3_Account4 extends React.Component {
                     </div>
                     {/* clearfix 끝 */}
                 </section>
+                {/* 팝업 ------------------------------------ */}
+                {/* 사전심사 준비전팝업 */}
+                <div className="pop_wrap project_pop audit_pop audit_pop1">
+                    <div className="dim"></div>      
+                    <div className="pop_cont">
+                        <div className="rightT"> 
+                            <button type="button" className="close_pop"><img src={ require('../images/icons/close_btn.png')} alt="팝업닫기아이콘"/></button>                    
+                        </div>                        
+                        <div className="cont">
+                            <h3>필수 입력 항목을 확인 해주세요</h3>
+                            <ul>
+                                <li>
+                                    <p>자격확인</p>
+                                    <p>·01, 02, 03, 04</p>
+                                </li>
+                                <li>
+                                    <p>기본자료</p>
+                                    <p>·02, 04</p>
+                                </li>
+                                <li>
+                                    <p>title</p>
+                                    <p>·part title</p>
+                                </li>
+                            </ul>
+                            <button type="button" className="btn pop_submit">확인</button>  
+                        </div>
+                    </div>                      
+                </div>
+                 {/* 사전심사 준비완료팝업 */}
+                 <div className="pop_wrap project_pop audit_pop audit_pop2">
+                    <div className="dim"></div>      
+                    <div className="pop_cont">
+                        <div className="rightT"> 
+                            <button type="button" className="close_pop"><img src={ require('../images/icons/close_btn.png')} alt="팝업닫기아이콘"/></button>                    
+                        </div>                        
+                        <div className="cont">
+                            <h3>해당 내용을 제출하시겠습니까?</h3>
+                            <p>제출하시면 최종심사 절차를 진행하게 됩니다.<br></br>제출하지않고 저장을 원하신다면 취소 버튼을 선택하세요.</p>                           
+                            <div>
+                                <button type="button" className="btn pop_submit line_btn">취소</button>
+                                <button type="button" className="btn pop_submit">제출하기</button>
+                            </div>
+                              
+                        </div>
+                    </div>                      
+                </div>
+                {/* 최종심사 확인팝업 */}
+                <div className="pop_wrap project_pop audit_pop audit_pop3">
+                    <div className="dim"></div>      
+                    <div className="pop_cont">
+                        <div className="rightT"> 
+                            <button type="button" className="close_pop"><img src={ require('../images/icons/close_btn.png')} alt="팝업닫기아이콘"/></button>                    
+                        </div>                        
+                        <div className="cont">
+                            <h3>계약준비 내용을 제출하시겠습니까?</h3>
+                            <p>제출하시면 심사 절차를 진행됩니다.</p>                           
+                            <div>
+                                <button type="button" className="btn pop_submit line_btn">취소</button>
+                                <button type="button" className="btn pop_submit">제출하기</button>
+                            </div>                              
+                        </div>
+                    </div>                      
+                </div>
+                
+                {/* 계약준비 제출 시 보이는 토스트팝업 */}
+                <div className="toast_pop">
+                    <p className="font_13 white_color">계약 준비 자료를 제출했습니다.</p>
+                </div>
             </>
         )
     }
