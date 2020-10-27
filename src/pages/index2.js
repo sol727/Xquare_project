@@ -60,6 +60,22 @@ export default class Index2 extends React.Component {
                     <li><Link to="/terms3"><span>이용약관 - 서비스이용약관</span></Link></li>
                     <li style={{fontSize:'20px',marginBottom:'10px',marginTop:'10px'}}>기타</li>
                     <li><Link to="/error_page"><span>에러페이지</span></Link></li>
+                    
+                    {/* 3차추가페이지 */}
+                    <li><Link to="/v3_project"><span>개설한프로젝트 - 전체</span></Link></li>
+                    <li><Link to="/v3_project2"><span>개설한프로젝트 - 종료된프로젝트</span></Link></li>
+                    <li><Link to="/v3_account"><span>계약준비 - 자격확인</span></Link></li>
+                    <li><Link to="/v3_account2"><span>계약준비 - 기본자료</span></Link></li>
+                    <li><Link to="/v3_account3"><span>계약준비 - 발행정보</span></Link></li>
+                    <li><Link to="/v3_account4"><span>계약준비 - 기타정보</span></Link></li>
+                    <li><Link to="/v3_funding1"><span>펀딩준비 - 발행정보확정</span></Link></li>
+                    <li><Link to="/v3_funding2"><span>펀딩준비 - 펀딩소개작성</span></Link></li>
+                    <li><Link to="/v3_funding3"><span>펀딩준비 - 추가자료</span></Link></li>
+                    <li><Link to="/v3_feedback"><span>엑스퀘어피드백</span></Link></li>
+                    <li><Link to="/v3_investor_state"><span>투자자현황</span></Link></li>
+                    <li><Link to="/v3_investor_opinion"><span>투자자의견</span></Link></li>
+                    <li><Link to="/v3_mo_opinion_detail"><span>투자자의견 상세(모바일)</span></Link></li>
+                    <li><Link to="/v3_news"><span>새소식</span></Link></li>
                 </ul>
 
                 

@@ -98,7 +98,7 @@ $mob-s-width		: 375px;
 			.opinion_list{width:100%;}
 			.detail_wrap{display:none;}
 		}
-		&.investor_opinion.mo_opinion .detail_wrap{display:block;}
+		&.investor_opinion.mo_opinion .detail_wrap{display:block;width:100%;margin-top:50px;}
 		
 	}
 	
