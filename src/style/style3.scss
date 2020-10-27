@@ -1,4 +1,5 @@
 // common
+.mt9{margin-top:9px;}
 .mb10{margin-bottom:10px;}
 .font_16{font-size: 16px;}
 
@@ -162,6 +163,12 @@
                 button{height:100%;}
             }
             .text_box{background:#fff;padding:24px 16px;}
+            .comment_box{background:#f8f9fb;padding:20px 16px 10px;
+                .bottom_comment{background:#fff;padding:16px;border-top:1px solid #eaedf1;}
+                .inner_box{padding:16px;background:#f9f9f9;margin-top:12px;}
+                .inner_box.new{border:2px solid #ff8e40;}
+                .inner_box .comment_wrap .input_wrap input[type="text"]{height:40px;}
+            }
         }
     }
     .opinion_cont{
@@ -171,27 +178,30 @@
             .feel.a{background:url(../images/icons/feeling_a.png)no-repeat center left;}
             .feel.b{background:url(../images/icons/feeling_b.png)no-repeat center left;}
             .feel.c{background:url(../images/icons/feeling_c.png)no-repeat center left;}
-            .label{background:#fff;font-size: 13px;color:#6e6e6d
+            .label{font-size: 13px;color:#6e6e6d
                 ;border:1px solid #eaedf1;border-radius:2px;padding:3px 16px;}
         }
         .txt_box{
             .txt_title{font-size:18px;margin-bottom:12px;}
             .txt_date{font-size:13px;color:#b8c4d2;margin-bottom:12px;}
             .ellipsis2{line-height: 1.5;}
+            .txt_btn{width: 88px;height: 38px;border:1px solid #eaedf1;background:#fff;line-height: 38px;font-size: 15px;border-radius:4px;margin-top:12px;}
         }
-
     }
     .comment_wrap{
-        .comment_title{font-size:18px;font-weight: bold;}
+        .comment_title{font-size:18px;font-weight: bold;margin-top:12px;}
         .comment_title span{margin-left: 10px;}
-        .input_box{
+        .input_wrap{
             input[type="text"]{height:48px;margin-top:12px;}
-            .feel_box{float: right;}
             .feel_box>div{background:#fff;border-radius:4px;padding:7px 16px;}
+            .feel_box>div>p{padding-top:5px;}
             .feel_box li{width:24px;height:24px;margin-right:16px;}
             .feel_box li:last-child{margin-right:0px;}
-            .feel_box li input[type="radio"] + label{width:24px;height:24px;display: block;}
-            .feel_box li:nth-child(1) input[type="radio"] + label{background: url(../images/icons/feeling_a.png)no-repeat center;}
+            .feel_box li input[type="radio"] + label{width:24px;height:24px;display: block;cursor: pointer;}
+            .feel_box li:nth-child(1) input[type="radio"] + label{background: url(../images/icons/feeling_c.png)no-repeat center;}
+            .feel_box li:nth-child(2) input[type="radio"] + label{background: url(../images/icons/feeling_b.png)no-repeat center;}
+            .feel_box li:nth-child(3) input[type="radio"] + label{background: url(../images/icons/feeling_a.png)no-repeat center;}
+            .feel_box button{width:97px;height:38px;line-height: 38px;font-size: 15px;}
         }
     }
 

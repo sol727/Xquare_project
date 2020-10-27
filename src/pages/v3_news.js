@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Header from '../components/header'
-import Footer from '../components/footer'
 import Studio_gnb from '../components/Studio_gnb'
 import InvestorCont from '../components/investorCont'
 
@@ -14,7 +12,6 @@ export default class V3_news extends React.Component {
     render() {
         return (
             <>
-                <Header />
                 <section className="v3 investor_state">
                     <div className="clearfix">
                         <Studio_gnb/>
@@ -126,7 +123,6 @@ export default class V3_news extends React.Component {
                         </div>
                     </div>
                 </section>
-                <Footer />
             </>
         )
     }

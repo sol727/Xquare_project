@@ -54,10 +54,12 @@ import V3_Account4 from './pages/v3_account4';
 import V3_Feedback from './pages/v3_feedback';
 import V3_investor_state from './pages/v3_investor_state';
 import V3_investor_opinion from './pages/v3_investor_opinion';
+import V3_mo_opinion_detail from './pages/v3_mo_opinion_detail';
 import V3_news from './pages/v3_news';
 import V3_funding1 from './pages/v3_funding1';
 import V3_funding2 from './pages/v3_funding2';
 import V3_funding3 from './pages/v3_funding3';
+
 
 
 
@@ -110,6 +112,7 @@ function App() {
         <Route path="/v3_feedback" component={V3_Feedback}/>
         <Route path="/v3_investor_state" component={V3_investor_state}/>
         <Route path="/v3_investor_opinion" component={V3_investor_opinion}/>
+        <Route path="/v3_mo_opinion_detail" component={V3_mo_opinion_detail}/>
         <Route path="/v3_news" component={V3_news}/>
         <Route path="/v3_funding1" component={V3_funding1}/>
         <Route path="/v3_funding2" component={V3_funding2}/>
