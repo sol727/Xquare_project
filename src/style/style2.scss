@@ -30,6 +30,9 @@
      }
      
      .check_list {
+          >* {
+               margin-bottom: 16px;
+          }
           &.check_list2 {               
                >div {
                     width: calc(50% - 20px);       
@@ -500,6 +503,7 @@
                     width: 100%;
                     height: 38px;
                     background-color: #f8f9fb;
+                    border: none;
                     font-size: 15px;
                     color: #bfbfbf;          
                     &::placeholder {font-size: 15px;color: #bfbfbf;}          
@@ -519,6 +523,9 @@
                .detail_address {background-color: #f8f9fb; padding: 8px 16px !important; font-size: 15px !important; color: #535352; margin-bottom: 16px; border-radius: 2px;}
           }
      }
+
+
+     
 }
 
 // 팝업 -----------------------------------------------------------------
@@ -530,12 +537,13 @@
                width: 24px;
                img {width: 98%;}               
           }
-          .cont {
+          .cont_box {
                >h3 {
                     font-size: 18px; 
                     color: #343332;
                     margin-bottom: 16px;
-                    text-align: center;          
+                    text-align: center;       
+                    line-height: 28px;   
                }
                >p {
                     font-size: 14px;
@@ -552,7 +560,7 @@
                     background-color: #fff; border: 1px solid #eaedf1; color: #343332;
                }
            }
-          button + button {margin-top: 8px;}
+          button + button {margin-top: 8px; margin-left: 0;}
      }
 }
 .audit_pop{
@@ -574,5 +582,26 @@
      padding: 0px 28px;
      background-image:none;     
 }
+
+.delete_pop {
+     .pro_content {
+          border: 1px solid #eaedf1;
+          border-radius: 8px;
+          margin-bottom: 12px;
+          a {
+               .top_box {
+                    .bottom {
+                         ul {
+                              margin-bottom: 0 !important;
+                              li {margin-bottom: 0;}
+                         }
+                    }
+               }
+
+          }
+     }
+
+}
+
 
 

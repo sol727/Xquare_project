@@ -264,7 +264,7 @@ export default class V3_Account4 extends React.Component {
                 </div>
                 
                 {/* 계약준비 제출 시 보이는 토스트팝업 */}
-                <div className="toast_pop">
+                <div className="toast_pop audit_toast">
                     <p className="font_13 white_color">계약 준비 자료를 제출했습니다.</p>
                 </div>
             </>
