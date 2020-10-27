@@ -22,16 +22,16 @@ export default class V3_Account extends React.Component {
                                 <h1>계약준비</h1>
                                 <ul className="clearfix tab_ul">
                                     <li className="on">
-                                        <Link to="/V3_Project_state">자격확인</Link>
+                                        <Link to="/V3_Account">자격확인</Link>
                                     </li>
                                     <li>
-                                        <Link to="/V3_Project_state">기본자료</Link>
+                                        <Link to="/V3_Account2">기본자료</Link>
                                     </li>
                                     <li>
-                                        <Link to="/V3_Project_state">발행정보</Link>
+                                        <Link to="/V3_Account3">발행정보</Link>
                                     </li>
                                     <li>
-                                        <Link to="/V3_Project_state">기타정보</Link>
+                                        <Link to="/V3_Account4">기타정보</Link>
                                     </li>
                                 </ul>
                             </div>

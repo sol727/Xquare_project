@@ -11,9 +11,9 @@ export default class Title extends React.Component {
             <div className="box_title">
                {
                     this.props.labelShow ?
-                    <p className="label" style={{ background_color : this.props.labelDisabled ? '#ff8e40' : '#bfbfbf' }}>{this.props.label_title}</p> :
+                    <p className="label" style={{ background: this.props.labelDisabled ? '#bfbfbf' : '#ff8e40' }}>{this.props.label_title}</p> :
                     <></>
-               }
+               }               
                <h3 className="title"><span className="playF">{this.props.num}</span>{this.props.title}<span className="star">{this.props.star}</span></h3>
                {this.props.text}
           </div>
