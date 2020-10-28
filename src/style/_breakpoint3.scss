@@ -99,7 +99,20 @@ $mob-s-width		: 375px;
 			.detail_wrap{display:none;}
 		}
 		&.investor_opinion.mo_opinion .detail_wrap{display:block;width:100%;margin-top:50px;}
-		
+		// 새소식관리
+		&.news{
+			.gray_bg{padding:24px 16px;}
+			.news_wrap{width:100%;
+				.title_box{padding:10px 0px;}
+			}
+			.detail_wrap{display:none;}
+		}
+		&.news.mo_news .detail_wrap{display:block;width:100%;margin-top:50px;}
+		&.news_write{
+			.gray_bg{padding: 40px 16px 24px;}
+			.left_wrap{width: 100%;}
+			.right_wrap{width: 100%;margin-top:16px;}
+		}
 	}
 	
 }
