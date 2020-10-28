@@ -4,6 +4,7 @@ import Studio_gnb from '../components/Studio_gnb'
 import Back_header from '../components/back_header';
 import Count_input from '../components/count_input';
 import Title from '../components/title';
+import Paragraph from '../components/Paragraph';
 export default class V3_funding2 extends React.Component {
 
     constructor(props) {
@@ -68,9 +69,11 @@ export default class V3_funding2 extends React.Component {
                                             buttonShow={false}
                                             buttonDisabled={false}
                                         />
-                                        <ul className="img_ul radio_ul clearfix">
-                                            <li className="active">
-                                                <input type="radio" id="img1"/><label htmlFor="img1">대표이미지로 사용</label>
+                                        <ul className="img_ul  clearfix">
+                                            <li className="active ">
+                                                <div className="clearfix radio_ul">
+                                                    <input type="radio" id="img1"/><label htmlFor="img1"></label><label htmlFor="img1">대표이미지로 사용</label>
+                                                </div>                                               
                                                 <div className="img_box">
                                                     <img src={ require('../images/detail_sample.png') } alt="샘플이미지"/>
                                                     <button type="button" className="delete_btn"><img src={ require('../images/icons/input_delt_icon2.png') } alt="삭제아이콘"/></button>
@@ -82,7 +85,10 @@ export default class V3_funding2 extends React.Component {
                                                 </div>                                                
                                             </li>
                                             <li className="">
-                                                <input type="radio" id="img1"/><label htmlFor="img1">대표이미지로 사용</label>
+                                                <div className="clearfix radio_ul">
+                                                    <input type="radio" id="img2"/><label htmlFor="img2"></label><label htmlFor="img1">대표이미지로 사용</label>
+                                                </div>
+                                                
                                                 <div className="img_box">
                                                     <img src={ require('../images/detail_sample.png') } alt="샘플이미지"/>
                                                     <button type="button" className="delete_btn"><img src={ require('../images/icons/input_delt_icon2.png') } alt="삭제아이콘"/></button>
@@ -94,7 +100,9 @@ export default class V3_funding2 extends React.Component {
                                                 </div>                                                
                                             </li>
                                             <li className="">
-                                                <input type="radio" id="img1"/><label htmlFor="img1">대표이미지로 사용</label>
+                                                <div className="clearfix radio_ul">
+                                                    <input type="radio" id="img3"/><label htmlFor="img3"></label><label htmlFor="img3">대표이미지로 사용</label>
+                                                </div>
                                                 <div className="img_box">
                                                     <img src={ require('../images/detail_sample.png') } alt="샘플이미지"/>
                                                     <button type="button" className="delete_btn"><img src={ require('../images/icons/input_delt_icon2.png') } alt="삭제아이콘"/></button>
@@ -121,14 +129,28 @@ export default class V3_funding2 extends React.Component {
                                             buttonShow={false}
                                             buttonDisabled={false}
                                         />
-                                        <Count_input
-                                            count_class="title mt16"
-                                            count_placeholder="프로젝트 제목 (최대 24자)"
-                                            count="24"
-                                        />                                        
+                                       <ul className="paragraph_list">
+                                            <li>
+                                                <Paragraph/>
+                                            </li>
+                                           <li>
+                                                <Paragraph/>
+                                           </li>
+                                           <li className="add_li centerT">                                            
+                                               <button type="button"><img src={ require('../images/icons/ic_add_paragraph.png') } alt="추가아이콘"/>문단 추가하기</button>
+                                           </li>
+                                        </ul>                            
+                                    </div>
+                                    <div className="fix_btn">
+                                        <button type="button"><img src={ require('../images/icons/img_fab_backup.png') } alt="임시저장버튼"/></button>
                                     </div>
                                 </div>
+                                <div className="bottom_btn rightT">
+                                    <button type="button" className="btn">임시저장</button>             
+                                    <button type="button" className="btn">다음 단계</button>             
+                                </div>                            
                             </div>
+                                   
                         </div>
                     </div>
                 </section>
