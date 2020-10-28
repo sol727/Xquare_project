@@ -3,7 +3,7 @@
 .mt8{margin-top:8px;}
 .mt9{margin-top:9px;}
 .mt10{margin-top:10px;}
-.mb10{margin-bottom:10px;}
+.mb10{margin-bottom:10px !important;}
 .mr10{margin-right:10px;}
 .pl8{padding-left:8px;}
 .font_16{font-size: 16px;}
@@ -273,9 +273,6 @@
            .radio_ul + p img{margin-right:10px;}
         }
         .right_wrap{width:calc(60% - 12px);
-            .title_input{position: relative;}
-            .title_input p{position: absolute;font-size: 13px;color:#bfbfbf;top:50%;transform: translateY(-50%);right:16px;}
-            .title_input input{height:38px;padding-right:62px;}
             .upload_box .file_upload .file_name .file_delete_btn{display:none;}
             .file_ul .file_upload .file_name{width:100%;}
             .file_ul .file_upload .upload_btn{display:none;}
@@ -291,10 +288,10 @@
             .right_box div{background:#eff1f7;padding:8px 0px;}
         }
         .season_box{
-            .notice_box{padding:16px 0;
+            .notice_box{padding:16px 0;margin:0;
                 .border_text::after{left:0;}
             }
-            .success_li{padding:16px;}
+            .info_box{padding:16px;background:#f8f9fb;border-top:1px solid #eaedf1;border-bottom:1px solid #eaedf1;}
             .pro_content a{padding:0px;}
             .pro_content .top_box{width:calc(40% - 12px);float:left;margin-top:0px;margin-right:24px;}
             .pro_content .bottom_box{width:calc(40% - 12px);float:left;}
@@ -308,8 +305,21 @@
                 .notice_box{width:calc(100% + 38px);margin-left:-16px;}
                 .gray_box{padding:8px;background:#f8f9fb;margin-top: 16px;}
             }
+            .write_box{padding-top:16px;}
         }
+        .btn_wrap button{width:180px;height:38px;font-size:15px;border-radius:4px;}
     }
+    // 공통
+    .title_input{position: relative;}
+    .title_input p{position: absolute;font-size: 13px;color:#bfbfbf;top:50%;transform: translateY(-50%);right:16px;}
+    .title_input input{height:38px;padding-right:62px;}
+    .delt_btn_none .file_name .file_delete_btn{display:none;}
+    .upload_btn_none {
+        .file_name{width:100%;}
+        .upload_btn{display:none;}
+    }
+
+
     
 
 
