@@ -8,8 +8,9 @@ export default class Text_input extends React.Component {
 
     render() {
         return (
-          <div className="text_input clearfix2">              
-               <input type="text"/> 
+          <div className={`text_input clearfix ${this.props.input_class}`}>
+              <p className="">{this.props.input_text2}</p>
+               <input type="text" placeholder={this.props.placeholder} /> 
                <p className="rightT">{this.props.input_text}</p>
           </div>
         )
