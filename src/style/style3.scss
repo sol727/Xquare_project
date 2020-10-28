@@ -2,11 +2,15 @@
 .mt4{margin-top:4px;}
 .mt8{margin-top:8px;}
 .mt9{margin-top:9px;}
+.mt10{margin-top:10px;}
 .mb10{margin-bottom:10px;}
 .mr10{margin-right:10px;}
 .pl8{padding-left:8px;}
 .font_16{font-size: 16px;}
 .red_bg{background:#ff513e !important;}
+.line_h5{line-height: 1.5;}
+.font_16{font-size:16px !important;}
+.font_24{font-size: 24px !important;}
 
 .v3{
     // 공통
@@ -23,6 +27,9 @@
     .black_alert_p{padding-left:42px;font-size:13px;position: relative;
         img{position: absolute;left:8px;top:-4px;}
     }
+    .radio_ul input[type="radio"] + label{width: 22px;height: 22px;border: 2px solid #d6d6d6;margin-right: 8px;cursor: pointer;border-radius: 50%;margin-right:8px;}
+    .radio_ul input[type="radio"] + label + label{margin-top:2px;cursor: pointer;}
+    .radio_ul input[type="radio"]:checked + label{border:6px solid #ff8e40;}
 
     // 개설한프로젝트
     &.project{
@@ -263,9 +270,6 @@
         .gray_bg{padding:24px;}
         .left_wrap{width: calc(40% - 12px);
            .radio_ul{background:#fff;padding:8px;border-radius:8px;}
-           .radio_ul input[type="radio"] + label{width: 22px;height: 22px;border: 2px solid #d6d6d6;margin-right: 8px;cursor: pointer;border-radius: 50%;margin-right:8px;}
-           .radio_ul input[type="radio"] + label + label{margin-top:2px;cursor: pointer;}
-           .radio_ul input[type="radio"]:checked + label{border:6px solid #ff8e40;}
            .radio_ul + p img{margin-right:10px;}
         }
         .right_wrap{width:calc(60% - 12px);
@@ -278,7 +282,33 @@
             .file_upload .file_name input{border:none;}
             .btn_wrap button{width:180px;height:38px;font-size: 15px;}
         }
-        
+    }
+    // 결산자료제출
+    &.v3_data{
+        .gray_bg{padding:24px;}
+        .not_season{
+            >div{width: 40%;}
+            .right_box div{background:#eff1f7;padding:8px 0px;}
+        }
+        .season_box{
+            .notice_box{padding:16px 0;
+                .border_text::after{left:0;}
+            }
+            .success_li{padding:16px;}
+            .pro_content a{padding:0px;}
+            .pro_content .top_box{width:calc(40% - 12px);float:left;margin-top:0px;margin-right:24px;}
+            .pro_content .bottom_box{width:calc(40% - 12px);float:left;}
+            .bottom_box{
+                ul{background:#fff;padding:24px 16px;}
+                button{height:38px;font-size:15px;margin-top:10px;}
+            }
+        }
+        .bottom_cont{
+            .top_wrap{background:#fff;padding:40px 16px 32px;
+                .notice_box{width:calc(100% + 38px);margin-left:-16px;}
+                .gray_box{padding:8px;background:#f8f9fb;margin-top: 16px;}
+            }
+        }
     }
     
 
