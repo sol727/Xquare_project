@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Count_input from '../components/count_input';
 import Studio_gnb from '../components/Studio_gnb'
 import Back_header from '../components/back_header';
 import Title from '../components/title';
@@ -50,11 +49,11 @@ export default class V3_funding2 extends React.Component {
                                             />
                                         </div>
                                         <div className="right">                                            
-                                            <Count_input
+                                            {/* <Count_input
                                                 count_class="title"
                                                 count_placeholder="프로젝트 제목 (최대 24자)"
                                                 count_text="24"
-                                            />
+                                            /> */}
                                         </div>
                                     </div>
                                 </div>
