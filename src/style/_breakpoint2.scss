@@ -179,7 +179,9 @@ $mob-s-width		: 360px;
 			}
 			
 		}
-		
+		.img_ul {
+			li {width: 100%; margin-right: 0; margin-bottom: 12px;}
+		}
 	}
 	.audit_pop1{
 		.pop_cont {

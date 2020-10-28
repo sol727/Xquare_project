@@ -534,7 +534,20 @@
                     }
                }
           }
+          .fix_btn {
+               position: fixed;
+               right: 16px;
+               bottom: 20px;
+              width: 64px;
+              height: 64px;
+              background: #1f318d; 
+              padding: 16px;
+              border-radius: 50%;    
+              box-shadow:2px 2px 10px rgba(0,0,0,0.1);          
+              img {width: 100%;}
+              
 
+          }
 
           .radio_box {
                width: 100%;
@@ -610,7 +623,42 @@
                .detail_address {background-color: #f8f9fb; padding: 8px 16px !important; font-size: 15px !important; color: #535352; margin-bottom: 16px; border-radius: 2px;}
           }
      }
-
+     .paragraph {
+          .drag_box{
+               background: #f9f9f9;
+               margin-bottom: 8px;
+               padding: 5px;
+               button {width: 24px; 
+                    img {width: 90%; }
+               }
+               p {max-width: 80%; color: #343332; font-size: 15px;font-weight: 600; line-height: 23px;}
+               ul{
+                    li{                         
+                         margin-right: 16px;
+                         &:last-child {margin-right: 0;}
+                    }
+               }
+          }
+          textarea {padding: 8px 16px; }
+     }
+     .paragraph_list  {
+          >li {
+               margin-bottom: 24px;
+               &:last-child {margin-bottom: 0;}
+               &.add_li {
+                    background: #f9f9f9;
+                    padding: 5px;
+                    >button {
+                         color: #343332;
+                         font-size: 15px;            
+                         font-weight: 600;        
+                         img {width: 24px; margin-right: 16px;  }
+                         
+                         
+                    }
+               }
+          }
+     }
 
      
 }
