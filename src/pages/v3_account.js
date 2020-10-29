@@ -8,25 +8,67 @@ export default class V3_Account extends React.Component {
 
     constructor(props) {
         super(props);
-        // this.state = {
-        //     checked : false
-        // }
-        // this.state = {
-        //     check1 : '',
-           
-        // }
-        // this.onChangeChk = this.onChangeChk.bind(this)
+        this.state = {
+            step1 : '',
+            step2 : '',
+            step3 : '',
+            step4 : '',
+            step5 : '',
+            step6 : '',
+            step7 : '',
+            step8 : ''
+        }
+        this.onChangeStep = this.onChangeStep.bind(this)
+        this.onChangeStep2 = this.onChangeStep2.bind(this)
+        this.onChangeStep3 = this.onChangeStep3.bind(this)
+        this.onChangeStep4 = this.onChangeStep4.bind(this)
+        this.onChangeStep5 = this.onChangeStep5.bind(this)
+        this.onChangeStep6 = this.onChangeStep6.bind(this)
+        this.onChangeStep7 = this.onChangeStep7.bind(this)
+        this.onChangeStep8 = this.onChangeStep8.bind(this)
+    }
+    onChangeStep(id) {
+        this.setState({
+            step1 : id
+        })
+    }
+    onChangeStep2(id) {
+        this.setState({
+            step2 : id
+        })
+    }
+    onChangeStep3(id) {
+        this.setState({
+            step3 : id
+        })
+    }
+    onChangeStep4(id) {
+        this.setState({
+            step4 : id
+        })
+    }
+    onChangeStep5(id) {
+        this.setState({
+            step5 : id
+        })
+    }
+    onChangeStep6(id) {
+        this.setState({
+            step6 : id
+        })
+    }
+    onChangeStep7(id) {
+        this.setState({
+            step7 : id
+        })
+    }
+    onChangeStep8(id) {
+        this.setState({
+            step8 : id
+        })
     }
 
-    // onChangeCheck(e) {
-    //         this.props.onChangeChk(this.props.id2)
-    // }
 
-    // onChangeChk(id2) {
-    //     this.setState({
-    //         chk1 : id2
-    //     })
-    // }
 
     render() {
         return (
@@ -80,37 +122,37 @@ export default class V3_Account extends React.Component {
                                                     <ul className="ul_50 clearfix check_list">
                                                         <li>                                                              
                                                             <div className="check_box check_box2" >
-                                                                <input type="checkbox" id="chk1"  /><label htmlFor="chk1"></label><label htmlFor="chk1">창업 7년 이내 비상장 기업 </label>
+                                                                <input type="checkbox" id="chk1" /><label htmlFor="chk1"></label><label htmlFor="chk1">창업 7년 이내 비상장 기업 </label>
                                                             </div>
                                                             <p className="centerT">(개업일 yyyy.mm.dd 기준)</p>
                                                         </li>
                                                         <li>
                                                              <div className="check_box check_box2" >
-                                                                <input type="checkbox" id="chk1"  /><label htmlFor="chk1"></label><label htmlFor="chk1">벤처기업 인증</label>
+                                                                <input type="checkbox" id="chk2"  /><label htmlFor="chk2"></label><label htmlFor="chk2">벤처기업 인증</label>
                                                             </div>
                                                         </li>
                                                         <li>    
                                                              <div className="check_box check_box2" >
-                                                                <input type="checkbox" id="chk1"  /><label htmlFor="chk1"></label><label htmlFor="chk1">메인비즈인증</label>
+                                                                <input type="checkbox" id="chk3"  /><label htmlFor="chk3"></label><label htmlFor="chk3">메인비즈인증</label>
                                                             </div>                                                            
                                                         </li>
                                                         <li>
                                                             <div className="check_box check_box2" >
-                                                                <input type="checkbox" id="chk1"  /><label htmlFor="chk1"></label><label htmlFor="chk1">이노비스 인증</label>
+                                                                <input type="checkbox" id="chk4"  /><label htmlFor="chk4"></label><label htmlFor="chk4">이노비스 인증</label>
                                                             </div>
                                                         </li>
                                                         <li>
                                                             <div className="check_box check_box2" >
-                                                                <input type="checkbox" id="chk1"  /><label htmlFor="chk1"></label><label htmlFor="chk1">프로젝트성 기업</label>
+                                                                <input type="checkbox" id="chk5"  /><label htmlFor="chk5"></label><label htmlFor="chk5">프로젝트성 기업</label>
                                                             </div>
                                                         </li>
                                                         <li>
                                                             <div className="check_box check_box2" >
-                                                                <input type="checkbox" id="chk1"  /><label htmlFor="chk1"></label><label htmlFor="chk1">사회적기업 </label>
+                                                                <input type="checkbox" id="chk6"  /><label htmlFor="chk6"></label><label htmlFor="chk6">사회적기업 </label>
                                                             </div>
                                                         </li>
                                                         <li className="width_100">
-                                                            <Radio id="id2" radio_box="radio_box3"  text="해당합니다."/>
+                                                            <Radio focus={this.state.step1} onChangeStep={this.onChangeStep} id="id2" radio_box="radio_box3"  text="해당합니다."/>
                                                         </li>
                                                     </ul>
                                                     

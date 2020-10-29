@@ -13,6 +13,16 @@ export default class V3_data extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            step1 : '',
+        }
+
+        this.onChangeStep = this.onChangeStep.bind(this)
+    }
+    onChangeStep(id) {
+        this.setState({
+            step1 : id
+        })
     }
 
 
@@ -68,8 +78,12 @@ export default class V3_data extends React.Component {
                                             state="성공" 
                                             date="200701-1301" 
                                             title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                                            label1="채권형(일반회사채)"
-                                            label2="연료전지"
+                                            label_li={
+                                                <>
+                                                <li>채권형(일반회사채)</li>
+                                                <li>연료전지</li>
+                                                </>
+                                            }
                                             txt1="진행 기간"
                                             start="시작일"
                                             start_day="yyyy.mm.dd"
@@ -101,10 +115,10 @@ export default class V3_data extends React.Component {
                                     <div className="bottom_box">
                                         <ul>
                                             <li className="mb16">
-                                                <Radio id="radio1"  name="radio-1" text="해당합니다"/>
+                                                <Radio  focus={this.state.step1} onChangeStep={this.onChangeStep} id="radio1" radio_box="radio_box2" name="radio-1" text="해당합니다"/>
                                             </li>
                                             <li>
-                                                <Radio id="radio2"  name="radio-1" text="해당하지 않습니다"/>
+                                                <Radio  focus={this.state.step1} onChangeStep={this.onChangeStep} id="radio2" radio_box="radio_box2" name="radio-1" text="해당하지 않습니다"/>
                                             </li>
                                         </ul>
                                         {/* 버튼 활성화시 클래스에 orange_btn 추가 */}
