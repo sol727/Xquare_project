@@ -7,7 +7,10 @@ export default class ProjectContent extends React.Component {
           super(props);
     }
 
+
     render() {
+        console.log(this.props.circle[0])
+
         return (
             <div className="pro_content">
                 <Link to="">
@@ -39,22 +42,22 @@ export default class ProjectContent extends React.Component {
                         <ul className="bottom_box">
                             <li className="clearfix2">
                                 <div className="left">
-                                    <p className="bold">진행 기간</p>
-                                    <p>시작일<span className="gray3_color">미지정</span></p>
-                                    <p>마감일<span className="gray3_color">미지정</span></p>
+                                    <p className="bold">{this.props.txt1}</p>
+                                    <p>{this.props.start}<span className="gray3_color">{this.props.start_day}</span></p>
+                                    <p>{this.props.end}<span className="gray3_color">{this.props.end_day}</span></p>
                                 </div>
                                 <div className="right">
-                                    <Circle percent="-"/>
+                                    <Circle text={this.props.circle[0].text} type={this.props.circle[0].type} percentage={this.props.circle[0].percentage} />
                                 </div>
                             </li>
                             <li className="clearfix2">
                                 <div className="left">
-                                    <p className="bold">달성률</p>
-                                    <p>목표 모금액<span className="gray3_color">미지정</span></p>
-                                    <p>달성 모금액<span className="gray3_color">미지정</span></p>
+                                    <p className="bold">{this.props.txt2}</p>
+                                    <p>{this.props.goal}<span className="gray3_color">{this.props.goal_txt}</span></p>
+                                    <p>{this.props.attain}<span className="gray3_color">{this.props.attain_txt}</span></p>
                                 </div>
                                 <div className="right">
-                                    <Circle percent="-"/>
+                                    <Circle text={this.props.circle[1].text} type={this.props.circle[1].type} percentage={this.props.circle[1].percentage} />
                                 </div>
                             </li>
                         </ul> : <></>

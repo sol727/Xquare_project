@@ -1,6 +1,7 @@
 // Break Point (Desktop First 기준 내림차순 설정)
 $desktop-l-width	: 1440px;
 $tablet-l-width		: 1247px;
+$tablet-l-width2	: 1200px;
 $tablet-m-width		: 1023px;
 $tablet-s-width		: 767px;
 $mob-m-width		: 480px;
@@ -24,6 +25,12 @@ $mob-s-width		: 375px;
 // 태블릿
 @mixin tab {
 	@media screen and (max-width: #{$tablet-l-width}) {
+		@content;
+	}
+}
+// 태블릿
+@mixin tab2 {
+	@media screen and (max-width: #{$tablet-l-width2}) {
 		@content;
 	}
 }
@@ -54,6 +61,27 @@ $mob-s-width		: 375px;
 
 //------------------------------------------------------------------------------
 
+// 1200px;
+@include tab2{
+	.v3{
+		// 약관확인
+		&.terms_check{
+			.btn_wrap{width:384px;}
+		}
+		// 투자준비하기
+		&.invest_page{
+			.prepare_ul{
+				li .li_top_wrap{padding-bottom: 55px;
+					button{bottom:0;top:unset;transform:unset;}
+				}
+				li .li_top_wrap + p{margin-top:32px;}
+				.address_li>p{text-align:left;line-height: 1.5;}
+				.address_li>p br{display: block;}
+			}
+		}
+	}
+	
+}
 // 1023px;
 @include tab-middle{
 	.v3{
@@ -64,6 +92,10 @@ $mob-s-width		: 375px;
 			.pro_list>li{width:calc(50% - 12px);}
 			.pro_list>li:nth-child(2n){margin-right:0px !important;}
 			.pro_list>li:nth-child(3n){margin-right:24px;}
+		}
+		// 약관확인
+		&.terms_check{
+			.title_wrap{width:100%;}
 		}
 		
 	}
@@ -113,6 +145,39 @@ $mob-s-width		: 375px;
 			.left_wrap{width: 100%;}
 			.right_wrap{width: 100%;margin-top:16px;}
 		}
+		// 결산자료제출
+		&.v3_data{
+			.gray_bg{padding:16px;}
+			.not_season>div{width:100%;}
+			.not_season .right_box{margin-top:24px;}
+			.season_box{
+				.info_box .pro_content .top_box{width:100%;}
+				.info_box .pro_content .bottom_box{width:100%;margin-top:0px;}
+				.bd_box .left{margin-bottom:0px;}
+				.bd_box .right .write_box {margin-top:0 !important;padding-top:0px;}
+				.bd_box .right.file_box {margin-top:16px !important;}
+				.red_box ul{width:100%;}
+			}
+		}
+		// 약관확인
+		&.terms_check{
+			.terms_wrap{width:100%;margin-top:32px;
+				.agree_box .agree_wrap .oc-scrollbar-container{margin-top:16px;}
+				.agree_box .agree_wrap .txt_box2{padding:0 8px;}
+			}
+		}
+	}
+	
+}
+
+// 480px
+@include mob{
+	.v3{
+		// 약관확인
+		&.terms_check{
+			.btn_wrap{width:100%;}
+		}
+		
 	}
 	
 }

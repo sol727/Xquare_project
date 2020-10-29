@@ -3,6 +3,7 @@
 .mt8{margin-top:8px;}
 .mt9{margin-top:9px;}
 .mt10{margin-top:10px;}
+.mt40{margin-top:40px;}
 .mb10{margin-bottom:10px !important;}
 .mb0{margin-bottom:0px !important;}
 .mr10{margin-right:10px;}
@@ -31,6 +32,14 @@
     .radio_ul input[type="radio"] + label{width: 22px;height: 22px;border: 2px solid #d6d6d6;margin-right: 8px;cursor: pointer;border-radius: 50%;margin-right:8px;}
     .radio_ul input[type="radio"] + label + label{margin-top:2px;cursor: pointer;font-size:14px;font-weight: 600;}
     .radio_ul input[type="radio"]:checked + label{border:6px solid #ff8e40;}
+    .title_input{position: relative;}
+    .title_input p{position: absolute;font-size: 13px;color:#bfbfbf;top:50%;transform: translateY(-50%);right:16px;}
+    .title_input input{height:38px;padding-right:62px;}
+    .delt_btn_none .file_name .file_delete_btn{display:none;}
+    .upload_btn_none {
+        .file_name{width:100%;}
+        .upload_btn{display:none;}
+    }
 
     // 개설한프로젝트
     &.project{
@@ -74,15 +83,11 @@
             .left p span{font-size:13px;margin-left:4px;}
             .right .circle{width: 56px;height:56px;border-radius:50%;background:#eaedf1;position: relative; 
                 >div{position:absolute;top:0;left:0;width:56px;height:56px;border-radius:50%;}
-                .base{background:conic-gradient(#5a7cfa 0% 25%,transparent 25% 100%);}
-                .over{background:conic-gradient(#5a7cfa 0% 50%,transparent 50% 100%);mix-blend-mode: multiply;}
-                span{font-size:13px;color:#6e6e6d;position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);z-index: 1;}
+                .base{background:conic-gradient(#5a7cfa 0% 0%,transparent 0% 0%);}
+                .over{background:conic-gradient(#5a7cfa 0% 0%,transparent 0% 0%);mix-blend-mode: multiply;}
+                span{font-size:13px;color:#6e6e6d;position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);z-index: 1;width: 100%;text-align: center;}
             }
             .right .circle::after{content:'';position: absolute;width:51px;height:51px;background:#fff;border-radius:50%;top:50%;left:50%;transform: translate(-50%,-50%);}
-            .right .green_circle{
-                .base{background-color:#5dcf17;}
-                .over{background-color:#5dcf17;}
-            }
         }
     }
     .alarm_on .pro_content{
@@ -100,10 +105,12 @@
     }
     .default_li .pro_content{
         .top_box .title{color:#bfbfbf;padding-top:24px;}
+        .bottom_box .left p span{color:#bfbfbf;}
     }
     .expect_li .pro_content{
         .top_box .top p:first-child{color:#fe8d40;}
         .top_box .top p:first-child::after{background-color:#fe8d40;}
+        .bottom_box>li:last-child .circle{display:none;}
     }
     .funding_li .pro_content{
         .top_box .top p:first-child{color:#5dcf17;}
@@ -140,7 +147,8 @@
         a{width:100%;padding:5px;background:#fff;border-radius:4px;}
         .img_box{width:24px;height:24px;border-radius:4px;background:#a5add1 url(../images/icons/ic_file.png)no-repeat center;}
         .txt_box{width:calc(100% - 40px);padding-top:3px;
-           .font_14{margin-bottom:6px;} 
+           .font_14{margin-bottom:6px;word-break: break-all;}
+           .gray2_color{word-break: break-all;}
         }
 
     }
@@ -317,18 +325,73 @@
         }
         .btn_wrap button{width:180px;height:38px;font-size:15px;border-radius:4px;}
     }
-    // 공통
-    .title_input{position: relative;}
-    .title_input p{position: absolute;font-size: 13px;color:#bfbfbf;top:50%;transform: translateY(-50%);right:16px;}
-    .title_input input{height:38px;padding-right:62px;}
-    .delt_btn_none .file_name .file_delete_btn{display:none;}
-    .upload_btn_none {
-        .file_name{width:100%;}
-        .upload_btn{display:none;}
+    // 약관확인
+    &.terms_check{
+        .title_wrap{width:964px;padding:0 0 16px;margin-top:40px;}
+        .terms_wrap{width:588px;margin:40px auto 0;
+            .agree_box{border-top:none;}
+            .agree_box .agree_wrap{display:block;}
+            .agree_box .agree_wrap .oc-scrollbar-container{height:310px;display: block;}
+            .agree_box .agree_wrap:first-child .oc-scrollbar-container{display:block;}
+            .agree_box .agree_wrap .check_wrap.on{background:#ff8e40;}
+            .agree_box .agree_wrap .check_wrap.on .label_txt{color:#fff;}
+            .agree_box .agree_wrap .agree_btn{width:100%;height:38PX;color: #fff;font-size:15px;background:#282d40;margin-top:16px;}
+            .agree_box .agree_wrap .info_txt {
+                height: 330px; transition: .3s; overflow: hidden;
+
+                &.hide { height: 0; }
+            }
+        }
+        .btn_wrap{margin-top:40px;padding-bottom:0px;
+            button{font-size:15px !important;}
+        }
+    }
+    // 투자준비하기
+    &.invest_page{
+        .prepare_ul {
+            li .txt p:nth-of-type(1){padding-top:12px;}
+            li .txt p{padding:0 0 2px;}
+            li .certify_box p{margin-top:17px;}
+            li .certify_box p span{font-size: 20px;font-weight: bold;color:#bfbfbf;margin-right:11px;}
+            li .certify_box p img{margin-right:8px;}
+            li .li_top_wrap{position: relative;
+                button{position: absolute;top:50%;right:0px;transform:translateY(-50%);margin-top:0px;}
+            }
+            .address_li>p br{display:none;}
+            button{height:38px;font-size: 15px;}
+        }
+
+    }
+    // 법인회원투자준비
+    &.invest_prepare2{
+        .big_title{width:964px;}
     }
 
+}
+// 증권계좌본인인증 팝업
+.invest_check_pop{
+    .top_title_box{margin-bottom:32px;
+        ul{margin-bottom:20px;}
+        ul li{width:8px;height:8px;border-radius: 50%;margin-right:8px;background:rgba(52,51,50,.2);}
+        ul li.on{background:#ff8e40;}
+    }
+    .account_wrap{width:248px;margin:40px auto;}
+    .account_box{width:216px;padding:32px 0;background:#f9f9f9;box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.4);text-align: center;border-radius: 8px;margin:0 auto;}
+    .change_btn{width:104px;height:38px;margin-top:24px;font-size: 15px;font-weight:600;}
+    .certify_wrap{margin-bottom:26px;
+        .num_input_box{position: relative;width:calc(100% - 138px);}
+        .num_input_box input{height:38px;width:100%;padding:0 55px 0 16px;}
+        .num_input_box .time{position: absolute;top:50%;transform:translateY(-50%);right:16px;font-size:13px;color:#bfbfbf;}
+        .num_input_box + button{width:130px;height:38px;font-size:15px;}
+    }
+    .btn_wrap button{height:38px;font-size:15px;}
+}
+.invest_check_pop.mo_invest{
+    .top_txt{text-align:left;}
+}
 
-    
-
-
+// 신분증인증팝업
+.identity_pop{
+    .red_box{padding:8px;border-radius: 4px;background:#ffdcd8;margin-top:24px;}
+    .btn_wrap button{font-size:15px;}
 }
