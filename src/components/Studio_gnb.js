@@ -22,22 +22,36 @@ export default class Studio_gnb extends React.Component {
                     </div>
                     <div className="state_box_wrap"> 
                         <div className="state_box">
-                            <ProjectContent 
-                                state="준비중" 
-                                date="210124-1401" 
+                            <ProjectContent
+                                state="준비중"
+                                date="yymmdd-hhnn" 
                                 title="제목없음"
-                                label1="미설정"                               
+                                label_li = {
+                                    <>
+                                    <li>미지정</li>
+                                    </>
+                                }
                                 alarmShow={false}
                                 bottomShow={false}
+                                txt1="진행 기간"
+                                start="시작일"
+                                start_day="미지정"
+                                end="마감일"
+                                end_day="미지정"
+                                txt2="달성률"
+                                goal="목표 모금액"
+                                goal_txt="미지정"
+                                attain="달성 모금액"
+                                attain_txt="0원"
                                 circle={[
                                     {
-                                        text : '준비중' ,
+                                        text : '-' ,
                                         percentage : 0 ,
                                         type : 0
                                     } ,
                                     {
-                                        text : '150%' ,
-                                        percentage : 150 ,
+                                        text : '-' ,
+                                        percentage : 0 ,
                                         type : 1
                                     }
                                 ]}
@@ -100,8 +114,12 @@ export default class Studio_gnb extends React.Component {
                             <Link to="/V3_Project_state" className="arrow">프로젝트 문의</Link>
                          </li>
                     </ul>
-                    <ul className="mo">
-                        <li>
+                    <ul className="off_menu">
+                        <li className="active clearfix">
+                            <a href=""></a>
+                            <p>프로젝트상세</p>
+                        </li>
+                        <li className="clearfix">
                             <a href=""></a>
                             <p>프로젝트상세</p>
                         </li>
