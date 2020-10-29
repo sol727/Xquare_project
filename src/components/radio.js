@@ -4,47 +4,22 @@ export default class Radio extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+             checked : false
+        }
+
+        this.onChangeRadio = this.onChangeRadio.bind(this)
     }
-    componentDidMount(){
 
-     
-          // var chk_radio = document.querySelector('input[type="radio"]');
-          // var parent = checked.parentNode; 
-		// var sel_type = null;
-		// for(var i=0;i<chk_radio.length;i++){
-		// 	if(chk_radio[i].checked == true){ 
-		// 		sel_type = chk_radio[i].value;
-		// 	}
-		// }
-		// if(sel_type == null){
-
-          //      parent.classList.add('on');
-		// 	return false;
-		// }else{
-          //      parent.classList.remove('on');
-          // }
-          
-     
-    
-
-
-
-     
-     // var checked= document.querySelector('input[type="radio"]');
-     // var parent = checked.parentNode; 
-     //      if(checked.checked == true){ 
-     //           parent.classList.add('on');
-     //      }else{
-     //           parent.classList.remove('on');
-     //      } 
+    onChangeRadio(e) {
+          this.props.onChangeStep(this.props.id)
     }
-    
 
     render() {
         return (
-          <div className="radio_box">
-               <input type="radio" name={this.props.name} className={`${this.props.class}`} 
-               id={this.props.id}/><label htmlFor={this.props.id}></label><label htmlFor={this.props.id}>{this.props.text}</label>
+          <div className={`radio_box ${this.props.radio_box} ${this.props.focus === this.props.id ? 'on' : ''}`}>
+               <input type="radio" onChange={this.onChangeRadio} value={this.state.checked} name={this.props.name} className={`radio_input ${this.props.radio_class}`} id={this.props.id}/>
+               <label htmlFor={this.props.id}></label><label htmlFor={this.props.id}>{this.props.text}</label>
           </div>
         )
     }
