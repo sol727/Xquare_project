@@ -7,6 +7,7 @@ import Radio from '../components/radio'
 import Title from '../components/title';
 import File_upload from '../components/file_upload';
 import File_down from '../components/File_down';
+import Back_header from '../components/back_header';
 
 export default class V3_data extends React.Component {
 
@@ -20,6 +21,7 @@ export default class V3_data extends React.Component {
         return (
             <>
                 <section className="v3 v3_data">
+                    <Back_header/>
                     <div className="clearfix">
                         <Studio_gnb/>
                         <div className="cont">
@@ -510,6 +512,28 @@ export default class V3_data extends React.Component {
                         </div>
                     </div>
                 </section>
+                {/* 제출 팝업 */}
+                <div className="pop_wrap project_pop audit_pop data_pop">
+                    <div className="dim"></div>      
+                    <div className="pop_cont">
+                        <div className="rightT"> 
+                            <button type="button" className="close_pop"><img src={ require('../images/icons/close_btn.png')} alt="팝업닫기아이콘"/></button>                    
+                        </div>                        
+                        <div className="cont_box">
+                            <h3 className="mb4">해당 내용을 제출하시겠습니까?</h3>
+                            <p>제출하시면 최종심사 절차를 진행하게 됩니다.<br></br>제출하지않고 저장을 원하신다면 취소 버튼을 선택하세요.</p>                           
+                            <div>
+                                <button type="button" className="btn pop_submit line_btn">취소</button>
+                                <button type="button" className="btn pop_submit">제출하기</button>
+                            </div>                              
+                        </div>
+                    </div>                      
+                </div>
+                {/*  제출 시 보이는 토스트팝업 */}
+                <div className="toast_pop audit_toast data_toast">
+                    <p className="font_13 white_color">결산자료를 제출했습니다.</p>
+                </div>
+
             </>
         )
     }

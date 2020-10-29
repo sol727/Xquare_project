@@ -247,7 +247,7 @@
                border-radius: 0 20px 20px 0;
                padding: 0 0 24px;
                
-               .top{
+               >.top{
                     padding: 56px 16px 32px;
                     border-radius: 0 20px 0 0;
                     background-color: #1f318d;
@@ -261,7 +261,15 @@
                     .state_box {
                          background: #fff;
                          border-radius: 8px;
-                         padding: 24px 16px;
+                         .top { 
+                              padding: 0;
+                              border-radius: 0;}
+                              background-color: #fff;
+                         .bottom {
+                              padding: 0;
+                              border-radius: 0;
+                              background-color: #fff;
+                         }
                     }
                }
                .pc {
@@ -325,7 +333,7 @@
                     }
                     
                }
-               .mo {display: none;}
+               .mo {display: none;}              
           }
           .bottom{
                background-color: #1f318d;
@@ -771,6 +779,9 @@
      width: 221px;
      padding: 0px 28px;
      background-image:none;     
+}
+.data_toast {
+     width: 190px;
 }
 
 .delete_pop {

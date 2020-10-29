@@ -207,7 +207,7 @@ export default class V3_Account4 extends React.Component {
                         <div className="rightT"> 
                             <button type="button" className="close_pop"><img src={ require('../images/icons/close_btn.png')} alt="팝업닫기아이콘"/></button>                    
                         </div>                        
-                        <div className="cont">
+                        <div className="cont_box">
                             <h3>필수 입력 항목을 확인 해주세요</h3>
                             <ul>
                                 <li>
@@ -234,7 +234,7 @@ export default class V3_Account4 extends React.Component {
                         <div className="rightT"> 
                             <button type="button" className="close_pop"><img src={ require('../images/icons/close_btn.png')} alt="팝업닫기아이콘"/></button>                    
                         </div>                        
-                        <div className="cont">
+                        <div className="cont_box">
                             <h3>해당 내용을 제출하시겠습니까?</h3>
                             <p>제출하시면 최종심사 절차를 진행하게 됩니다.<br></br>제출하지않고 저장을 원하신다면 취소 버튼을 선택하세요.</p>                           
                             <div>
@@ -252,7 +252,7 @@ export default class V3_Account4 extends React.Component {
                         <div className="rightT"> 
                             <button type="button" className="close_pop"><img src={ require('../images/icons/close_btn.png')} alt="팝업닫기아이콘"/></button>                    
                         </div>                        
-                        <div className="cont">
+                        <div className="cont_box">
                             <h3>계약준비 내용을 제출하시겠습니까?</h3>
                             <p>제출하시면 심사 절차를 진행됩니다.</p>                           
                             <div>

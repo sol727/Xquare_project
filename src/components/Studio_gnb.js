@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import ProjectContent from '../components/ProjectContent'
+
 export default class Studio_gnb extends React.Component {
 
     constructor(props) {
@@ -20,10 +22,26 @@ export default class Studio_gnb extends React.Component {
                     </div>
                     <div className="state_box_wrap"> 
                         <div className="state_box">
-                            <div className="clearfix2">
-                                <p className="gray2_color font_13">준비중</p>
-                                <p className="gray2_color font_13">yymmdd-hhnn</p>
-                            </div>
+                            <ProjectContent 
+                                state="준비중" 
+                                date="210124-1401" 
+                                title="제목없음"
+                                label1="미설정"                               
+                                alarmShow={false}
+                                bottomShow={false}
+                                circle={[
+                                    {
+                                        text : '준비중' ,
+                                        percentage : 0 ,
+                                        type : 0
+                                    } ,
+                                    {
+                                        text : '150%' ,
+                                        percentage : 150 ,
+                                        type : 1
+                                    }
+                                ]}
+                            />
                         </div>
                     </div>
                     <ul className="pc">
