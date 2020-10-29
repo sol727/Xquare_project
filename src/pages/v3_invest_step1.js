@@ -136,10 +136,10 @@ export default class V3_invest_step1 extends React.Component {
                                             <div className="top">
                                                 <h5 className="mb16">예치금이</h5>
                                                 <h6 className="font_18 mb16"><span className="bold point_color font_18">nnn,nnn</span>원 부족합니다.</h6>
-                                                <p className="font_13 gray2_color">부족한 금액을 My 엑스퀘어 계좌에 입금한 후 새로고침을 누르세요.</p>
+                                                <p className="font_13 gray2_color mb16">부족한 금액을 My 엑스퀘어 계좌에 입금한 후 새로고침을 누르세요.</p>
                                                 <button type="button">자세한 입금 방법</button>
                                             </div>
-                                            <div className="bottom mt40">예치금이 충분합니다.<br/>투자를 계속 진행 해주세요.</div>
+                                            <div className="bottom mt40 bold line_h5">예치금이 충분합니다.<br/>투자를 계속 진행 해주세요.</div>
                                         </div>
                                     </div>
                                 </div>

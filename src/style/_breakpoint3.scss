@@ -181,6 +181,12 @@ $mob-s-width		: 375px;
 			.btn_wrap{width:100%;}
 		}
 	}
+	// 투자정보입력
+	.invest_page.step{
+		.cont.card_cont .card_box>div{width:100%;}
+		.cont.card_cont .card_box .left{padding:24px 16px;}
+		.cont.card_cont .card_box .left .card{width:100%;}
+	}
 	
 }
 

@@ -74,8 +74,12 @@ export default class V3_Project extends React.Component {
                                         state="준비중"
                                         date="yymmdd-hhnn" 
                                         title="제목 미지정"
-                                        label1="증권구분"
-                                        label2="에너지 유형"
+                                        label_li = {
+                                            <>
+                                            <li>증권구분</li>
+                                            <li>에너지 유형</li>
+                                            </>
+                                        }
                                         alarmShow={true}
                                         bottomShow={true}
                                         txt1="진행 기간"
@@ -107,8 +111,12 @@ export default class V3_Project extends React.Component {
                                         state="준비중" 
                                         date="210124-1401" 
                                         title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                                        label1="채권형(일반회사채)"
-                                        label2="연료전지"
+                                        label_li = {
+                                            <>
+                                            <li>채권형(일반회사채)</li>
+                                            <li>연료전지</li>
+                                            </>
+                                        }
                                         alarmShow={true}
                                         alarm="1" 
                                         bottomShow={true}
@@ -141,8 +149,12 @@ export default class V3_Project extends React.Component {
                                         state="오픈예정"
                                         date="210124-1401"
                                         title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                                        label1="채권형(일반회사채)"
-                                        label2="연료전지"
+                                        label_li = {
+                                            <>
+                                            <li>채권형(일반회사채)</li>
+                                            <li>연료전지</li>
+                                            </>
+                                        }
                                         alarmShow={true}
                                         alarm="1"
                                         bottomShow={true}
@@ -175,8 +187,12 @@ export default class V3_Project extends React.Component {
                                         state="펀딩중" 
                                         date="210124-1401" 
                                         title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                                        label1="채권형(일반회사채)"
-                                        label2="연료전지"
+                                        label_li = {
+                                            <>
+                                            <li>채권형(일반회사채)</li>
+                                            <li>연료전지</li>
+                                            </>
+                                        }
                                         alarmShow={true}
                                         alarm="1"
                                         bottomShow={true}
@@ -209,8 +225,12 @@ export default class V3_Project extends React.Component {
                                         state="성공" 
                                         date="210124-1401" 
                                         title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                                        label1="채권형(일반회사채)"
-                                        label2="연료전지"
+                                        label_li = {
+                                            <>
+                                            <li>채권형(일반회사채)</li>
+                                            <li>연료전지</li>
+                                            </>
+                                        }
                                         alarmShow={true}
                                         alarm="1"
                                         bottomShow={true}
@@ -243,8 +263,12 @@ export default class V3_Project extends React.Component {
                                         state="실패"
                                         date="210124-1401" 
                                         title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                                        label1="채권형(일반회사채)"
-                                        label2="연료전지"
+                                        label_li = {
+                                            <>
+                                            <li>채권형(일반회사채)</li>
+                                            <li>연료전지</li>
+                                            </>
+                                        }
                                         alarmShow={true}
                                         alarm="1"
                                         bottomShow={true}
@@ -294,8 +318,12 @@ export default class V3_Project extends React.Component {
                                     state="준비중" 
                                     date="210124-1401" 
                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                                    label1="주식형(보통주)"
-                                    label2="태양광/소형"
+                                    label_li = {
+                                        <>
+                                        <li>주식형(보통주)</li>
+                                        <li>태양광/소형</li>
+                                        </>
+                                    }
                                     alarmShow={false}
                                     bottomShow={false}
                                     circle={[
@@ -334,8 +362,12 @@ export default class V3_Project extends React.Component {
                                     state="준비중" 
                                     date="210124-1401" 
                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                                    label1="주식형(보통주)"
-                                    label2="태양광/소형"
+                                    label_li = {
+                                        <>
+                                        <li>주식형(보통주)</li>
+                                        <li>태양광/소형</li>
+                                        </>
+                                    }
                                     alarmShow={false}
                                     bottomShow={false}
                                     circle={[
