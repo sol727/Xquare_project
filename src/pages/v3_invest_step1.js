@@ -44,7 +44,7 @@ export default class V3_invest_step1 extends React.Component {
                     </div>
                     {/* -------------상단부분끝 */}
                     <div className="container step1">
-                        <div className="step_progress">
+                        {/* <div className="step_progress">
                             <ul className="">
                                 <li className="now"><div></div><p>투자정보입력</p></li>
                                 <li><div>02</div><p className="centerT">약관 및 투자위험</p></li>
@@ -52,8 +52,8 @@ export default class V3_invest_step1 extends React.Component {
                             </ul>
                             <div className="step_bar step_bar1"></div>
                             <div className="step_bar step_bar2"></div>
-                        </div>
-                        <div className="title_box centerT">
+                        </div> */}
+                        <div className="title_box centerT mt40">
                             <p className="font_13 gray4_color">STEP 01</p>
                             <h1 className="title">투자정보입력</h1>
                         </div>
@@ -208,7 +208,7 @@ export default class V3_invest_step1 extends React.Component {
                         </div>
                         <div className="page_btn centerT">
                             <button className="point_color font_15 mr24 d_ib" onClick={() => window.history.back()}>이전</button>
-                            <button className="unable_btn d_ib" onClick={() => window.location.pathname = "/invest_step2"} >다음</button>
+                            <button className="unable_btn d_ib font_15" onClick={() => window.location.pathname = "/invest_step2"} >결과확인</button>
                         </div>
                     </div>
                 </section>

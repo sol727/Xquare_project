@@ -9,9 +9,9 @@
 .mb4{margin-bottom:4px;}
 .mr10{margin-right:10px;}
 .pl8{padding-left:8px;}
-.font_16{font-size: 16px;}
 .red_bg{background:#ff513e !important;}
 .line_h5{line-height: 1.5;}
+.font_15{font-size:15px !important;}
 .font_16{font-size:16px !important;}
 .font_24{font-size: 24px !important;}
 .sky_color{color:#eff1f7;}
@@ -308,7 +308,9 @@
             .info_box{padding:16px;background:#f8f9fb;border-top:1px solid #eaedf1;border-bottom:1px solid #eaedf1;}
             .pro_content a{padding:0px;}
             .pro_content .top_box{width:calc(40% - 12px);float:left;margin-top:0px;margin-right:24px;}
-            .pro_content .bottom_box{width:calc(40% - 12px);float:left;}
+            .pro_content .bottom_box{width:calc(40% - 12px);float:left;
+                .right .circle::after{background:#f8f9fb;}
+            }
             .bottom_box{
                 ul{background:#fff;padding:24px 16px;}
                 button{height:38px;font-size:15px;margin-top:10px;}
