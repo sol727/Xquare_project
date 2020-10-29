@@ -9,6 +9,66 @@ export default class V3_Account3 extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            step1 : '',
+            step2 : '',
+            step3 : '',
+            step4 : '',
+            step5 : '',
+            step6 : '',
+            step7 : '',
+            step8 : ''
+        }
+
+        this.onChangeStep = this.onChangeStep.bind(this)
+        this.onChangeStep2 = this.onChangeStep2.bind(this)
+        this.onChangeStep3 = this.onChangeStep3.bind(this)
+        this.onChangeStep4 = this.onChangeStep4.bind(this)
+        this.onChangeStep5 = this.onChangeStep5.bind(this)
+        this.onChangeStep6 = this.onChangeStep6.bind(this)
+        this.onChangeStep7 = this.onChangeStep7.bind(this)
+        this.onChangeStep8 = this.onChangeStep8.bind(this)
+    }
+
+    onChangeStep(id) {
+        this.setState({
+            step1 : id
+        })
+    }
+    onChangeStep2(id) {
+        this.setState({
+            step2 : id
+        })
+    }
+    onChangeStep3(id) {
+        this.setState({
+            step3 : id
+        })
+    }
+    onChangeStep4(id) {
+        this.setState({
+            step4 : id
+        })
+    }
+    onChangeStep5(id) {
+        this.setState({
+            step5 : id
+        })
+    }
+    onChangeStep6(id) {
+        this.setState({
+            step6 : id
+        })
+    }
+    onChangeStep7(id) {
+        this.setState({
+            step7 : id
+        })
+    }
+    onChangeStep8(id) {
+        this.setState({
+            step8 : id
+        })
     }
 
     render() {
@@ -96,13 +156,14 @@ export default class V3_Account3 extends React.Component {
                                         <div className="right">
                                             <div className="check_list check_list2 clearfix2">
                                                 <div>
-                                                    <Radio id="type1"  name="type"  text="태양광 (소형)"/>
-                                                     <Radio id="type3"  name="type"  text="태양광 (중소형)"/><Radio id="type5"  name="type"  text="태양광 (중형)"/>
+                                                     <Radio focus={this.state.step1} onChangeStep={this.onChangeStep} id="type1"  name="type"  text="태양광 (소형)"/>
+                                                     <Radio focus={this.state.step1} onChangeStep={this.onChangeStep} id="type3"  name="type"  text="태양광 (중소형)"/>
+                                                     <Radio focus={this.state.step1} onChangeStep={this.onChangeStep} id="type5"  name="type"  text="태양광 (중형)"/>
                                                 </div>
                                                 <div>
-                                                    <Radio id="type2"  name="type"  text="태양광 (대형)"/>
-                                                    <Radio id="type4"  name="type"  text="연료전지"/>
-                                                    <Radio id="type6"  name="type"  text="바이오디젤"/>
+                                                    <Radio focus={this.state.step1} onChangeStep={this.onChangeStep} id="type2"  name="type"  text="태양광 (대형)"/>
+                                                    <Radio focus={this.state.step1} onChangeStep={this.onChangeStep} id="type4"  name="type"  text="연료전지"/>
+                                                    <Radio focus={this.state.step1} onChangeStep={this.onChangeStep} id="type6"  name="type"  text="바이오디젤"/>
                                                 </div>
                                             </div>                                           
                                         </div>                 
@@ -125,10 +186,10 @@ export default class V3_Account3 extends React.Component {
                                         <div className="right">
                                             <div className="check_list check_list2 clearfix2">
                                                 <div>
-                                                    <Radio id="type1"  name="type"  text="주식형"/>                                                    
+                                                    <Radio focus={this.state.step2} onChangeStep={this.onChangeStep2} id="type2-1"  name="type2"  text="주식형"/>                                                    
                                                 </div>
                                                 <div>
-                                                    <Radio id="type2"  name="type"  text="채권형"/>                                                    
+                                                    <Radio focus={this.state.step2} onChangeStep={this.onChangeStep2} id="type2-2"  name="type2"  text="채권형"/>                                                    
                                                 </div>
                                             </div>                                           
                                         </div>                 
@@ -159,13 +220,13 @@ export default class V3_Account3 extends React.Component {
                                                 <div className="right">                                                    
                                                     <ul className="check_list check_list3 clearfix">
                                                         <li>
-                                                            <Radio id="division1"  name="division"  text="보통주"/>                                                    
+                                                            <Radio focus={this.state.step3} onChangeStep={this.onChangeStep3} id="division1"  name="division"  text="보통주" />                                                    
                                                         </li>
                                                         <li>
-                                                            <Radio id="division2"  name="division"  text="전환우선주"/>     
+                                                            <Radio focus={this.state.step3} onChangeStep={this.onChangeStep3} id="division2"  name="division"  text="전환우선주" />     
                                                         </li>
                                                         <li>
-                                                            <Radio id="division3"  name="division"  text="상환전환우선주"/>     
+                                                            <Radio focus={this.state.step3} onChangeStep={this.onChangeStep3} id="division3"  name="division"  text="상환전환우선주" />     
                                                         </li>
                                                     </ul>
                                                 </div>       
@@ -249,10 +310,10 @@ export default class V3_Account3 extends React.Component {
                                                 <div className="right">                    
                                                     <div className="check_list check_list2 clearfix2">
                                                         <div>
-                                                            <Radio id="method"  name="method"  text="공모"/>
+                                                            <Radio id="method"  name="method"  text="공모" focus={this.state.step4} onChangeStep={this.onChangeStep4}/>
                                                         </div>
                                                         <div>
-                                                            <Radio id="method2"  name="method"  text="사모"/>     
+                                                            <Radio id="method2"  name="method"  text="사모" focus={this.state.step4} onChangeStep={this.onChangeStep4}/>     
                                                         </div>
                                                     </div>
                                                 </div>       
@@ -274,10 +335,10 @@ export default class V3_Account3 extends React.Component {
                                                 <div className="right">                    
                                                     <div className="check_list check_list2 clearfix2">
                                                         <div>
-                                                            <Radio id="method2-1"  name="method2"  text="정율"/>
+                                                            <Radio focus={this.state.step5} onChangeStep={this.onChangeStep5} id="method2-1"  name="method2"  text="정율"/>
                                                         </div>
                                                         <div>
-                                                            <Radio id="method2"  name="method2"  text="정액"/>     
+                                                            <Radio focus={this.state.step5} onChangeStep={this.onChangeStep5} id="method2-2"  name="method2"  text="정액"/>     
                                                         </div>
                                                     </div>
                                                 </div>       
@@ -307,10 +368,10 @@ export default class V3_Account3 extends React.Component {
                                                 <div className="right">                                                    
                                                     <ul className="check_list check_list3 clearfix">
                                                         <li>
-                                                            <Radio id="division2-1"  name="division2"  text="전환사채"/>                                                    
+                                                            <Radio focus={this.state.step6} onChangeStep={this.onChangeStep6} id="division2-1"  name="division2"  text="전환사채"/>                                                    
                                                         </li>
                                                         <li>
-                                                            <Radio id="division2-2"  name="division2"  text="일반 회사채"/>     
+                                                            <Radio  focus={this.state.step6} onChangeStep={this.onChangeStep6} id="division2-2"  name="division2"  text="일반 회사채"/>     
                                                         </li>                                                        
                                                     </ul>
                                                 </div>       
@@ -397,10 +458,10 @@ export default class V3_Account3 extends React.Component {
                                                 <div className="right">                    
                                                     <div className="check_list check_list2 clearfix2">
                                                         <div>
-                                                            <Radio id="method2-1"  name="method2-1"  text="공모"/>
+                                                            <Radio focus={this.state.step7} onChangeStep={this.onChangeStep7} id="method3-1"  name="method3"  text="공모"/>
                                                         </div>
                                                         <div>
-                                                            <Radio id="method2-2"  name="method2-1"  text="사모"/>     
+                                                            <Radio focus={this.state.step7} onChangeStep={this.onChangeStep7} id="method3-2"  name="method3"  text="사모"/>     
                                                         </div>
                                                     </div>
                                                 </div>       
@@ -422,10 +483,10 @@ export default class V3_Account3 extends React.Component {
                                                 <div className="right">                    
                                                     <div className="check_list check_list2 clearfix2">
                                                         <div>
-                                                            <Radio id="method2_1"  name="method2-2"  text="정율"/>
+                                                            <Radio focus={this.state.step8} onChangeStep={this.onChangeStep8} id="method4-1"  name="method4"  text="정율"/>
                                                         </div>
                                                         <div>
-                                                            <Radio id="method2_2"  name="method2-2"  text="정액"/>     
+                                                            <Radio focus={this.state.step8} onChangeStep={this.onChangeStep8} id="method4-2"  name="method4"  text="정액"/>     
                                                         </div>
                                                     </div>
                                                 </div>       

@@ -7,8 +7,26 @@ import Radio from '../components/radio';
 export default class V3_Account extends React.Component {
 
     constructor(props) {
-    super(props);
+        super(props);
+        // this.state = {
+        //     checked : false
+        // }
+        // this.state = {
+        //     check1 : '',
+           
+        // }
+        // this.onChangeChk = this.onChangeChk.bind(this)
     }
+
+    // onChangeCheck(e) {
+    //         this.props.onChangeChk(this.props.id2)
+    // }
+
+    // onChangeChk(id2) {
+    //     this.setState({
+    //         chk1 : id2
+    //     })
+    // }
 
     render() {
         return (
@@ -60,24 +78,39 @@ export default class V3_Account extends React.Component {
                                         <div className="right">
                                                 <div>
                                                     <ul className="ul_50 clearfix check_list">
-                                                        <li>                                                                <Radio id="id1" class="c" text="해당하지 않습니다."/>
+                                                        <li>                                                              
+                                                            <div className="check_box check_box2" >
+                                                                <input type="checkbox" id="chk1"  /><label htmlFor="chk1"></label><label htmlFor="chk1">창업 7년 이내 비상장 기업 </label>
+                                                            </div>
                                                             <p className="centerT">(개업일 yyyy.mm.dd 기준)</p>
                                                         </li>
                                                         <li>
-                                                            <Radio id="id2" class="d" text="해당합니다."/>
+                                                             <div className="check_box check_box2" >
+                                                                <input type="checkbox" id="chk1"  /><label htmlFor="chk1"></label><label htmlFor="chk1">벤처기업 인증</label>
+                                                            </div>
                                                         </li>
-                                                        <li>                                                                <Radio id="id1" class="c" text="해당하지 않습니다."/>
+                                                        <li>    
+                                                             <div className="check_box check_box2" >
+                                                                <input type="checkbox" id="chk1"  /><label htmlFor="chk1"></label><label htmlFor="chk1">메인비즈인증</label>
+                                                            </div>                                                            
                                                         </li>
                                                         <li>
-                                                            <Radio id="id2" class="d" text="해당합니다."/>
-                                                        </li>
-                                                        <li>                                                                <Radio id="id1" class="c" text="해당하지 않습니다."/>
+                                                            <div className="check_box check_box2" >
+                                                                <input type="checkbox" id="chk1"  /><label htmlFor="chk1"></label><label htmlFor="chk1">이노비스 인증</label>
+                                                            </div>
                                                         </li>
                                                         <li>
-                                                            <Radio id="id2" class="d" text="해당합니다."/>
+                                                            <div className="check_box check_box2" >
+                                                                <input type="checkbox" id="chk1"  /><label htmlFor="chk1"></label><label htmlFor="chk1">프로젝트성 기업</label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div className="check_box check_box2" >
+                                                                <input type="checkbox" id="chk1"  /><label htmlFor="chk1"></label><label htmlFor="chk1">사회적기업 </label>
+                                                            </div>
                                                         </li>
                                                         <li className="width_100">
-                                                            <Radio id="id2" class="d" text="해당합니다."/>
+                                                            <Radio id="id2" radio_box="radio_box3"  text="해당합니다."/>
                                                         </li>
                                                     </ul>
                                                     
