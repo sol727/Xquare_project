@@ -139,7 +139,8 @@
                     height: 38px;
                     margin-right: 8px;
                     background-color: #f8f9fb;
-                    border-radius: 2px;               
+                    border-radius: 2px;     
+                    border: none;          
                }
               .file_delete_btn {
                    position: absolute;
@@ -160,6 +161,10 @@
                text-align: center;
                border-radius: 2px;     
                font-weight: 500;
+               &.active {
+                    background-color: #ffa566;
+                    color: #fff;
+               }
                input {display: none;}
           }          
 
@@ -409,6 +414,17 @@
           }
           
      }
+     &.funding3 {
+          .cont{
+               .gray_bg{
+                    .bd_box{
+                         .left{
+                              width: 40%;
+                         }
+                    }
+               }
+          } 
+     }
      //컨텐츠
      .cont {
           width: calc(100% - 306px);
@@ -441,9 +457,9 @@
                          color: #343332; 
                          line-height: 22px ; 
                          padding: 8px 16px;
-                         &:after {position: absolute; content: ''; left: -16px; top: 0; width: 4px; height: 100%; background: #ff8e40; border-radius: 0 3px 3px 0;}
-                         
+                         &:after {position: absolute; content: ''; left: -16px; top: 0; width: 4px; height: 100%; background: #ff8e40; border-radius: 0 3px 3px 0;}                         
                     }
+                    
                }
                .bd_line {
                     width: 100%;
@@ -537,7 +553,7 @@
           .fix_btn {
                position: fixed;
                right: 16px;
-               bottom: 20px;
+               bottom: 76px;
               width: 64px;
               height: 64px;
               background: #1f318d; 
@@ -672,7 +688,7 @@
                width: 24px;
                img {width: 98%;}               
           }
-          .cont_box {
+          .cont {
                >h3 {
                     font-size: 18px; 
                     color: #343332;

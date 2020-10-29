@@ -14,7 +14,7 @@ export default class V3_funding2 extends React.Component {
     render() {
         return (
             <>
-                <section className="v3">
+                <section className="v3 studio funding funding2">
                     <Back_header/>
                     <div className="clearfix">
                         <Studio_gnb/>
@@ -22,10 +22,10 @@ export default class V3_funding2 extends React.Component {
                             <div className="top_box container">
                                 <h1>펀딩 준비</h1>
                                 <ul className="clearfix tab_ul">
-                                    <li className="on">
+                                    <li >
                                         <Link to="/V3_funding1">발행정보 확정</Link>
                                     </li>
-                                    <li>
+                                    <li className="on">
                                         <Link to="/V3_funding2">펀딩 소개 자료</Link>
                                     </li>
                                     <li >
