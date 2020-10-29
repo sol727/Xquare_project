@@ -16,7 +16,7 @@ export default class V3_Project extends React.Component {
         return (
             <>
                 <Header />
-                <section className="v3 project">                        
+                <section className="v3 project">
                     <div className="top_box container">
                         <div className="clearfix2">
                             <h1>개설한 프로젝트</h1>
@@ -70,14 +70,36 @@ export default class V3_Project extends React.Component {
                                     </Link>
                                 </li>
                                 <li className="default_li">
-                                    <ProjectContent 
-                                        state="준비중" 
+                                    <ProjectContent
+                                        state="준비중"
                                         date="yymmdd-hhnn" 
                                         title="제목 미지정"
                                         label1="증권구분"
                                         label2="에너지 유형"
                                         alarmShow={true}
                                         bottomShow={true}
+                                        txt1="진행 기간"
+                                        start="시작일"
+                                        start_day="미지정"
+                                        end="마감일"
+                                        end_day="미지정"
+                                        txt2="달성률"
+                                        goal="목표 모금액"
+                                        goal_txt="미지정"
+                                        attain="달성 모금액"
+                                        attain_txt="0원"
+                                        circle={[
+                                            {
+                                                text : '-' ,
+                                                percentage : 0 ,
+                                                type : 0
+                                            } ,
+                                            {
+                                                text : '-' ,
+                                                percentage : 0 ,
+                                                type : 1
+                                            }
+                                        ]}
                                     />
                                 </li>
                                 <li className="prepare_li alarm_on">
@@ -90,6 +112,28 @@ export default class V3_Project extends React.Component {
                                         alarmShow={true}
                                         alarm="1" 
                                         bottomShow={true}
+                                        txt1="진행 기간"
+                                        start="시작일"
+                                        start_day="yyyy.mm.dd"
+                                        end="마감일"
+                                        end_day="yyyy.mm.dd"
+                                        txt2="달성률"
+                                        goal="목표 모금액"
+                                        goal_txt="10,000,000원"
+                                        attain="달성 모금액"
+                                        attain_txt="0원"
+                                        circle={[
+                                            {
+                                                text : '준비중' ,
+                                                percentage : 0 ,
+                                                type : 0
+                                            } ,
+                                            {
+                                                text : '0%' ,
+                                                percentage : 0 ,
+                                                type : 1
+                                            }
+                                        ]}
                                     />
                                 </li>
                                 <li className="expect_li btn_on">
@@ -102,6 +146,28 @@ export default class V3_Project extends React.Component {
                                         alarmShow={true}
                                         alarm="1"
                                         bottomShow={true}
+                                        txt1="진행 기간"
+                                        start="시작일"
+                                        start_day="yyyy.mm.dd"
+                                        end="마감일"
+                                        end_day="yyyy.mm.dd"
+                                        txt2="응원합니다"
+                                        goal="관심투자자"
+                                        goal_txt="10,000명"
+                                        attain="목표 모금액"
+                                        attain_txt="10,000,000원"
+                                        circle={[
+                                            {
+                                                text : '예정' ,
+                                                percentage : 100 ,
+                                                type : 0
+                                            } ,
+                                            {
+                                                text : '-' ,
+                                                percentage : 0 ,
+                                                type : 1
+                                            }
+                                        ]}
                                     />
                                 </li>
                                 <li className="funding_li btn_on">
@@ -114,6 +180,28 @@ export default class V3_Project extends React.Component {
                                         alarmShow={true}
                                         alarm="1"
                                         bottomShow={true}
+                                        txt1="진행 기간"
+                                        start="시작일"
+                                        start_day="yyyy.mm.dd"
+                                        end="마감일"
+                                        end_day="yyyy.mm.dd"
+                                        txt2="달성률"
+                                        goal="목표 모금액"
+                                        goal_txt="10,000,000원"
+                                        attain="달성 모금액"
+                                        attain_txt="6,000,000원"
+                                        circle={[
+                                            {
+                                                text : '-15일' ,
+                                                percentage : 70 ,
+                                                type : 0
+                                            } ,
+                                            {
+                                                text : '60%' ,
+                                                percentage : 60 ,
+                                                type : 1
+                                            }
+                                        ]}
                                     />
                                 </li>
                                 <li className="success_li btn_on bell_none">
@@ -126,11 +214,33 @@ export default class V3_Project extends React.Component {
                                         alarmShow={true}
                                         alarm="1"
                                         bottomShow={true}
+                                        txt1="진행 기간"
+                                        start="시작일"
+                                        start_day="yyyy.mm.dd"
+                                        end="마감일"
+                                        end_day="yyyy.mm.dd"
+                                        txt2="달성률"
+                                        goal="목표 모금액"
+                                        goal_txt="10,000,000원"
+                                        attain="달성 모금액"
+                                        attain_txt="12,000,000원"
+                                        circle={[
+                                            {
+                                                text : '종료' ,
+                                                percentage : 0 ,
+                                                type : 0
+                                            } ,
+                                            {
+                                                text : '120%' ,
+                                                percentage : 120 ,
+                                                type : 1
+                                            }
+                                        ]}
                                     />
                                 </li>
                                 <li className="fail_li btn_on bell_none">
                                     <ProjectContent 
-                                        state="성공" 
+                                        state="실패"
                                         date="210124-1401" 
                                         title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                                         label1="채권형(일반회사채)"
@@ -138,6 +248,28 @@ export default class V3_Project extends React.Component {
                                         alarmShow={true}
                                         alarm="1"
                                         bottomShow={true}
+                                        txt1="진행 기간"
+                                        start="시작일"
+                                        start_day="yyyy.mm.dd"
+                                        end="마감일"
+                                        end_day="yyyy.mm.dd"
+                                        txt2="달성률"
+                                        goal="목표 모금액"
+                                        goal_txt="10,000,000원"
+                                        attain="달성 모금액"
+                                        attain_txt="6,000,000원"
+                                        circle={[
+                                            {
+                                                text : '종료' ,
+                                                percentage : 0 ,
+                                                type : 0
+                                            } ,
+                                            {
+                                                text : '60%' ,
+                                                percentage : 60 ,
+                                                type : 1
+                                            }
+                                        ]}
                                     />
                                 </li>
                             </ul>
@@ -162,8 +294,22 @@ export default class V3_Project extends React.Component {
                                     state="준비중" 
                                     date="210124-1401" 
                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                                    label1="주식형(보통주)"
+                                    label2="태양광/소형"
                                     alarmShow={false}
                                     bottomShow={false}
+                                    circle={[
+                                        {
+                                            text : '준비중' ,
+                                            percentage : 0 ,
+                                            type : 0
+                                        } ,
+                                        {
+                                            text : '150%' ,
+                                            percentage : 150 ,
+                                            type : 1
+                                        }
+                                    ]}
                                 />
                             </div>
                             <div>
@@ -188,8 +334,22 @@ export default class V3_Project extends React.Component {
                                     state="준비중" 
                                     date="210124-1401" 
                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                                    label1="주식형(보통주)"
+                                    label2="태양광/소형"
                                     alarmShow={false}
                                     bottomShow={false}
+                                    circle={[
+                                            {
+                                                text : '준비중' ,
+                                                percentage : 0 ,
+                                                type : 0
+                                            } ,
+                                            {
+                                                text : '150%' ,
+                                                percentage : 150 ,
+                                                type : 1
+                                            }
+                                        ]}
                                 />
                             </div>
                             <div>

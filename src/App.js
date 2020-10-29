@@ -62,6 +62,12 @@ import V3_funding1 from './pages/v3_funding1';
 import V3_funding2 from './pages/v3_funding2';
 import V3_funding3 from './pages/v3_funding3';
 import V3_data from './pages/v3_data';
+import V3_terms_check from './pages/v3_terms_check';
+import V3_invest_prepare from './pages/v3_invest_prepare';
+import V3_invest_prepare2 from './pages/v3_invest_prepare2';
+import V3_mo_invest_check from './pages/v3_mo_invest_check';
+import V3_mo_identity_pop from './pages/v3_mo_identity_pop';
+
 
 
 
@@ -123,6 +129,11 @@ function App() {
         <Route path="/v3_funding2" component={V3_funding2}/>
         <Route path="/v3_funding3" component={V3_funding3}/>
         <Route path="/v3_data" component={V3_data}/>
+        <Route path="/v3_terms_check" component={V3_terms_check}/>
+        <Route path="/v3_invest_prepare" component={V3_invest_prepare}/>
+        <Route path="/v3_invest_prepare2" component={V3_invest_prepare2}/>
+        <Route path="/v3_mo_invest_check" component={V3_mo_invest_check}/>
+        <Route path="/v3_mo_identity_pop" component={V3_mo_identity_pop}/>
              
         
     </BrowserRouter>

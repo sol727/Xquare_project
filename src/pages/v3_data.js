@@ -36,6 +36,7 @@ export default class V3_data extends React.Component {
                                             <button type="button" className="btn big mt8 mb0">자세히 보기</button>
                                         </div>
                                     </div>
+                                    <p className="mt16 mb16 font_14 centerT">결산자료 심사는 최대 3영업일 소요됩니다</p>
                                 </div>
 
                                 {/* 아직시즌아닐때 */}
@@ -66,8 +67,9 @@ export default class V3_data extends React.Component {
                                             label1="채권형(일반회사채)"
                                             label2="연료전지"
                                             
-                                            alarmShow={true}
+                                            alarmShow={false}
                                             bottomShow={true}
+                                            
                                         />
                                     </div>
                                     <div className="bottom_box">
