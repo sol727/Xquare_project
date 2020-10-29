@@ -79,6 +79,10 @@ $mob-s-width		: 375px;
 				.address_li>p br{display: block;}
 			}
 		}
+		// 법인회원투자준비
+		&.invest_prepare2{
+			.btn_wrap{width:384px;}
+		}
 	}
 	
 }
@@ -95,6 +99,10 @@ $mob-s-width		: 375px;
 		}
 		// 약관확인
 		&.terms_check{
+			.title_wrap{width:100%;}
+		}
+		// 법인회원투자준비
+		&.invest_prepare2{
 			.title_wrap{width:100%;}
 		}
 		
@@ -165,6 +173,12 @@ $mob-s-width		: 375px;
 				.agree_box .agree_wrap .oc-scrollbar-container{margin-top:16px;}
 				.agree_box .agree_wrap .txt_box2{padding:0 8px;}
 			}
+		}
+		// 법인회원투자준비
+		&.invest_prepare2{
+			.wrap>div{width:100%}
+			.wrap .right{margin-top:24px;}
+			.btn_wrap{width:100%;}
 		}
 	}
 	

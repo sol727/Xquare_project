@@ -6,6 +6,7 @@
 .mt40{margin-top:40px;}
 .mb10{margin-bottom:10px !important;}
 .mb0{margin-bottom:0px !important;}
+.mb4{margin-bottom:4px;}
 .mr10{margin-right:10px;}
 .pl8{padding-left:8px;}
 .font_16{font-size: 16px;}
@@ -13,6 +14,7 @@
 .line_h5{line-height: 1.5;}
 .font_16{font-size:16px !important;}
 .font_24{font-size: 24px !important;}
+.sky_color{color:#eff1f7;}
 
 .v3{
     // 공통
@@ -364,10 +366,50 @@
     }
     // 법인회원투자준비
     &.invest_prepare2{
-        .big_title{width:964px;}
-    }
+        .title_wrap{width:964px;margin:30px auto 40px;
+            h3{font-weight: normal;}
+        }
+        .wrap>div{width:calc(50% - 12px);}
+        .wrap .left .email_box{width:256px;border-radius:100px;overflow: hidden;border:1px solid #c5c5c5;
+            >p{padding:4px 12px;text-align: center;font-weight: 600;}
+            >p:last-child{text-decoration: underline;}
 
+        }
+        .wrap .right{margin-top:55px;
+            .downBtn{width:100%;height:38px;font-size: 15px;color:#fff;background:#ffa566;border-radius:4px;}
+            .gray_box{background:#f8f9fb;padding:8px;margin-bottom:4px;}
+        }
+        .btn_wrap button{font-size:15px;}
+    }
 }
+
+// 투자정보입력
+.invest_page.step{
+    .cont.card_cont{
+        .card_box>div{width:calc(50% - 12px);}
+        .card_box .left .card{
+            width: 384px;margin:24px auto;border-radius: 8px;background:#4c5aa4 url(../images/card_img.png)no-repeat right bottom;
+            .bank_name{padding:6px 8px 4px;
+                button{font-size: 15px;background:#fff;padding:2px 8px;border-radius:4px;font-weight: 600;}
+            }
+            .bottom{padding:0 8px 8px;position: relative;
+                input{width:calc(100% + 16px);margin-left:-8px;height: 32px;background:#eff1f7;border-radius: 0;padding:4px 8px;font-size: 20px;font-weight: bold;margin-bottom:10px;font-family: 'Play', sans-serif;}
+                >div{margin-top:70px;}
+                .refresh_btn{font-size:14px;color:#fff;font-weight: 600;background:#a5add1 url(../images/icons/ic_refresh.png) no-repeat center left;border-radius:4px;padding:4px 4px 4px 28px;margin-top:32px;}
+                .right_txt{
+                    p:first-child{margin-bottom:5px;}
+                    p:last-child{font-size: 24px;font-weight: bold;
+                        span{margin-left:4px;}
+                    }
+                }
+            }
+            .bottom::after{position: absolute;content:'';width:100%;height:2px;background:#fff;top:34px;left:0;}
+        }
+        .card_box .right>div{padding:24px;}
+    }
+}
+
+
 // 증권계좌본인인증 팝업
 .invest_check_pop{
     .top_title_box{margin-bottom:32px;
