@@ -4,6 +4,7 @@
 .mt9{margin-top:9px;}
 .mt10{margin-top:10px;}
 .mb10{margin-bottom:10px !important;}
+.mb0{margin-bottom:0px !important;}
 .mr10{margin-right:10px;}
 .pl8{padding-left:8px;}
 .font_16{font-size: 16px;}
@@ -28,7 +29,7 @@
         img{position: absolute;left:8px;top:-4px;}
     }
     .radio_ul input[type="radio"] + label{width: 22px;height: 22px;border: 2px solid #d6d6d6;margin-right: 8px;cursor: pointer;border-radius: 50%;margin-right:8px;}
-    .radio_ul input[type="radio"] + label + label{margin-top:2px;cursor: pointer;}
+    .radio_ul input[type="radio"] + label + label{margin-top:2px;cursor: pointer;font-size:14px;font-weight: 600;}
     .radio_ul input[type="radio"]:checked + label{border:6px solid #ff8e40;}
 
     // 개설한프로젝트
@@ -139,7 +140,7 @@
         a{width:100%;padding:5px;background:#fff;border-radius:4px;}
         .img_box{width:24px;height:24px;border-radius:4px;background:#a5add1 url(../images/icons/ic_file.png)no-repeat center;}
         .txt_box{width:calc(100% - 40px);padding-top:3px;
-           .font_14{margin-bottom:4px;} 
+           .font_14{margin-bottom:6px;} 
         }
 
     }
@@ -283,6 +284,9 @@
     // 결산자료제출
     &.v3_data{
         .gray_bg{padding:24px;}
+        .reject_box{
+            .border_text{padding:12px 0 !important;}
+        }
         .not_season{
             >div{width: 40%;}
             .right_box div{background:#eff1f7;padding:8px 0px;}
@@ -300,9 +304,13 @@
                 button{height:38px;font-size:15px;margin-top:10px;}
             }
         }
+        .red_box{padding:8px;background:#ffdcd8;border-radius:4px;
+            >.txt_box{width:100%;}
+            ul{width: 40%;}
+        }
         .bottom_cont{
             .top_wrap{background:#fff;padding:40px 16px 32px;
-                .notice_box{width:calc(100% + 38px);margin-left:-16px;}
+                .notice_box{width:calc(100% + 32px);margin-left:-16px;}
                 .gray_box{padding:8px;background:#f8f9fb;margin-top: 16px;}
             }
             .write_box{padding-top:16px;}
