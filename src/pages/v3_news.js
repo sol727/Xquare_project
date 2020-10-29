@@ -131,6 +131,23 @@ Sed fermentum, mauris volutpat volutpat. Volutpat blandit adipiscing justo aliqu
                         </div>
                     </div>
                 </section>
+                {/* 삭제 팝업 */}
+                <div className="pop_wrap project_pop audit_pop news_pop">
+                    <div className="dim"></div>      
+                    <div className="pop_cont">
+                        <div className="rightT"> 
+                            <button type="button" className="close_pop"><img src={ require('../images/icons/close_btn.png')} alt="팝업닫기아이콘"/></button>                    
+                        </div>                        
+                        <div className="cont_box">
+                            <h3 className="mb4">정말로 삭제하시겠습니까?</h3>
+                            <p>심사중에만 삭제하실 수 있으며<br></br>예탁결제원의 크라우드펀딩업 규정에 따라 게재 후 삭제는 불가능합니다.</p>                           
+                            <div>
+                                <button type="button" className="btn pop_submit line_btn">취소</button>
+                                <button type="button" className="btn pop_submit">삭제하기</button>
+                            </div>                              
+                        </div>
+                    </div>                      
+                </div>
             </>
         )
     }

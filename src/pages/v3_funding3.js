@@ -320,7 +320,7 @@ export default class V3_funding3 extends React.Component {
                         <div className="rightT"> 
                             <button type="button" className="close_pop"><img src={ require('../images/icons/close_btn.png')} alt="팝업닫기아이콘"/></button>                    
                         </div>                        
-                        <div className="cont">
+                        <div className="cont_box">
                             <h3>필수 입력 항목을 확인 해주세요</h3>
                             <ul>
                                 <li>
@@ -343,7 +343,7 @@ export default class V3_funding3 extends React.Component {
                         <div className="rightT"> 
                             <button type="button" className="close_pop"><img src={ require('../images/icons/close_btn.png')} alt="팝업닫기아이콘"/></button>                    
                         </div>                        
-                        <div className="cont">
+                        <div className="cont_box">
                             <h3 className="mb4">정말로 삭제하시겠습니까?</h3>
                             <p>해당 문단은 삭제 후 복구가 불가능합니다.</p>                           
                             <div>
@@ -361,7 +361,7 @@ export default class V3_funding3 extends React.Component {
                         <div className="rightT"> 
                             <button type="button" className="close_pop"><img src={ require('../images/icons/close_btn.png')} alt="팝업닫기아이콘"/></button>                    
                         </div>                        
-                        <div className="cont">
+                        <div className="cont_box">
                             <h3>미리보기</h3>                    
                             <div>
                                 <button type="button" className="btn pop_submit line_btn">PC 버전</button>
