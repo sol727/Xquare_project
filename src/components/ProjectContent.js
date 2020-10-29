@@ -22,8 +22,7 @@ export default class ProjectContent extends React.Component {
                         <div className="bottom">
                             <h5 className="title">{this.props.title}</h5>
                             <ul className="clearfix">
-                                <li className="font_13">{this.props.label1}</li>
-                                <li className="font_13">{this.props.label2}</li>
+                                {this.props.label_li}
                             </ul>
                             {
                                 this.props.alarmShow ?
