@@ -32,111 +32,74 @@ export default class V3_invest_prepare2 extends React.Component {
                         </ul>
                     </div>
                     <div className="container">
-                    <div class="title_wrap centerT mb24">
-                            <h1 class="mb16">법인회원의 투자준비</h1>
+                        <div className="title_wrap centerT mb24">
+                            <h1 className="mb16">법인회원의 투자준비</h1>
                             <h3>법인투자자가 되기 위해서는 다음의 서류를 아래의 이메일로 보내주시기 바랍니다.</h3>
                         </div>
-                        <ul className="prepare_ul">
-                            <li>
-                                <div className="li_top_wrap">
-                                    <div className="clearfix2">
-                                        <div className="txt">
-                                            <h3>투자 전용 신한은행 가상계좌 개설</h3>
-                                            <p>- 엑스퀘어는 크라우드펀딩 중개업자로서 투자자의 투자금을 안전하게 보호할 의무가 있습니다. 따라서 엑스퀘어의 계좌가 아닌, 투자자 개개인의 신한은행 가상계좌를 개설합니다.</p>
-                                            <p>- 가상계좌 개설을 위해 아래의 두가지를 요청드립니다.</p>
-                                            <p className="point_color">* 개인정보는 실명정보 확인 후 즉시 파기됩니다.</p>
+                        <div className="wrap clearfix2 mb40">
+                            <div className="left">
+                                <div className="email_box clearfix">
+                                    <p className="white_color point_bg">서류접수</p>
+                                    <p>info@xsquare.co.kr</p>
+                                </div>
+                                <div>
+                                    <h4 className="font_18 point_color mt24">필수서류</h4>
+                                    <ul className="mt24 txt_ul">
+                                        <li className="mb24">
+                                            <h6 className="font_15 mb8">대표자의 실명확인증표</h6>
+                                            <p className="font_13 gray2_color mb4">- 대표자의 주민등록증·운전면허증·여권 사본</p>
+                                            <p className="font_13 gray2_color">- 공동대표의 경우 대표자 모두의 실명확인증표 필요</p>
+                                        </li>
+                                        <li className="mb24">
+                                            <h6 className="font_15 mb8">사업자 등록 증명원</h6>
+                                            <p className="font_13 gray2_color">- 대표자의 주민등록번호 포함 필수</p>
+                                        </li>
+                                        <li className="mb24">
+                                            <h6 className="font_15 mb8">등기사항 전부증명서</h6>
+                                            <p className="font_13 gray2_color mb4">- 말소사항 포함 필수</p>
+                                            <p className="font_13 gray2_color">- 신청일 기준 3개월 이내에 발금된 서류</p>
+                                        </li>
+                                        <li>
+                                            <h6 className="font_15">법인 명의의 종합위탁계좌(증권계좌)</h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="right">
+                                <h4 className="font_18 point_color">추가서류</h4>
+                                <ul className="mt24 txt_ul">
+                                    <li className="mb24">
+                                        <h6 className="font_15 mb8">담당자가 대표자가 아닌 대리인인 경우</h6>
+                                        <p className="font_13 gray2_color mb4">- 위임장</p>
+                                        <p className="font_13 gray2_color mb4">- 대리인 신분증</p>
+                                        <p className="font_13 gray2_color">- 인감 증명서</p>
+                                        <button type="button" className="mt24 downBtn">위임장 양식 다운로드</button>
+                                    </li>
+                                    <li className="mb24">
+                                        <h6 className="font_15 mb8">적격투자자 승급을 원하는 경우</h6>
+                                        <div className="gray_box">
+                                            <p className="font_13 gray2_color mb4">※ 적격투자자 투자한도</p>
+                                            <p className="font_13 gray2_color mb4">- 1년간 '한 발행인에게' 투자 가능한 금액 1000만원</p>
+                                            <p className="font_13 gray2_color">- 1년간 '크라우드펀딩'에 투자 가능한 금액 2000만원</p>
                                         </div>
-
-                                        <button type="button" className="navy_btn invest_prepare_pop_show">인증하기</button>
-
-                                        {/* 심사중 버튼↓*/}
-                                        {/* <button type="button" className="navy_btn orange_btn">심사중</button> */}
-
-                                        {/* 인증완료 버튼↓*/}
-                                        {/* <button type="button" className="navy_btn green_btn">인증완료</button> */}
-
-                                        {/* 다시인증 버튼↓*/}
-                                        {/* <button type="button" className="navy_btn red_bg">다시 인증하기</button> */}
-                                    </div>
-                                    <div className="certify_box">
-                                        <p className="font_16 fw600"><span>1.</span>신분증 인증</p>
-                                        <p className="font_16 fw600"><span>2.</span>계좌 인증</p>
-                                    </div>
-
-                                    {/* 필수조건모두 달성했을때 보임▼ */}
-                                    {/* <div className="certify_box">
-                                        <p className="font_16 fw600"><img src={require ("../images/icons/green_check.png")} alt="체크 아이콘"/>신분증 인증</p>
-                                        <p className="font_16 fw600"><img src={require ("../images/icons/green_check.png")} alt="체크 아이콘"/>계좌 인증</p>
-                                    </div> */}
-
-                                    {/* 본인확인 심사중일때 보임▼ */}
-                                    {/* <div className="certify_box">
-                                        <p className="font_16 fw600"><img src={require ("../images/icons/stopwatch_icon.png")} alt="시계 아이콘"/>신분증 인증</p>
-                                        <p className="font_16 fw600"><img src={require ("../images/icons/green_check.png")} alt="체크 아이콘"/>계좌 인증</p>
-                                    </div> */}
-
-                                    {/* 본인확인 심사미통과시 보임▼ */}
-                                    {/* <div className="certify_box">
-                                        <p className="font_16 fw600"><img src={require ("../images/icons/check_input_alert.png")} alt="시계 아이콘"/>신분증 인증</p>
-                                        <p className="font_16 fw600"><img src={require ("../images/icons/green_check.png")} alt="체크 아이콘"/>계좌 인증</p>
-                                    </div> */}
-                                </div>
-
-                                {/* 필수조건모두 달성했을때 보이는문구▼ */}
-                                <p className="font_14 centerT mt40 mb16">심사는 최대 2영업일 소요됩니다</p>
-                                {/* 본인확인 심사중일때 보이는문구▼ */}
-                                {/* <p className="font_14 centerT mt40 mb16">실명인증심사는 최대 2영업일 소요됩니다</p> */}
-                                {/* 본인확인 심사미통과시 보이는문구▼ */}
-                                {/* <p className="font_14 centerT mt40 mb16">실명인증심사를 통과하지 못했습니다.</p> */}
-                            </li>
-                            <li>
-                                <div className="clearfix2">
-                                    <div className="txt">
-                                        <h3>증권계좌등록</h3>
-                                        <p>원활한 이용을 위해 증권을 거래할 수 있는 계좌를 등록해주세요.</p>
-                                    </div>
-                                    <button type="button" className="navy_btn invest_account_pop_show">등록하기</button>
-
-                                    {/* 증권계좌변경 버튼↓*/}
-                                    {/* <button type="button" className="navy_btn invest_account_pop_show">증권계좌 변경</button> */}
-                                </div>
-                                <div className="account_box">
-                                    <h4 className="mb12">KB 증권</h4>
-                                    <p className="font_14">123-9999-9999-9999</p>
-                                </div>
-                            </li>
-                            <li className="address_li">
-                                <div className="clearfix2 mb40">
-                                    <div className="txt">
-                                        <h3>주소입력</h3>
-                                        <p>발행기업으로부터 투자자관련 서류를 수령하실 주소를 입력해주세요.</p>
-                                    </div>
-                                    <button type="button" className="navy_btn">주소검색</button>
-
-                                    {/* 주소변경 버튼↓*/}
-                                    {/* <button type="button" className="navy_btn">주소변경</button> */}
-                                </div>
-                                <p className="font_14 centerT mb16">서울시 강남구 강남대로 102길 38딩,<br/> 2층(역삼동, 강림빌딩)</p>
-                            </li>
-                            <li>
-                                <div className="clearfix2 mb40">
-                                    <div className="txt">
-                                        <h3>투자 적합성 테스트</h3>
-                                        <p>자본시장법에 따라, 12개월마다 투자에 따른 위험성에 대해 이해하고 있는지 확인합니다.</p>
-                                    </div>
-                                    <button type="button" className="navy_btn invest_test_pop_show">테스트 진행하기</button>
-
-                                    {/* 테스트 통과 버튼↓*/}
-                                    {/* <button type="button" className="navy_btn green_btn">테스트 통과</button> */}
-                                </div>
-                                <p className="font_14 centerT mb16">유효기간 D-365</p>
-                            </li>
-                        </ul>
-                        <div className="btn_wrap clearfix2">
+                                        <p className="font_13">- 대표자의 주민등록번호 포함 필수</p>
+                                    </li>
+                                    <li className="">
+                                        <h6 className="font_15 mb8">전문투자자 승급을 원하는 경우</h6>
+                                        <div className="gray_box">
+                                            <p className="font_13 gray2_color">※ 전문투자자 투자한도 : 없음</p>
+                                        </div>
+                                        <p className="font_13 mb4">- 법인전문투자자 : 금융투자협회에서 전문투자자 신청 후 증빙서류 제출(링크)</p>
+                                        <p className="font_13">- 당연전문투자자 : 당연전문투자자임을 증빙할 수 있는 서류 제출</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="btn_wrap clearfix2 ">
                             <button type="button" className="back_btn" onClick={() => window.history.back()}>이전</button>
-                            <button type="button" className="unable_btn" onClick={() => window.location.pathname="/invest_step1"}>투자하러 가기</button>
+                            <button type="button" className="unable_btn" >확인</button>
                             {/* 활성화 버튼↓*/}
-                            {/* <button type="button" className="unable_btn orange_btn" onClick={() => window.location.pathname="/invest_step1"}>투자하러 가기</button> */}
+                            {/* <button type="button" className="unable_btn orange_btn">확인</button> */}
                         </div>
                     </div>
                 </section>

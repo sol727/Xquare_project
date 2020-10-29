@@ -11,10 +11,12 @@ import File_down from '../components/File_down';
 export default class V3_data extends React.Component {
 
     constructor(props) {
-    super(props);
+        super(props);
     }
 
+
     render() {
+
         return (
             <>
                 <section className="v3 v3_data">
@@ -66,6 +68,28 @@ export default class V3_data extends React.Component {
                                             title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                                             label1="채권형(일반회사채)"
                                             label2="연료전지"
+                                            txt1="진행 기간"
+                                            start="시작일"
+                                            start_day="yyyy.mm.dd"
+                                            end="마감일"
+                                            end_day="yyyy.mm.dd"
+                                            txt2="달성률"
+                                            goal="목표 모금액"
+                                            goal_txt="nn,nnn,nnn"
+                                            attain="달성 모금액"
+                                            attain_txt="nn,nnn,nnn"
+                                            circle={[
+                                                {
+                                                    text : '종료' ,
+                                                    percentage : 0 ,
+                                                    type : 0
+                                                } ,
+                                                {
+                                                    text : '120%' ,
+                                                    percentage : 120 ,
+                                                    type : 1
+                                                }
+                                            ]}
                                             
                                             alarmShow={false}
                                             bottomShow={true}
