@@ -404,7 +404,8 @@
           }
           .bottom{
                background-color: #1f318d;
-               padding: 24px 16px 191px;              
+               padding: 24px 16px;     
+               border-radius: 0 0 20px 0;         
                .studio_btn {
                     padding: 8px 24px;
                     color: #fff;
@@ -520,7 +521,7 @@
      .cont {
           width: calc(100% - 306px);
           margin-left: 306px;
-          transition: all 0.3s;
+          transition: all 0.3s;         
           .container {
                width: 100%;
                padding: 0 24px ;
@@ -539,6 +540,7 @@
           .gray_bg {
                padding-top: 24px;
                background-color: #eff1f7;
+               min-height: 910px;
                .notice_box {
                     width: 100%;
                     background: #fff;
