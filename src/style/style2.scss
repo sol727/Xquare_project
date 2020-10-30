@@ -211,6 +211,7 @@
           height: 100%;
           background-color: #1f318d;
           border-radius: 0 20px 20px 0;
+          transition: all 0.3s;
           &.off {
                width: 102px;
                .gnb_btn{display:none;}
@@ -510,6 +511,7 @@
      .cont {
           width: calc(100% - 306px);
           margin-left: 306px;
+          transition: all 0.3s;
           .container {
                width: 100%;
                padding: 0 24px ;

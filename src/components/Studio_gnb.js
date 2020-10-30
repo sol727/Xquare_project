@@ -86,7 +86,7 @@ export default class Studio_gnb extends React.Component {
                         <button type="button" className="gnb_btn2" onClick={this.gnbOn}></button>
                     </div>
                     <div className="top centerT">
-                        <img src={ require('../images/img_logo_xquare.png') } alt="logo"/>
+                        <img src={ require('../images/img_logo_xquare_w.png') } alt="logo"/>
                         <h1>프로젝트 스튜디오</h1>
                     </div>
                     <div className="state_box_wrap"> 
