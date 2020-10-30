@@ -297,6 +297,11 @@
             .file_upload .file_name input{border:none;}
             .btn_wrap button{width:180px;height:38px;font-size: 15px;}
         }
+        &.gnb_off{
+            .file_cont{overflow: hidden;}
+            .file_cont .upload_box{width:calc(40% - 12px);float:left;}
+            .file_cont .file_ul{width:calc(60% - 12px);float:right;margin-top:0px !important;}
+        }
     }
     // 결산자료제출
     &.v3_data{
@@ -420,6 +425,31 @@
     }
 }
 
+.invest_check_pop,.identity_pop{display: block;left: 100%;
+    .dim{display: none;}
+    .pop_cont{width:486px;position: absolute;right: -100%;top:0;height: 100%;padding: 0;border-radius:0;left:unset;transform:unset;background: unset;}
+    .left{width: 52px;height: 100%;background-image: linear-gradient(to top,#ffa740, #ffb27c );border-radius:15px 0 0 0;}
+    .left>img{position: absolute;bottom: 0;left: 0;}
+    .left .pop_close{width:100%;padding:14px 0;position: unset;height: auto;}
+    .right{width:calc(100% - 52px);height:100%;background: #fff;padding-top:60px;}
+    .content{border-top:2px solid #ff8e40;padding:24px 16px 0;}
+    .top_txt{font-size: 13px;color:#6e6e6d;background:#f8f9fb;padding:4px 8px;line-height: 1.5;}
+    .top_txt h5{padding:10px 0px 20px;}
+    .top_txt h5 img{margin-right:8px;}
+    .input_li{line-height: 40px;text-align: center;}
+    .input_li input{width:calc(50% - 4px);}
+    .radio_wrap{width:100%;}
+    .radio_wrap li{width:50%;}
+    .date_input{position: relative;
+        span{position: absolute;right:16px;top:50%;transform: translateY(-50%);color:#bfbfbf;font-size: 13px;}
+    }
+    .file_wrap .file_name{width:calc(100% - 112px);}
+    .file_wrap .file_up_btn{width:104px;}
+    .alert_p{font-size:13px;color:#fff;background: #ff513e;width: 100%;padding: 2px 8px;line-height: 28px;margin-bottom:16px;}
+    .alert_p img{margin-right: 8px;margin-top:-3px;}
+    .back_btn{width:129px;}
+    .unable_btn{width:calc(100% - 137px);}
+}
 
 // 증권계좌본인인증 팝업
 .invest_check_pop{
