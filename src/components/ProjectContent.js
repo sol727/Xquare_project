@@ -9,7 +9,7 @@ export default class ProjectContent extends React.Component {
 
 
     render() {
-        console.log(this.props.circle[0])
+        // console.log(this.props.circle[0])
 
         return (
             <div className="pro_content">

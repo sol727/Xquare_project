@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Studio_gnb from '../components/Studio_gnb'
 import Opinion from '../components/opinion'
-
+import Back_header from '../components/back_header';
 export default class V3_mo_news_detail extends React.Component {
 
     constructor(props) {
@@ -13,6 +13,7 @@ export default class V3_mo_news_detail extends React.Component {
         return (
             <>
                 <section className="v3 news mo_news">
+                    <Back_header/>
                     <div className="clearfix">
                         <Studio_gnb/>
                         <div className="cont">

@@ -3,7 +3,7 @@
      display: none;
      border: none;
      >div{
-          padding: 16px 24px;
+          padding: 16px;
      }     
      .back_btn {
           width: 24px;
@@ -213,6 +213,7 @@
           border-radius: 0 20px 20px 0;
           &.off {
                width: 102px;
+               .gnb_btn{display:none;}
                .gnb_wrap { 
                     background-color: #1f318d;
                     .on_menu {display: none;}
@@ -288,13 +289,17 @@
                position: absolute;
                right: -56px;
                top: 0;
-               padding: 16px;
-               img {width: 24px;}              
+               width:56px;
+               height: 56px;
+               background-image: url(../images/icons/ic_menu_left.png);
+               background-repeat: no-repeat;
+               background-position: center;
+               background-size: 24px;            
           }
           .menu_btn {
                display: none;
                text-align: center;
-               margin-top: 48px;
+               padding-top: 48px;
                margin-bottom: 121px;
                button{
                width: 40px; 
@@ -321,7 +326,7 @@
                }
                .state_box_wrap {
                     background-color: #1f318d;
-                    border-radius: 0 0 20px 0;
+                    // border-radius: 0 0 20px 0;
                     padding: 0 16px 24px;
                     .state_box {
                          background: #fff;
@@ -387,15 +392,20 @@
                                    font-weight: 400;
                               }
                          }
+                         // &.prev_li{
+                         //      border-radius: 0 0 20px 0;
+                         // }
                          &.on {
                               background-color: #eff1f7;
                               a {color: #343332;}
-                              &+ li {
-                                   border-radius: 0 20px  0 0;
-                              }                                                   
+                              // &+ li {
+                              //      border-radius: 0 20px  0 0;
+                              // }                                                   
                          }                                         
                     }                    
                }
+               .prev_li{border-radius: 0 0 20px 0 !important;}
+               .next_li{border-radius: 0 20px 0 0 !important;}
                .off_menu {display: none;}              
           }
           .bottom{

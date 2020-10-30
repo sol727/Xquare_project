@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Studio_gnb from '../components/Studio_gnb'
 import File_upload from '../components/file_upload'
+import Back_header from '../components/back_header';
 
 export default class V3_news_write extends React.Component {
 
@@ -14,6 +15,7 @@ export default class V3_news_write extends React.Component {
         return (
             <>
                 <section className="v3 news news_write studio">
+                <Back_header/>
                     <div className="clearfix">
                         <Studio_gnb/>
                         <div className="cont">

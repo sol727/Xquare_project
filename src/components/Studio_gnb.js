@@ -6,15 +6,84 @@ export default class Studio_gnb extends React.Component {
 
     constructor(props) {
           super(props);
+        
+          this.menuOn = this.menuOn.bind(this)
+          this.menuOn2 = this.menuOn2.bind(this)
+          this.menuOn3 = this.menuOn3.bind(this)
+          this.gnbOff = this.gnbOff.bind(this)
+          this.gnbOn = this.gnbOn.bind(this)
+        
+    }
+    gnbOff(e) {
+        console.log(e.target);
+        
+        var mother = e.target.parentNode;
+        mother.className += " off"
+
+        var section = document.getElementsByClassName('v3 studio')[0];
+        section.className += " gnb_off"
+
     }
 
+    gnbOn(e) {
+        console.log(e.target);
+        
+        var menu = document.getElementsByClassName('studio_gnb')[0];
+        menu.classList.remove('off')
+
+        var section = document.getElementsByClassName('v3 studio')[0];
+        section.classList.remove('gnb_off')
+
+    }
+    
+    menuOn(e) {
+        console.log(e.target);
+        
+        var mother = e.target.parentNode;
+        var prev = mother.previousSibling;
+        var next = mother.nextSibling;
+        mother.className += " on"
+        prev.className += " prev_li"
+        next.className += " next_li"
+
+    }
+
+    menuOn2(e) {
+        console.log(e.target);
+        
+        var mother = e.target.parentNode;
+        var mother2 = mother.parentNode;
+        var prev = mother2.previousSibling;
+        var next = mother.nextSibling;
+        mother.className += " on"
+        prev.className += " prev_li"
+        next.className += " next_li"
+    }
+
+    menuOn3(e) {
+        console.log(e.target);
+        
+        var mother = e.target.parentNode;
+        var mother2 = mother.parentNode;
+        var prev = mother.previousSibling;
+        var next = mother2.nextSibling;
+        var next2 = next.nextSibling;
+
+        mother.className += " on"
+        prev.className += " prev_li"
+        next2.className += " next_li"
+    }
+
+
     render() {
+
+        
         return (
             <div className="v3 studio_gnb">
-               <button className="gnb_btn"><img src={ require('../images/icons/ic_menu_left.png') } alt="gnb접기아이콘"/></button>
+               <button className="gnb_btn" onClick={this.gnbOff}></button>
                 <div className="gnb_wrap">
                     <div className="centerT menu_btn">
-                        <button type="button" className="gnb_btn2"></button>
+                        <button type="button" className="gnb_btn2" onClick={this.gnbOn}></button>
                     </div>
                     <div className="top centerT">
                         <img src={ require('../images/img_logo_xquare.png') } alt="logo"/>
@@ -59,50 +128,50 @@ export default class Studio_gnb extends React.Component {
                         </div>
                     </div>
                     <ul className="on_menu">
-                         <li className="on">
-                            <Link to="/V3_Project_state">프로젝트상세</Link>
+                         <li className="">
+                            <Link to="/v3_project_state" onClick={this.menuOn2}>프로젝트상세</Link>
                          </li>
-                         <li className="next">
+                         <li className=""  >
                             <Link to="/v3_account">계약준비</Link>
                          </li>
                          <li className="sub_menu">
-                            <Link to="/v3_account" className="arrow">자격확인</Link>
+                            <Link to="/v3_account" className="arrow" onClick={this.menuOn}>자격확인</Link>
                         </li>
                         <li className="sub_menu">
-                            <Link to="/v3_account2" className="arrow">기본자료</Link>
+                            <Link to="/v3_account2" className="arrow" onClick={this.menuOn}>기본자료</Link>
                         </li>
                         <li className="sub_menu">
-                            <Link to="/v3_account3" className="arrow">발행정보</Link>
+                            <Link to="/v3_account3" className="arrow" onClick={this.menuOn}>발행정보</Link>
                         </li>
                         <li className="sub_menu">
-                            <Link to="/v3_account4" className="arrow">기타정보</Link>
+                            <Link to="/v3_account4" className="arrow" onClick={this.menuOn}>기타정보</Link>
                         </li>
-                        <li className="">
+                        <li className="" >
                             <Link to="/v3_funding1">펀딩준비</Link>
                          </li>
                          <li className="sub_menu">
-                            <Link to="/v3_funding1" className="arrow">발행정보 확정</Link>
+                            <Link to="/v3_funding1" className="arrow" onClick={this.menuOn}>발행정보 확정</Link>
                         </li>
                         <li className="sub_menu">
-                            <Link to="/v3_funding2" className="arrow">펀딩 소개 작성</Link>
+                            <Link to="/v3_funding2" className="arrow" onClick={this.menuOn}>펀딩 소개 작성</Link>
                         </li>
                         <li className="sub_menu">
-                            <Link to="/v3_funding3" className="arrow">추가 자료</Link>
+                            <Link to="/v3_funding3" className="arrow" onClick={this.menuOn}>추가 자료</Link>
                         </li>
-                        <li className="">
-                            <Link to="/v3_feedback" className="arrow">엑스퀘어 피드백 <span className="count">9999</span></Link>
+                        <li className="" >
+                            <Link to="/v3_feedback" className="arrow" onClick={this.menuOn}>엑스퀘어 피드백 <span className="count">9999</span></Link>
                          </li>
-                         <li className="">
-                            <Link to="/v3_investor_state" className="arrow">투자자 현황 </Link>
+                         <li className="" >
+                            <Link to="/v3_investor_state" className="arrow" onClick={this.menuOn}>투자자 현황 </Link>
                          </li>
-                         <li className="">
-                            <Link to="/v3_investor_opinion" className="arrow">투자자 의견 <span className="count">1</span></Link>
+                         <li className="" >
+                            <Link to="/v3_investor_opinion" className="arrow" onClick={this.menuOn}>투자자 의견 <span className="count">1</span></Link>
                          </li>
-                         <li className="alert">
-                            <Link to="/v3_news" className="arrow">새소식 관리  <img src={ require('../images/icons/ic_ic_alert_alert_circle.png') } alt="느낌표아이콘"/></Link>
+                         <li className="alert" >
+                            <Link to="/v3_news" className="arrow" onClick={this.menuOn}>새소식 관리  <img src={ require('../images/icons/ic_ic_alert_alert_circle.png') } alt="느낌표아이콘"/></Link>
                          </li>
-                         <li className="alert">
-                            <Link to="/v3_data" className="arrow">결산자료 제출 및 확인  <img src={ require('../images/icons/ic_ic_alert_alert_circle.png') } alt="느낌표아이콘"/></Link>
+                         <li className="alert" >
+                            <Link to="/v3_data" className="arrow" onClick={this.menuOn3}>결산자료 제출 및 확인  <img src={ require('../images/icons/ic_ic_alert_alert_circle.png') } alt="느낌표아이콘"/></Link>
                          </li>
                          {/* <li className="">
                             <Link to="/" className="arrow">투자광고 </Link>

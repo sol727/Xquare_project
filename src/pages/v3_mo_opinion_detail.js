@@ -1,7 +1,7 @@
 import React from 'react'
 import Opinion from '../components/opinion'
 import CommentBox from '../components/commentBox'
-
+import Back_header from '../components/back_header';
 export default class V3_mo_opinion_detail extends React.Component {
 
     constructor(props) {
@@ -11,6 +11,7 @@ export default class V3_mo_opinion_detail extends React.Component {
     render() {
         return (
             <section className="v3 investor_opinion mo_opinion">
+                <Back_header/>
                 <div className="cont">
                     <div className="top_box container">
                         <h1>투자자 의견</h1>

@@ -4,6 +4,7 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import Studio_gnb from '../components/Studio_gnb'
 import InvestorCont from '../components/investorCont'
+import Back_header from '../components/back_header';
 
 export default class V3_investor_state extends React.Component {
 
@@ -16,6 +17,7 @@ export default class V3_investor_state extends React.Component {
             <>
                 <Header />
                 <section className="v3 investor_state studio">
+                <Back_header/>
                     <div className="clearfix">
                         <Studio_gnb/>
                         <div className="cont">
