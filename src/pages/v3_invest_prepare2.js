@@ -16,7 +16,7 @@ export default class V3_invest_prepare2 extends React.Component {
             <>
                 <Header />
 
-                <section className="v3 invest_page invest_prepare2">
+                <section className="v3 invest_page invest_prepare2 studio">
                     <div className="top_banner">
                         <h1>투자하기</h1>
                     </div>

@@ -12,7 +12,7 @@ export default class V3_news extends React.Component {
     render() {
         return (
             <>
-                <section className="v3 news">
+                <section className="v3 news studio">
                     <div className="clearfix">
                         <Studio_gnb/>
                         <div className="cont">

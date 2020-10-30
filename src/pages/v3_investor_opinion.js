@@ -13,7 +13,7 @@ export default class V3_investor_opinion extends React.Component {
     render() {
         return (
             <>
-                <section className="v3 investor_opinion">
+                <section className="v3 investor_opinion studio">
                     <div className="clearfix">
                         <Studio_gnb/>
                         <div className="cont">

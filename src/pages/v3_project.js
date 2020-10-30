@@ -45,21 +45,15 @@ export default class V3_Project extends React.Component {
                         </div>
                         <ul className="tab_ul clearfix2">
                             <li className="on">
-                                <Link to="">전체</Link>
+                                <Link to="/v3_project">전체</Link>
                             </li>
                             <li>
-                                <Link to="">종료된 프로젝트</Link>
+                                <Link to="/v3_project2">종료된 프로젝트</Link>
                             </li>
                         </ul>
                     </div>
                     <div className="gray_bg">
                         <div className="container">
-                            {/* 노데이터시 보이는영역 ▼ */}
-                            {/* <div className="no_data centerT">
-                                <img src={require("../images/icons/nodata_icon.png")} alt="노데이터 느낌표아이콘"/>
-                                <p>종료된 프로젝트가 없습니다.</p>
-                            </div> */}
-
                             <ul className="pro_list clearfix">
                                 <li className="add_li">
                                     <Link to="">

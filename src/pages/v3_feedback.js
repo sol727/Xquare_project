@@ -13,7 +13,7 @@ export default class V3_Feedback extends React.Component {
     render() {
         return (
             <>
-                <section className="v3 feedback">
+                <section className="v3 feedback studio">
                     <div className="clearfix">
                         <Studio_gnb/>
                         <div className="cont">

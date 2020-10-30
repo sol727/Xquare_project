@@ -178,10 +178,10 @@ export default class V3_Account extends React.Component {
                                             <div>
                                                 <ul className="ul_50 clearfix radio_list">
                                                     <li>
-                                                        <Radio id="radio1"  name="radio-1" text="해당하지 않습니다."/>
+                                                        <Radio focus={this.state.step2} onChangeStep={this.onChangeStep2} id="radio1"  name="radio-1" text="해당하지 않습니다."/>
                                                     </li>
                                                     <li>
-                                                        <Radio id="radio2"  name="radio-1" text="해당합니다."/>
+                                                        <Radio focus={this.state.step2} onChangeStep={this.onChangeStep2} id="radio2"  name="radio-1" text="해당합니다."/>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -215,10 +215,10 @@ export default class V3_Account extends React.Component {
                                             <div>
                                                 <ul className="ul_50 clearfix radio_list">
                                                     <li>
-                                                        <Radio id="radio3"  name="radio-2"  text="없습니다."/>
+                                                        <Radio focus={this.state.step3} onChangeStep={this.onChangeStep3} id="radio3"  name="radio-2"  text="없습니다."/>
                                                     </li>
                                                     <li>
-                                                        <Radio id="radio4" name="radio-2" text="있습니다."/>
+                                                        <Radio focus={this.state.step3} onChangeStep={this.onChangeStep3} id="radio4" name="radio-2" text="있습니다."/>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -244,8 +244,8 @@ export default class V3_Account extends React.Component {
                                     </div>
                                 </div>
                                 <div className="bottom_btn rightT">
-                                    <button type="button" className="btn">임시저장</button>             
-                                    <button type="button" className="btn">다음 단계</button>             
+                                    <button type="button" className="btn">임시저장</button>
+                                    <button type="button" className="btn">다음 단계</button>
                                 </div>
                             </div>
                         </div>
