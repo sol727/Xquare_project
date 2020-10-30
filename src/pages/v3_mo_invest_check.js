@@ -72,10 +72,10 @@ export default class V3_mo_invest_check extends React.Component {
                             <div>
                                 <form action="">
                                     <div className="account_wrap">
-                                        <div class="account_box">
-                                            <h4 class="mb12">KB 증권</h4>
-                                            <p class="font_14 mb8">123-9999-9999-9999</p>
-                                            <p class="font_14">홍길동</p>
+                                        <div className="account_box">
+                                            <h4 className="mb12">KB 증권</h4>
+                                            <p className="font_14 mb8">123-9999-9999-9999</p>
+                                            <p className="font_14">홍길동</p>
                                         </div>
                                         <div className="rightT">
                                             <button type="button" className="change_btn">변경하기</button>

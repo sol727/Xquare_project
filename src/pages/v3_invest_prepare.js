@@ -64,6 +64,14 @@ export default class V3_invest_prepare extends React.Component {
             $('.invest_test_pop').css({'left':'100%','display':'block'});
             $('.invest_test_pop .dim').hide();
             $('.invest_test_pop .pop_cont').css('right','-100%');
+
+            $('.invest_check_pop').css({'left':'100%','display':'block'});
+            $('.invest_check_pop .dim').hide();
+            $('.invest_check_pop .pop_cont').css('right','-100%');
+
+            $('.identity_pop').css({'left':'100%','display':'block'});
+            $('.identity_pop .dim').hide();
+            $('.identity_pop .pop_cont').css('right','-100%');
         });
         
 
@@ -85,6 +93,18 @@ export default class V3_invest_prepare extends React.Component {
             $('.invest_test_pop .dim').show();
             $('.invest_test_pop .pop_cont').css('right','0');
         });
+
+        $('.invest_check_pop_show').on('click',function(){
+            $('.invest_check_pop').css('left','0');
+            $('.invest_check_pop .dim').show();
+            $('.invest_check_pop .pop_cont').css('right','0');
+        });
+
+        $('.identity_pop_show').on('click',function(){
+            $('.identity_pop').css('left','0');
+            $('.identity_pop .dim').show();
+            $('.identity_pop .pop_cont').css('right','0');
+        });
     
     }
 
@@ -104,8 +124,8 @@ export default class V3_invest_prepare extends React.Component {
                                     <img src={ require('../images/icons/home_icon.png') } alt="홈아이콘"/>
                                 </Link>
                             </li>
-                            <li>투자하기</li>
-                            <li className="on">지금 투자하기</li>
+                            <li className="">투자하기</li>
+                            <li className="on ">지금 투자하기</li>
                         </ul>
                     </div>
                     <div className="container">
@@ -287,8 +307,8 @@ export default class V3_invest_prepare extends React.Component {
                     </div>
                 </div>
 
-                {/* 신분증인증팝업 */}
-                <div className="pop_wrap invest_prepare_pop identity_pop">
+                {/* 신분증인증팝업 3차 추가팝업*/}
+                <div className="pop_wrap identity_pop">
                     <div className="dim"></div>
                     <div className="pop_cont clearfix">
                         <div className="left">
@@ -322,10 +342,10 @@ export default class V3_invest_prepare extends React.Component {
                                                 <h3 className="input_title mb8">신분증 종류</h3>
                                                 <ul className="radio_wrap clearfix">
                                                     <li>
-                                                        <input type="radio" id="radio1" name="radio"/><label htmlFor="radio1">주민등록증</label>
+                                                        <input type="radio" id="radio3" name="radio2"/><label htmlFor="radio3">주민등록증</label>
                                                     </li>
                                                     <li>
-                                                        <input type="radio" id="radio2" name="radio"/><label htmlFor="radio2">국내운전면허증</label>
+                                                        <input type="radio" id="radio4" name="radio2"/><label htmlFor="radio4">국내운전면허증</label>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -363,8 +383,8 @@ export default class V3_invest_prepare extends React.Component {
                     </div>
                 </div>
 
-                {/* 타행계좌를통한본인확인 팝업*/}
-                <div className="pop_wrap invest_account_pop invest_check_pop ">
+                {/* 타행계좌를통한본인확인 팝업 3차 추가팝업*/}
+                <div className="pop_wrap invest_check_pop">
                     <div className="dim"></div>
                     <div className="pop_cont clearfix">
                         <div className="left">
@@ -424,10 +444,10 @@ export default class V3_invest_prepare extends React.Component {
                                 <div>
                                     <form action="">
                                         <div className="account_wrap">
-                                            <div class="account_box">
-                                                <h4 class="mb12">KB 증권</h4>
-                                                <p class="font_14 mb8">123-9999-9999-9999</p>
-                                                <p class="font_14">홍길동</p>
+                                            <div className="account_box">
+                                                <h4 className="mb12">KB 증권</h4>
+                                                <p className="font_14 mb8">123-9999-9999-9999</p>
+                                                <p className="font_14">홍길동</p>
                                             </div>
                                             <div className="rightT">
                                                 <button type="button" className="change_btn">변경하기</button>
