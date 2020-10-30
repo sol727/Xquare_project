@@ -58,71 +58,127 @@ export default class Studio_gnb extends React.Component {
                             />
                         </div>
                     </div>
-                    <ul className="pc">
+                    <ul className="on_menu">
                          <li className="on">
                             <Link to="/V3_Project_state">프로젝트상세</Link>
                          </li>
                          <li className="next">
-                            <Link to="/V3_Project_state">계약준비</Link>
+                            <Link to="/v3_account">계약준비</Link>
                          </li>
                          <li className="sub_menu">
-                            <Link to="/V3_Project_state" className="arrow">자격확인</Link>
+                            <Link to="/v3_account" className="arrow">자격확인</Link>
                         </li>
                         <li className="sub_menu">
-                            <Link to="/V3_Project_state" className="arrow">기본자료</Link>
+                            <Link to="/v3_account2" className="arrow">기본자료</Link>
                         </li>
                         <li className="sub_menu">
-                            <Link to="/V3_Project_state" className="arrow">발행정보</Link>
+                            <Link to="/v3_account3" className="arrow">발행정보</Link>
                         </li>
                         <li className="sub_menu">
-                            <Link to="/V3_Project_state" className="arrow">기타정보</Link>
+                            <Link to="/v3_account4" className="arrow">기타정보</Link>
                         </li>
                         <li className="">
-                            <Link to="/V3_Project_state">펀딩준비</Link>
+                            <Link to="/v3_funding1">펀딩준비</Link>
                          </li>
                          <li className="sub_menu">
-                            <Link to="/V3_Project_state" className="arrow">발행정보 확정</Link>
+                            <Link to="/v3_funding1" className="arrow">발행정보 확정</Link>
                         </li>
                         <li className="sub_menu">
-                            <Link to="/V3_Project_state" className="arrow">펀딩 소개 작성</Link>
+                            <Link to="/v3_funding2" className="arrow">펀딩 소개 작성</Link>
                         </li>
                         <li className="sub_menu">
-                            <Link to="/V3_Project_state" className="arrow">추가 자료</Link>
+                            <Link to="/v3_funding3" className="arrow">추가 자료</Link>
                         </li>
                         <li className="">
-                            <Link to="/V3_Project_state" className="arrow">엑스퀘어 피드백 <span className="count">9999</span></Link>
+                            <Link to="/v3_feedback" className="arrow">엑스퀘어 피드백 <span className="count">9999</span></Link>
                          </li>
                          <li className="">
-                            <Link to="/V3_Project_state" className="arrow">투자자 현황 </Link>
+                            <Link to="/v3_investor_state" className="arrow">투자자 현황 </Link>
                          </li>
                          <li className="">
-                            <Link to="/V3_Project_state" className="arrow">투자자 의견 <span className="count">1</span></Link>
+                            <Link to="/v3_investor_opinion" className="arrow">투자자 의견 <span className="count">1</span></Link>
                          </li>
                          <li className="alert">
-                            <Link to="/V3_Project_state" className="arrow">새소식 관리  <img src={ require('../images/icons/ic_ic_alert_alert_circle.svg') } alt="느낌표아이콘"/></Link>
+                            <Link to="/v3_news" className="arrow">새소식 관리  <img src={ require('../images/icons/ic_ic_alert_alert_circle.png') } alt="느낌표아이콘"/></Link>
                          </li>
                          <li className="alert">
-                            <Link to="/V3_Project_state" className="arrow">결산자료 제출 및 확인  <img src={ require('../images/icons/ic_ic_alert_alert_circle.svg') } alt="느낌표아이콘"/></Link>
+                            <Link to="/v3_data" className="arrow">결산자료 제출 및 확인  <img src={ require('../images/icons/ic_ic_alert_alert_circle.png') } alt="느낌표아이콘"/></Link>
+                         </li>
+                         {/* <li className="">
+                            <Link to="/" className="arrow">투자광고 </Link>
                          </li>
                          <li className="">
-                            <Link to="/V3_Project_state" className="arrow">투자광고 </Link>
+                            <Link to="/" className="arrow">설정 </Link>
                          </li>
                          <li className="">
-                            <Link to="/V3_Project_state" className="arrow">설정 </Link>
-                         </li>
-                         <li className="">
-                            <Link to="/V3_Project_state" className="arrow">프로젝트 문의</Link>
-                         </li>
+                            <Link to="/" className="arrow">프로젝트 문의</Link>
+                         </li> */}
                     </ul>
                     <ul className="off_menu">
                         <li className="active clearfix">
-                            <a href=""></a>
+                            <Link to="/V3_Project_state"></Link>
                             <p>프로젝트상세</p>
                         </li>
+                        <li className="clearfix sub_menu first_sub">
+                            <Link to="/v3_account"></Link>
+                            <p>자격확인</p>
+                        </li>
+                        <li className="clearfix sub_menu">
+                            <Link to="/v3_account2"></Link>
+                            <p>기본자료</p>
+                        </li>
+                        <li className="clearfix sub_menu">
+                            <Link to="/v3_account3"></Link>
+                            <p>발행정보</p>
+                        </li>
+                        <li className="clearfix sub_menu">
+                            <Link to="/v3_account4"></Link>
+                            <p>기타정보</p>
+                        </li>
+                        <li className="clearfix sub_menu first_sub">
+                            <Link to="/v3_funding1"></Link>
+                            <p>발행정보 확정</p>
+                        </li>
+                        <li className="clearfix sub_menu">
+                            <Link to="/v3_funding2"></Link>
+                            <p>펀딩 소개 작성</p>
+                        </li>
+                        <li className="clearfix sub_menu">
+                            <Link to="/v3_funding3"></Link>
+                            <p>추가 자료</p>
+                        </li>      
+                        <li className="clearfix long_menu">
+                            <Link to="/v3_feedback"></Link>
+                            <p>엑스퀘어 피드백</p>
+                        </li>      
+                        <li className="clearfix">
+                            <Link to="/v3_investor_state"></Link>
+                            <p>투자자 현황</p>
+                        </li>  
+                        <li className="clearfix">
+                            <Link to="/v3_investor_opinion"></Link>
+                            <p>투자자 의견</p>
+                        </li>  
+                        <li className="clearfix">
+                            <Link to="/v3_news"></Link>
+                            <p>새소식 관리</p>
+                        </li>    
+                        <li className="clearfix long_menu long_menu2">
+                            <Link to="/v3_data"></Link>
+                            <p>결산자료 제출 및 확인</p>
+                        </li>              
+                        {/* <li className="clearfix">
+                            <a href=""></a>
+                            <p>투자광고</p>
+                        </li>    
                         <li className="clearfix">
                             <a href=""></a>
-                            <p>프로젝트상세</p>
-                        </li>
+                            <p>설정</p>
+                        </li>    
+                        <li className="clearfix">
+                            <a href=""></a>
+                            <p>프로젝트 문의</p>
+                        </li>     */}
                     </ul>
                     <div className="bottom rightT"> 
                         <button type="button" className="studio_btn">프로젝트 삭제</button>
