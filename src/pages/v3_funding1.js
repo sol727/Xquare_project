@@ -92,12 +92,14 @@ export default class V3_funding1 extends React.Component {
                                             />
                                         </div>
                                         <div className="right">
-                                            <ul className="check_list gnb_off">
+                                            {/* check_list에 gnb_off 클래스를 넣으면 레이아웃이 바뀝니다. */}
+                                            <ul className="check_list">
                                                 <li><Radio id="type1"  name="type"  text="태양광 (소형)"/></li>
                                                 <li> <Radio id="type3"  name="type"  text="태양광 (중소형)"/></li>
                                                 <li><Radio id="type5"  name="type"  text="태양광 (중형)"/></li>
                                             </ul>
-                                            <ul className="check_list gnb_off">
+                                             {/* check_list에 gnb_off 클래스를 넣으면 레이아웃이 바뀝니다. */}
+                                            <ul className="check_list">
                                                 <li><Radio id="type2"  name="type"  text="태양광 (대형)"/></li>
                                                 <li> <Radio id="type4"  name="type"  text="연료전지"/></li>
                                                 <li><Radio id="type6"  name="type"  text="바이오디젤"/></li>
@@ -120,6 +122,7 @@ export default class V3_funding1 extends React.Component {
                                             />
                                         </div>
                                         <div className="right">
+                                             {/*li가 2개뿐일경우 check_list에 gnb_off , gnb_off2클래스를 넣으면 레이아웃이 바뀝니다. */}
                                             <ul className="check_list gnb_off gnb_off2">
                                                 <li><Radio id="type1"  name="type"  text="주식형"/></li>
                                                 <li><Radio id="type2"  name="type"  text="채권형"/></li>

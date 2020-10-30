@@ -98,6 +98,20 @@ export default class V3_Account3 extends React.Component {
                             </div>
                             <div className="gray_bg">
                                 <div className="container">
+                                     {/* 제출했을 때 노출 ▼*/}
+                                     <div className="notice_box ">
+                                        <div className="clearfix2 mb24">
+                                            <div className="border_text left">
+                                                <h3 className="font_18 mb8">계약 준비 자료 제출 결과</h3>
+                                                <p className="font_13">· 제출하신 yymmdd-hhnn 계약 준비 자료를 확인중입니다.</p>
+                                            </div>        
+                                            <div className="right">
+                                                <button type="button" className="btn big">심사중</button>
+                                            </div>
+                                        </div>
+                                        <p className="mt16 mb16 font_14 centerT">자료 심사는 최대 3영업일 소요됩니다</p>
+                                    </div>                                    
+                                   
                                     <div className="bd_box clearfix">
                                         <div className="left"> 
                                             <Title 
@@ -156,6 +170,7 @@ export default class V3_Account3 extends React.Component {
                                         <div className="right">
                                             <div className="check_list check_list2 clearfix2">
                                                 <div>
+                                                        {/* radio_box에 on을 넣으면 활성화 disabled를 넣으면 비활성화 처리됩니다 */}
                                                      <Radio focus={this.state.step1} onChangeStep={this.onChangeStep} id="type1"  name="type"  text="태양광 (소형)"/>
                                                      <Radio focus={this.state.step1} onChangeStep={this.onChangeStep} id="type3"  name="type"  text="태양광 (중소형)"/>
                                                      <Radio focus={this.state.step1} onChangeStep={this.onChangeStep} id="type5"  name="type"  text="태양광 (중형)"/>
@@ -197,7 +212,8 @@ export default class V3_Account3 extends React.Component {
                                     <div className="bd_line">
                                         <p>선택한 발행 증권구분</p>
                                     </div>
-                                    <div className="bd_box off">
+                                    {/* bd_box에 off 클래스를 넣으면 레이아웃이 바뀝니다. */}
+                                    <div className="bd_box">
                                         <div className="big_title">
                                             <h2>주식형</h2>
                                             <p className="error">·error here</p>
@@ -345,6 +361,7 @@ export default class V3_Account3 extends React.Component {
                                             </li>
                                         </ul>
                                     </div>
+                                    {/* bd_box에 off 클래스를 넣으면 레이아웃이 바뀝니다. */}
                                     <div className="bd_box ">
                                         <div className="big_title">
                                             <h2>채권형</h2>
@@ -502,6 +519,7 @@ export default class V3_Account3 extends React.Component {
                         </div>
                     </div>                        
                 </section>
+               
             </>
         )
     }
