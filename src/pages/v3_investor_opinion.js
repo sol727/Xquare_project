@@ -221,7 +221,7 @@ export default class V3_investor_opinion extends React.Component {
                                                             <label htmlFor="radio2_2"></label>
                                                         </li>
                                                         <li>
-                                                            <input type="radio" name="radio3"className="" id="radio2_3"/>
+                                                            <input type="radio" name="radio2"className="" id="radio2_3"/>
                                                             <label htmlFor="radio2_3"></label>
                                                         </li>
                                                         </>
@@ -273,16 +273,16 @@ export default class V3_investor_opinion extends React.Component {
                                                     radio_li={
                                                         <>
                                                         <li>
-                                                            <input type="radio" name="radio2"className="" id="radio2_1"/>
-                                                            <label htmlFor="radio2_1"></label>
+                                                            <input type="radio" name="radio3"className="" id="radio3_1"/>
+                                                            <label htmlFor="radio3_1"></label>
                                                         </li>
                                                         <li>
-                                                            <input type="radio" name="radio2"className="" id="radio2_2"/>
-                                                            <label htmlFor="radio2_2"></label>
+                                                            <input type="radio" name="radio3"className="" id="radio3_2"/>
+                                                            <label htmlFor="radio3_2"></label>
                                                         </li>
                                                         <li>
-                                                            <input type="radio" name="radio3"className="" id="radio2_3"/>
-                                                            <label htmlFor="radio2_3"></label>
+                                                            <input type="radio" name="radio3"className="" id="radio3_3"/>
+                                                            <label htmlFor="radio3_3"></label>
                                                         </li>
                                                         </>
                                                     }

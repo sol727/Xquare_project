@@ -9,24 +9,65 @@ export default class V3_Account extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            check1 : false ,
+            check2 : false ,
+            check3 : false ,
+            check4 : false ,
+            check5 : false ,
+            check6 : false ,
             step1 : '',
             step2 : '',
             step3 : '',
-            step4 : '',
-            step5 : '',
-            step6 : '',
-            step7 : '',
-            step8 : ''
         }
+
+        this.onChangeCheck = this.onChangeCheck.bind(this)
         this.onChangeStep = this.onChangeStep.bind(this)
         this.onChangeStep2 = this.onChangeStep2.bind(this)
         this.onChangeStep3 = this.onChangeStep3.bind(this)
-        this.onChangeStep4 = this.onChangeStep4.bind(this)
-        this.onChangeStep5 = this.onChangeStep5.bind(this)
-        this.onChangeStep6 = this.onChangeStep6.bind(this)
-        this.onChangeStep7 = this.onChangeStep7.bind(this)
-        this.onChangeStep8 = this.onChangeStep8.bind(this)
+
     }
+
+    onChangeCheck(e) {
+        if ( e.target.id === "check1" ) {
+            
+            this.setState({
+                check1 : e.target.checked
+            })
+
+        } else if( e.target.id === "check2"){
+
+            this.setState({
+                check2 : e.target.checked
+            })
+
+        } else if( e.target.id === "check3"){
+
+            this.setState({
+                check3 : e.target.checked
+            })
+
+        }else if( e.target.id === "check4"){
+
+            this.setState({
+                check4 : e.target.checked
+            })
+
+        }else if( e.target.id === "check5"){
+
+            this.setState({
+                check5 : e.target.checked
+            })
+
+        }else if( e.target.id === "check6"){
+
+            this.setState({
+                check6 : e.target.checked
+            })
+
+        }
+    }
+
+
     onChangeStep(id) {
         this.setState({
             step1 : id
@@ -42,35 +83,19 @@ export default class V3_Account extends React.Component {
             step3 : id
         })
     }
-    onChangeStep4(id) {
-        this.setState({
-            step4 : id
-        })
-    }
-    onChangeStep5(id) {
-        this.setState({
-            step5 : id
-        })
-    }
-    onChangeStep6(id) {
-        this.setState({
-            step6 : id
-        })
-    }
-    onChangeStep7(id) {
-        this.setState({
-            step7 : id
-        })
-    }
-    onChangeStep8(id) {
-        this.setState({
-            step8 : id
-        })
-    }
+
 
 
 
     render() {
+
+        const check1 = this.state.check1
+        const check2 = this.state.check2
+        const check3 = this.state.check3
+        const check4 = this.state.check4
+        const check5 = this.state.check5
+        const check6 = this.state.check6
+
         return (
             <>
                <section className="v3 studio account">
@@ -121,34 +146,34 @@ export default class V3_Account extends React.Component {
                                                 <div>
                                                     <ul className="ul_50 clearfix check_list">
                                                         <li>                                                              
-                                                            <div className="check_box check_box2" >
-                                                                <input type="checkbox" id="chk1" /><label htmlFor="chk1"></label><label htmlFor="chk1">창업 7년 이내 비상장 기업 </label>
+                                                            <div className={`check_box check_box2 ${check1 ? 'on' : ''}`}>
+                                                                <input type="checkbox" value={this.state.check1} onChange={this.onChangeCheck} id="check1" /><label htmlFor="check1"></label><label htmlFor="check1">창업 7년 이내 비상장 기업 </label>
                                                             </div>
                                                             <p className="centerT">(개업일 yyyy.mm.dd 기준)</p>
                                                         </li>
                                                         <li>
-                                                             <div className="check_box check_box2" >
-                                                                <input type="checkbox" id="chk2"  /><label htmlFor="chk2"></label><label htmlFor="chk2">벤처기업 인증</label>
+                                                             <div className={`check_box check_box2 ${check2 ? 'on' : ''}`}>
+                                                                <input type="checkbox"  value={this.state.check2} onChange={this.onChangeCheck} id="check2"  /><label htmlFor="check2"></label><label htmlFor="check2">벤처기업 인증</label>
                                                             </div>
                                                         </li>
                                                         <li>    
-                                                             <div className="check_box check_box2" >
-                                                                <input type="checkbox" id="chk3"  /><label htmlFor="chk3"></label><label htmlFor="chk3">메인비즈인증</label>
+                                                             <div className={`check_box check_box2 ${check3 ? 'on' : ''}`}>
+                                                                <input type="checkbox"  value={this.state.check3} onChange={this.onChangeCheck} id="check3"  /><label htmlFor="check3"></label><label htmlFor="check3">메인비즈인증</label>
                                                             </div>                                                            
                                                         </li>
                                                         <li>
-                                                            <div className="check_box check_box2" >
-                                                                <input type="checkbox" id="chk4"  /><label htmlFor="chk4"></label><label htmlFor="chk4">이노비스 인증</label>
+                                                            <div className={`check_box check_box2 ${check4 ? 'on' : ''}`}>
+                                                                <input type="checkbox"  value={this.state.check4} onChange={this.onChangeCheck} id="check4"  /><label htmlFor="check4"></label><label htmlFor="check4">이노비스 인증</label>
                                                             </div>
                                                         </li>
                                                         <li>
-                                                            <div className="check_box check_box2" >
-                                                                <input type="checkbox" id="chk5"  /><label htmlFor="chk5"></label><label htmlFor="chk5">프로젝트성 기업</label>
+                                                            <div className={`check_box check_box2 ${check5 ? 'on' : ''}`}>
+                                                                <input type="checkbox" value={this.state.check5} onChange={this.onChangeCheck}  id="check5"  /><label htmlFor="check5"></label><label htmlFor="check5">프로젝트성 기업</label>
                                                             </div>
                                                         </li>
                                                         <li>
-                                                            <div className="check_box check_box2" >
-                                                                <input type="checkbox" id="chk6"  /><label htmlFor="chk6"></label><label htmlFor="chk6">사회적기업 </label>
+                                                            <div className={`check_box check_box2 ${check6 ? 'on' : ''}`}>
+                                                                <input type="checkbox" value={this.state.check6} onChange={this.onChangeCheck}  id="check6"  /><label htmlFor="check6"></label><label htmlFor="check6">사회적기업 </label>
                                                             </div>
                                                         </li>
                                                         <li className="width_100">

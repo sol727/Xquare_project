@@ -231,9 +231,13 @@
             .feel_box li{width:24px;height:24px;margin-right:16px;}
             .feel_box li:last-child{margin-right:0px;}
             .feel_box li input[type="radio"] + label{width:24px;height:24px;display: block;cursor: pointer;}
-            .feel_box li:nth-child(1) input[type="radio"] + label{background-image: url(../images/icons/feeling_c.png);background-repeat: no-repeat;background-position: center;}
-            .feel_box li:nth-child(2) input[type="radio"] + label{background-image: url(../images/icons/feeling_b.png);background-repeat: no-repeat;background-position: center;}
-            .feel_box li:nth-child(3) input[type="radio"] + label{background-image: url(../images/icons/feeling_a.png);background-repeat: no-repeat;background-position: center;}
+            .feel_box li:nth-child(1) input[type="radio"] + label{background-image: url(../images/icons/feeling_c_off.png);background-repeat: no-repeat;background-position: center;}
+            .feel_box li:nth-child(2) input[type="radio"] + label{background-image: url(../images/icons/feeling_b_off.png);background-repeat: no-repeat;background-position: center;}
+            .feel_box li:nth-child(3) input[type="radio"] + label{background-image: url(../images/icons/feeling_a_off.png);background-repeat: no-repeat;background-position: center;}
+            .feel_box button{width:97px;height:38px;line-height: 38px;font-size: 15px;}
+            .feel_box li:nth-child(1) input[type="radio"]:checked + label{background-image: url(../images/icons/feeling_c.png);background-repeat: no-repeat;background-position: center;}
+            .feel_box li:nth-child(2) input[type="radio"]:checked + label{background-image: url(../images/icons/feeling_b.png);background-repeat: no-repeat;background-position: center;}
+            .feel_box li:nth-child(3) input[type="radio"]:checked + label{background-image: url(../images/icons/feeling_a.png);background-repeat: no-repeat;background-position: center;}
             .feel_box button{width:97px;height:38px;line-height: 38px;font-size: 15px;}
         }
     }
