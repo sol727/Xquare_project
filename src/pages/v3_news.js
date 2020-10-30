@@ -10,6 +10,10 @@ export default class V3_news extends React.Component {
     super(props);
     }
 
+    onClickLink (link) {
+        window.location.pathname = link
+    }
+
     render() {
         return (
             <>
@@ -25,7 +29,7 @@ export default class V3_news extends React.Component {
                                 <div className="news_wrap">
                                     <div className="title_box clearfix2">
                                         <h3 className="font_18">전체글<span className="font_18">6</span></h3>
-                                        <button type="button" className="btn">새소식 작성</button>
+                                        <button type="button" className="btn" onClick={() => this.onClickLink("/v3_news_write")}>새소식 작성</button>
                                     </div>
                                     <div className="list_box">
                                         <ul className="top_ul clearfix">

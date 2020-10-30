@@ -55,20 +55,21 @@ export default class V3_news_write extends React.Component {
                                             <p className="black_alert_p mt16"><img src={ require('../images/icons/ic_ic_alert_alert_circle.svg') } alt="느낌표아이콘"/>예탁결제원의 크라우드펀딩업 규정에 따라 게시 후 수정 및 삭제가 불가능합니다. 신중히 작성해주세요.</p>
                                             <p className="black_alert_p mt24"><img src={ require('../images/icons/ic_ic_alert_alert_circle.svg') } alt="느낌표아이콘"/>모든 게시물은 운영자의 심사를 거친 후 게시됩니다.</p>
                                         </div>
-                                        <div className="upload_box">
-                                            <File_upload/>
+                                        <div className="file_cont">
+                                            <div className="upload_box">
+                                                <File_upload/>
+                                            </div>
+
+                                            {/* 파일업로드시 보이는 파일이름 */}
+                                            <ul className="mt16 file_ul">
+                                                <li className="mb16">
+                                                    <File_upload/>
+                                                </li>
+                                                <li className="mb16">
+                                                    <File_upload/>
+                                                </li>
+                                            </ul>
                                         </div>
-
-                                        {/* 파일업로드시 보이는 파일이름 */}
-                                        <ul className="mt16 file_ul">
-                                            <li className="mb16">
-                                                <File_upload/>
-                                            </li>
-                                            <li className="mb16">
-                                                <File_upload/>
-                                            </li>
-                                        </ul>
-
                                         <div className="btn_wrap mt8 rightT">
                                             <button type="button" className="mr24">이전</button>
 

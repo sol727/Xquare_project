@@ -70,8 +70,8 @@ export default class V3_data extends React.Component {
 
                                 {/* 시즌일때 */}
                                 <div className="season_box">
-                                    <div class="notice_box">
-                                        <h3 class="border_text font_16">해당 프로젝트의 주식을 소각했거나 채권 상환을 완료했거나 사업보고서 제출의 대상이신가요?</h3>
+                                    <div className="notice_box">
+                                        <h3 className="border_text font_16">해당 프로젝트의 주식을 소각했거나 채권 상환을 완료했거나 사업보고서 제출의 대상이신가요?</h3>
                                     </div>
                                     <div className="success_li info_box">
                                         <ProjectContent 
@@ -146,8 +146,8 @@ export default class V3_data extends React.Component {
                                     <div className="bottom_cont mt10">
                                         <div className="top_wrap">
                                             <p className="font_14 fw600">이 프로젝트는</p>
-                                            <div class="notice_box mt8 mb24">
-                                                <h3 class="border_text font_24">결산자료 게재 면재 대상입니다</h3>
+                                            <div className="notice_box mt8 mb24">
+                                                <h3 className="border_text font_24">결산자료 게재 면재 대상입니다</h3>
                                             </div>
                                             <p className="font_13 gray2_color line_h5">자본시장법시행령 제118조16 제3항 제2호에 따라 발행인은 매 사업연도 경과 후 90일 이내에 재무제표 등 결산 관련 서류를 중개업자 홈페이지에 게재해야 하지만, 앞선 답변에 따르면 게재의무가 면재됩니다. 따라서 공시 의무 종료 증빙서류를 제출하시기 바랍니다.</p>
                                             <div className="gray_box">
@@ -176,7 +176,7 @@ export default class V3_data extends React.Component {
                                                     labelDisabled={false}
                                                 />
                                             </div>
-                                            <div className="right file_box file_box2">
+                                            <div className="right file_box">
                                                 <div className="delt_btn_none mb16">
                                                     <File_upload
                                                         flie_id = "file1"
@@ -234,8 +234,8 @@ export default class V3_data extends React.Component {
                                     <div className="bottom_cont mt10">
                                         <div className="top_wrap">
                                             <p className="font_14 fw600">이 프로젝트는</p>
-                                            <div class="notice_box mt8 mb24">
-                                                <h3 class="border_text font_24">결산자료 게재 의무 대상입니다</h3>
+                                            <div className="notice_box mt8 mb24">
+                                                <h3 className="border_text font_24">결산자료 게재 의무 대상입니다</h3>
                                             </div>
                                             <p className="font_13 gray2_color line_h5">자본시장법시행령 제118조16 제3항 제2호에 따라 발행인은 매 사업연도 경과 후 90일 이내에 재무제표 등 결산 관련 서류를 중개업자 홈페이지에 게재해야 합니다.</p>
                                             <div className="gray_box">
@@ -260,7 +260,7 @@ export default class V3_data extends React.Component {
                                                     labelDisabled={false}
                                                 />
                                             </div>
-                                            <div className="right file_box file_box2">
+                                            <div className="right file_box">
                                                 <div className="delt_btn_none mb16">
                                                     <File_upload
                                                         flie_id = "file1"
@@ -300,7 +300,7 @@ export default class V3_data extends React.Component {
                                                     labelDisabled={false}
                                                 />
                                             </div>
-                                            <div className="right file_box file_box2">
+                                            <div className="right file_box ">
                                                 <div className="delt_btn_none mb16">
                                                     <File_upload
                                                         flie_id = "file1"
@@ -340,7 +340,7 @@ export default class V3_data extends React.Component {
                                                     labelDisabled={false}
                                                 />
                                             </div>
-                                            <div className="right file_box file_box2">
+                                            <div className="right file_box ">
                                                 <div className="delt_btn_none mb16">
                                                     <File_upload
                                                         flie_id = "file1"
@@ -382,7 +382,7 @@ export default class V3_data extends React.Component {
                                                     labelDisabled={false}
                                                 />
                                             </div>
-                                            <div className="right file_box file_box2">
+                                            <div className="right file_box ">
                                                 <div className="delt_btn_none mb16">
                                                     <File_upload
                                                         flie_id = "file1"
@@ -422,7 +422,7 @@ export default class V3_data extends React.Component {
                                                     labelDisabled={false}
                                                 />
                                             </div>
-                                            <div className="right file_box file_box2">
+                                            <div className="right file_box ">
                                                 <div className="delt_btn_none mb16">
                                                     <File_upload
                                                         flie_id = "file1"
@@ -462,7 +462,7 @@ export default class V3_data extends React.Component {
                                                     labelDisabled={false}
                                                 />
                                             </div>
-                                            <div className="right file_box file_box2">
+                                            <div className="right file_box ">
                                                 <div className="delt_btn_none mb16">
                                                     <File_upload
                                                         flie_id = "file1"
