@@ -58,6 +58,10 @@ $mob-s-width		: 360px;
 	.back_header {display: block;}
 	.v3{
 		.studio_gnb {display: none;}
+		&.gnb_off{
+			.cont {margin-left: 0;}
+			width: 100%;
+		}
 		.cont {
 			width: 100%;
 			margin-left: 0;

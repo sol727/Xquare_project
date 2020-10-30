@@ -9,8 +9,67 @@ import Text_input from '../components/text_input';
 export default class V3_funding1 extends React.Component {
 
     constructor(props) {
-    super(props);
+        super(props);
+        this.state = {
+            step1 : '',
+            step2 : '',
+            step3 : '',
+            step4 : '',
+            step5 : '',
+            step6 : '',
+            step7 : '',
+            step8 : ''
+        }
+        this.onChangeStep = this.onChangeStep.bind(this)
+        this.onChangeStep2 = this.onChangeStep2.bind(this)
+        this.onChangeStep3 = this.onChangeStep3.bind(this)
+        this.onChangeStep4 = this.onChangeStep4.bind(this)
+        this.onChangeStep5 = this.onChangeStep5.bind(this)
+        this.onChangeStep6 = this.onChangeStep6.bind(this)
+        this.onChangeStep7 = this.onChangeStep7.bind(this)
+        this.onChangeStep8 = this.onChangeStep8.bind(this)
     }
+    onChangeStep(id) {
+        this.setState({
+            step1 : id
+        })
+    }
+    onChangeStep2(id) {
+        this.setState({
+            step2 : id
+        })
+    }
+    onChangeStep3(id) {
+        this.setState({
+            step3 : id
+        })
+    }
+    onChangeStep4(id) {
+        this.setState({
+            step4 : id
+        })
+    }
+    onChangeStep5(id) {
+        this.setState({
+            step5 : id
+        })
+    }
+    onChangeStep6(id) {
+        this.setState({
+            step6 : id
+        })
+    }
+    onChangeStep7(id) {
+        this.setState({
+            step7 : id
+        })
+    }
+    onChangeStep8(id) {
+        this.setState({
+            step8 : id
+        })
+    }
+
 
     render() {
         return (
@@ -92,17 +151,15 @@ export default class V3_funding1 extends React.Component {
                                             />
                                         </div>
                                         <div className="right">
-                                            {/* check_list에 gnb_off 클래스를 넣으면 레이아웃이 바뀝니다. */}
-                                            <ul className="check_list">
-                                                <li><Radio id="type1"  name="type"  text="태양광 (소형)"/></li>
-                                                <li> <Radio id="type3"  name="type"  text="태양광 (중소형)"/></li>
-                                                <li><Radio id="type5"  name="type"  text="태양광 (중형)"/></li>
+                                            <ul className="check_list gnb_off">
+                                                <li><Radio focus={this.state.step1} onChangeStep={this.onChangeStep} id="type1"  name="type"  text="태양광 (소형)"/></li>
+                                                <li> <Radio focus={this.state.step1} onChangeStep={this.onChangeStep} id="type3"  name="type"  text="태양광 (중소형)"/></li>
+                                                <li><Radio focus={this.state.step1} onChangeStep={this.onChangeStep} id="type5"  name="type"  text="태양광 (중형)"/></li>
                                             </ul>
-                                             {/* check_list에 gnb_off 클래스를 넣으면 레이아웃이 바뀝니다. */}
-                                            <ul className="check_list">
-                                                <li><Radio id="type2"  name="type"  text="태양광 (대형)"/></li>
-                                                <li> <Radio id="type4"  name="type"  text="연료전지"/></li>
-                                                <li><Radio id="type6"  name="type"  text="바이오디젤"/></li>
+                                            <ul className="check_list gnb_off">
+                                                <li><Radio focus={this.state.step1} onChangeStep={this.onChangeStep} id="type2"  name="type"  text="태양광 (대형)"/></li>
+                                                <li> <Radio focus={this.state.step1} onChangeStep={this.onChangeStep} id="type4"  name="type"  text="연료전지"/></li>
+                                                <li><Radio focus={this.state.step1} onChangeStep={this.onChangeStep} id="type6"  name="type"  text="바이오디젤"/></li>
                                             </ul>                                                                                
                                         </div>                 
                                     </div>
@@ -124,8 +181,8 @@ export default class V3_funding1 extends React.Component {
                                         <div className="right">
                                              {/*li가 2개뿐일경우 check_list에 gnb_off , gnb_off2클래스를 넣으면 레이아웃이 바뀝니다. */}
                                             <ul className="check_list gnb_off gnb_off2">
-                                                <li><Radio id="type1"  name="type"  text="주식형"/></li>
-                                                <li><Radio id="type2"  name="type"  text="채권형"/></li>
+                                                <li><Radio focus={this.state.step1} onChangeStep={this.onChangeStep2} id="type2-1"  name="type2"  text="주식형"/></li>
+                                                <li><Radio focus={this.state.step1} onChangeStep={this.onChangeStep2} id="type2-2"  name="type2"  text="채권형"/></li>
                                             </ul>
                                         </div>                 
                                     </div>
@@ -168,13 +225,13 @@ export default class V3_funding1 extends React.Component {
                                         <div className="right">
                                             <ul className="check_list">
                                                 <li>
-                                                    <Radio id="division1"  name="division"  text="보통주"/>                                                    
+                                                    <Radio focus={this.state.step1} onChangeStep={this.onChangeStep3} id="division1"  name="division"  text="보통주"/>                                                    
                                                 </li>
                                                 <li>
-                                                    <Radio id="division2"  name="division"  text="전환우선주(추후 서비스 예정)"/>     
+                                                    <Radio focus={this.state.step1} onChangeStep={this.onChangeStep3} id="division2"  name="division"  text="전환우선주(추후 서비스 예정)"/>     
                                                 </li>
                                                 <li>
-                                                    <Radio id="division3"  name="division"  text="상환전환우선주 (추후 서비스 예정)"/>     
+                                                    <Radio focus={this.state.step1} onChangeStep={this.onChangeStep3} id="division3"  name="division"  text="상환전환우선주 (추후 서비스 예정)"/>     
                                                 </li>
                                             </ul>                        
                                         </div>                 
@@ -197,8 +254,8 @@ export default class V3_funding1 extends React.Component {
                                         </div>
                                         <div className="right">
                                             <ul className="check_list gnb_off gnb_off2">
-                                                <li><Radio id="type1"  name="type"  text="전환사채"/></li>
-                                                <li> <Radio id="type2" name="type"  text="일반회사채"/></li>                                                
+                                                <li><Radio focus={this.state.step1} onChangeStep={this.onChangeStep4} id="type3-1"  name="type3"  text="전환사채"/></li>
+                                                <li> <Radio focus={this.state.step1} onChangeStep={this.onChangeStep4} id="type3-2" name="type3"  text="일반회사채"/></li>                                                
                                             </ul>                                            
                                         </div>                 
                                     </div>  

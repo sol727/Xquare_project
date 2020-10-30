@@ -71,8 +71,8 @@ export default class V3_funding2 extends React.Component {
                                         />
                                         <ul className="img_ul  clearfix">
                                             <li className="active ">
-                                                <div className="clearfix radio_ul">
-                                                    <input type="radio" id="img1"/><label htmlFor="img1"></label><label htmlFor="img1">대표이미지로 사용</label>
+                                                <div className="clearfix radio_ul radio_ul2">
+                                                    <input type="radio" id="img1" name="img_box"/><label htmlFor="img1"></label><label htmlFor="img1">대표이미지로 사용</label>
                                                 </div>                                               
                                                 <div className="img_box">
                                                     <img src={ require('../images/detail_sample.png') } alt="샘플이미지"/>
@@ -85,8 +85,8 @@ export default class V3_funding2 extends React.Component {
                                                 </div>                                                
                                             </li>
                                             <li className="">
-                                                <div className="clearfix radio_ul">
-                                                    <input type="radio" id="img2"/><label htmlFor="img2"></label><label htmlFor="img1">대표이미지로 사용</label>
+                                                <div className="clearfix radio_ul radio_ul2">
+                                                    <input type="radio" id="img2" name="img_box"/><label htmlFor="img2"></label><label htmlFor="img2">대표이미지로 사용</label>
                                                 </div>
                                                 
                                                 <div className="img_box">
@@ -100,8 +100,8 @@ export default class V3_funding2 extends React.Component {
                                                 </div>                                                
                                             </li>
                                             <li className="">
-                                                <div className="clearfix radio_ul">
-                                                    <input type="radio" id="img3"/><label htmlFor="img3"></label><label htmlFor="img3">대표이미지로 사용</label>
+                                                <div className="clearfix radio_ul radio_ul2">
+                                                    <input type="radio" id="img3"name="img_box" /><label htmlFor="img3"></label><label htmlFor="img3">대표이미지로 사용</label>
                                                 </div>
                                                 <div className="img_box">
                                                     <img src={ require('../images/detail_sample.png') } alt="샘플이미지"/>

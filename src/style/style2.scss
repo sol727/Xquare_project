@@ -32,21 +32,7 @@
           overflow: hidden;
           >* {
                margin-bottom: 16px;
-          }
-          &.gnb_off {
-               width: calc(50% - 12px);
-               float: left;
-               + .gnb_off {margin-left: 24px;}   
-               &.gnb_off2 {
-                    width: 100%;  
-                    li {
-                         width: calc(50% - 12px);
-                         float: left;
-                         margin-right: 24px;
-                         &:nth-child(2n) {margin-right: 0;}
-                    }
-               }              
-          }
+          }          
           &.check_list2 {               
                >div {
                     width: calc(50% - 20px);       
@@ -65,6 +51,13 @@
           li{
                margin-bottom: 24px;
                p {margin-top: 5px; color: #bfbfbf; font-size: 13px;}
+          }
+     }
+     .radio_ul {
+          &.radio_ul2 {
+               input[type=radio]:checked + label + label {
+                    color: #fe8d40;
+               }
           }
      }
      .img_ul {
@@ -284,7 +277,7 @@
                .menu_btn {display: block;}
                .studio_btn {display: none;}
                .state_box {display: none;}
-               .top {display: none;}               
+               .top {display: none;}              
           }
           .gnb_btn {
                position: absolute;
@@ -425,9 +418,25 @@
      }
      &.gnb_off {
           .cont {
-               width: calc(100% - 102px);
+               width: calc(100% - 102px);               
                margin-left: 102px;
           }
+          .check_list{
+               &.gnb_off {
+                    width: calc(50% - 12px);
+                    float: left;
+                    + .gnb_off {margin-left: 24px;}   
+                    &.gnb_off2 {
+                         width: 100%;  
+                         li {
+                              width: calc(50% - 12px);
+                              float: left;
+                              margin-right: 24px;
+                              &:nth-child(2n) {margin-right: 0;}
+                         }
+                    }              
+               }    
+          }               
      }
      &.account2 {
           .left {width: 40%; margin-right: 32px;}
