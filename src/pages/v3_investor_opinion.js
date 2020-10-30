@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import Studio_gnb from '../components/Studio_gnb'
 import Opinion from '../components/opinion'
 import CommentBox from '../components/commentBox'
+import Back_header from '../components/back_header';
 
 export default class V3_investor_opinion extends React.Component {
 
@@ -14,6 +14,7 @@ export default class V3_investor_opinion extends React.Component {
         return (
             <>
                 <section className="v3 investor_opinion studio">
+                    <Back_header/>
                     <div className="clearfix">
                         <Studio_gnb/>
                         <div className="cont">
@@ -21,81 +22,112 @@ export default class V3_investor_opinion extends React.Component {
                                 <h1>투자자 의견</h1>
                             </div>
                             <div className="gray_bg clearfix2">
-                                {/* 노데이터시 노출됩니다 ▼*/}
-                                {/* <div className="no_data">받은 피드백이 없습니다.</div> */}
+                                <div className="opinion_list">
 
-                                <ul className="opinion_list">
-                                    {/* li 클래스에 new 추가하면 new라벨이 보입니다▼ */}
-                                    <li className="new on">
-                                        <Opinion 
-                                            label_li={
-                                                <>
-                                                <li>커뮤니티</li>
-                                                <li>게시글</li>
-                                                </>
-                                            }
-                                            NameBoxShow={true}
-                                            feel_class="a"
-                                            name ="username"
-                                            TimeShow={true}
-                                            time="yyyy. mm. dd hh:mm"
-                                            labelShow={false}
-                                            
-                                            TitleShow={false}
-                                            DateShow={false}
+                                    {/* 노데이터시 노출됩니다 ▼*/}
+                                    {/* <div className="no_data">받은 피드백이 없습니다.</div> */}
 
-                                            txt="How to build a loyal community online and offline How to build a loyal community online and offlineHow to build a loyal community online and offline How to build a loyal community online and offline"
+                                    <ul>
+                                        {/* li 클래스에 on 추가하면 활성화됩니다*/}
+                                        <li className="on">
+                                            <Opinion 
+                                                label_li={
+                                                    <>
+                                                    <li>커뮤니티</li>
+                                                    <li>게시글</li>
+                                                    </>
+                                                }
+                                                NameBoxShow={true}
+                                                feel_class="a"
+                                                name ="username"
+                                                TimeShow={true}
+                                                time="yyyy. mm. dd hh:mm"
+                                                labelShow={false}
+                                                
+                                                TitleShow={false}
+                                                DateShow={false}
 
-                                            ButtonShow={false}
-                                        />
-                                    </li>
-                                    <li>
-                                        <Opinion 
-                                            label_li={
-                                                <>
-                                                <li>커뮤니티</li>
-                                                <li>게시글</li>
-                                                </>
-                                            }
-                                            NameBoxShow={true}
-                                            feel_class="b"
-                                            name ="username"
-                                            TimeShow={true}
-                                            time="yyyy. mm. dd hh:mm"
-                                            labelShow={false}
+                                                txt="How to build a loyal community online and offline How to build a loyal community online and offlineHow to build a loyal community online and offline How to build a loyal community online and offline"
 
-                                            TitleShow={false}
-                                            DateShow={false}
+                                                ButtonShow={false}
+                                            />
+                                        </li>
+                                        
+                                        {/* li 클래스에 new 추가하면 new라벨이 보입니다▼*/}
+                                        <li className="new">
+                                            <Opinion 
+                                                label_li={
+                                                    <>
+                                                    <li>커뮤니티</li>
+                                                    <li>게시글</li>
+                                                    </>
+                                                }
+                                                NameBoxShow={true}
+                                                feel_class="b"
+                                                name ="username"
+                                                TimeShow={true}
+                                                time="yyyy. mm. dd hh:mm"
+                                                labelShow={false}
 
-                                            txt="How to build a loyal community online and offline"
+                                                TitleShow={false}
+                                                DateShow={false}
 
-                                            ButtonShow={false}
-                                        />
-                                    </li>
-                                    <li>
-                                        <Opinion 
-                                            label_li={
-                                                <>
-                                                <li>새소식</li>
-                                                <li>댓글</li>
-                                                </>
-                                            }
-                                            NameBoxShow={true}
-                                            feel_class="c"
-                                            name ="username"
-                                            TimeShow={true}
-                                            time="yyyy. mm. dd hh:mm"
-                                            labelShow={false}
+                                                txt="How to build a loyal community online and offline"
 
-                                            TitleShow={false}
-                                            DateShow={false}
+                                                ButtonShow={false}
+                                            />
+                                        </li>
+                                        <li>
+                                            <Opinion 
+                                                label_li={
+                                                    <>
+                                                    <li>새소식</li>
+                                                    <li>댓글</li>
+                                                    </>
+                                                }
+                                                NameBoxShow={true}
+                                                feel_class="c"
+                                                name ="username"
+                                                TimeShow={true}
+                                                time="yyyy. mm. dd hh:mm"
+                                                labelShow={false}
 
-                                            txt="comment here"
+                                                TitleShow={false}
+                                                DateShow={false}
 
-                                            ButtonShow={false}
-                                        />
-                                    </li>
-                                </ul>
+                                                txt="comment here"
+
+                                                ButtonShow={false}
+                                            />
+                                        </li>
+                                        <li>
+                                            <Opinion 
+                                                label_li={
+                                                    <>
+                                                    <li>새소식</li>
+                                                    <li>댓글</li>
+                                                    </>
+                                                }
+                                                NameBoxShow={true}
+                                                feel_class="a"
+                                                name ="username"
+                                                TimeShow={true}
+                                                time="yyyy. mm. dd hh:mm"
+                                                labelShow={false}
+
+                                                TitleShow={false}
+                                                DateShow={false}
+
+                                                txt="I know this may be awkward to answer, but is there anything about the way I do my job,I know this may be awkward to answer, but is there anything about the way I do my job,I know this may be awkward to answer, but is there anything about the way I do my job,"
+
+                                                ButtonShow={false}
+                                            />
+                                        </li>
+                                    </ul>
+                                    <div className="centerT mt24">
+                                        <button type="button" className="list_more_btn">더보기(5/6)<img src={require("../images/icons/more_icon.png")} alt="화살표 아이콘"/></button>
+                                    </div>
+                                </div>
                                 <div className="detail_wrap">
                                     <div className="clearfix2 title_box">
                                         <h3 className="font_18 white_color">커뮤니티</h3>
@@ -121,7 +153,7 @@ export default class V3_investor_opinion extends React.Component {
                                             DateShow={true}
                                             txt_date="2020.05.01 06:05:46"
 
-                                            txt="How to build a loyal community online and offline How to build a loyal community online and offlineHow to build a loyal community online and offline How to build a loyal community online and offline"
+                                            txt="How to build a loyal community online and offline How to build a loyal community online and offlineHow to build a loyal community online and offline How to build a loyal community online and offline How to build a loyal community online and offline How to build a loyal community online and offlineHow to build a loyal community online and offline How to build a loyal community online and offline"
 
                                             ButtonShow={false}
                                         />

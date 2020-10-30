@@ -64,6 +64,11 @@ $mob-s-width		: 375px;
 // 1200px;
 @include tab2{
 	.v3{
+		// 개설한프로젝트
+		&.project{
+			.fixed_btn{display: none;}
+			.no_data{padding:48px 0;}
+		}
 		// 약관확인
 		&.terms_check{
 			.btn_wrap{width:384px;}
@@ -121,7 +126,7 @@ $mob-s-width		: 375px;
 		}
 		// 피드백
 		&.feedback{
-			.feedback_li {padding:10px 16px;}
+			.feedback_li {padding:10px 16px;border-color:#fff;}
 			.feedback_li span{font-size:13px;}
 			.feedback_li p{font-size:15px;}
 			.detail_wrap .detail{padding:24px 16px;}

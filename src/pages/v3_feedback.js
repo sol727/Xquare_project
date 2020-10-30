@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import Back_header from '../components/back_header';
 import Studio_gnb from '../components/Studio_gnb'
 import File_down from '../components/File_down';
 
@@ -14,6 +14,7 @@ export default class V3_Feedback extends React.Component {
         return (
             <>
                 <section className="v3 feedback studio">
+                    <Back_header/>
                     <div className="clearfix">
                         <Studio_gnb/>
                         <div className="cont">

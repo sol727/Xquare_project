@@ -35,7 +35,7 @@ export default class Opinion extends React.Component {
                         this.props.DateShow ?
                         <p className="txt_date">{this.props.txt_date}</p> : <></>
                     }
-                    <p className="font_14 ellipsis2">{this.props.txt}</p>
+                    <p className="font_14 line_h5">{this.props.txt}</p>
                     {
                         this.props.ButtonShow ?
                     <button type="button" className="txt_btn">{this.props.button}</button>: <></>
