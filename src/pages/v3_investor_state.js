@@ -15,7 +15,7 @@ export default class V3_investor_state extends React.Component {
         return (
             <>
                 <Header />
-                <section className="v3 investor_state">
+                <section className="v3 investor_state studio">
                     <div className="clearfix">
                         <Studio_gnb/>
                         <div className="cont">

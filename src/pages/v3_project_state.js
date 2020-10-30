@@ -12,7 +12,7 @@ export default class V3_Project_state extends React.Component {
     render() {
         return (
             <>
-               <section className="v3 studio state">
+               <section className="v3 studio state studio">
                   
                </section>
             </>

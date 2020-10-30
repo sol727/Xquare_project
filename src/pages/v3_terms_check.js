@@ -63,7 +63,7 @@ export default class V3_terms_check extends React.Component {
                <Mount />
                 <Header />
 
-                <section className="invest_page v3 terms_check signup signup2">
+                <section className="invest_page v3 terms_check signup signup2 studio">
                     <div className="top_banner">
                         <h1>투자하기</h1>
                     </div>

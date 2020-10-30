@@ -76,7 +76,7 @@ export default class V3_invest_step1 extends React.Component {
                                             <img src={ require('../images/sample.png') } alt="투자상품이미지"/>
                                         </div>
                                         <div className="text">
-                                            <ul className="label_wrap mb8 clearfix">
+                                            <ul className="label_wrap mb8 clearfix label_wrap2">
                                                 <li>태양광/소형</li>
                                                 <li>주식형(보통주)</li>
                                             </ul>

@@ -30,7 +30,7 @@ export default class V3_data extends React.Component {
 
         return (
             <>
-                <section className="v3 v3_data">
+                <section className="v3 v3_data studio">
                     <Back_header/>
                     <div className="clearfix">
                         <Studio_gnb/>
