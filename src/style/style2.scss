@@ -27,8 +27,7 @@
      }
      .division_list {
           li {margin-bottom: 16px;}
-     }
-     
+     }     
      .check_list {
           overflow: hidden;
           >* {
@@ -204,6 +203,7 @@
         }
         p {font-size: 13px; color: #bfbfbf; position: absolute;   right: 16px; top: 10px;}
    }
+     &.studio {position: relative;}
      //프로젝트 스튜디오 gnb
      &.studio_gnb{
           position: absolute;
@@ -215,11 +215,20 @@
                width: 102px;
                .gnb_wrap { 
                     background-color: #1f318d;
+                    .on_menu {display: none;}
                     .off_menu {
+                         display: block;
                          li {
                               transform: rotate(-90deg);
-                              width: calc(100% + 30px);
-                              padding-bottom: 30px;
+                              width: calc(100% + 28px);
+                              padding-bottom: 28px;
+
+                              &:first-child {
+                                   margin-top: -100%;
+                                   &.active {
+                                        margin-top: 0;
+                                   }
+                              }
                               a   {
                                    width: 24px;
                                    height: 24px;
@@ -233,14 +242,33 @@
                                    margin-left: 10px;
                               }
                               &.active {
-                                   margin-top: 100%;
-                                   padding-bottom: 30px;
+                                   margin-top: 85%;
+                                   padding-bottom: 28px;                                   
                                    p {display: block;}
                                    a   {                                        
                                         background: rgba(255,255,255,1);
                                    }
+                                   &.long_menu {
+                                        width: calc(100% + 70px);
+                                        padding-bottom: 70px;  
+                                        &.long_menu2 {
+                                             margin-top: 95%;
+                                             width: calc(100% + 71px);
+                                             padding-bottom: 71px;  
+                                        }
+                                   }
                               }
                               &.sub_menu {
+                                   width: calc(100% + 18px);
+                                   padding-bottom: 18px;
+                                   &.first_sub {
+                                        margin-top: 50%;
+                                        &.active {margin-top: 120%;}
+                                   }
+                                   &.active {
+                                        margin-top: 70%;
+                                        padding-bottom: 18px;         
+                                   }
                                    a   {
                                         width: 16px;
                                         height: 16px;
@@ -254,26 +282,24 @@
                .menu_btn {display: block;}
                .studio_btn {display: none;}
                .state_box {display: none;}
-               .top {display: none;}
-               .pc {display: none;}
-               .mo {display: block;}
-               
+               .top {display: none;}               
           }
           .gnb_btn {
                position: absolute;
                right: -56px;
                top: 0;
                padding: 16px;
-               img {width: 24px;}
-              
+               img {width: 24px;}              
           }
           .menu_btn {
                display: none;
                text-align: center;
+               margin-top: 48px;
+               margin-bottom: 121px;
                button{
                width: 40px; 
                height: 40px;
-               background-image: url(../images/icons/hamburger.png);
+               background-image: url(../images/icons/hamburger_w.png);
                background-size: 40px;
                background-repeat: no-repeat;
                background-position: center;
@@ -305,13 +331,12 @@
                               border-radius: 0;}
                               background-color: #fff;
                          .bottom {
-                              padding: 0;
-                              border-radius: 0;
+                              padding: 0;                              
                               background-color: #fff;
                          }
                     }
                }
-               .pc {
+               .on_menu {
                     background: linear-gradient(to right, #1f318d, #1f318d, #eff1f7);
                     padding: 0 0 0 16px;
                     li{
@@ -372,12 +397,11 @@
                     }
                     
                }
-               .mo {display: none;}              
+               .off_menu {display: none;}              
           }
           .bottom{
                background-color: #1f318d;
-               padding: 24px 16px 191px;
-               border-radius: 0 0 20px 0;
+               padding: 24px 16px 191px;              
                .studio_btn {
                     padding: 8px 24px;
                     color: #fff;
@@ -654,6 +678,7 @@
                input[type=radio] + label + label {
                     font-size: 15px;
                     color: #535352;
+                    cursor: pointer;
                }
           }
           .check_box {
