@@ -390,12 +390,11 @@
                          &.on {
                               background-color: #eff1f7;
                               a {color: #343332;}
-                         }
-                         &.next {
-                              border-radius: 0 20px  0 0;
-                         }
-                    }
-                    
+                              &+ li {
+                                   border-radius: 0 20px  0 0;
+                              }                                                   
+                         }                                         
+                    }                    
                }
                .off_menu {display: none;}              
           }
@@ -651,6 +650,13 @@
                          color: #fff;
                     }
                }
+               &.disabled {
+                    background-color:#eaedf1 ;
+                    border: 1px solid #eaedf1;
+                    input[type=radio] + label + label {
+                         color: #bfbfbf;
+                    }
+               }
                &.radio_box2 {
                     input[type=radio]:checked + label {
                          background-image:url(../images/icons/radio_check.png);background-repeat: no-repeat;
@@ -724,6 +730,7 @@
                input[type=checkbox] + label + label {
                     font-size: 15px;
                     color: #535352;
+                    cursor: pointer;
                }
           }      
           .date_selete {

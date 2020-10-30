@@ -66,7 +66,8 @@ export default class V3_Account2 extends React.Component {
                                              <div className="right file_box file_box2">                                                        
                                                   <File_upload
                                                         flie_id = "file1"
-                                                       downShow={false}                                                  
+                                                       downShow={false}
+                                                       
                                                   />                                                                                                                                        
                                              </div>
                                         </div>
@@ -88,10 +89,13 @@ export default class V3_Account2 extends React.Component {
                                                        labelDisabled={false}
                                                   />
                                              </div>
-                                             <div className="right file_box ">                                                        
+                                             {/* 파일업로드에 active 클래스를 넣을 시 버튼색 주황 , file_box 에 delt_btn_none 넣을 시 버튼 사라짐 */}
+                                             <div className="right file_box delt_btn_none">                                                        
                                                   <File_upload
                                                         flie_id = "file2"
-                                                       downShow={true}                                                  
+                                                       downShow={true}      
+                                                       btn_class="active"          
+
                                                   />
                                              </div>
                                         </div>                                       
@@ -113,10 +117,11 @@ export default class V3_Account2 extends React.Component {
                                                        labelDisabled={false}
                                                   />
                                              </div>
-                                             <div className="right file_box ">                                                        
+                                             <div className="right file_box delt_btn_none">                                                        
                                                   <File_upload
                                                         flie_id = "file3"
-                                                       downShow={true}                                                  
+                                                       downShow={true}     
+                                                       btn_class="active"
                                                   />
                                              </div>
                                         </div>
@@ -138,10 +143,11 @@ export default class V3_Account2 extends React.Component {
                                                        labelDisabled={false}
                                                   />
                                              </div>
-                                             <div className="right file_box ">                                                        
+                                             <div className="right file_box delt_btn_none">                                                        
                                                   <File_upload
                                                         flie_id = "file4"
-                                                       downShow={true}                                                  
+                                                       downShow={true}   
+                                                       btn_class="active"                                                        
                                                   />
                                              </div>
                                         </div>
@@ -163,10 +169,11 @@ export default class V3_Account2 extends React.Component {
                                                        labelDisabled={false}
                                                   />
                                              </div>
-                                             <div className="right file_box ">                                                        
+                                             <div className="right file_box delt_btn_none">                                                        
                                                   <File_upload
                                                         flie_id = "file5"
-                                                       downShow={true}                                                  
+                                                       downShow={true}   
+                                                       btn_class="active"                                                        
                                                   />
                                              </div>
                                         </div>
@@ -188,10 +195,11 @@ export default class V3_Account2 extends React.Component {
                                                        labelDisabled={false}
                                                   />
                                              </div>
-                                             <div className="right file_box ">                                                        
+                                             <div className="right file_box delt_btn_none">                                                        
                                                   <File_upload
                                                         flie_id = "file6"
-                                                       downShow={true}                                                  
+                                                       downShow={true}
+                                                       btn_class="active"                                                           
                                                   />
                                              </div>
                                         </div>
@@ -213,7 +221,7 @@ export default class V3_Account2 extends React.Component {
                                                        labelDisabled={true}
                                                   />
                                              </div>
-                                             <div className="right file_box ">                                                        
+                                             <div className="right file_box delt_btn_none">                                                        
                                                   <File_upload
                                                         flie_id = "file7"
                                                        downShow={true}                                                  
@@ -238,7 +246,7 @@ export default class V3_Account2 extends React.Component {
                                                        labelDisabled={true}
                                                   />
                                              </div>
-                                             <div className="right file_box ">                                                        
+                                             <div className="right file_box delt_btn_none">                                                        
                                                   <File_upload
                                                         flie_id = "file8"
                                                        downShow={true}                                                  

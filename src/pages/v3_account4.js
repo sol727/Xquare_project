@@ -267,6 +267,10 @@ export default class V3_Account4 extends React.Component {
                 <div className="toast_pop audit_toast">
                     <p className="font_13 white_color">계약 준비 자료를 제출했습니다.</p>
                 </div>
+                 {/* 6명이상 입력시  보이는 토스트팝업 */}
+                 <div className="toast_pop audit_toast max_toast">
+                    <p className="font_13 white_color">최대 5명까지 입력 가능합니다.</p>
+                </div>
             </>
         )
     }
