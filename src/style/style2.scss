@@ -60,10 +60,12 @@
                }
           }
      }
+     .img_ul_wrap {text-align: center;}
      .img_ul {
+          display: inline-block;
           margin-top: 16px;
           li {
-               width: calc(33.333% - 8px);
+               width:282px;
                margin-right: 12px;
                &:last-child {margin-right: 0;}
                &.active {
@@ -816,6 +818,9 @@
           textarea {padding: 8px 16px; }
      }
      .paragraph_list  {
+          &.done {
+               .drag_box ul li {opacity: 0.1;}
+          }
           >li {
                margin-bottom: 24px;
                &:last-child {margin-bottom: 0;}

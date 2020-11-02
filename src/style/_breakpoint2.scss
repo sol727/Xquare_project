@@ -81,7 +81,11 @@ $mob-s-width		: 360px;
 			
 			
 		}
-
+		.img_ul {
+			li {
+				width: calc(33.333% - 8px);
+			}
+		}
 	}
 	
 }
