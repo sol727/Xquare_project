@@ -71,6 +71,14 @@
                          border: 2px solid #ff8e40; 
                     }                   
                }
+               &.none_img {
+                    .img_box{
+                         >img {display: none;}
+                         .delete_btn {display: none;}
+                         .add_btn {display: block;}
+
+                    }
+               }
                .img_box {
                     position: relative;
                     margin-top: 12px; width: 100%; height: 166px;
@@ -105,9 +113,6 @@
      }
      //---------------------------------------------------------------------------------
      //btn
-     .bottom_btn {
-          padding: 24px;
-     }
      .btn {
           background-color: #ff8e40; color: #fff; font-size: 15px; padding: 11px; width: 160px; height: 44px; line-height: 24px;
           &.big {width: 328px; margin-bottom: 24px;}
@@ -277,7 +282,7 @@
                .menu_btn {display: block;}
                .studio_btn {display: none;}
                .state_box {display: none;}
-               .top {display: none;}              
+               .top {display: none;}                   
           }
           .gnb_btn {
                position: absolute;
@@ -336,7 +341,7 @@
                     }
                }
                .on_menu {
-                    background: linear-gradient(to right, #1f318d, #1f318d, #eff1f7);
+                    background: linear-gradient(to right, #1f318d, #1f318d, #eff1f700, #eff1f700);
                     padding: 0 0 0 16px;
                     li{
                          padding: 12px 24px;
@@ -421,6 +426,12 @@
           .cont {
                width: calc(100% - 102px);               
                margin-left: 102px;
+              >.top_box {
+                    padding-left: 24px;
+               }
+               >.gray_bg {
+                    padding-left: 0;
+               }
           }
           .check_list{
                &.gnb_off {
@@ -519,15 +530,17 @@
      }
      //컨텐츠
      .cont {
-          width: calc(100% - 306px);
-          margin-left: 306px;
+          width: calc(100% - 286px);
+          margin-left: 286px;
           transition: all 0.3s;         
           .container {
                width: 100%;
                padding: 0 24px ;
           }
+          >.top_box {padding-left: 44px;}
           .top_box {
                margin-top: 80px;
+
                h1 {font-size: 30px; color: #343332;   margin-bottom: 8px; }
                .tab_ul {
                     li {
@@ -537,10 +550,12 @@
                }
 
           }
+          >.gray_bg {padding-left: 20px;}
           .gray_bg {
                padding-top: 24px;
                background-color: #eff1f7;
                min-height: 910px;
+               padding-bottom: 24px;
                .notice_box {
                     width: 100%;
                     background: #fff;
@@ -565,14 +580,14 @@
                          font-weight: 500;
 
                     }
-               }
-               .bd_box {                    
+               }              
+               .bd_box {                          
                     padding: 16px;
                     border-top: 2px solid #ffa566;
                     background: #fff;
                     margin-bottom: 36px;
                     &.bd_none {border: none;}
-                    &:last-of-type {margin-bottom: 0;}
+                    &.last {margin-bottom: 24px;}                   
                     .box_title {
                          h3 {
                               font-size: 16px; color:#343332; margin-bottom: 4px;

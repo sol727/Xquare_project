@@ -312,7 +312,7 @@ export default class V3_Account2 extends React.Component {
                                                   </ul>                                                 
                                              </div>
                                         </div>
-                                        <div className="bd_box clearfix2">
+                                        <div className="bd_box clearfix2 last">
                                              <div className="left"> 
                                                   <Title 
                                                        num="10."
@@ -354,12 +354,11 @@ export default class V3_Account2 extends React.Component {
                                                   </ul>                                                 
                                              </div>
                                         </div>                    
-
-                                   </div>
-                                   <div className="bottom_btn rightT">
-                                        <button type="button" className="btn">임시저장</button>             
-                                        <button type="button" className="btn">다음 단계</button>             
-                                   </div>
+                                        <div className="bottom_btn rightT">
+                                             <button type="button" className="btn">임시저장</button>             
+                                             <button type="button" className="btn">다음 단계</button>             
+                                        </div>                   
+                                   </div>                                  
                               </div>
                          </div>
                     </div>

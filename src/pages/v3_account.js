@@ -249,7 +249,7 @@ export default class V3_Account extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="bd_box">
+                                    <div className="bd_box last">
                                         <Title 
                                             num="04."
                                             title ="엑스퀘어에서 투자 유치를 신청하게 된 경로를 알려주세요."
@@ -267,11 +267,12 @@ export default class V3_Account extends React.Component {
                                             <textarea name="" id="" className="width_100" rows="10"></textarea>
                                         </div>
                                     </div>
+                                    <div className="bottom_btn rightT">
+                                        <button type="button" className="btn">임시저장</button>
+                                        <button type="button" className="btn">다음 단계</button>
+                                    </div>
                                 </div>
-                                <div className="bottom_btn rightT">
-                                    <button type="button" className="btn">임시저장</button>
-                                    <button type="button" className="btn">다음 단계</button>
-                                </div>
+                                
                             </div>
                         </div>
                    </div>

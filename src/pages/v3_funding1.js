@@ -1341,7 +1341,7 @@ export default class V3_funding1 extends React.Component {
 
                                     
                                     {/* 전환사채 선택시 */}
-                                    <div className="bd_box off">
+                                    <div className="bd_box off last">
                                         <div className="big_title">
                                             <h2>전환사채</h2>
                                             <p className="error">·error here</p>
@@ -1620,7 +1620,10 @@ export default class V3_funding1 extends React.Component {
                                             </li>
                                         </ul>
                                     </div>  
-
+                                    <div className="bottom_btn rightT">
+                                        <button type="button" className="btn">임시저장</button>             
+                                        <button type="button" className="btn">최종제출</button>             
+                                    </div>  
                                 </div>
                              </div>
                         </div>
