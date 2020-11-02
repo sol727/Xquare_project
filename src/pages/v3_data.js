@@ -39,18 +39,31 @@ export default class V3_data extends React.Component {
                                 <h1>결산자료 제출 및 확인</h1>
                             </div>
                             <div className="gray_bg">
+                                {/* 결산자료제출후 심사기간일때 */}
+                                <div className="notice_box reject_box">
+                                    <div className="clearfix2">
+                                        <div className="border_text left">
+                                            <h3 className="font_18 mb12 fw600">결산자료 제출 결과</h3>
+                                            <p className="font_13">· 제출하신 nnnn년 결산자료를 확인중입니다.</p>
+                                        </div>
+                                        <div className="right">
+                                            <button type="button" className="btn big mt8 mb0">심사중</button>
+                                        </div>
+                                    </div>
+                                    <p className="mt16 mb16 font_14 centerT">결산자료 심사는 최대 3영업일 소요됩니다</p>
+                                </div>
+
                                 {/* 결산자료제출후 심사후 반려되었을때 */}
                                 <div className="notice_box reject_box">
                                     <div className="clearfix2">
                                         <div className="border_text left">
                                             <h3 className="font_18 mb12 fw600">결산자료 제출 결과</h3>
                                             <p className="error">· 제출하신 nnnn년 결산자료는 반려되었습니다.</p>
-                                        </div>        
+                                        </div>
                                         <div className="right">
                                             <button type="button" className="btn big mt8 mb0">자세히 보기</button>
                                         </div>
                                     </div>
-                                    <p className="mt16 mb16 font_14 centerT">결산자료 심사는 최대 3영업일 소요됩니다</p>
                                 </div>
 
                                 {/* 아직시즌아닐때 */}
@@ -485,7 +498,7 @@ export default class V3_data extends React.Component {
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div className="bd_box bd_none clearfix2">
+                                        <div className="bd_box bd_none clearfix2 mb0">
                                             <div className="left mt16">
                                                 <Title 
                                                     num=""
