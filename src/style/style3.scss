@@ -137,6 +137,7 @@
         .feedback_li span{display: none;color:#fff;background:#ff513e;border-radius:20px;padding:3px 14px;margin-right:10px;}
         .feedback_li p{font-size:22px;font-weight: 500;}
         .feedback_li.new span{display:block;}
+        .feedback_li.new p{width:calc(100% - 70px);}
         .detail_wrap {padding-left:20px;}
         .detail_wrap .detail{padding:24px;
             >div>img{max-width: 100%;margin-left: auto;margin-right: auto;margin-bottom:16px;text-align:center;}
@@ -179,10 +180,10 @@
 
     // 투자자의견
     &.investor_opinion{
-        .gray_bg{margin-top:50px;padding:16px 24px;}
+        .gray_bg{margin-top:50px;padding:16px 24px 16px 44px;}
         .no_data{padding:15px 0;background:transparent;font-size: 14px;width:calc(40% - 12px);text-align: center; margin: 0 auto;}
         .opinion_list{width:calc(40% - 12px);}
-        .opinion_list>ul>li{padding:8px 16px;background: #fff;border-radius:4px;margin-bottom:16px;position: relative;
+        .opinion_list>ul>li{padding:8px 16px;background: #fff;border-radius:4px;margin-bottom:16px;position: relative;cursor: pointer;
             .opinion_cont .txt_box p{overflow: hidden;text-overflow: ellipsis;word-wrap: break-word;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
         }
         .opinion_list>ul>li::after{content:'New';position: absolute;font-size:13px;color:#ff513e;right:32px;top:13px;display: none;}
@@ -211,6 +212,7 @@
             .top_box {padding-left:24px;}
             .detail_wrap{width:100%;}
         }
+        &.gnb_off .gray_bg{padding-left:24px;}
     }
     .detail_wrap{width:calc(60% - 12px);
         .text_box{background:#fff;padding:24px 16px;}
@@ -259,7 +261,7 @@
 
     // 새소식관리
     &.news{
-        .gray_bg{padding:24px;margin-top:50px;}
+        .gray_bg{padding:24px 24px 24px 44px;margin-top:50px;}
         .news_wrap{width:calc(40% - 12px);
             .title_box{padding:10px 16px;}
             .title_box h3 span{color:#1f318d;margin-left:10px;}
@@ -297,6 +299,7 @@
                 div{padding-top:16px;border-top:1px solid #eaedf1;line-height: 1.5;}
             }
         }
+        &.gnb_off .gray_bg{padding-left:24px;}
         &.mo_news {
             .cont{width:100%;margin-left:0px;}
             .top_box {padding-left:24px;}
@@ -304,7 +307,7 @@
         }
     }
     &.news_write{
-        .gray_bg{padding:24px;}
+        .gray_bg{padding:24px 24px 24px 44px;}
         .left_wrap{width: calc(40% - 12px);
            .radio_ul{background:#fff;padding:8px;border-radius:8px;}
            .radio_ul + p img{margin-right:10px;}
@@ -317,6 +320,7 @@
             .btn_wrap button{width:180px;height:38px;font-size: 15px;}
         }
         &.gnb_off{
+            .gray_bg{padding-left:24px;}
             .file_cont{overflow: hidden;}
             .file_cont .upload_box{width:calc(40% - 12px);float:left;}
             .file_cont .file_ul{width:calc(60% - 12px);float:right;margin-top:0px !important;}
@@ -324,7 +328,7 @@
     }
     // 결산자료제출
     &.v3_data{
-        .gray_bg{padding:24px;}
+        .gray_bg{padding:24px 24px 24px 44px;}
         .reject_box{
             .border_text{padding:12px 0 !important;}
         }
@@ -359,6 +363,7 @@
             .write_box{padding-top:16px;}
         }
         .btn_wrap button{width:180px;height:38px;font-size:15px;border-radius:4px;}
+        &.gnb_off .gray_bg{padding-left:24px;}
     }
     // 약관확인
     &.terms_check{

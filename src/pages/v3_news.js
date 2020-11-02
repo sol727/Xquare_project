@@ -7,7 +7,7 @@ import Back_header from '../components/back_header';
 export default class V3_news extends React.Component {
 
     constructor(props) {
-    super(props);
+        super(props);
     }
 
     onClickLink (link) {
@@ -37,8 +37,7 @@ export default class V3_news extends React.Component {
                                             <li className="font_14 centerT">등록일</li>
                                         </ul>
                                         <ul className="bottom_ul">
-                                            {/* li 클래스에 on추가시 색깔변경됨 */}
-                                            <li className="clearfix on">
+                                            <li className="clearfix">
                                                 <div>
                                                     <div className="label_box clearfix mb10">
                                                         <p>일반</p>
@@ -70,7 +69,8 @@ export default class V3_news extends React.Component {
                                                     <p className="gray2_color font_14">2020-09-26</p>
                                                 </div>
                                             </li>
-                                            <li className="clearfix">
+                                            {/* li 클래스에 on추가시 색깔변경됨 */}
+                                            <li className="clearfix on">
                                                 <div>
                                                     <div className="label_box clearfix mb10">
                                                         <p>공시</p>
@@ -122,6 +122,7 @@ export default class V3_news extends React.Component {
                                             ButtonShow={false}
                                         />
                                         <div className="btn_box">
+                                            {/* 반려됐을때만 보이는 내용수정버튼▼ */}
                                             <button type="button">내용 수정</button>
                                             <button type="button">게시 취소</button>
                                         </div>
@@ -139,20 +140,20 @@ Sed fermentum, mauris volutpat volutpat. Volutpat blandit adipiscing justo aliqu
                 </section>
                 {/* 삭제 팝업 */}
                 <div className="pop_wrap project_pop audit_pop news_pop">
-                    <div className="dim"></div>      
+                    <div className="dim"></div>
                     <div className="pop_cont">
-                        <div className="rightT"> 
-                            <button type="button" className="close_pop"><img src={ require('../images/icons/close_btn.png')} alt="팝업닫기아이콘"/></button>                    
-                        </div>                        
+                        <div className="rightT">
+                            <button type="button" className="close_pop"><img src={ require('../images/icons/close_btn.png')} alt="팝업닫기아이콘"/></button>
+                        </div>
                         <div className="cont_box">
                             <h3 className="mb4">정말로 삭제하시겠습니까?</h3>
-                            <p>심사중에만 삭제하실 수 있으며<br></br>예탁결제원의 크라우드펀딩업 규정에 따라 게재 후 삭제는 불가능합니다.</p>                           
+                            <p>심사중에만 삭제하실 수 있으며<br></br>예탁결제원의 크라우드펀딩업 규정에 따라 게재 후 삭제는 불가능합니다.</p>
                             <div>
                                 <button type="button" className="btn pop_submit line_btn">취소</button>
                                 <button type="button" className="btn pop_submit">삭제하기</button>
-                            </div>                              
+                            </div>
                         </div>
-                    </div>                      
+                    </div>
                 </div>
             </>
         )
