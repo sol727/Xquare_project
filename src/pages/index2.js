@@ -62,6 +62,7 @@ export default class Index2 extends React.Component {
                     <li><Link to="/error_page"><span>에러페이지</span></Link></li>
                     
                     {/* 3차추가페이지 */}
+                    <li style={{fontSize:'20px',marginBottom:'10px',marginTop:'10px',color:'red'}}>3차 추가작업</li>
                     <li><Link to="/v3_project"><span>개설한프로젝트 - 전체</span></Link></li>
                     <li><Link to="/v3_project2"><span>개설한프로젝트 - 종료된프로젝트</span></Link></li>
                     <li><Link to="/v3_account"><span>계약준비 - 자격확인</span></Link></li>
