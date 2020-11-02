@@ -71,7 +71,19 @@ $mob-s-width		: 375px;
 		&.feedback{
 			.detail_wrap{padding-left: 0px;}
 			.bottom_list{padding-left:0px;}
-		} 
+		}
+		// 투자자의견
+		&.investor_opinion{
+			.gray_bg{padding-left:24px;}
+		}
+		// 새소식관리
+		&.news{
+			.gray_bg{padding-left:24px;}
+		}
+		// 결산자료제출
+		&.v3_data{
+			.gray_bg{padding-left:24px;}
+		}
 	}
 }
 
@@ -148,7 +160,7 @@ $mob-s-width		: 375px;
 		// 투자자현황
 		&.investor_state{
 			.gray_bg{padding:0 16px;margin-top:50px;}
-			.api_box{width:calc(100% + 38px);float: none;margin-left:-16px;}
+			.api_box{width:calc(100% + 32px);float: none;margin-left:-16px;}
 			.list_box{width:100%;float: none;margin-top:24px;}
 		}
 		// 투자자의견
@@ -172,6 +184,7 @@ $mob-s-width		: 375px;
 			.gray_bg{padding: 40px 16px 24px;}
 			.left_wrap{width: 100%;}
 			.right_wrap{width: 100%;margin-top:16px;}
+			.right_wrap .btn_wrap button{width:calc(50% - 12px);}
 		}
 		// 결산자료제출
 		&.v3_data{

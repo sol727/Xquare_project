@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Footer from '../components/footer'
 import Studio_gnb from '../components/Studio_gnb'
 import InvestorCont from '../components/investorCont'
 import Back_header from '../components/back_header';
@@ -126,7 +125,6 @@ export default class V3_investor_state extends React.Component {
                         </div>
                     </div>
                 </section>
-                <Footer />
             </>
         )
     }

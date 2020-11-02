@@ -59,25 +59,25 @@ export default class V3_Feedback extends React.Component {
                                 <li className="feedback_li top_title clearfix new">
                                     <Link to="" className="clearfix">
                                         <span>new</span>
-                                        <p>yyyy년 mm월 dd일 n차 피드백</p>
+                                        <p className="ellipsis">yyyy년 mm월 dd일 n차 피드백</p>
                                     </Link>
                                 </li>
                                 <li className="feedback_li clearfix">
                                     <Link to="" className="clearfix">
                                         <span>new</span>
-                                        <p>yyyy년 mm월 dd일 n차 피드백</p>
+                                        <p className="ellipsis">yyyy년 mm월 dd일 n차 피드백</p>
                                     </Link>
                                 </li>
                                 <li className="feedback_li clearfix">
                                     <Link to="" className="clearfix">
                                         <span>new</span>
-                                        <p>yyyy년 mm월 dd일 n차 피드백</p>
+                                        <p className="ellipsis">yyyy년 mm월 dd일 n차 피드백</p>
                                     </Link>
                                 </li>
                                 <li className="feedback_li clearfix">
                                     <Link to="" className="clearfix">
                                         <span>new</span>
-                                        <p>yyyy년 mm월 dd일 n차 피드백</p>
+                                        <p className="ellipsis">yyyy년 mm월 dd일 n차 피드백</p>
                                     </Link>
                                 </li>
                             </ul>
