@@ -362,7 +362,7 @@ export default class V3_Account3 extends React.Component {
                                         </ul>
                                     </div>
                                     {/* bd_box에 off 클래스를 넣으면 레이아웃이 바뀝니다. */}
-                                    <div className="bd_box ">
+                                    <div className="bd_box last ">
                                         <div className="big_title">
                                             <h2>채권형</h2>
                                             <p className="error">·error here</p>
@@ -510,11 +510,12 @@ export default class V3_Account3 extends React.Component {
                                             </li>
                                         </ul>
                                     </div>
+                                    <div className="bottom_btn rightT">
+                                        <button type="button" className="btn">임시저장</button>             
+                                        <button type="button" className="btn">다음 단계</button>             
+                                    </div>
                                 </div>
-                                <div className="bottom_btn rightT">
-                                    <button type="button" className="btn">임시저장</button>             
-                                    <button type="button" className="btn">다음 단계</button>             
-                                </div>
+                              
                             </div>                                
                         </div>
                     </div>                        

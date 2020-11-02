@@ -94,7 +94,7 @@ export default class V3_funding3 extends React.Component {
                                                     labelDisabled={true}
                                                 />
                                             </div>
-                                            <div className="right file_box ">                                                        
+                                            <div className="right file_box delt_btn_none">                                                        
                                                 <File_upload
                                                     flie_id = "file2"
                                                     downShow={true}
@@ -120,7 +120,7 @@ export default class V3_funding3 extends React.Component {
                                                     labelDisabled={false}
                                                 />
                                             </div>
-                                            <div className="right file_box ">                                                        
+                                            <div className="right file_box delt_btn_none">                                                        
                                                 <File_upload
                                                     flie_id = "file3"
                                                     downShow={true}     
@@ -146,7 +146,7 @@ export default class V3_funding3 extends React.Component {
                                                     labelDisabled={false}
                                                 />
                                             </div>
-                                            <div className="right file_box ">                                                        
+                                            <div className="right file_box delt_btn_none">                                                        
                                                 <File_upload
                                                     flie_id = "file4"
                                                     downShow={true}   
@@ -173,7 +173,7 @@ export default class V3_funding3 extends React.Component {
                                                     labelDisabled={false}
                                                 />
                                             </div>
-                                            <div className="right file_box ">                                                        
+                                            <div className="right file_box delt_btn_none">                                                        
                                                 <File_upload
                                                     flie_id = "file5"
                                                     downShow={true}
@@ -200,7 +200,7 @@ export default class V3_funding3 extends React.Component {
                                                     labelDisabled={false}
                                                 />
                                             </div>
-                                            <div className="right file_box ">                                                        
+                                            <div className="right file_box delt_btn_none">                                                        
                                                 <File_upload
                                                     flie_id = "file6"
                                                     downShow={true}
@@ -226,7 +226,7 @@ export default class V3_funding3 extends React.Component {
                                                     labelDisabled={false}
                                                 />
                                             </div>
-                                            <div className="right file_box ">                                                        
+                                            <div className="right file_box delt_btn_none">                                                        
                                                 <File_upload
                                                     flie_id = "file7"
                                                     downShow={true}
@@ -252,7 +252,7 @@ export default class V3_funding3 extends React.Component {
                                                     labelDisabled={true}
                                                 />
                                             </div>
-                                            <div className="right file_box ">                                                        
+                                            <div className="right file_box delt_btn_none">                                                        
                                                 <File_upload
                                                     flie_id = "file8"
                                                     downShow={true}
@@ -260,7 +260,7 @@ export default class V3_funding3 extends React.Component {
                                                 />
                                             </div>
                                     </div>
-                                    <div className="bd_box clearfix2">
+                                    <div className="bd_box last clearfix2">
                                             <div className="left"> 
                                                 <Title 
                                                     num="09."

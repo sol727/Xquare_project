@@ -70,6 +70,7 @@ export default class V3_funding2 extends React.Component {
                                             buttonDisabled={false}
                                         />
                                         <ul className="img_ul  clearfix">
+                                            {/* active를 추가하면 이미지박스에 border가 활성화됩니다.*/}
                                             <li className="active ">
                                                 <div className="clearfix radio_ul radio_ul2">
                                                     <input type="radio" id="img1" name="img_box"/><label htmlFor="img1"></label><label htmlFor="img1">대표이미지로 사용</label>
@@ -90,7 +91,7 @@ export default class V3_funding2 extends React.Component {
                                                 </div>
                                                 
                                                 <div className="img_box">
-                                                    <img src={ require('../images/detail_sample.png') } alt="샘플이미지"/>
+                                                    <img src={ require('../images/main_banner_bg.png') } alt="샘플이미지"/>
                                                     <button type="button" className="delete_btn"><img src={ require('../images/icons/input_delt_icon2.png') } alt="삭제아이콘"/></button>
                                                     
                                                     <button className="add_btn">
@@ -99,14 +100,14 @@ export default class V3_funding2 extends React.Component {
                                                     </button>
                                                 </div>                                                
                                             </li>
-                                            <li className="">
+                                            {/* none_img 를 추가하면 이미지 추가 버튼이 활성화 됩니다. */}
+                                            <li className="none_img">
                                                 <div className="clearfix radio_ul radio_ul2">
                                                     <input type="radio" id="img3"name="img_box" /><label htmlFor="img3"></label><label htmlFor="img3">대표이미지로 사용</label>
                                                 </div>
                                                 <div className="img_box">
                                                     <img src={ require('../images/detail_sample.png') } alt="샘플이미지"/>
-                                                    <button type="button" className="delete_btn"><img src={ require('../images/icons/input_delt_icon2.png') } alt="삭제아이콘"/></button>
-                                                    
+                                                    <button type="button" className="delete_btn"><img src={ require('../images/icons/input_delt_icon2.png') } alt="삭제아이콘"/></button>                                                    
                                                     <button className="add_btn">
                                                         <img src={ require('../images/icons/add_img.png') } alt="추가아이콘"/>
                                                         <p>클릭하여 이미지 추가</p>                                                        
@@ -115,7 +116,7 @@ export default class V3_funding2 extends React.Component {
                                             </li>
                                         </ul>                    
                                     </div>
-                                    <div className="bd_box">                                        
+                                    <div className="bd_box last">                                        
                                         <Title 
                                             num="03."
                                             title ="펀딩 세부정보"
@@ -144,13 +145,12 @@ export default class V3_funding2 extends React.Component {
                                     <div className="fix_btn">
                                         <button type="button"><img src={ require('../images/icons/img_fab_backup.png') } alt="임시저장버튼"/></button>
                                     </div>
-                                </div>
-                                <div className="bottom_btn rightT">
-                                    <button type="button" className="btn">임시저장</button>             
-                                    <button type="button" className="btn">다음 단계</button>             
-                                </div>                            
-                            </div>
-                                   
+                                    <div className="bottom_btn rightT">
+                                        <button type="button" className="btn">임시저장</button>             
+                                        <button type="button" className="btn">다음 단계</button>             
+                                    </div>                
+                                </div>                                                   
+                            </div>                                   
                         </div>
                     </div>
                 </section>
