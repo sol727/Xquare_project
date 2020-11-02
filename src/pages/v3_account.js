@@ -123,8 +123,7 @@ export default class V3_Account extends React.Component {
                             <div className="gray_bg">
                                 <div className="container">
                                      <div className="notice_box">
-                                        <h3 className="border_text">기업의 사실 관계와 발행을 위한 법적 자격 요건을 확인합니다. 발행을 진행하려는 기업의 실제 정보를 정확하게 입력하세요.</h3>
-                                        
+                                        <h3 className="border_text">기업의 사실 관계와 발행을 위한 법적 자격 요건을 확인합니다. 발행을 진행하려는 기업의 실제 정보를 정확하게 입력하세요.</h3>                                        
                                     </div>
                                     <div className="bd_box clearfix">
                                         <div className="left"> 

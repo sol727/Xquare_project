@@ -35,6 +35,19 @@ export default class V3_funding2 extends React.Component {
                             </div>  
                             <div className="gray_bg">
                                 <div className="container">
+                                    {/* 제출했을 때 노출 ▼*/}
+                                    <div className="notice_box ">
+                                        <div className="clearfix2 mb24">
+                                            <div className="border_text left">
+                                                <h3 className="font_18 mb8">펀딩 준비 자료 제출 결과</h3>
+                                                <p className="font_13">· 제출하신 yymmdd-hhnn 펀딩 준비 자료를 확인중입니다.</p>
+                                            </div>        
+                                            <div className="right">
+                                                <button type="button" className="btn big">심사중</button>
+                                            </div>
+                                        </div>
+                                        <p className="mt16 mb16 font_14 centerT">자료 심사는 최대 5영업일 소요됩니다</p>
+                                    </div>                                    
                                     <div className="bd_box">                                        
                                         <Title 
                                             num="01."
@@ -69,52 +82,54 @@ export default class V3_funding2 extends React.Component {
                                             buttonShow={false}
                                             buttonDisabled={false}
                                         />
-                                        <ul className="img_ul  clearfix">
-                                            {/* active를 추가하면 이미지박스에 border가 활성화됩니다.*/}
-                                            <li className="active ">
-                                                <div className="clearfix radio_ul radio_ul2">
-                                                    <input type="radio" id="img1" name="img_box"/><label htmlFor="img1"></label><label htmlFor="img1">대표이미지로 사용</label>
-                                                </div>                                               
-                                                <div className="img_box">
-                                                    <img src={ require('../images/detail_sample.png') } alt="샘플이미지"/>
-                                                    <button type="button" className="delete_btn"><img src={ require('../images/icons/input_delt_icon2.png') } alt="삭제아이콘"/></button>
+                                        <div className="img_ul_wrap">                                        
+                                            <ul className="img_ul  clearfix">
+                                                {/* active를 추가하면 이미지박스에 border가 활성화됩니다.*/}
+                                                <li className="active ">
+                                                    <div className="clearfix radio_ul radio_ul2">
+                                                        <input type="radio" id="img1" name="img_box"/><label htmlFor="img1"></label><label htmlFor="img1">대표이미지로 사용</label>
+                                                    </div>                                               
+                                                    <div className="img_box">
+                                                        <img src={ require('../images/detail_sample.png') } alt="샘플이미지"/>
+                                                        <button type="button" className="delete_btn"><img src={ require('../images/icons/input_delt_icon2.png') } alt="삭제아이콘"/></button>
+                                                        
+                                                        <button className="add_btn">
+                                                            <img src={ require('../images/icons/add_img.png') } alt="추가아이콘"/>
+                                                            <p>클릭하여 이미지 추가</p>                                                        
+                                                        </button>
+                                                    </div>                                                
+                                                </li>
+                                                <li className="">
+                                                    <div className="clearfix radio_ul radio_ul2">
+                                                        <input type="radio" id="img2" name="img_box"/><label htmlFor="img2"></label><label htmlFor="img2">대표이미지로 사용</label>
+                                                    </div>
                                                     
-                                                    <button className="add_btn">
-                                                        <img src={ require('../images/icons/add_img.png') } alt="추가아이콘"/>
-                                                        <p>클릭하여 이미지 추가</p>                                                        
-                                                    </button>
-                                                </div>                                                
-                                            </li>
-                                            <li className="">
-                                                <div className="clearfix radio_ul radio_ul2">
-                                                    <input type="radio" id="img2" name="img_box"/><label htmlFor="img2"></label><label htmlFor="img2">대표이미지로 사용</label>
-                                                </div>
-                                                
-                                                <div className="img_box">
-                                                    <img src={ require('../images/main_banner_bg.png') } alt="샘플이미지"/>
-                                                    <button type="button" className="delete_btn"><img src={ require('../images/icons/input_delt_icon2.png') } alt="삭제아이콘"/></button>
-                                                    
-                                                    <button className="add_btn">
-                                                        <img src={ require('../images/icons/add_img.png') } alt="추가아이콘"/>
-                                                        <p>클릭하여 이미지 추가</p>                                                        
-                                                    </button>
-                                                </div>                                                
-                                            </li>
-                                            {/* none_img 를 추가하면 이미지 추가 버튼이 활성화 됩니다. */}
-                                            <li className="none_img">
-                                                <div className="clearfix radio_ul radio_ul2">
-                                                    <input type="radio" id="img3"name="img_box" /><label htmlFor="img3"></label><label htmlFor="img3">대표이미지로 사용</label>
-                                                </div>
-                                                <div className="img_box">
-                                                    <img src={ require('../images/detail_sample.png') } alt="샘플이미지"/>
-                                                    <button type="button" className="delete_btn"><img src={ require('../images/icons/input_delt_icon2.png') } alt="삭제아이콘"/></button>                                                    
-                                                    <button className="add_btn">
-                                                        <img src={ require('../images/icons/add_img.png') } alt="추가아이콘"/>
-                                                        <p>클릭하여 이미지 추가</p>                                                        
-                                                    </button>
-                                                </div>                                                
-                                            </li>
-                                        </ul>                    
+                                                    <div className="img_box">
+                                                        <img src={ require('../images/main_banner_bg.png') } alt="샘플이미지"/>
+                                                        <button type="button" className="delete_btn"><img src={ require('../images/icons/input_delt_icon2.png') } alt="삭제아이콘"/></button>
+                                                        
+                                                        <button className="add_btn">
+                                                            <img src={ require('../images/icons/add_img.png') } alt="추가아이콘"/>
+                                                            <p>클릭하여 이미지 추가</p>                                                        
+                                                        </button>
+                                                    </div>                                                
+                                                </li>
+                                                {/* none_img 를 추가하면 이미지 추가 버튼이 활성화 됩니다. */}
+                                                <li className="none_img">
+                                                    <div className="clearfix radio_ul radio_ul2">
+                                                        <input type="radio" id="img3"name="img_box" /><label htmlFor="img3"></label><label htmlFor="img3">대표이미지로 사용</label>
+                                                    </div>
+                                                    <div className="img_box">
+                                                        <img src={ require('../images/detail_sample.png') } alt="샘플이미지"/>
+                                                        <button type="button" className="delete_btn"><img src={ require('../images/icons/input_delt_icon2.png') } alt="삭제아이콘"/></button>                                                    
+                                                        <button className="add_btn">
+                                                            <img src={ require('../images/icons/add_img.png') } alt="추가아이콘"/>
+                                                            <p>클릭하여 이미지 추가</p>                                                        
+                                                        </button>
+                                                    </div>                                                
+                                                </li>
+                                            </ul>                    
+                                        </div>
                                     </div>
                                     <div className="bd_box last">                                        
                                         <Title 
@@ -130,7 +145,8 @@ export default class V3_funding2 extends React.Component {
                                             buttonShow={false}
                                             buttonDisabled={false}
                                         />
-                                       <ul className="paragraph_list">
+                                        {/* 문단리스트에 done을 넣으면 버튼들이 비활성화됩니다. */}
+                                       <ul className="paragraph_list done">
                                             <li>
                                                 <Paragraph/>
                                             </li>
