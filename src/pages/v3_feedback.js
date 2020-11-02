@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Back_header from '../components/back_header';
 import Studio_gnb from '../components/Studio_gnb'
 import File_down from '../components/File_down';
@@ -56,20 +57,28 @@ export default class V3_Feedback extends React.Component {
                             </div>
                             <ul className="bottom_list">
                                 <li className="feedback_li top_title clearfix new">
-                                    <span>new</span>
-                                    <p>yyyy년 mm월 dd일 n차 피드백</p>
+                                    <Link to="" className="clearfix">
+                                        <span>new</span>
+                                        <p>yyyy년 mm월 dd일 n차 피드백</p>
+                                    </Link>
                                 </li>
                                 <li className="feedback_li clearfix">
-                                    <span>new</span>
-                                    <p>yyyy년 mm월 dd일 n차 피드백</p>
+                                    <Link to="" className="clearfix">
+                                        <span>new</span>
+                                        <p>yyyy년 mm월 dd일 n차 피드백</p>
+                                    </Link>
                                 </li>
                                 <li className="feedback_li clearfix">
-                                    <span>new</span>
-                                    <p>yyyy년 mm월 dd일 n차 피드백</p>
+                                    <Link to="" className="clearfix">
+                                        <span>new</span>
+                                        <p>yyyy년 mm월 dd일 n차 피드백</p>
+                                    </Link>
                                 </li>
                                 <li className="feedback_li clearfix">
-                                    <span>new</span>
-                                    <p>yyyy년 mm월 dd일 n차 피드백</p>
+                                    <Link to="" className="clearfix">
+                                        <span>new</span>
+                                        <p>yyyy년 mm월 dd일 n차 피드백</p>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
