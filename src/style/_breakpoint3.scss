@@ -63,6 +63,10 @@ $mob-s-width		: 375px;
 // 1247px;
 @include tab{
 	.v3{
+		// 투자자현황
+		&.investor_state{
+			.gray_bg{padding-left:24px;}
+		}
 		// 피드백
 		&.feedback{
 			.detail_wrap{padding-left: 0px;}
