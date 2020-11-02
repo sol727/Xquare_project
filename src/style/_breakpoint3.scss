@@ -60,6 +60,16 @@ $mob-s-width		: 375px;
 }
 
 //------------------------------------------------------------------------------
+// 1247px;
+@include tab{
+	.v3{
+		// 피드백
+		&.feedback{
+			.detail_wrap{padding-left: 0px;}
+			.bottom_list{padding-left:0px;}
+		} 
+	}
+}
 
 // 1200px;
 @include tab2{
