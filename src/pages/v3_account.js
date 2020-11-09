@@ -26,6 +26,9 @@ export default class V3_Account extends React.Component {
         this.onChangeStep3 = this.onChangeStep3.bind(this)
 
     }
+    onClickLink (link) {
+        window.location.pathname = link
+    }
 
     onChangeCheck(e) {
         if ( e.target.id === "check1" ) {
@@ -268,7 +271,7 @@ export default class V3_Account extends React.Component {
                                     </div>
                                     <div className="bottom_btn rightT">
                                         <button type="button" className="btn">임시저장</button>
-                                        <button type="button" className="btn">다음 단계</button>
+                                        <button type="button" className="btn" onClick={() => window.location.pathname = "/v3_account2"} >다음 단계</button>
                                     </div>
                                 </div>
                                 

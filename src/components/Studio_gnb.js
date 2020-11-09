@@ -13,7 +13,25 @@ export default class Studio_gnb extends React.Component {
           this.gnbOff = this.gnbOff.bind(this)
           this.gnbOn = this.gnbOn.bind(this)
         
-    }
+    }   
+
+   
+    // console.log(e.target);
+    // var li = document.querySelector(".v3.studio_gnb.off .gnb_wrap .off_menu li");
+
+    // function Show() {
+    //     li.className += "active"
+    // }
+
+    // function hide() {
+    //     li.remove('active')
+    // }
+
+    // li.addEventListener("mouseover", Show);
+    // li.addEventListener("mouseout", hide);
+
+     
+
     gnbOff(e) {
         console.log(e.target);
         

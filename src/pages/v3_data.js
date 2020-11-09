@@ -340,6 +340,46 @@ export default class V3_data extends React.Component {
                                             <div className="left">
                                                 <Title 
                                                     num=""
+                                                    title ="손익계산서 및 그 부속명세서"
+                                                    star ="*"
+                                                    
+                                                    text = {
+                                                        <>
+                                                        <p className="error">·등록 할 수 없는 파일형식입니다.</p>
+                                                        </>
+                                                    }
+                                                    label_title="투자자 노출"
+                                                    labelShow={true}
+                                                    labelDisabled={false}
+                                                />
+                                            </div>
+                                            <div className="right file_box ">
+                                                <div className="delt_btn_none mb16">
+                                                    <File_upload
+                                                        flie_id = "file1"
+                                                        downShow={false}
+                                                    />
+                                                </div>
+                                                <ul>
+                                                    <li className="upload_btn_none mb16">
+                                                        <File_upload
+                                                            flie_id = "file1"
+                                                            downShow={false}
+                                                        />
+                                                    </li>
+                                                    <li className="upload_btn_none mb16">
+                                                        <File_upload
+                                                            flie_id = "file1"
+                                                            downShow={false}
+                                                        />
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className="bd_box bd_none clearfix2 mb0">
+                                            <div className="left">
+                                                <Title 
+                                                    num=""
                                                     title ="이익잉여금처분 (또는 결손금처리)계산서"
                                                     star ="*"
                                                     

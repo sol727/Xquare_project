@@ -11,6 +11,9 @@ export default class V3_Account2 extends React.Component {
     constructor(props) {
     super(props);
     }
+    onClickLink (link) {
+     window.location.pathname = link
+     }
 
     render() {
         return (
@@ -333,19 +336,20 @@ export default class V3_Account2 extends React.Component {
                                              </div>
                                              <div className="right file_box ">                     
                                                   <ul className="flie_ul">
-                                                       <li>                                                            
+                                                       <li className="delt_btn_none">                                                            
                                                             <File_upload
                                                                  flie_id = "file14"
                                                                  downShow={false}
+                                                                 btn_class="active"
                                                             />
                                                        </li>
-                                                       <li>                                                           
+                                                       <li className="upload_btn_none">                                                           
                                                             <File_upload
                                                                  flie_id = "file15"
                                                                  downShow={false}
                                                             />
                                                        </li>
-                                                       <li>                                                           
+                                                       <li className="upload_btn_none">                                                           
                                                             <File_upload
                                                                  flie_id = "file16"
                                                                  downShow={false}
@@ -356,7 +360,7 @@ export default class V3_Account2 extends React.Component {
                                         </div>                    
                                         <div className="bottom_btn rightT">
                                              <button type="button" className="btn">임시저장</button>             
-                                             <button type="button" className="btn">다음 단계</button>             
+                                             <button type="button" className="btn" onClick={() => window.location.pathname = "/v3_account3"} >다음 단계</button>             
                                         </div>                   
                                    </div>                                  
                               </div>

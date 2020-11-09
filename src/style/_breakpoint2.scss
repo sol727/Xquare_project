@@ -168,8 +168,7 @@ $mob-s-width		: 360px;
 				.top_box {
 					.tab_ul {
 						li {
-							width: calc(33.333% - 5.3333px);
-							margin-right: 8px;
+							width:33.333%;
 						}
 					}
 				}
@@ -184,8 +183,7 @@ $mob-s-width		: 360px;
 				.tab_ul {
 					width: 100%;
 					li {
-						width: calc(25% - 6px);
-						&:last-child {margin-right: 0;}
+						width: 25%;
 					}
 				}
 			}
@@ -218,10 +216,17 @@ $mob-s-width		: 360px;
 		.img_ul {
 			li {width: 100%; margin-right: 0; margin-bottom: 12px;}
 		}
+		&.v3_data .btn_wrap button {
+			width: calc(50% - 4px);
+			margin-right: 8px;
+			&:last-child {margin-right: 0;}
+		}
 	}
 	.audit_pop1{
 		.pop_cont {
 			.pop_submit {margin-top: 34px;}
 		}
 	}
+	
+	
 }

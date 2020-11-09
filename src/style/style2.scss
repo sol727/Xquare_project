@@ -50,7 +50,7 @@
           }
           li{
                margin-bottom: 24px;
-               p {margin-top: 5px; color: #bfbfbf; font-size: 13px;}
+               p {margin-top: 5px; color: #bfbfbf; font-size: 13px; text-align: left; padding-left: 48px;}
           }
      }
      .radio_ul {
@@ -113,6 +113,7 @@
           input {width: calc(100% - 96px); margin-right: 8px;}
           button {width: 88px; height: 40px; line-height: 18px;}
      }
+     textarea:focus {border: 1px solid #ff8e40;}
      //---------------------------------------------------------------------------------
      //btn
      .btn {
@@ -316,7 +317,7 @@
                height: auto ;  
                background-color: #eff1f7;
                border-radius: 0 20px 20px 0;
-              
+               
                
                >.top{
                     padding: 56px 16px 32px;
@@ -563,6 +564,7 @@
                     background: #fff;
                     padding: 16px;
                     margin: 0 0 24px;
+                    border-radius: 4px;
                     .border_text {
                          position: relative;
                          font-size: 14px; 
@@ -915,6 +917,29 @@
                     }
                }
 
+          }
+     }
+
+}
+
+.deposit_pop {
+     ul {
+          border-left: 2px solid #a5add1 ;
+          padding-left: 12px;
+          margin-bottom: 32px;
+          li {
+               p:first-child {width: 20%; margin-right: 12px; font-size: 14px; color:#6e6e6e; margin-bottom: 0 !important;}
+               p:last-child {width: calc(80% - 12px); font-size: 14px; color:#343332; margin-bottom: 0 !important;}
+          }     
+     }
+    
+     .pop_cont {
+          h3 {text-align: left !important;}
+          p {text-align: left !important; margin-bottom: 12px !important; 
+               &:last-child {margin-bottom: 0;}
+               &.red_txt {color:#ff513e; }
+               &.mb32 {margin-bottom: 32px !important;}
+               
           }
      }
 

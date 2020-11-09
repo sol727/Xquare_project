@@ -20,7 +20,7 @@ export default class V3_mo_identity_pop extends React.Component {
 
                 <section className="invest_prepare_pop identity_pop mo_invest">
                     <div className="">
-                        <h2 className="font_18 mb12 ml16">1. 신분증 인증</h2>
+                        <h2 className="font_18 mb12 ml16">신분증 인증</h2>
                         <div className="content">
                             <div className="top_txt">
                             금융실명법에 따라 실명확인이 필요합니다. 등록하신 정보는 실명확인에만 사용되며, 확인후 즉시 파기됩니다. 실제정보와 다른 경우 거래가 제한 될 수 있습니다.
