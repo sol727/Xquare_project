@@ -20,7 +20,7 @@ export default class V3_mo_invest_check extends React.Component {
 
                 <section className="invest_account_pop invest_check_pop mo_invest">
                     <div className="">
-                        <h2 className="font_18 mb12 ml16">2. 타행계좌를 통한 본인확인</h2>
+                        <h2 className="font_18 mb12 ml16">타행계좌를 통한 본인확인</h2>
 
                         {/* 본인인증용계좌입력 부분 */}
                         {/* <div className="content">

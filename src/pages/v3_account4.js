@@ -38,6 +38,19 @@ export default class V3_Account4 extends React.Component {
                             </div>  
                             <div className="gray_bg">
                                 <div className="container">
+                                    {/* 제출했을 때 노출 ▼*/}
+                                    <div className="notice_box ">
+                                        <div className="clearfix2 mb24">
+                                            <div className="border_text left">
+                                                <h3 className="font_18 mb8">계약 준비 자료 제출 결과</h3>
+                                                <p className="font_13">· 제출하신 yymmdd-hhnn 계약 준비 자료를 확인중입니다.</p>
+                                            </div>        
+                                            <div className="right">
+                                                <button type="button" className="btn big">심사중</button>
+                                            </div>
+                                        </div>
+                                        <p className="mt16 mb16 font_14 centerT">자료 심사는 최대 3영업일 소요됩니다</p>
+                                    </div>     
                                     <div className="bd_box clearfix2">
                                         <div className="left"> 
                                             <Title 
@@ -94,7 +107,7 @@ export default class V3_Account4 extends React.Component {
                                                 </li>
                                                 <li>
                                                     <label htmlFor="">예금주</label>
-                                                   
+                                                    <p className="error">·error here</p>
                                                     <input type="text" placeholder="법인명이 포함된 예금주명 입력"/>                                                   
                                                 </li>
                                                 <li>

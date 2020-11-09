@@ -29,6 +29,9 @@ export default class V3_Account3 extends React.Component {
         this.onChangeStep7 = this.onChangeStep7.bind(this)
         this.onChangeStep8 = this.onChangeStep8.bind(this)
     }
+    onClickLink (link) {
+        window.location.pathname = link
+    }
 
     onChangeStep(id) {
         this.setState({
@@ -218,12 +221,12 @@ export default class V3_Account3 extends React.Component {
                                             <h2>주식형</h2>
                                             <p className="error">·error here</p>
                                         </div>                 
-                                        <ul className="division_list">
-                                            <li className="clearfix2">
+                                        <ul className="division_list ">
+                                            <li className="clearfix2 ml16">
                                                 <div className="left"> 
                                                     <Title 
                                                         num=""
-                                                        title ="증권 유형"                                                
+                                                        title ="증권 구분"                                                
                                                         text = {
                                                             <>                                                    
                                                             <p className="error">·error here</p>
@@ -368,11 +371,11 @@ export default class V3_Account3 extends React.Component {
                                             <p className="error">·error here</p>
                                         </div>                 
                                         <ul className="division_list">
-                                            <li className="clearfix2">
+                                            <li className="clearfix2 ml16">
                                                 <div className="left"> 
                                                     <Title 
                                                         num=""
-                                                        title ="증권 유형"                                                
+                                                        title ="증권 구분"                                                
                                                         text = {
                                                             <>                                                    
                                                             <p className="error">·error here</p>
@@ -512,7 +515,7 @@ export default class V3_Account3 extends React.Component {
                                     </div>
                                     <div className="bottom_btn rightT">
                                         <button type="button" className="btn">임시저장</button>             
-                                        <button type="button" className="btn">다음 단계</button>             
+                                        <button type="button" className="btn" onClick={() => window.location.pathname = "/v3_account4"}>다음 단계</button>             
                                     </div>
                                 </div>
                               

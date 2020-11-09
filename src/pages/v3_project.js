@@ -12,6 +12,10 @@ export default class V3_Project extends React.Component {
     super(props);
     }
 
+    onClickLink (link) {
+        window.location.pathname = link
+      }
+
     render() {
         return (
             <>
@@ -63,7 +67,7 @@ export default class V3_Project extends React.Component {
                                         </div>
                                     </Link>
                                 </li>
-                                <li className="default_li">
+                                <li className="default_li" onClick={() => window.location.pathname = "/v3_project_state"}>
                                     <ProjectContent
                                         state="준비중"
                                         date="yymmdd-hhnn" 
@@ -100,7 +104,7 @@ export default class V3_Project extends React.Component {
                                         ]}
                                     />
                                 </li>
-                                <li className="prepare_li alarm_on">
+                                <li className="prepare_li alarm_on" onClick={() => window.location.pathname = "/v3_project_state"}>
                                     <ProjectContent 
                                         state="준비중" 
                                         date="210124-1401" 
@@ -138,7 +142,7 @@ export default class V3_Project extends React.Component {
                                         ]}
                                     />
                                 </li>
-                                <li className="expect_li btn_on">
+                                <li className="expect_li btn_on" onClick={() => window.location.pathname = "/v3_project_state"}>
                                     <ProjectContent 
                                         state="오픈예정"
                                         date="210124-1401"
@@ -150,7 +154,7 @@ export default class V3_Project extends React.Component {
                                             </>
                                         }
                                         alarmShow={true}
-                                        alarm="1"
+                                        alarm=""
                                         bottomShow={true}
                                         txt1="진행 기간"
                                         start="시작일"
@@ -176,7 +180,7 @@ export default class V3_Project extends React.Component {
                                         ]}
                                     />
                                 </li>
-                                <li className="funding_li btn_on">
+                                <li className="funding_li btn_on" onClick={() => window.location.pathname = "/v3_project_state"}>
                                     <ProjectContent 
                                         state="펀딩중" 
                                         date="210124-1401" 
@@ -188,7 +192,7 @@ export default class V3_Project extends React.Component {
                                             </>
                                         }
                                         alarmShow={true}
-                                        alarm="1"
+                                        alarm=""
                                         bottomShow={true}
                                         txt1="진행 기간"
                                         start="시작일"
@@ -214,7 +218,7 @@ export default class V3_Project extends React.Component {
                                         ]}
                                     />
                                 </li>
-                                <li className="success_li btn_on bell_none">
+                                <li className="success_li btn_on bell_none" onClick={() => window.location.pathname = "/v3_project_state"}>
                                     <ProjectContent 
                                         state="성공" 
                                         date="210124-1401" 
@@ -252,7 +256,7 @@ export default class V3_Project extends React.Component {
                                         ]}
                                     />
                                 </li>
-                                <li className="fail_li btn_on bell_none">
+                                <li className="fail_li btn_on bell_none" onClick={() => window.location.pathname = "/v3_project_state"}>
                                     <ProjectContent 
                                         state="실패"
                                         date="210124-1401" 

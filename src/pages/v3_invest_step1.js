@@ -19,8 +19,11 @@ export default class V3_invest_step1 extends React.Component {
     }
 
     componentDidMount(){
-
+        
     }
+    onClickLink (link) {
+        window.location.pathname = link
+      }
 
     render() {
         return (
@@ -208,12 +211,43 @@ export default class V3_invest_step1 extends React.Component {
                         </div>
                         <div className="page_btn centerT">
                             <button className="point_color font_15 mr24 d_ib" onClick={() => window.history.back()}>이전</button>
-                            <button className="unable_btn d_ib font_15" onClick={() => window.location.pathname = "/invest_step2"} >결과확인</button>
+                            <button className="unable_btn d_ib font_15" onClick={() => window.location.pathname = "/v3_terms_check"} >다음</button>
                         </div>
                     </div>
                 </section>
                 <Footer />
-
+                {/* 예치금 팝업 */}
+                <div className="pop_wrap project_pop deposit_pop">
+                    <div className="dim"></div>      
+                    <div className="pop_cont">
+                        <div className="clearfix2 mb16"> 
+                            <h2 className="font_24">나의 예치금 입금하기</h2>    
+                            <button type="button" className="close_pop"><img src={ require('../images/icons/close_btn.png')} alt="팝업닫기아이콘"/></button>                    
+                        </div>           
+                        <p className="font_14 mb32">투자에 필요한 금액을 아래 My 엑스퀘어 계좌로 이체하시면 투자하실 수 있습니다.</p>               
+                        <div className="cont_box">                            
+                            <h3 className="mb16">My 엑스퀘어 계좌</h3>
+                            <ul>
+                                <li className="clearfix mb16">
+                                    <p>입금은행</p>
+                                    <p>신한은행</p>
+                                </li>
+                                <li className="clearfix mb16">
+                                    <p>계좌번호</p>
+                                    <p>12345-67-890987</p>
+                                </li>
+                                <li className="clearfix">
+                                    <p>예금주명</p>
+                                    <p>엑스퀘어홍길동</p>
+                                </li>
+                            </ul>                                                
+                             <button type="button" className="btn orange mb24 w100">계좌번호 복사</button>
+                             <p className="red_txt mb12">은행 전산망 점검시간(23:00~00:30)에는 입금이 불가합니다.</p>     
+                             <p className="red_txt mb12">입금하기전자금융 사기 피해 방지를 위해 입금일로부터 24시간이 지난 후 출금이 가능합니다. </p> 
+                             <p className="font_13 gray2_color">입금 후 1분 이내에 반영되며, 새로고침 시 반영된 입금 내역을 확인하실 수 있습니다.</p>   
+                        </div>
+                    </div>                      
+                </div>
             </>
         )
     }
