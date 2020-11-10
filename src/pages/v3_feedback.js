@@ -11,7 +11,7 @@ export default class V3_Feedback extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            focus : '',
+            focus : 1,
             feedbackHeight : [],
         }
         this.initSlide = this.initSlide.bind(this);
@@ -24,9 +24,11 @@ export default class V3_Feedback extends React.Component {
         let detail_wrap = document.querySelectorAll(".detail_wrap .detail");
 
         let heightList = [];
+        let index = 0
         detail_wrap.forEach(function(dt){
             heightList.push(dt.offsetHeight);
             dt.style.height = 0;
+            index ++
         });
 
         return heightList;
@@ -68,6 +70,8 @@ export default class V3_Feedback extends React.Component {
     componentDidMount(){
         let heightList = this.initSlide();
 
+        document.querySelector('#starter').style.height = 'auto'
+
         this.setState({
             feedbackHeight : heightList
         })
@@ -90,8 +94,10 @@ export default class V3_Feedback extends React.Component {
                                     <span>new</span>
                                     <p>yyyy년 mm월 dd일 n차 피드백</p>
                                 </div>
-                                <div className={`detail ${this.state.focus === 1 ? 'slideOn' : ''}`}>
+                                <div id="starter" className={`detail ${this.state.focus === 1 ? 'slideOn' : ''}`}>
                                     <div className="centerT">
+                                        <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
+                                        <p className="leftT">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare lacus, feugiat cras eget ultricies. Neque, bibendum sed id diam quis ipsum eget. Et maecenas mi, habitant velit, feugiat. Ipsum purus amet, nulla habitasse bibendum. Risus scelerisque pellentesque aliquam vestibulum, et amet, mi turpis egestas. Blandit quis quam sed tellus. Justo, eu blandit mollis vitae lorem sapien blandit integer vulputate. Diam vitae pellentesque pulvinar in tempus enim commodo tellus. Praesent montes, vel malesuada mauris eget tellus. Congue vitae nulla sed morbi congue mauris malesuada est. Nisl curabitur malesuada nec faucibus egestas. Diam lectus dui quis bibendum viverra a elementum ornare. Ut commodo, arcu sapien facilisis auctor ut tortor diam orci.</p>
                                         <img src={ require('../images/img_img_thumnail_default.png') } alt="리스트이미지"/>
                                         <p className="leftT">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare lacus, feugiat cras eget ultricies. Neque, bibendum sed id diam quis ipsum eget. Et maecenas mi, habitant velit, feugiat. Ipsum purus amet, nulla habitasse bibendum. Risus scelerisque pellentesque aliquam vestibulum, et amet, mi turpis egestas. Blandit quis quam sed tellus. Justo, eu blandit mollis vitae lorem sapien blandit integer vulputate. Diam vitae pellentesque pulvinar in tempus enim commodo tellus. Praesent montes, vel malesuada mauris eget tellus. Congue vitae nulla sed morbi congue mauris malesuada est. Nisl curabitur malesuada nec faucibus egestas. Diam lectus dui quis bibendum viverra a elementum ornare. Ut commodo, arcu sapien facilisis auctor ut tortor diam orci.</p>
                                     </div>
@@ -216,32 +222,6 @@ export default class V3_Feedback extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            {/* <ul className="bottom_list">
-                                <li className="feedback_li top_title clearfix new">
-                                    <Link to="" className="clearfix">
-                                        <span>new</span>
-                                        <p className="ellipsis">yyyy년 mm월 dd일 n차 피드백</p>
-                                    </Link>
-                                </li>
-                                <li className="feedback_li clearfix">
-                                    <Link to="" className="clearfix">
-                                        <span>new</span>
-                                        <p className="ellipsis">yyyy년 mm월 dd일 n차 피드백</p>
-                                    </Link>
-                                </li>
-                                <li className="feedback_li clearfix">
-                                    <Link to="" className="clearfix">
-                                        <span>new</span>
-                                        <p className="ellipsis">yyyy년 mm월 dd일 n차 피드백</p>
-                                    </Link>
-                                </li>
-                                <li className="feedback_li clearfix">
-                                    <Link to="" className="clearfix">
-                                        <span>new</span>
-                                        <p className="ellipsis">yyyy년 mm월 dd일 n차 피드백</p>
-                                    </Link>
-                                </li>
-                            </ul> */}
                         </div>
                     </div>
                 </section>

@@ -70,7 +70,7 @@ $mob-s-width		: 375px;
 		// 피드백
 		&.feedback{
 			.detail_wrap{padding-left: 0px;}
-			.bottom_list{padding-left:0px;}
+			// .bottom_list{padding-left:0px;}
 		}
 		// 투자자의견
 		&.investor_opinion{
@@ -155,7 +155,8 @@ $mob-s-width		: 375px;
 			.feedback_li {padding:10px 16px;border-color:#fff;}
 			.feedback_li span{font-size:13px;}
 			.feedback_li p{font-size:15px;}
-			.detail_wrap .detail{padding:24px 16px;}
+			// .detail_wrap .detail{padding:24px 16px;}
+			.detail_wrap .detail.slideOn{padding:24px 16px;}
 		}
 		// 투자자현황
 		&.investor_state{
