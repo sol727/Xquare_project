@@ -24,6 +24,7 @@ export default class V3_Account extends React.Component {
         this.onChangeStep = this.onChangeStep.bind(this)
         this.onChangeStep2 = this.onChangeStep2.bind(this)
         this.onChangeStep3 = this.onChangeStep3.bind(this)
+        this.checkBoxCallBack = this.checkBoxCallBack.bind(this)
 
     }
     onClickLink (link) {
@@ -31,42 +32,59 @@ export default class V3_Account extends React.Component {
     }
 
     onChangeCheck(e) {
+
         if ( e.target.id === "check1" ) {
             
             this.setState({
                 check1 : e.target.checked
-            })
+            }, () => this.checkBoxCallBack())
 
         } else if( e.target.id === "check2"){
 
             this.setState({
                 check2 : e.target.checked
-            })
+            }, () => this.checkBoxCallBack())
 
         } else if( e.target.id === "check3"){
 
             this.setState({
                 check3 : e.target.checked
-            })
+            }, () => this.checkBoxCallBack())
 
         }else if( e.target.id === "check4"){
 
             this.setState({
                 check4 : e.target.checked
-            })
+            }, () => this.checkBoxCallBack())
 
         }else if( e.target.id === "check5"){
 
             this.setState({
                 check5 : e.target.checked
-            })
+            }, () => this.checkBoxCallBack())
 
         }else if( e.target.id === "check6"){
 
             this.setState({
                 check6 : e.target.checked
-            })
+            }, () => this.checkBoxCallBack())
 
+        }
+    }
+
+
+    checkBoxCallBack() {
+        if (
+            this.state.check1 ||
+            this.state.check2 ||
+            this.state.check3 ||
+            this.state.check4 ||
+            this.state.check5 ||
+            this.state.check6
+        ) {
+            this.setState({
+                step1 : ''
+            })
         }
     }
 
@@ -74,6 +92,17 @@ export default class V3_Account extends React.Component {
     onChangeStep(id) {
         this.setState({
             step1 : id
+        } , () => {
+            if(this.state.step1 !== '') {
+                this.setState({
+                    check1 : false ,
+                    check2 : false ,
+                    check3 : false ,
+                    check4 : false ,
+                    check5 : false ,
+                    check6 : false ,
+                })
+            }
         })
     }
     onChangeStep2(id) {
@@ -149,33 +178,33 @@ export default class V3_Account extends React.Component {
                                                     <ul className="ul_50 clearfix check_list">
                                                         <li>                                                              
                                                             <div className={`check_box check_box2 ${check1 ? 'on' : ''}`}>
-                                                                <input type="checkbox" value={this.state.check1} onChange={this.onChangeCheck} id="check1" /><label htmlFor="check1"></label><label htmlFor="check1">창업 7년 이내 비상장 기업 </label>
+                                                                <input type="checkbox" checked={this.state.check1} onChange={this.onChangeCheck} id="check1" /><label htmlFor="check1"></label><label htmlFor="check1">창업 7년 이내 비상장 기업 </label>
                                                             </div>
                                                             <p className="centerT">(개업일 yyyy.mm.dd 기준)</p>
                                                         </li>
                                                         <li>
                                                              <div className={`check_box check_box2 ${check2 ? 'on' : ''}`}>
-                                                                <input type="checkbox"  value={this.state.check2} onChange={this.onChangeCheck} id="check2"  /><label htmlFor="check2"></label><label htmlFor="check2">벤처기업 인증</label>
+                                                                <input type="checkbox"  checked={this.state.check2} onChange={this.onChangeCheck} id="check2"  /><label htmlFor="check2"></label><label htmlFor="check2">벤처기업 인증</label>
                                                             </div>
                                                         </li>
                                                         <li>    
                                                              <div className={`check_box check_box2 ${check3 ? 'on' : ''}`}>
-                                                                <input type="checkbox"  value={this.state.check3} onChange={this.onChangeCheck} id="check3"  /><label htmlFor="check3"></label><label htmlFor="check3">메인비즈인증</label>
+                                                                <input type="checkbox"  checked={this.state.check3} onChange={this.onChangeCheck} id="check3"  /><label htmlFor="check3"></label><label htmlFor="check3">메인비즈인증</label>
                                                             </div>                                                            
                                                         </li>
                                                         <li>
                                                             <div className={`check_box check_box2 ${check4 ? 'on' : ''}`}>
-                                                                <input type="checkbox"  value={this.state.check4} onChange={this.onChangeCheck} id="check4"  /><label htmlFor="check4"></label><label htmlFor="check4">이노비스 인증</label>
+                                                                <input type="checkbox"  checked={this.state.check4} onChange={this.onChangeCheck} id="check4"  /><label htmlFor="check4"></label><label htmlFor="check4">이노비스 인증</label>
                                                             </div>
                                                         </li>
                                                         <li>
                                                             <div className={`check_box check_box2 ${check5 ? 'on' : ''}`}>
-                                                                <input type="checkbox" value={this.state.check5} onChange={this.onChangeCheck}  id="check5"  /><label htmlFor="check5"></label><label htmlFor="check5">프로젝트성 기업</label>
+                                                                <input type="checkbox" checked={this.state.check5} onChange={this.onChangeCheck}  id="check5"  /><label htmlFor="check5"></label><label htmlFor="check5">프로젝트성 기업</label>
                                                             </div>
                                                         </li>
                                                         <li>
                                                             <div className={`check_box check_box2 ${check6 ? 'on' : ''}`}>
-                                                                <input type="checkbox" value={this.state.check6} onChange={this.onChangeCheck}  id="check6"  /><label htmlFor="check6"></label><label htmlFor="check6">사회적기업 </label>
+                                                                <input type="checkbox" checked={this.state.check6} onChange={this.onChangeCheck}  id="check6"  /><label htmlFor="check6"></label><label htmlFor="check6">사회적기업 </label>
                                                             </div>
                                                         </li>
                                                         <li className="width_100">

@@ -434,7 +434,15 @@
                }
                >.gray_bg {
                     padding-left: 0;
+
                }
+          }
+          &.account2 {
+               .gray_bg {
+                    .bd_box {
+                         .left {width: 50%; }
+                    }
+               }               
           }
           .check_list{
                &.gnb_off {

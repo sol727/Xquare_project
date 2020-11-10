@@ -30,6 +30,18 @@ export default class Studio_gnb extends React.Component {
     // li.addEventListener("mouseover", Show);
     // li.addEventListener("mouseout", hide);
 
+
+    componentDidMount() {
+        
+        if ( localStorage.gnb_state === 'off' ) {
+
+            document.querySelector('.studio_gnb').classList.add('off')
+
+            document.querySelector('.v3.studio').classList.add('gnb_off')
+
+        }
+
+    }
      
 
     gnbOff(e) {
@@ -41,6 +53,8 @@ export default class Studio_gnb extends React.Component {
         var section = document.getElementsByClassName('v3 studio')[0];
         section.className += " gnb_off"
 
+        localStorage.setItem('gnb_state','off')
+
     }
 
     gnbOn(e) {
@@ -51,6 +65,8 @@ export default class Studio_gnb extends React.Component {
 
         var section = document.getElementsByClassName('v3 studio')[0];
         section.classList.remove('gnb_off')
+
+        localStorage.setItem('gnb_state','on')
 
     }
     

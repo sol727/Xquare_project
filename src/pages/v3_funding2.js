@@ -8,7 +8,18 @@ import Paragraph from '../components/Paragraph';
 export default class V3_funding2 extends React.Component {
 
     constructor(props) {
-    super(props);
+        super(props);
+        this.state = {
+            active : 'img1'
+        }
+
+        this.onChangeRadio = this.onChangeRadio.bind(this)
+    }
+
+    onChangeRadio (e) {
+        this.setState({
+            active : e.target.id
+        })
     }
 
     render() {
@@ -85,9 +96,9 @@ export default class V3_funding2 extends React.Component {
                                         <div className="img_ul_wrap">                                        
                                             <ul className="img_ul  clearfix">
                                                 {/* active를 추가하면 이미지박스에 border가 활성화됩니다.*/}
-                                                <li className="active ">
+                                                <li className={`${this.state.active == 'img1' ? 'active' : ''}`}>
                                                     <div className="clearfix radio_ul radio_ul2">
-                                                        <input type="radio" id="img1" name="img_box"/><label htmlFor="img1"></label><label htmlFor="img1">대표이미지로 사용</label>
+                                                        <input type="radio" id="img1" name="img_box" checked={this.state.active === 'img1'}  onChange={this.onChangeRadio}/><label htmlFor="img1"></label><label htmlFor="img1">대표이미지로 사용</label>
                                                     </div>                                               
                                                     <div className="img_box">
                                                         <img src={ require('../images/detail_sample.png') } alt="샘플이미지"/>
@@ -99,9 +110,9 @@ export default class V3_funding2 extends React.Component {
                                                         </button>
                                                     </div>                                                
                                                 </li>
-                                                <li className="">
+                                                <li className={`${this.state.active == 'img2' ? 'active' : ''}`}>
                                                     <div className="clearfix radio_ul radio_ul2">
-                                                        <input type="radio" id="img2" name="img_box"/><label htmlFor="img2"></label><label htmlFor="img2">대표이미지로 사용</label>
+                                                        <input type="radio" id="img2" name="img_box" checked={this.state.active === 'img2'}  onChange={this.onChangeRadio}/><label htmlFor="img2"></label><label htmlFor="img2">대표이미지로 사용</label>
                                                     </div>
                                                     
                                                     <div className="img_box">
@@ -115,9 +126,9 @@ export default class V3_funding2 extends React.Component {
                                                     </div>                                                
                                                 </li>
                                                 {/* none_img 를 추가하면 이미지 추가 버튼이 활성화 됩니다. */}
-                                                <li className="none_img">
+                                                <li className={`none_img ${this.state.active == 'img3' ? 'active' : ''}`}>
                                                     <div className="clearfix radio_ul radio_ul2">
-                                                        <input type="radio" id="img3"name="img_box" /><label htmlFor="img3"></label><label htmlFor="img3">대표이미지로 사용</label>
+                                                        <input type="radio" id="img3"name="img_box" checked={this.state.active === 'img3'}  onChange={this.onChangeRadio}/><label htmlFor="img3"></label><label htmlFor="img3">대표이미지로 사용</label>
                                                     </div>
                                                     <div className="img_box">
                                                         <img src={ require('../images/detail_sample.png') } alt="샘플이미지"/>
