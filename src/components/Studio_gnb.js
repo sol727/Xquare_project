@@ -42,7 +42,7 @@ export default class Studio_gnb extends React.Component {
         section.className += " gnb_off"
 
     }
-
+    
     gnbOn(e) {
         console.log(e.target);
         
