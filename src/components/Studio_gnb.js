@@ -12,26 +12,30 @@ export default class Studio_gnb extends React.Component {
           this.menuOn3 = this.menuOn3.bind(this)
           this.gnbOff = this.gnbOff.bind(this)
           this.gnbOn = this.gnbOn.bind(this)
+          this.onHover = this.onHover.bind(this)
+          this.onLeave = this.onLeave.bind(this)
         
     }   
 
-   
-    // console.log(e.target);
-    // var li = document.querySelector(".v3.studio_gnb.off .gnb_wrap .off_menu li");
 
-    // function Show() {
-    //     li.className += "active"
-    // }
+    onHover(e) {
 
-    // function hide() {
-    //     li.remove('active')
-    // }
+        e.preventDefault()
 
-    // li.addEventListener("mouseover", Show);
-    // li.addEventListener("mouseout", hide);
+        if ( e.target.tagName === "LI" ) {
+            e.target.classList.add('active')
+        }
+    }
 
+    onLeave(e) {
+        e.preventDefault()
+        if ( e.target.tagName === "LI" ) {
+            e.target.classList.remove('active')
+        }
+    }
 
     componentDidMount() {
+        
         
         if ( localStorage.gnb_state === 'off' ) {
 
@@ -45,15 +49,19 @@ export default class Studio_gnb extends React.Component {
      
 
     gnbOff(e) {
-        console.log(e.target);
+
+        if( document.querySelector('body').offsetWidth <= 1247 ) {
+            document.querySelector('.studio_gnb').style.display = 'none'
+        } else {
+            var mother = e.target.parentNode;
+            mother.className += " off"
+    
+            var section = document.getElementsByClassName('v3 studio')[0];
+            section.className += " gnb_off"
+    
+            localStorage.setItem('gnb_state','off')
+        }
         
-        var mother = e.target.parentNode;
-        mother.className += " off"
-
-        var section = document.getElementsByClassName('v3 studio')[0];
-        section.className += " gnb_off"
-
-        localStorage.setItem('gnb_state','off')
 
     }
     
@@ -218,69 +226,83 @@ export default class Studio_gnb extends React.Component {
                          </li> */}
                     </ul>
                     <ul className="off_menu">
-                        <li className="active clearfix">
+                        <li className="active" onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                             <p>프로젝트상세</p>
                             <Link to="/V3_Project_state"></Link>
-                            <p>프로젝트상세</p>
+                            
                         </li>
-                        <li className="clearfix sub_menu first_sub">
-                            <Link to="/v3_account"></Link>
+                        <li className=" sub_menu first_sub" onMouseOver={this.onHover} onMouseLeave={this.onLeave} >
                             <p>자격확인</p>
+                            <Link to="/v3_account"></Link>
+                            
                         </li>
-                        <li className="clearfix sub_menu">
+                        <li className=" sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                             <p>기본자료</p>
                             <Link to="/v3_account2"></Link>
-                            <p>기본자료</p>
+                           
                         </li>
-                        <li className="clearfix sub_menu">
-                            <Link to="/v3_account3"></Link>
+                        <li className=" sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
                             <p>발행정보</p>
+                            <Link to="/v3_account3"></Link>
+                            
                         </li>
-                        <li className="clearfix sub_menu">
+                        <li className=" sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                             <p>기타정보</p>
                             <Link to="/v3_account4"></Link>
-                            <p>기타정보</p>
+                           
                         </li>
-                        <li className="clearfix sub_menu first_sub">
-                            <Link to="/v3_funding1"></Link>
+                        <li className=" sub_menu first_sub"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
                             <p>발행정보 확정</p>
+                            <Link to="/v3_funding1"></Link>
+                            
                         </li>
-                        <li className="clearfix sub_menu">
-                            <Link to="/v3_funding2"></Link>
+                        <li className=" sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
                             <p>펀딩 소개 작성</p>
+                            <Link to="/v3_funding2"></Link>
+                           
                         </li>
-                        <li className="clearfix sub_menu">
-                            <Link to="/v3_funding3"></Link>
+                        <li className=" sub_menu" onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
                             <p>추가 자료</p>
+                            <Link to="/v3_funding3"></Link>
+                            
                         </li>      
-                        <li className="clearfix long_menu">
-                            <Link to="/v3_feedback"></Link>
+                        <li className=" long_menu" onMouseOver={this.onHover} onMouseLeave={this.onLeave}> 
                             <p>엑스퀘어 피드백</p>
+                            <Link to="/v3_feedback"></Link>
+                           
                         </li>      
-                        <li className="clearfix">
-                            <Link to="/v3_investor_state"></Link>
+                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave}> 
                             <p>투자자 현황</p>
+                            <Link to="/v3_investor_state"></Link>
+                         
                         </li>  
-                        <li className="clearfix">
-                            <Link to="/v3_investor_opinion"></Link>
+                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
                             <p>투자자 의견</p>
+                            <Link to="/v3_investor_opinion"></Link>
+                           
                         </li>  
-                        <li className="clearfix">
-                            <Link to="/v3_news"></Link>
+                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
                             <p>새소식 관리</p>
+                            <Link to="/v3_news"></Link>
+                            
                         </li>    
-                        <li className="clearfix long_menu long_menu2">
-                            <Link to="/v3_data"></Link>
+                        <li className="long_menu long_menu2" onMouseOver={this.onHover} onMouseLeave={this.onLeave} >
                             <p>결산자료 제출 및 확인</p>
+                            <Link to="/v3_data"></Link>
+                           
                         </li>              
-                        {/* <li className="clearfix">
-                            <a href=""></a>
+                        {/* <li className="">
                             <p>투자광고</p>
+                            <a href=""></a>                            
                         </li>    
                         <li className="clearfix">
-                            <a href=""></a>
                             <p>설정</p>
+                            <a href=""></a>                            
                         </li>    
                         <li className="clearfix">
-                            <a href=""></a>
                             <p>프로젝트 문의</p>
+                            <a href=""></a>
+                           
                         </li>     */}
                     </ul>
                     <div className="bottom rightT"> 

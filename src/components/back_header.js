@@ -1,19 +1,18 @@
 import React from 'react'
 
-export default class Back_header extends React.Component {
+export default function Back_header() {
 
-    constructor(props) {
-        super(props);
+    const onClickBack  = () => {
+        document.querySelector('.studio_gnb').style.display = 'block'
+        document.querySelector('.studio_gnb').classList.remove('off')
     }
 
-    render() {
         return (
           <header className="back_header">
                <div className="clearfix2">
-                    <button type="button" className="back_btn"><img src={ require('../images/icons/back_arrow.png') } alt="뒤로가기아이콘"/></button>
+                    <button onClick={onClickBack} type="button" className="back_btn"><img src={ require('../images/icons/back_arrow.png') } alt="뒤로가기아이콘"/></button>
                     <p className="notice_bell"><img src={ require('../images/icons/bell.png') } alt="벨아이콘"/><span className="playF">99</span></p>
                </div>
           </header>          
         )
-    }
 }

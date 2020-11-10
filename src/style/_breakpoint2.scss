@@ -55,13 +55,13 @@ $mob-s-width		: 360px;
 //------------------------------------------------------------------------------
 // 1247px;
 @include tab{
-	.back_header {display: block;}
+	.back_header {display: block; background: #ffffff;}
 	.v3{
 		//스튜디오메뉴
-		.studio_gnb {top:0;}
+		.studio_gnb {top:0; display: none; z-index: 9;}
 		&.gnb_off{
 			width: 100%;
-			.cont {margin-left: 0;}			
+			.cont {margin-left: 0; width: 100%; }			
 		}
 		//스튜디오 cont
 		.cont {
