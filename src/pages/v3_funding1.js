@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import Studio_gnb from '../components/Studio_gnb'
 import Back_header from '../components/back_header';
@@ -36,22 +36,13 @@ export default function V3_funding1 () {
 
 
     }
-    // componentDidMount() {
-    //     document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li').classList.remove('on')
-    //     var on = document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li:nth-child(3)')
-    //     var prev = on.previousSibling;
-    //     var next = on.nextSibling;
-    //     on.className += " on"
-    //     prev.className += " prev_li"
-    //     next.className += " next_li"
-    // }
 
     return (    
         <>
             <section className="v3 studio funding funding1">
                 <Back_header/>
                 <div className="clearfix">
-                    <Studio_gnb/>
+                    <Studio_gnb on_index="8" off_index="6" />
                     <div className="cont">  
 
                         <div className="top_box container">

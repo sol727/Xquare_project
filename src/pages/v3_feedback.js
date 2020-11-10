@@ -76,17 +76,6 @@ export default class V3_Feedback extends React.Component {
             feedbackHeight : heightList
         })
 
-        document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li').classList.remove('on')
-        document.querySelector('.v3.studio_gnb.off .gnb_wrap .off_menu li').classList.remove('active')
-        var on = document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li:nth-child(11)')
-        var active = document.querySelector('.v3.studio_gnb.off .gnb_wrap .off_menu li:nth-child(9)')
-        
-        var prev = on.previousSibling;
-        var next = on.nextSibling;
-        on.className += " on"
-        active.className += " active"
-        prev.className += " prev_li"
-        next.className += " next_li"
 
         document.querySelector("body").style.background = '#fff';
         let contHeight = document.querySelector(".cont").offsetHeight;
@@ -100,7 +89,7 @@ export default class V3_Feedback extends React.Component {
                 <section className="v3 feedback studio">
                     <Back_header/>
                     <div className="clearfix">
-                        <Studio_gnb/>
+                        <Studio_gnb on_index="11" off_index="9"/>
                         <div className="cont">
                             <div className="top_box container">
                                 <h1>엑스퀘어 피드백</h1>

@@ -10,18 +10,7 @@ export default class V3_investor_state extends React.Component {
     super(props);
     }
 
-    componentDidMount() {
-        document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li').classList.remove('on')
-        document.querySelector('.v3.studio_gnb.off .gnb_wrap .off_menu li').classList.remove('active')
-        var on = document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li:nth-child(12)')
-        var active = document.querySelector('.v3.studio_gnb.off .gnb_wrap .off_menu li:nth-child(10)')
-        var prev = on.previousSibling;
-        var next = on.nextSibling;
-        on.className += " on"
-        active.className += " active"
-        prev.className += " prev_li"
-        next.className += " next_li"
-    }
+
 
     render() {
         return (
@@ -29,7 +18,7 @@ export default class V3_investor_state extends React.Component {
                 <section className="v3 investor_state studio">
                     <Back_header/>
                     <div className="clearfix">
-                        <Studio_gnb/>
+                        <Studio_gnb on_index="12" off_index="10"/>
                         <div className="cont">
                             <div className="top_box container">
                                 <h1>투자자 현황</h1>
