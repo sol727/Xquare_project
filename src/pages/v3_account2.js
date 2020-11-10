@@ -11,18 +11,7 @@ export default class V3_Account2 extends React.Component {
     constructor(props) {
     super(props);
     }
-    componentDidMount() {
-          document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li').classList.remove('on')
-          document.querySelector('.v3.studio_gnb.off .gnb_wrap .off_menu li').classList.remove('active')
-          var on = document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li:nth-child(4)')
-          var active = document.querySelector('.v3.studio_gnb.off .gnb_wrap .off_menu li:nth-child(3)')
-          var prev = on.previousSibling;
-          var next = on.nextSibling;
-          on.className += " on"
-          active.className += " active"
-          prev.className += " prev_li"
-          next.className += " next_li"
-     }
+    
     onClickLink (link) {
      window.location.pathname = link
      }
@@ -33,7 +22,7 @@ export default class V3_Account2 extends React.Component {
                <section className="v3 studio account account2">
                     <Back_header/>
                     <div className="clearfix">
-                         <Studio_gnb />
+                         <Studio_gnb on_index="4" off_index="3"/>
                          <div className="cont">
                               <div className="top_box container">
                                    <h1>계약준비</h1>

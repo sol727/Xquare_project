@@ -25,21 +25,6 @@ export default class V3_data extends React.Component {
         })
     }
 
-    componentDidMount() {
-        document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li').classList.remove('on')
-        document.querySelector('.v3.studio_gnb.off .gnb_wrap .off_menu li').classList.remove('active')
-        var on = document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li:nth-child(15)')
-        var on2 = on.parentNode;
-        var active = document.querySelector('.v3.studio_gnb.off .gnb_wrap .off_menu li:nth-child(13)')
-        var prev = on.previousSibling;
-        var next = on2.nextSibling;
-        var next2 = next.nextSibling;
-        on.className += " on"
-        active.className += " active"
-        prev.className += " prev_li"
-        next2.className += " next_li"
-    }
-
 
     render() {
 
@@ -48,7 +33,7 @@ export default class V3_data extends React.Component {
                 <section className="v3 v3_data studio">
                     <Back_header/>
                     <div className="clearfix">
-                        <Studio_gnb/>
+                        <Studio_gnb on_index="15" off_index="13"/>
                         <div className="cont">
                             <div className="top_box container">
                                 <h1>결산자료 제출 및 확인</h1>

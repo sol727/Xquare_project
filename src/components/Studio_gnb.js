@@ -23,7 +23,6 @@ export default class Studio_gnb extends React.Component {
         
     }   
 
-
     onHover(e) {
         e.preventDefault()
         if ( e.target.tagName === "LI" ) {
@@ -92,6 +91,21 @@ export default class Studio_gnb extends React.Component {
             document.querySelector('.studio_gnb').classList.add('off')
             document.querySelector('.v3.studio').classList.add('gnb_off')
         }
+
+        document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li').classList.remove('on')
+        document.querySelector('.v3.studio_gnb .gnb_wrap .off_menu li').classList.remove('active')
+        var on = document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li:nth-child('+this.props.on_index+')')
+        var active = document.querySelector('.v3.studio_gnb .gnb_wrap .off_menu li:nth-child('+this.props.off_index+')')
+        var prev = on.previousSibling;
+        var next = on.nextSibling;
+        on.className += " on"
+        active.className += " active"
+
+        if (prev)  prev.className += " prev_li"
+        else        on.parentNode.previousSibling.className += " prev_li"
+        
+        if ( next ) next.className += " next_li"
+        else         prev.parentNode.nextSibling.nextSibling.className += " next_li"
     }
 
     gnbOff(e) {
