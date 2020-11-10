@@ -215,7 +215,7 @@
           border-radius: 0 20px 20px 0;
           transition: all 0.3s;
           &.off {
-               width: 102px;
+               width: 102px; height: 100vh;
                .gnb_btn{display:none;}
                .gnb_wrap { 
                     background-color: #1f318d;
@@ -285,7 +285,7 @@
                                         height: 16px;
                                         border-radius: 50%;                                   
                                    }
-                                   p {line-height: 16px; padding-left: 0;}
+                                   p {line-height: 16px;}
                               }
                          }
                     }
@@ -743,6 +743,8 @@
                     font-size: 15px;
                     color: #535352;
                     cursor: pointer;
+                    width: calc(100% - 30px);
+                    display: inline-block;
                }
           }
           .check_box {
@@ -764,7 +766,7 @@
                          width: 24px;
                          height: 24px;
                          border: 2px solid #d6d6d6 ;
-                         border-radius: 2px;
+                         border-radius: 2px;                         
                     }
                     input[type=checkbox]:checked + label {
                          background-image:url(../images/icons/radio_check.png);background-repeat: no-repeat;
@@ -789,6 +791,8 @@
                     font-size: 15px;
                     color: #535352;
                     cursor: pointer;
+                    width: calc(100% - 32px);
+                    display: inline-block;
                }
           }      
           .date_selete {

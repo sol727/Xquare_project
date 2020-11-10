@@ -12,6 +12,7 @@ export default class Studio_gnb extends React.Component {
           this.menuOn3 = this.menuOn3.bind(this)
           this.gnbOff = this.gnbOff.bind(this)
           this.gnbOn = this.gnbOn.bind(this)
+          this.initActive = this.initActive.bind(this);
           this.onHover = this.onHover.bind(this)
           this.onLeave = this.onLeave.bind(this)
         
@@ -21,10 +22,16 @@ export default class Studio_gnb extends React.Component {
     onHover(e) {
 
         e.preventDefault()
+        
+        let listHTMLDom = e.target;
+        this.initActive();
 
         if ( e.target.tagName === "LI" ) {
+            
             e.target.classList.add('active')
         }
+
+
     }
 
     onLeave(e) {
@@ -32,6 +39,15 @@ export default class Studio_gnb extends React.Component {
         if ( e.target.tagName === "LI" ) {
             e.target.classList.remove('active')
         }
+    }
+
+    // Active Class 초기화
+    initActive(){
+        let off_menu = document.querySelectorAll('ul.off_menu li');
+
+        off_menu.forEach(function(om){
+            om.classList.remove("actvie");
+        });
     }
 
     componentDidMount() {
@@ -50,8 +66,8 @@ export default class Studio_gnb extends React.Component {
 
     gnbOff(e) {
 
-        if( document.querySelector('body').offsetWidth <= 1247 ) {
-            document.querySelector('.studio_gnb').style.display = 'none'
+        if( document.querySelector('body').offsetWidth <= 1247 ) {            
+            document.querySelector('.studio_gnb').style.display = 'none'    
         } else {
             var mother = e.target.parentNode;
             mother.className += " off"
@@ -59,9 +75,8 @@ export default class Studio_gnb extends React.Component {
             var section = document.getElementsByClassName('v3 studio')[0];
             section.className += " gnb_off"
     
-            localStorage.setItem('gnb_state','off')
-        }
-        
+            localStorage.setItem('gnb_state','off')    
+        }       
 
     }
     
