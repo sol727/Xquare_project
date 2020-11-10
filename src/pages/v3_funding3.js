@@ -11,6 +11,19 @@ export default class V3_funding3 extends React.Component {
     super(props);
     }
 
+    componentDidMount() {
+        document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li').classList.remove('on')
+        document.querySelector('.v3.studio_gnb.off .gnb_wrap .off_menu li').classList.remove('active')
+        var on = document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li:nth-child(10)')
+        var active = document.querySelector('.v3.studio_gnb.off .gnb_wrap .off_menu li:nth-child(8)')
+        var prev = on.previousSibling;
+        var next = on.nextSibling;
+        on.className += " on"
+        active.className += " active"
+        prev.className += " prev_li"
+        next.className += " next_li"
+    }
+
     render() {
         return (
             <>
