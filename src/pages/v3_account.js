@@ -27,6 +27,20 @@ export default class V3_Account extends React.Component {
         this.checkBoxCallBack = this.checkBoxCallBack.bind(this)
 
     }
+
+    componentDidMount() {
+        document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li').classList.remove('on')
+        document.querySelector('.v3.studio_gnb.off .gnb_wrap .off_menu li').classList.remove('active')
+        var on = document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li:nth-child(3)')
+        var active = document.querySelector('.v3.studio_gnb.off .gnb_wrap .off_menu li:nth-child(2)')
+        var prev = on.previousSibling;
+        var next = on.nextSibling;
+        on.className += " on"
+        active.className += " active"
+        prev.className += " prev_li"
+        next.className += " next_li"
+    }
+
     onClickLink (link) {
         window.location.pathname = link
     }

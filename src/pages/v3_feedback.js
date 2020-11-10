@@ -75,6 +75,23 @@ export default class V3_Feedback extends React.Component {
         this.setState({
             feedbackHeight : heightList
         })
+
+        document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li').classList.remove('on')
+        document.querySelector('.v3.studio_gnb.off .gnb_wrap .off_menu li').classList.remove('active')
+        var on = document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li:nth-child(11)')
+        var active = document.querySelector('.v3.studio_gnb.off .gnb_wrap .off_menu li:nth-child(9)')
+        
+        var prev = on.previousSibling;
+        var next = on.nextSibling;
+        on.className += " on"
+        active.className += " active"
+        prev.className += " prev_li"
+        next.className += " next_li"
+
+        document.querySelector("body").style.background = '#fff';
+        let contHeight = document.querySelector(".cont").offsetHeight;
+        document.querySelector(".studio_gnb").style.minHeight = contHeight + "px";
+        
     }
 
     render() {

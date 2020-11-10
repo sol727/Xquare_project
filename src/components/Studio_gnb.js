@@ -6,13 +6,18 @@ export default class Studio_gnb extends React.Component {
 
     constructor(props) {
           super(props);
+
+        this.state = {
+            activeIndex : null,
+        }
         
           this.menuOn = this.menuOn.bind(this)
           this.menuOn2 = this.menuOn2.bind(this)
           this.menuOn3 = this.menuOn3.bind(this)
           this.gnbOff = this.gnbOff.bind(this)
           this.gnbOn = this.gnbOn.bind(this)
-          this.initActive = this.initActive.bind(this);
+          this.initActive = this.initActive.bind(this)
+          this.getElementIndex = this.getElementIndex.bind(this)
           this.onHover = this.onHover.bind(this)
           this.onLeave = this.onLeave.bind(this)
         
@@ -20,49 +25,74 @@ export default class Studio_gnb extends React.Component {
 
 
     onHover(e) {
-
         e.preventDefault()
-        
-        let listHTMLDom = e.target;
-        this.initActive();
-
         if ( e.target.tagName === "LI" ) {
-            
-            e.target.classList.add('active')
+            this.initActive();
+            e.target.classList.add('active');
         }
-
-
     }
 
     onLeave(e) {
         e.preventDefault()
         if ( e.target.tagName === "LI" ) {
-            e.target.classList.remove('active')
+            let off_menu = document.querySelectorAll('ul.off_menu li');
+            let index =  this.getElementIndex(off_menu, e.target);
+
+           
+
+            if(this.state.activeIndex != index){
+                e.target.classList.remove('active');
+                this.initActive();
+            }else if(this.state.activeIndex == null){
+                e.target.classList.remove('active');
+            }
         }
     }
 
     // Active Class 초기화
     initActive(){
+        let target = this;
         let off_menu = document.querySelectorAll('ul.off_menu li');
+        let active_menu = document.querySelector('ul.off_menu li.active');
 
-        off_menu.forEach(function(om){
-            om.classList.remove("actvie");
-        });
+        if(this.state.activeIndex == null && active_menu){
+            let index = this.getElementIndex(off_menu, active_menu);
+
+            this.setState({
+                activeIndex:index
+            }, () => {
+                let menu_index = 0;
+                off_menu.forEach(function(om){
+                    if(target.state.activeIndex != menu_index){
+                        om.classList.remove("active");
+                    }
+                    menu_index++;
+                });
+            });
+        }else{
+            let menu_index = 0;
+            off_menu.forEach(function(om){
+                if(target.state.activeIndex != menu_index){
+                    om.classList.remove("active");
+                }
+                menu_index++;
+            });
+        }
     }
+
+     // HTML 요소의 Indext 찾기
+     getElementIndex(element, range) {
+        // 추가
+        if (!!range) return [].indexOf.call(element, range);
+        return [].indexOf.call(element.parentNode.children, element);
+     }
 
     componentDidMount() {
-        
-        
         if ( localStorage.gnb_state === 'off' ) {
-
             document.querySelector('.studio_gnb').classList.add('off')
-
             document.querySelector('.v3.studio').classList.add('gnb_off')
-
         }
-
     }
-     
 
     gnbOff(e) {
 
@@ -130,7 +160,6 @@ export default class Studio_gnb extends React.Component {
         prev.className += " prev_li"
         next2.className += " next_li"
     }
-
 
     render() {
 
@@ -241,7 +270,7 @@ export default class Studio_gnb extends React.Component {
                          </li> */}
                     </ul>
                     <ul className="off_menu">
-                        <li className="active" onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
                              <p>프로젝트상세</p>
                             <Link to="/V3_Project_state"></Link>
                             

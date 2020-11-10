@@ -218,7 +218,7 @@
                width: 102px; height: 100vh;
                .gnb_btn{display:none;}
                .gnb_wrap { 
-                    background-color: #1f318d;
+                    background-color: #1f318d;                    
                     .on_menu {display: none;}
                     .off_menu {
                          display: block;
@@ -230,7 +230,7 @@
                               &:first-child {
                                    //margin-top: -100%;
                                    &.active {
-                                        margin-top: 0;
+                                        padding-top: 0;
                                    }
                               }
                               a   {
@@ -250,7 +250,7 @@
                                    transition:all 0.3s;
                               }
                               &.active {
-                                   margin-top: 36px;
+                                   padding-top: 36px;
                                    padding-bottom: 28px;                                   
                                    p {display: block; }
                                    a   {                                        
@@ -277,7 +277,7 @@
                                         //&.active {margin-top: 120%;}
                                    }
                                    &.active {
-                                        margin-top: 24px;
+                                        padding-top: 24px;
                                         padding-bottom: 18px;         
                                    }
                                    a   {
@@ -325,8 +325,7 @@
                height: auto ;  
                background-color: #eff1f7;
                border-radius: 0 20px 20px 0;
-               
-               
+               overflow: hidden;               
                >.top{
                     padding: 56px 16px 32px;
                     border-radius: 0 20px 0 0;
@@ -350,6 +349,7 @@
                               background-color: #fff;
                          }
                     }
+                    .pro_content a .top_box .bottom ul {margin: 24px 0 0; }
                }
                .on_menu {
                     background: linear-gradient(to right, #1f318d, #1f318d, #eff1f700, #eff1f700);
@@ -421,7 +421,7 @@
           .bottom{
                background-color: #1f318d;
                padding: 24px 16px;     
-               border-radius: 0 0 20px 0;         
+               //border-radius: 0 0 20px 0;         
                .studio_btn {
                     padding: 8px 24px;
                     color: #fff;
@@ -435,15 +435,14 @@
      }
      &.gnb_off {
           .cont {
-               width: calc(100% - 102px);               
-               margin-left: 102px;
-              >.top_box {
-                    padding-left: 24px;
-               }
-               >.gray_bg {
-                    padding-left: 0;
-
-               }
+               width: calc(100% - 82px);               
+               margin-left: 82px;
+          //     >.top_box {
+          //           padding-left: 24px;
+          //      }
+          //      >.gray_bg {
+          //           padding-left: 0;
+          //      }
           }
           &.account2 {
                .gray_bg {

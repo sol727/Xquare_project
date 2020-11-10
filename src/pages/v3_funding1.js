@@ -7,6 +7,7 @@ import Radio from '../components/radio';
 import Text_input from '../components/text_input';
 
 export default function V3_funding1 () {
+    
 
     const [ step , setStep ] = useState({
         step1: '',
@@ -31,10 +32,21 @@ export default function V3_funding1 () {
         setStep({
             ...step , 
             [target] : id
-        })
-    }
+        })   
 
-    return (
+
+    }
+    // componentDidMount() {
+    //     document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li').classList.remove('on')
+    //     var on = document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li:nth-child(3)')
+    //     var prev = on.previousSibling;
+    //     var next = on.nextSibling;
+    //     on.className += " on"
+    //     prev.className += " prev_li"
+    //     next.className += " next_li"
+    // }
+
+    return (    
         <>
             <section className="v3 studio funding funding1">
                 <Back_header/>
@@ -928,7 +940,7 @@ export default function V3_funding1 () {
                                                     <p className="font_14 gray2_color mb8">적용 여부</p>
                                                     <div>
                                                         <Radio id="method7-1"  name="method7"  text="네 사용합니다."/>
-                                                    </div>          
+                                                    </div>
                                                 </div>
                                                 <ul className="clearfix ul_50">                                                      
                                                     <li>
