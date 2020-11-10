@@ -58,7 +58,7 @@ $mob-s-width		: 360px;
 	.back_header {display: block;}
 	.v3{
 		//스튜디오메뉴
-		.studio_gnb {display: none;}
+		.studio_gnb {top:0;}
 		&.gnb_off{
 			width: 100%;
 			.cont {margin-left: 0;}			

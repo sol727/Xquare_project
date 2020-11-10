@@ -56,7 +56,7 @@ export default class Studio_gnb extends React.Component {
         localStorage.setItem('gnb_state','off')
 
     }
-
+    
     gnbOn(e) {
         console.log(e.target);
         
