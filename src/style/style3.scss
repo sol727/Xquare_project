@@ -16,7 +16,7 @@
 .font_24{font-size: 24px !important;}
 .sky_color{color:#eff1f7;}
 
-body{background:#eff1f7;}
+// body{background:#eff1f7;}
 .v3 .cont{background:#fff;}
 
 .v3{
@@ -133,7 +133,7 @@ body{background:#eff1f7;}
 
     // 피드백
     &.feedback{
-        .top_box{margin-bottom:50px;}
+        .cont>.top_box{margin-bottom:50px;}
         .detail_wrap{width:100%;}
         .feedback_li{padding:12px 24px;background: #f8f9fb;border-top:2px solid #eff1f7;}
         .feedback_li a{width:100%;}
@@ -154,7 +154,7 @@ body{background:#eff1f7;}
             .file_wrap>ul>li.link_li .file_box .img_box{background-color:#a5add1;background-image: url(../images/icons/ic_link.png);background-repeat: no-repeat;background-position: center;}
         }
         .detail_wrap .detail.slideOn{padding:24px;}
-        &.gnb_off .detail_wrap {padding-left:0px;}
+        // &.gnb_off .detail_wrap {padding-left:0px;}
     }
     .file_box{
         a{width:100%;padding:5px;background:#fff;border-radius:4px;}
