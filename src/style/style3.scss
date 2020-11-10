@@ -172,7 +172,7 @@ body{background:#eff1f7;}
         .api_box{width:calc(60% - 12px);height:360px;background: #ddd;}
         .list_box{width:calc(40% - 12px);}
         .list_box>li{margin-bottom:24px;}
-        &.gnb_off .gray_bg{padding-left:24px;}
+        // &.gnb_off .gray_bg{padding-left:24px;}
     }
     .investor_cont{background: #fff;border-radius: 8px;padding:10px;
         .date{font-size: 14px;color:#bfbfbf;margin-bottom:10px;}
@@ -214,7 +214,7 @@ body{background:#eff1f7;}
             .top_box {padding-left:24px;}
             .detail_wrap{width:100%;}
         }
-        &.gnb_off .gray_bg{padding-left:24px;}
+        // &.gnb_off .gray_bg{padding-left:24px;}
     }
     .detail_wrap{width:calc(60% - 12px);
         .text_box{background:#fff;padding:24px 16px;}
@@ -301,7 +301,7 @@ body{background:#eff1f7;}
                 div{padding-top:16px;border-top:1px solid #eaedf1;line-height: 1.5;}
             }
         }
-        &.gnb_off .gray_bg{padding-left:24px;}
+        // &.gnb_off .gray_bg{padding-left:24px;}
         &.mo_news {
             .cont{width:100%;margin-left:0px;}
             .top_box {padding-left:24px;}
@@ -365,7 +365,7 @@ body{background:#eff1f7;}
             .write_box{padding-top:16px;}
         }
         .btn_wrap button{width:180px;height:38px;font-size:15px;border-radius:4px;}
-        &.gnb_off .gray_bg{padding-left:24px;}
+        // &.gnb_off .gray_bg{padding-left:24px;}
     }
     // 약관확인
     &.terms_check{
