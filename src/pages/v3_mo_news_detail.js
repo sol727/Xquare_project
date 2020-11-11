@@ -12,10 +12,10 @@ export default class V3_mo_news_detail extends React.Component {
     render() {
         return (
             <>
-                <section className="v3 news mo_news">
+                <section className="v3 news mo_news studio">
                     <Back_header/>
                     <div className="clearfix">
-                        <Studio_gnb/>
+                        <Studio_gnb on_index="14" off_index="12"/>
                         <div className="cont">
                             <div className="top_box container">
                                 <h1>새소식 관리</h1>

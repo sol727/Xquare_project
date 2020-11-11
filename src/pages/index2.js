@@ -78,12 +78,12 @@ export default class Index2 extends React.Component {
                     <li><Link to="/v3_mo_opinion_detail"><span>투자자의견 상세(모바일)</span></Link></li>
                     <li><Link to="/v3_news"><span>새소식</span></Link></li>
                     <li><Link to="/v3_news_write"><span>새소식 글쓰기</span></Link></li>
-                    <li><Link to="/v3_mo_news_detail"><span>새소식 상세(mo)</span></Link></li>
+                    <li><Link to="/v3_mo_news_detail"><span>새소식 상세(모바일)</span></Link></li>
                     <li><Link to="/v3_data"><span>결산자료 제출 및 확인</span></Link></li>
                     <li><Link to="/v3_terms_check"><span>투자하기 - 약관확인</span></Link></li>
                     <li><Link to="/v3_invest_prepare"><span>투자하기 - 투자준비하기</span></Link></li>
-                    <li><Link to="/v3_mo_identity_pop"><span>투자하기 - 신분증인증(mo)</span></Link></li>
-                    <li><Link to="/v3_mo_invest_check"><span>투자하기 - 타행계좌인증(mo)</span></Link></li>
+                    <li><Link to="/v3_mo_identity_pop"><span>투자하기 - 신분증인증(모바일)</span></Link></li>
+                    <li><Link to="/v3_mo_invest_check"><span>투자하기 - 타행계좌인증(모바일)</span></Link></li>
                     <li><Link to="/v3_invest_prepare2"><span>투자하기 - 법인회원의 투자준비</span></Link></li>
                     <li><Link to="/v3_invest_step1"><span>투자하기 - 투자정보입력</span></Link></li>
                 </ul>

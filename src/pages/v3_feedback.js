@@ -47,7 +47,7 @@ export default class V3_Feedback extends React.Component {
         // style.scss 에 있는 .deatil 의 패딩값을 꼭 더해주세요
         let padding = 24
 
-        padding = (padding * 3);
+        padding = (padding * 2);
 
         this.initSlide();
 
@@ -95,8 +95,8 @@ export default class V3_Feedback extends React.Component {
                                 <h1>엑스퀘어 피드백</h1>
                             </div>
                             <div className="detail_wrap">
-                                {/* div 클래스에 new 추가하면 new라벨노출됨▼ */}
-                                <div className="feedback_li top_title clearfix new" onClick={(event) => this.slide(1, event)}>
+                                {/* div 클래스에 new 추가하면 new라벨노출되고 li 배경색 변경됨▼ */}
+                                <div className="feedback_li clearfix new" onClick={(event) => this.slide(1, event)}>
                                     <span>new</span>
                                     <p>yyyy년 mm월 dd일 n차 피드백</p>
                                 </div>
@@ -130,8 +130,7 @@ export default class V3_Feedback extends React.Component {
                                 </div>
                             </div>
                             <div className="detail_wrap">
-                                {/* div 클래스에 new 추가하면 new라벨노출됨▼ */}
-                                <div className="feedback_li top_title clearfix new" onClick={(event) => this.slide(2, event)}>
+                                <div className="feedback_li clearfix new" onClick={(event) => this.slide(2, event)}>
                                     <span>new</span>
                                     <p>yyyy년 mm월 dd일 n차 피드백</p>
                                 </div>
@@ -163,7 +162,6 @@ export default class V3_Feedback extends React.Component {
                                 </div>
                             </div>
                             <div className="detail_wrap">
-                                {/* div 클래스에 new 추가하면 new라벨노출됨▼ */}
                                 <div className="feedback_li clearfix" onClick={(event) => this.slide(3, event)}>
                                     <span>new</span>
                                     <p>yyyy년 mm월 dd일 n차 피드백</p>
@@ -196,7 +194,6 @@ export default class V3_Feedback extends React.Component {
                                 </div>
                             </div>
                             <div className="detail_wrap">
-                                {/* div 클래스에 new 추가하면 new라벨노출됨▼ */}
                                 <div className="feedback_li clearfix" onClick={(event) => this.slide(4, event)}>
                                     <span>new</span>
                                     <p>yyyy년 mm월 dd일 n차 피드백</p>
