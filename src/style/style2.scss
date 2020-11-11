@@ -363,6 +363,7 @@
                .off_scroll {
                     display:none;
                     height: calc(100vh - 100px);
+                    .ps__rail-x{display:none;}
                }
                .on_menu {
                     background: linear-gradient(to right, #1f318d, #1f318d, #eff1f700, #eff1f700);

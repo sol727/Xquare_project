@@ -153,7 +153,7 @@
             .file_wrap>ul>li.link_li .file_box .img_box{background-color:#a5add1;background-image: url(../images/icons/ic_link.png);background-repeat: no-repeat;background-position: center;}
         }
         .detail_wrap .detail.slideOn{padding:24px;}
-        .studio_gnb{max-height:auto;height:100%;position:absolute;}
+        .studio_gnb{max-height:unset;height:100%;position:absolute;}
         .gnb_wrap{height:auto;}
         .on_scroll,.off_scroll{height: auto;}
     }
