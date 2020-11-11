@@ -28,13 +28,19 @@ export default function V3_funding1 () {
         step16: '',
     })
 
+    const [ check1 , setCheck1 ] = useState('')
+
     const onChangeStep = ( id, target ) => {
         setStep({
             ...step , 
             [target] : id
         })   
+    }
 
-
+    const onChangeCheck = e => {
+        setCheck1(
+            e.target.checked
+        )
     }
 
     return (    
@@ -929,9 +935,16 @@ export default function V3_funding1 () {
                                             <div className="right">              
                                                 <div className="mb24">
                                                     <p className="font_14 gray2_color mb8">적용 여부</p>
-                                                    <div>
-                                                        <Radio id="method7-1"  name="method7"  text="네 사용합니다."/>
+
+                                                    <div className={`check_box check_box2 bd ${check1 ? 'on' : ''}`}>
+                                                        <input
+                                                         type="checkbox"
+                                                          checked={check1} 
+                                                          onChange={onChangeCheck} id="check1" />
+                                                          <label htmlFor="check1"></label>
+                                                          <label htmlFor="check1">네 사용합니다.</label>
                                                     </div>
+
                                                 </div>
                                                 <ul className="clearfix ul_50">                                                      
                                                     <li>
