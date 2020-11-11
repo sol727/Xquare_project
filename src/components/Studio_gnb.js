@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import ProjectContent from '../components/ProjectContent'
+import PerfectScrollbar from '@opuscapita/react-perfect-scrollbar';
 
 export default class Studio_gnb extends React.Component {
 
@@ -106,12 +107,14 @@ export default class Studio_gnb extends React.Component {
         
         if ( next ) next.className += " next_li"
         else         prev.parentNode.nextSibling.nextSibling.className += " next_li"
+
+        document.querySelector('body').style.background = '#eff1f7'
     }
 
     gnbOff(e) {
 
-        if( document.querySelector('body').offsetWidth <= 1247 ) {            
-            document.querySelector('.studio_gnb').style.display = 'none'    
+        if( document.querySelector('body').offsetWidth <= 1247 ) {
+            document.querySelector('.studio_gnb').style.display = 'none'
         } else {
             var mother = e.target.parentNode;
             mother.className += " off"
@@ -227,6 +230,7 @@ export default class Studio_gnb extends React.Component {
                             />
                         </div>
                     </div>
+                    <PerfectScrollbar>
                     <ul className="on_menu">
                          <li className="">
                             <Link to="/v3_project_state" onClick={this.menuOn2}>프로젝트상세</Link>
@@ -283,6 +287,8 @@ export default class Studio_gnb extends React.Component {
                             <Link to="/" className="arrow">프로젝트 문의</Link>
                          </li> */}
                     </ul>
+                    </PerfectScrollbar>
+                    <PerfectScrollbar>
                     <ul className="off_menu">
                         <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
                              <p>프로젝트상세</p>
@@ -363,6 +369,7 @@ export default class Studio_gnb extends React.Component {
                            
                         </li>     */}
                     </ul>
+                    </PerfectScrollbar>
                     <div className="bottom rightT"> 
                         <button type="button" className="studio_btn">프로젝트 삭제</button>
                     </div>
