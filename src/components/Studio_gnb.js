@@ -103,10 +103,10 @@ export default class Studio_gnb extends React.Component {
         active.className += " active"
 
         if (prev)  prev.className += " prev_li"
-        else        on.parentNode.previousSibling.className += " prev_li"
+        else        on.parentNode.parentNode.previousSibling.className += " prev_li"
         
         if ( next ) next.className += " next_li"
-        else         prev.parentNode.nextSibling.nextSibling.className += " next_li"
+        else         prev.parentNode.parentNode.nextSibling.nextSibling.className += " next_li"
 
         document.querySelector('body').style.background = '#eff1f7'
     }
@@ -156,7 +156,7 @@ export default class Studio_gnb extends React.Component {
         console.log(e.target);
         
         var mother = e.target.parentNode;
-        var mother2 = mother.parentNode;
+        var mother2 = mother.parentNode.parentNode;
         var prev = mother2.previousSibling;
         var next = mother.nextSibling;
         mother.className += " on"
@@ -168,7 +168,7 @@ export default class Studio_gnb extends React.Component {
         console.log(e.target);
         
         var mother = e.target.parentNode;
-        var mother2 = mother.parentNode;
+        var mother2 = mother.parentNode.parentNode;
         var prev = mother.previousSibling;
         var next = mother2.nextSibling;
         var next2 = next.nextSibling;
@@ -230,10 +230,10 @@ export default class Studio_gnb extends React.Component {
                             />
                         </div>
                     </div>
-                    <PerfectScrollbar>
+                    <PerfectScrollbar className="on_scroll">
                     <ul className="on_menu">
                          <li className="">
-                            <Link to="/v3_project_state" onClick={this.menuOn2}>프로젝트상세</Link>
+                            <Link to="/v3_project_state" onClick={this.menuOn2}>프로젝트상세</Link>                            
                          </li>
                          <li className=""  >
                             <Link to="/v3_account">계약준비</Link>
@@ -288,7 +288,7 @@ export default class Studio_gnb extends React.Component {
                          </li> */}
                     </ul>
                     </PerfectScrollbar>
-                    <PerfectScrollbar>
+                    <PerfectScrollbar  className="off_scroll">
                     <ul className="off_menu">
                         <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
                              <p>프로젝트상세</p>
