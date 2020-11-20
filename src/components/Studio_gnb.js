@@ -21,6 +21,7 @@ export default class Studio_gnb extends React.Component {
           this.getElementIndex = this.getElementIndex.bind(this)
           this.onHover = this.onHover.bind(this)
           this.onLeave = this.onLeave.bind(this)
+        //   this.active_li = this.active_li.bind(this)
         
     }   
 
@@ -29,8 +30,11 @@ export default class Studio_gnb extends React.Component {
         if ( e.target.tagName === "LI" ) {
             this.initActive();
             e.target.classList.add('active');
+
         }
+
     }
+
 
     onLeave(e) {
         e.preventDefault()
@@ -46,7 +50,10 @@ export default class Studio_gnb extends React.Component {
             }else if(this.state.activeIndex == null){
                 e.target.classList.remove('active');
             }
+
         }
+        document.querySelector('.v3.studio_gnb .gnb_wrap .off_menu li:nth-child('+this.props.off_index+')').classList.add('active');
+        
     }
 
     // Active Class 초기화
@@ -66,7 +73,7 @@ export default class Studio_gnb extends React.Component {
                     if(target.state.activeIndex != menu_index){
                         om.classList.remove("active");
                     }
-                    menu_index++;
+                    // menu_index++;
                 });
             });
         }else{
@@ -75,7 +82,7 @@ export default class Studio_gnb extends React.Component {
                 if(target.state.activeIndex != menu_index){
                     om.classList.remove("active");
                 }
-                menu_index++;
+                // menu_index++;
             });
         }
     }
@@ -116,6 +123,7 @@ export default class Studio_gnb extends React.Component {
         else         prev.parentNode.parentNode.nextSibling.nextSibling.className += " next_li"
 
         document.querySelector('body').style.background = '#eff1f7'
+        
     }
 
     gnbOff(e) {
@@ -302,42 +310,42 @@ export default class Studio_gnb extends React.Component {
                             <Link to="/V3_Project_state"></Link>
                             
                         </li>
-                        <li className=" sub_menu first_sub" onMouseOver={this.onHover} onMouseLeave={this.onLeave} >
+                        <li className="sub_menu first_sub" onMouseOver={this.onHover} onMouseLeave={this.onLeave} >
                             <p>자격확인</p>
                             <Link to="/v3_account"></Link>
                             
                         </li>
-                        <li className=" sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
                              <p>기본자료</p>
                             <Link to="/v3_account2"></Link>
                            
                         </li>
-                        <li className=" sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
                             <p>발행정보</p>
                             <Link to="/v3_account3"></Link>
                             
                         </li>
-                        <li className=" sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
                              <p>기타정보</p>
                             <Link to="/v3_account4"></Link>
                            
                         </li>
-                        <li className=" sub_menu first_sub"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                        <li className="sub_menu first_sub"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
                             <p>발행정보 확정</p>
                             <Link to="/v3_funding1"></Link>
                             
                         </li>
-                        <li className=" sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
                             <p>펀딩 소개 작성</p>
                             <Link to="/v3_funding2"></Link>
                            
                         </li>
-                        <li className=" sub_menu" onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                        <li className="sub_menu" onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
                             <p>추가 자료</p>
                             <Link to="/v3_funding3"></Link>
                             
                         </li>      
-                        <li className=" long_menu" onMouseOver={this.onHover} onMouseLeave={this.onLeave}> 
+                        <li className="long_menu" onMouseOver={this.onHover} onMouseLeave={this.onLeave}> 
                             <p>엑스퀘어 피드백</p>
                             <Link to="/v3_feedback"></Link>
                            
