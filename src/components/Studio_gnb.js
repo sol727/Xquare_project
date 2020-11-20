@@ -88,11 +88,18 @@ export default class Studio_gnb extends React.Component {
      }
 
     componentDidMount() {
+        window.onresize = function() {
+            if( document.querySelector('body').offsetWidth > 1247 ) {
+                document.querySelector('.studio_gnb').style.display = 'block'
+                document.querySelector('.studio_gnb').classList.add('off')
+            }else{
+                document.querySelector('.studio_gnb').style.display = 'none'
+            }
+        };
         if ( localStorage.gnb_state === 'off' ) {
             document.querySelector('.studio_gnb').classList.add('off')
             document.querySelector('.v3.studio').classList.add('gnb_off')
         }
-
         document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li').classList.remove('on')
         document.querySelector('.v3.studio_gnb .gnb_wrap .off_menu li').classList.remove('active')
         var on = document.querySelector('.v3.studio_gnb .gnb_wrap .on_menu li:nth-child('+this.props.on_index+')')
@@ -122,7 +129,7 @@ export default class Studio_gnb extends React.Component {
             var section = document.getElementsByClassName('v3 studio')[0];
             section.className += " gnb_off"
     
-            localStorage.setItem('gnb_state','off')    
+            localStorage.setItem('gnb_state','off')
         }       
 
     }
