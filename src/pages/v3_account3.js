@@ -29,7 +29,20 @@ export default class V3_Account3 extends React.Component {
         this.onChangeStep7 = this.onChangeStep7.bind(this)
         this.onChangeStep8 = this.onChangeStep8.bind(this)
     }
-
+    componentDidMount() {
+        var off_box = document.querySelectorAll('.off_box') 
+        if ( localStorage.gnb_state === 'off' ) {
+            //off_box.classList.add('off')
+            for ( var i = 0; i < off_box.length; i++ ) {
+                off_box[i].classList.add('off')
+              }
+        }else{
+            //off_box.classList.remove('off')
+            for ( var i = 0; i < off_box.length; i++ ) {
+                off_box[i].classList.remove('off')
+              }
+        }
+    }
     
     onClickLink (link) {
         window.location.pathname = link
@@ -218,7 +231,7 @@ export default class V3_Account3 extends React.Component {
                                         <p>선택한 발행 증권구분</p>
                                     </div>
                                     {/* bd_box에 off 클래스를 넣으면 레이아웃이 바뀝니다. */}
-                                    <div className="bd_box">
+                                    <div className="bd_box off_box">
                                         <div className="big_title">
                                             <h2>주식형</h2>
                                             <p className="error">·error here</p>
@@ -367,7 +380,7 @@ export default class V3_Account3 extends React.Component {
                                         </ul>
                                     </div>
                                     {/* bd_box에 off 클래스를 넣으면 레이아웃이 바뀝니다. */}
-                                    <div className="bd_box last ">
+                                    <div className="bd_box last off_box">
                                         <div className="big_title">
                                             <h2>채권형</h2>
                                             <p className="error">·error here</p>

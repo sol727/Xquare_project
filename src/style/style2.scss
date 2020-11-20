@@ -215,7 +215,7 @@
           border-radius: 0 20px 20px 0;
           transition: all 0.3s;
           position: fixed;
-          max-height: 1080px;
+         //max-height: 1080px;
           &.off {
                width: 102px; height: 100%;
                .gnb_btn{display:none;}
@@ -275,7 +275,7 @@
                                    //width: calc(100% + 18px);
                                    padding-bottom: 18px;
                                    &.first_sub {
-                                        margin-top: 50%;
+                                        margin-top: 15%;
                                         //&.active {margin-top: 120%;}
                                    }
                                    &.active {
@@ -330,7 +330,7 @@
                background-color: #eff1f7;
                border-radius: 0 20px 20px 0;
                overflow: hidden;   
-               
+               max-height: 1113px;
                >.top{
                     padding: 56px 16px 32px;
                     border-radius: 0 20px 0 0;
@@ -465,6 +465,28 @@
                     }
                }               
           }
+          &.account3 {
+               .gray_bg {
+                    .bd_box {
+                         &.off {
+                              .big_title{width: 25%; }
+                              .division_list {
+                                   width: 37.5%;
+                                   .left {width: 25%; margin-right: 24px;}
+                                   .right {width: calc(75% - 24px);
+                                        >select{
+                                             width: 100%; 
+                                        } 
+                                   }
+                              }
+                              .check_list2 {
+                                   >div {width: 100%;}
+                              }
+                         }
+                    }
+               }               
+          }    
+
           .check_list{
                &.gnb_off {
                     width: calc(50% - 12px);
@@ -713,7 +735,7 @@
                height: 40px;
                border: 1px solid #eaedf1;
                border-radius: 20px;
-               padding: 9px 16px;
+               padding: 9px 15px;
                &.on {
                     background-color:#ff8e40 ;
                     border: 1px solid #ff8e40;
