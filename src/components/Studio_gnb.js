@@ -143,7 +143,7 @@ export default class Studio_gnb extends React.Component {
 
             var off_box = document.querySelectorAll('.account3 .off_box'); 
             for ( var i = 0; i < off_box.length; i++ ) {
-                off_box[i].classList.remove('off')
+                off_box[i].classList.add('off')
               }
               
             localStorage.setItem('gnb_state','off')
@@ -160,10 +160,10 @@ export default class Studio_gnb extends React.Component {
         var section = document.getElementsByClassName('v3 studio')[0];
         section.classList.remove('gnb_off')
 
-        var off_box = document.querySelectorAll('.account3 .off_box'); 
+        var off_box = document.querySelectorAll('.account3 .off_box');
         for ( var i = 0; i < off_box.length; i++ ) {
-            off_box[i].classList.add('off')
-          }
+            off_box[i].classList.remove('off')
+        }
 
         localStorage.setItem('gnb_state','on')
 
