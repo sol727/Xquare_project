@@ -29,20 +29,20 @@ export default class V3_Account3 extends React.Component {
         this.onChangeStep7 = this.onChangeStep7.bind(this)
         this.onChangeStep8 = this.onChangeStep8.bind(this)
     }
-    componentDidMount() {
-        var off_box = document.querySelectorAll('.off_box') 
-        if ( localStorage.gnb_state === 'off' ) {
-            //off_box.classList.add('off')
-            for ( var i = 0; i < off_box.length; i++ ) {
-                off_box[i].classList.add('off')
-              }
-        }else{
-            //off_box.classList.remove('off')
-            for ( var i = 0; i < off_box.length; i++ ) {
-                off_box[i].classList.remove('off')
-              }
-        }
-    }
+    // componentDidMount() {
+        
+    //     if ( localStorage.gnb_state === 'off' ) {
+    //         //off_box.classList.add('off')
+    //         for ( var i = 0; i < off_box.length; i++ ) {
+    //             off_box[i].classList.add('off')
+    //           }
+    //     }else{
+    //         //off_box.classList.remove('off')
+    //         for ( var i = 0; i < off_box.length; i++ ) {
+    //             off_box[i].classList.remove('off')
+    //           }
+    //     }
+    // }
     
     onClickLink (link) {
         window.location.pathname = link

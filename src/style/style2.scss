@@ -250,6 +250,7 @@
                                    margin-bottom: 36px;
                                    padding-left: 8px;
                                    transition:all 0.3s;
+                                   cursor: pointer;
                               }
                               &.active {
                                    padding-top: 36px;
@@ -358,7 +359,7 @@
                     .pro_content a .top_box .bottom ul {margin: 24px 0 0; }
                }
                .on_scroll {
-                    height: calc(100% - 441px);
+                    height: calc(100% - 359px);
                }
                .off_scroll {
                     display:none;

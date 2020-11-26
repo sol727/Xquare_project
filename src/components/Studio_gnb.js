@@ -25,6 +25,10 @@ export default class Studio_gnb extends React.Component {
         
     }   
 
+    onClickLink (link) {
+        window.location.pathname = link
+    }
+
     onHover(e) {
         e.preventDefault()
         if ( e.target.tagName === "LI" ) {
@@ -73,7 +77,7 @@ export default class Studio_gnb extends React.Component {
                     if(target.state.activeIndex != menu_index){
                         om.classList.remove("active");
                     }
-                    // menu_index++;
+                    //menu_index++;
                 });
             });
         }else{
@@ -82,7 +86,7 @@ export default class Studio_gnb extends React.Component {
                 if(target.state.activeIndex != menu_index){
                     om.classList.remove("active");
                 }
-                // menu_index++;
+                //menu_index++;
             });
         }
     }
@@ -120,7 +124,7 @@ export default class Studio_gnb extends React.Component {
         else        on.parentNode.parentNode.previousSibling.className += " prev_li"
         
         if ( next ) next.className += " next_li"
-        else         prev.parentNode.parentNode.nextSibling.nextSibling.className += " next_li"
+        else         prev.parentNode.nextSibling.className += " next_li"
 
         document.querySelector('body').style.background = '#eff1f7'
         
@@ -131,12 +135,17 @@ export default class Studio_gnb extends React.Component {
         if( document.querySelector('body').offsetWidth <= 1247 ) {
             document.querySelector('.studio_gnb').style.display = 'none'
         } else {
-            var mother = e.target.parentNode;
+            var mother = e.target.parentNode;            
             mother.className += " off"
     
             var section = document.getElementsByClassName('v3 studio')[0];
             section.className += " gnb_off"
-    
+
+            var off_box = document.querySelectorAll('.account3 .off_box'); 
+            for ( var i = 0; i < off_box.length; i++ ) {
+                off_box[i].classList.remove('off')
+              }
+              
             localStorage.setItem('gnb_state','off')
         }       
 
@@ -150,6 +159,11 @@ export default class Studio_gnb extends React.Component {
 
         var section = document.getElementsByClassName('v3 studio')[0];
         section.classList.remove('gnb_off')
+
+        var off_box = document.querySelectorAll('.account3 .off_box'); 
+        for ( var i = 0; i < off_box.length; i++ ) {
+            off_box[i].classList.add('off')
+          }
 
         localStorage.setItem('gnb_state','on')
 
@@ -183,14 +197,14 @@ export default class Studio_gnb extends React.Component {
         console.log(e.target);
         
         var mother = e.target.parentNode;
-        var mother2 = mother.parentNode.parentNode;
+        var mother2 = mother.parentNode;
         var prev = mother.previousSibling;
         var next = mother2.nextSibling;
         var next2 = next.nextSibling;
 
         mother.className += " on"
         prev.className += " prev_li"
-        next2.className += " next_li"
+        next.className += " next_li"
     }
 
     render() {
@@ -302,70 +316,73 @@ export default class Studio_gnb extends React.Component {
                             <Link to="/" className="arrow">프로젝트 문의</Link>
                          </li> */}
                     </ul>
+                    <div className="bottom rightT"> 
+                        <button type="button" className="studio_btn">프로젝트 삭제</button>
+                    </div>
                     </PerfectScrollbar>
                     <PerfectScrollbar  className="off_scroll">
                     <ul className="off_menu">
-                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
-                             <p>프로젝트상세</p>
+                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/V3_Project_state"}>
+                            <p>프로젝트상세</p>
                             <Link to="/V3_Project_state"></Link>
                             
                         </li>
-                        <li className="sub_menu first_sub" onMouseOver={this.onHover} onMouseLeave={this.onLeave} >
+                        <li className="sub_menu first_sub" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account"}>
                             <p>자격확인</p>
                             <Link to="/v3_account"></Link>
                             
                         </li>
-                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account2"}>
                              <p>기본자료</p>
                             <Link to="/v3_account2"></Link>
                            
                         </li>
-                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account3"}>
                             <p>발행정보</p>
                             <Link to="/v3_account3"></Link>
                             
                         </li>
-                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account4"}>
                              <p>기타정보</p>
                             <Link to="/v3_account4"></Link>
                            
                         </li>
-                        <li className="sub_menu first_sub"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                        <li className="sub_menu first_sub"onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_funding1"}>
                             <p>발행정보 확정</p>
                             <Link to="/v3_funding1"></Link>
                             
                         </li>
-                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_funding2"}>
                             <p>펀딩 소개 작성</p>
                             <Link to="/v3_funding2"></Link>
                            
                         </li>
-                        <li className="sub_menu" onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                        <li className="sub_menu" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_funding3"}>
                             <p>추가 자료</p>
                             <Link to="/v3_funding3"></Link>
                             
                         </li>      
-                        <li className="long_menu" onMouseOver={this.onHover} onMouseLeave={this.onLeave}> 
+                        <li className="long_menu" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_feedback"}> 
                             <p>엑스퀘어 피드백</p>
                             <Link to="/v3_feedback"></Link>
                            
                         </li>      
-                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave}> 
+                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_investor_state"}> 
                             <p>투자자 현황</p>
                             <Link to="/v3_investor_state"></Link>
                          
                         </li>  
-                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_investor_opinion"}>
                             <p>투자자 의견</p>
                             <Link to="/v3_investor_opinion"></Link>
                            
                         </li>  
-                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave}>
+                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_news"}>
                             <p>새소식 관리</p>
                             <Link to="/v3_news"></Link>
                             
                         </li>    
-                        <li className="long_menu long_menu2" onMouseOver={this.onHover} onMouseLeave={this.onLeave} >
+                        <li className="long_menu long_menu2" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_data"} >
                             <p>결산자료 제출 및 확인</p>
                             <Link to="/v3_data"></Link>
                            
@@ -384,10 +401,7 @@ export default class Studio_gnb extends React.Component {
                            
                         </li>     */}
                     </ul>
-                    </PerfectScrollbar>
-                    <div className="bottom rightT"> 
-                        <button type="button" className="studio_btn">프로젝트 삭제</button>
-                    </div>
+                    </PerfectScrollbar>                    
                </div>               
             </div>
         )
