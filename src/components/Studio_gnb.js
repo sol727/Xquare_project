@@ -332,57 +332,57 @@ export default class Studio_gnb extends React.Component {
                             <Link to="/v3_account"></Link>
                             
                         </li>
-                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account"}>
+                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account2"}>
                              <p>기본자료</p>
                             <Link to="/v3_account2"></Link>
                            
                         </li>
-                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account"}>
+                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account3"}>
                             <p>발행정보</p>
                             <Link to="/v3_account3"></Link>
                             
                         </li>
-                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account"}>
+                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account4"}>
                              <p>기타정보</p>
                             <Link to="/v3_account4"></Link>
                            
                         </li>
-                        <li className="sub_menu first_sub"onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account"}>
+                        <li className="sub_menu first_sub"onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_funding1"}>
                             <p>발행정보 확정</p>
                             <Link to="/v3_funding1"></Link>
                             
                         </li>
-                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account"}>
+                        <li className="sub_menu"onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_funding2"}>
                             <p>펀딩 소개 작성</p>
                             <Link to="/v3_funding2"></Link>
                            
                         </li>
-                        <li className="sub_menu" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account"}>
+                        <li className="sub_menu" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_funding3"}>
                             <p>추가 자료</p>
                             <Link to="/v3_funding3"></Link>
                             
                         </li>      
-                        <li className="long_menu" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account"}> 
+                        <li className="long_menu" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_feedback"}> 
                             <p>엑스퀘어 피드백</p>
                             <Link to="/v3_feedback"></Link>
                            
                         </li>      
-                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account"}> 
+                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_investor_state"}> 
                             <p>투자자 현황</p>
                             <Link to="/v3_investor_state"></Link>
                          
                         </li>  
-                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account"}>
+                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_investor_opinion"}>
                             <p>투자자 의견</p>
                             <Link to="/v3_investor_opinion"></Link>
                            
                         </li>  
-                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_account"}>
+                        <li className="" onMouseOver={this.onHover} onMouseLeave={this.onLeave} onClick={() => window.location.pathname = "/v3_news"}>
                             <p>새소식 관리</p>
                             <Link to="/v3_news"></Link>
                             
                         </li>    
-                        <li className="long_menu long_menu2" onMouseOver={this.onHover} onMouseLeave={this.onLeave}onClick={() => window.location.pathname = "/v3_account"} >
+                        <li className="long_menu long_menu2" onMouseOver={this.onHover} onMouseLeave={this.onLeave}onClick={() => window.location.pathname = "/v3_data"} >
                             <p>결산자료 제출 및 확인</p>
                             <Link to="/v3_data"></Link>
                            
