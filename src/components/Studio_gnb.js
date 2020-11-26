@@ -74,7 +74,7 @@ export default class Studio_gnb extends React.Component {
             this.setState({
                 activeIndex:index
             }, () => {
-                let menu_index = 1;
+                let menu_index = -1;
                 off_menu.forEach(function(om){
                     if(target.state.activeIndex != menu_index){
                         om.classList.remove("active");
@@ -83,7 +83,7 @@ export default class Studio_gnb extends React.Component {
                 });
             });
         }else{
-            let menu_index = 1;
+            let menu_index = -1;
             off_menu.forEach(function(om){
                 if(target.state.activeIndex != menu_index){
                     om.classList.remove("active");
@@ -145,8 +145,8 @@ export default class Studio_gnb extends React.Component {
 
             var off_box = document.querySelectorAll('.account3 .off_box'); 
             for ( var i = 0; i < off_box.length; i++ ) {
-                off_box[i].classList.remove('off')
-              }
+                off_box[i].classList.add('off')
+            }
               
             localStorage.setItem('gnb_state','off')
         }       
@@ -164,9 +164,9 @@ export default class Studio_gnb extends React.Component {
 
         var off_box = document.querySelectorAll('.account3 .off_box'); 
         for ( var i = 0; i < off_box.length; i++ ) {
-            off_box[i].classList.add('off')
-          }
-
+            off_box[i].classList.remove('off')
+        }
+        
         localStorage.setItem('gnb_state','on')
 
     }
